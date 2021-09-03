@@ -21,84 +21,84 @@
 <ul>
     
     <li>
-      <a href="/">
+      <a href="/mt3501-lnotes/">
       
       Home
       </a>
     </li>
     
     <li>
-      <a href="/01-intro">
+      <a href="/mt3501-lnotes/01-intro">
       
       Section 1 - Intro
       </a>
     </li>
     
     <li>
-      <a href="/02-vector-spaces">
+      <a href="/mt3501-lnotes/02-vector-spaces">
       
       Section 2 - Vector spaces
       </a>
     </li>
     
     <li>
-      <a href="/03-algorithms-to-live-by">
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by">
       
       Section 3 - Algorithms to live by
       </a>
     </li>
     
     <li>
-      <a href="/04-linear-transf">
+      <a href="/mt3501-lnotes/04-linear-transf">
       
       Section 4 - Linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/05-l-v-w">
+      <a href="/mt3501-lnotes/05-l-v-w">
       
       Section 5 - The vector space of linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/06-direct-sums">
+      <a href="/mt3501-lnotes/06-direct-sums">
       
       Section 6 - Direct sums
       </a>
     </li>
     
     <li>
-      <a href="/07-dual-space">
+      <a href="/mt3501-lnotes/07-dual-space">
       
       Section 7 - The dual space
       </a>
     </li>
     
     <li>
-      <a href="/08-eigen-stuff">
+      <a href="/mt3501-lnotes/08-eigen-stuff">
       
       Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
       </a>
     </li>
     
     <li>
-      <a href="/09-diagonal">
+      <a href="/mt3501-lnotes/09-diagonal">
       
       Section 9 - Diagonalisation
       </a>
     </li>
     
     <li>
-      <a href="/10-jnf">
+      <a href="/mt3501-lnotes/10-jnf">
       
       Section 10 - Jordan normal form
       </a>
     </li>
     
     <li>
-      <a href="/11-inner-products">
+      <a href="/mt3501-lnotes/11-inner-products">
       
       Section 11 - Inner products
       </a>
@@ -178,9 +178,9 @@
 <p>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix over <span class="math inline">\(\mathbb{C}\)</span>. Then there exists an invertible <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(P\)</span> (over <span class="math inline">\(\mathbb{C}\)</span>) such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \to \mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A\)</span>. Then by <a href="http://example.org/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)_{\mathbb{C} ^ n}}\)</span> is the change of basis matrix from <a href="http://example.org/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P  = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
+<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \to \mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A\)</span>. Then by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)_{\mathbb{C} ^ n}}\)</span> is the change of basis matrix from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P  = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
 </div>
-<p>We shall not prove <a href="http://example.org/10-jnf/#thm-JNF">Theorem 10.1.3</a>. It is reasonably hard to prove and is most easily addressed by developing more advanced concepts and theory. Instead, we shall use this section to explain how to calculate the Jordan normal form associated to a linear transformation or matrix.</p>
+<p>We shall not prove <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a>. It is reasonably hard to prove and is most easily addressed by developing more advanced concepts and theory. Instead, we shall use this section to explain how to calculate the Jordan normal form associated to a linear transformation or matrix.</p>
 <p>Why do we care about the Jordan normal form? For more or less the same reason as we cared about diagonal matrices, they are considerably easier to handle than arbitrary matrices.</p>
 <div class="prop">
 <p><span id="prop:J-props" label="prop:J-props"></span> Let <span class="math inline">\(J = J_{n}(\lambda)\)</span> be an <span class="math inline">\(n \times n\)</span> Jordan block. Then the following hold:</p>
@@ -231,7 +231,7 @@
       0   &amp; x-2
     \end{pmatrix} \\
              &amp; = (x-2)^{2} (x+2)^{2}.
-  \end{aligned}\]</span> It follows that the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> and the algebraic multiplicities are <span class="math inline">\(a_2 = 2 = a_{-2}\)</span>. By <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(1), <span class="math inline">\(a_2\)</span> is the sum of the sizes of the Jordan blocks <span class="math inline">\(J_{?}(2)\)</span> in the JNF for <span class="math inline">\(T\)</span>. It follows that either <span class="math inline">\(a_2 = 1 + 1\)</span> (the JNF has <span class="math inline">\(2\)</span> blocks of size <span class="math inline">\(1\)</span>) or <span class="math inline">\(a_2 = 2\)</span> (the JNF has <span class="math inline">\(1\)</span> block of size <span class="math inline">\(2\)</span>). The analogous statement holds for the eigenvalue <span class="math inline">\(-2\)</span>. To figure out which option occurs, we compute the minimum polynomial.</p>
+  \end{aligned}\]</span> It follows that the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> and the algebraic multiplicities are <span class="math inline">\(a_2 = 2 = a_{-2}\)</span>. By <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(1), <span class="math inline">\(a_2\)</span> is the sum of the sizes of the Jordan blocks <span class="math inline">\(J_{?}(2)\)</span> in the JNF for <span class="math inline">\(T\)</span>. It follows that either <span class="math inline">\(a_2 = 1 + 1\)</span> (the JNF has <span class="math inline">\(2\)</span> blocks of size <span class="math inline">\(1\)</span>) or <span class="math inline">\(a_2 = 2\)</span> (the JNF has <span class="math inline">\(1\)</span> block of size <span class="math inline">\(2\)</span>). The analogous statement holds for the eigenvalue <span class="math inline">\(-2\)</span>. To figure out which option occurs, we compute the minimum polynomial.</p>
 <p>The minimum polynomial <span class="math inline">\(m_T(x)\)</span> of <span class="math inline">\(T\)</span> has the form <span class="math inline">\(m_{T}(x) =  (x-2)^{i}(x+2)^{j}\)</span> where <span class="math inline">\(1 \leq i,j \leq 2\)</span>. Since <span class="math display">\[B - 2I = \begin{pmatrix}
       0 &amp; 1 &amp; 0  &amp; -3 \\
       0 &amp; 0 &amp; 0  &amp; 4  \\
@@ -270,7 +270,7 @@
       0 &amp; 0 &amp; 0 &amp; 0 \\
       0 &amp; 0 &amp; 0 &amp; 0
     \end{pmatrix}.
-  \end{aligned}\]</span> Hence <span class="math display">\[m_{T}(x) = (x-2)^{2} (x+2).\]</span> Hence, by <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(2), the largest Jordan block for the eigenvalue <span class="math inline">\(2\)</span> has size <span class="math inline">\(2\)</span>, while the largest Jordan block for the eigenvalue <span class="math inline">\(-2\)</span> is <span class="math inline">\(1\)</span>. This uniquely determines the Jordan normal form of <span class="math inline">\(T\)</span> as: <span class="math display">\[\begin{pmatrix}
+  \end{aligned}\]</span> Hence <span class="math display">\[m_{T}(x) = (x-2)^{2} (x+2).\]</span> Hence, by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(2), the largest Jordan block for the eigenvalue <span class="math inline">\(2\)</span> has size <span class="math inline">\(2\)</span>, while the largest Jordan block for the eigenvalue <span class="math inline">\(-2\)</span> is <span class="math inline">\(1\)</span>. This uniquely determines the Jordan normal form of <span class="math inline">\(T\)</span> as: <span class="math display">\[\begin{pmatrix}
       J_{2}(2) &amp; 0         &amp; 0         \\
       0        &amp; J_{1}(-2) &amp; 0         \\
       0        &amp; 0         &amp; J_{1}(-2)
@@ -313,7 +313,7 @@
              &amp; = (x-2)^{2} (x^{2} - 4x + 3 + 1)             \\
              &amp; = (x-2)^{2} (x^{2} - 4x + 4)                 \\
              &amp; = (x-2)^{4}.
-  \end{aligned}\]</span> By <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(1), the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are either <span class="math inline">\(1 + 1 + 1 + 1 = 4\)</span>, <span class="math inline">\(1 + 1 + 2 = 4\)</span>, <span class="math inline">\(1 + 3 = 4\)</span>, <span class="math inline">\(2 + 2 = 4\)</span>, or just <span class="math inline">\(4\)</span>.</p>
+  \end{aligned}\]</span> By <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(1), the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are either <span class="math inline">\(1 + 1 + 1 + 1 = 4\)</span>, <span class="math inline">\(1 + 1 + 2 = 4\)</span>, <span class="math inline">\(1 + 3 = 4\)</span>, <span class="math inline">\(2 + 2 = 4\)</span>, or just <span class="math inline">\(4\)</span>.</p>
 <p>Next, we calculate the minimum polynomial: <span class="math display">\[C - 2I = \begin{pmatrix}
       1  &amp; 0 &amp; 1  &amp; -1 \\
       1  &amp; 0 &amp; 1  &amp; -1 \\
@@ -338,14 +338,14 @@
       0 &amp; 0 &amp; 0 &amp; 0 \\
       0 &amp; 0 &amp; 0 &amp; 0
     \end{pmatrix}.
-  \end{aligned}\]</span> Hence <span class="math inline">\(m_{T}(x) = (x-2)^{2}\)</span>, and so, by <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(2), there is a Jordan block <span class="math inline">\(J_2(2)\)</span> in the Jordan normal form for <span class="math inline">\(T\)</span>. Combining this with the above, the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are either <span class="math inline">\(1 + 1 + 2 = 4\)</span> or <span class="math inline">\(2 + 2 = 4\)</span>. To know which one of these, we must find the geometric multiplicity <span class="math inline">\(g_2\)</span> of the eigenvalue <span class="math inline">\(2\)</span>. If <span class="math inline">\(g_2 = 3\)</span>, then the correct option is <span class="math inline">\(1 + 1 + 2\)</span>, and if <span class="math inline">\(g_2 = 2\)</span>, then <span class="math inline">\(2 + 2\)</span> is the correct option.</p>
+  \end{aligned}\]</span> Hence <span class="math inline">\(m_{T}(x) = (x-2)^{2}\)</span>, and so, by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(2), there is a Jordan block <span class="math inline">\(J_2(2)\)</span> in the Jordan normal form for <span class="math inline">\(T\)</span>. Combining this with the above, the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are either <span class="math inline">\(1 + 1 + 2 = 4\)</span> or <span class="math inline">\(2 + 2 = 4\)</span>. To know which one of these, we must find the geometric multiplicity <span class="math inline">\(g_2\)</span> of the eigenvalue <span class="math inline">\(2\)</span>. If <span class="math inline">\(g_2 = 3\)</span>, then the correct option is <span class="math inline">\(1 + 1 + 2\)</span>, and if <span class="math inline">\(g_2 = 2\)</span>, then <span class="math inline">\(2 + 2\)</span> is the correct option.</p>
 <p>Since <span class="math inline">\(g_2 = \dim E_2 = \dim \ker (T - 2I)\)</span>, we solve <span class="math inline">\((T-2I)(v) = \vec{0}\)</span>; that is, <span class="math display">\[C - 2I =
     \begin{pmatrix}
       1  &amp; 0 &amp; 1  &amp; -1 \\
       1  &amp; 0 &amp; 1  &amp; -1 \\
       -1 &amp; 0 &amp; -1 &amp; 1  \\
       0  &amp; 0 &amp; 0  &amp; 0
-    \end{pmatrix}\]</span> By inspection, the column rank of <span class="math inline">\(C - 2I\)</span> is <span class="math inline">\(1\)</span>, and so, by <a href="http://example.org/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), <span class="math inline">\(\dim \operatorname{im} (T - 2I) = 1\)</span>. Hence, by the Rank-Nullity Theorem (<a href="http://example.org/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), <span class="math inline">\(g_{2} = \dim \ker (T  - 2I) = 3\)</span>. Therefore, by <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(3), there are 3 Jordan blocks in the JNF for <span class="math inline">\(T\)</span> for the eigenvalue <span class="math inline">\(2\)</span>, and so the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are <span class="math inline">\(1 + 1 + 2 = 4\)</span>, and the Jordan normal form of <span class="math inline">\(T\)</span> is <span class="math display">\[\begin{pmatrix}
+    \end{pmatrix}\]</span> By inspection, the column rank of <span class="math inline">\(C - 2I\)</span> is <span class="math inline">\(1\)</span>, and so, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), <span class="math inline">\(\dim \operatorname{im} (T - 2I) = 1\)</span>. Hence, by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), <span class="math inline">\(g_{2} = \dim \ker (T  - 2I) = 3\)</span>. Therefore, by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(3), there are 3 Jordan blocks in the JNF for <span class="math inline">\(T\)</span> for the eigenvalue <span class="math inline">\(2\)</span>, and so the sizes of the Jordan blocks in the Jordan Normal Form for <span class="math inline">\(T\)</span> are <span class="math inline">\(1 + 1 + 2 = 4\)</span>, and the Jordan normal form of <span class="math inline">\(T\)</span> is <span class="math display">\[\begin{pmatrix}
       J_{2}(2) &amp; 0        &amp; 0        \\
       0        &amp; J_{1}(2) &amp; 0        \\
       0        &amp; 0        &amp; J_{1}(2)
@@ -363,7 +363,7 @@
       1  &amp; 2 &amp; 1 &amp; -1 \\
       -1 &amp; 0 &amp; 1 &amp; 1  \\
       0  &amp; 0 &amp; 0 &amp; 2
-    \end{pmatrix}\]</span> (the matrix from <a href="http://example.org/10-jnf/#ex:JNF-exD">Example 10.3.2</a>). Find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}CP\)</span> is in Jordan normal form.</p>
+    \end{pmatrix}\]</span> (the matrix from <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#ex:JNF-exD">Example 10.3.2</a>). Find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}CP\)</span> is in Jordan normal form.</p>
 </div>
 <div class="solution">
 <p>We have already established the Jordan normal form of the transformation <span class="math inline">\(T : \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> with matrix <span class="math inline">\(C\)</span> is <span class="math display">\[A = \begin{pmatrix}
@@ -376,9 +376,9 @@
       0 &amp; 2 &amp; 0 &amp; 0 \\
       0 &amp; 0 &amp; 2 &amp; 0 \\
       0 &amp; 0 &amp; 0 &amp; 2
-    \end{pmatrix}.\]</span> Our problem is equivalent (by <a href="http://example.org/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>) to finding a basis <span class="math inline">\(\mathscr{B}\)</span> with respect to which the matrix of <span class="math inline">\(T\)</span> equals <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},v_{3},v_{4} \}\)</span> such that <span class="math display">\[T(v_{1}) = 2v_{1}, \qquad T(v_{2}) = v_{1} + 2v_{2}, \qquad T(v_{3})
+    \end{pmatrix}.\]</span> Our problem is equivalent (by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>) to finding a basis <span class="math inline">\(\mathscr{B}\)</span> with respect to which the matrix of <span class="math inline">\(T\)</span> equals <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},v_{3},v_{4} \}\)</span> such that <span class="math display">\[T(v_{1}) = 2v_{1}, \qquad T(v_{2}) = v_{1} + 2v_{2}, \qquad T(v_{3})
     = 2v_{3}, \qquad T(v_{4}) = 2v_{4}.\]</span> So we need to choose <span class="math inline">\(v_{1}\)</span>, <span class="math inline">\(v_{3}\)</span> and <span class="math inline">\(v_{4}\)</span> to lie in the eigenspace <span class="math inline">\(E_{2}\)</span> (which we determined earlier).</p>
-<p>On the face of it, the choice of <span class="math inline">\(v_{2}\)</span> appears to be less straightforward: we require <span class="math inline">\((T-2I)(v_{2}) = v_{1}\)</span>, some non-zero vector in <span class="math inline">\(E_{2}\)</span> and this indicates we also probably do not have total freedom in the choice of <span class="math inline">\(v_{1}\)</span>. In <a href="http://example.org/10-jnf/#ex:JNF-exD">Example 10.3.2</a>, we calculated <span class="math display">\[E_{2} = \left\{ \begin{pmatrix} x \\ y \\ z \\ x+z \end{pmatrix} \;\middle|\; x,y,z \in \mathbb{R} \right\}.\]</span> Let us solve <span class="math display">\[(T-2I)(v) = \begin{pmatrix}
+<p>On the face of it, the choice of <span class="math inline">\(v_{2}\)</span> appears to be less straightforward: we require <span class="math inline">\((T-2I)(v_{2}) = v_{1}\)</span>, some non-zero vector in <span class="math inline">\(E_{2}\)</span> and this indicates we also probably do not have total freedom in the choice of <span class="math inline">\(v_{1}\)</span>. In <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#ex:JNF-exD">Example 10.3.2</a>, we calculated <span class="math display">\[E_{2} = \left\{ \begin{pmatrix} x \\ y \\ z \\ x+z \end{pmatrix} \;\middle|\; x,y,z \in \mathbb{R} \right\}.\]</span> Let us solve <span class="math display">\[(T-2I)(v) = \begin{pmatrix}
       1  &amp; 0 &amp; 1  &amp; -1 \\
       1  &amp; 0 &amp; 1  &amp; -1 \\
       -1 &amp; 0 &amp; -1 &amp; 1  \\
@@ -561,7 +561,7 @@
              &amp; = (x-1)^{2}(x+2) \bigl( (x-1)^{2} + 1 - 1 \bigr)                                                      \\
              &amp; = (x-1)^{4} (x+2).
   \end{aligned}\]</span> We now know that the Jordan normal form for <span class="math inline">\(T\)</span> contains a single Jordan block <span class="math inline">\(J_{1}(-2)\)</span> corresponding to eigenvalue <span class="math inline">\(-2\)</span> and some number of Jordan blocks <span class="math inline">\(J_{n}(1)\)</span> corresponding to eigenvalue <span class="math inline">\(1\)</span>. The sum of the sizes of these latter blocks equals <span class="math inline">\(4\)</span>.</p>
-<p>Let us now determine the minimum polynomial of <span class="math inline">\(T\)</span>. We know <span class="math inline">\(m_{T}(x) = (x-1)^{i} (x+2)\)</span> where <span class="math inline">\(1 \leq i \leq 4\)</span> by <a href="http://example.org/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) and (3). Now <span class="math display">\[E-I = \begin{pmatrix}
+<p>Let us now determine the minimum polynomial of <span class="math inline">\(T\)</span>. We know <span class="math inline">\(m_{T}(x) = (x-1)^{i} (x+2)\)</span> where <span class="math inline">\(1 \leq i \leq 4\)</span> by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) and (3). Now <span class="math display">\[E-I = \begin{pmatrix}
       0  &amp; 0 &amp; -1 &amp; 0 &amp; -8  \\
       0  &amp; 0 &amp; 4  &amp; 0 &amp; 29  \\
       -1 &amp; 0 &amp; 0  &amp; 1 &amp; 5   \\
@@ -772,7 +772,7 @@
       0  &amp; 0  &amp; 0 &amp; 0 &amp; 1
     \end{pmatrix}.\]</span></p>
 </div>
-<p>In the previous examples we used <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a> to determine the Jordan normal form, and this technique is enough to find the Jordan normal form for the linear transformations that you will encounter in this course. <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a> is sufficient for small matrices, but will not solve the problem for all possibilities.</p>
+<p>In the previous examples we used <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a> to determine the Jordan normal form, and this technique is enough to find the Jordan normal form for the linear transformations that you will encounter in this course. <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a> is sufficient for small matrices, but will not solve the problem for all possibilities.</p>
 <p>For example, they do not distinguish between the <span class="math inline">\(7 \times 7\)</span> matrices <span class="math display">\[\begin{pmatrix}
     J_{3}(\lambda) &amp; 0              &amp; 0              \\
     0              &amp; J_{2}(\lambda) &amp; 0              \\
@@ -783,7 +783,7 @@
     J_{3}(\lambda) &amp; 0              &amp; 0              \\
     0              &amp; J_{3}(\lambda) &amp; 0              \\
     0              &amp; 0              &amp; J_{1}(\lambda)
-  \end{pmatrix},\]</span> which both have characteristic polynomial <span class="math inline">\((x-\lambda)^{7}\)</span>, minimum polynomial <span class="math inline">\((x-\lambda)^{3}\)</span> and geometric multiplicity <span class="math inline">\(g_{\lambda} =  \dim E_{\lambda} = 3\)</span>. To deal with such possible Jordan normal forms one needs to generalise <a href="http://example.org/10-jnf/#prop-JNF">Proposition 10.2.1</a>(3) to consider the dimension of generalisations of eigenspaces: <span class="math display">\[\dim \ker (T-\lambda I)^{2}, \quad \dim \ker (T-\lambda I)^{3}, \quad
+  \end{pmatrix},\]</span> which both have characteristic polynomial <span class="math inline">\((x-\lambda)^{7}\)</span>, minimum polynomial <span class="math inline">\((x-\lambda)^{3}\)</span> and geometric multiplicity <span class="math inline">\(g_{\lambda} =  \dim E_{\lambda} = 3\)</span>. To deal with such possible Jordan normal forms one needs to generalise <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(3) to consider the dimension of generalisations of eigenspaces: <span class="math display">\[\dim \ker (T-\lambda I)^{2}, \quad \dim \ker (T-\lambda I)^{3}, \quad
   \dots.\]</span> We leave the details to the interested and enthused student.</p>
 
 

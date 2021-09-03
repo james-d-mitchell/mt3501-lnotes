@@ -21,84 +21,84 @@
 <ul>
     
     <li>
-      <a href="/">
+      <a href="/mt3501-lnotes/">
       
       Home
       </a>
     </li>
     
     <li>
-      <a href="/01-intro">
+      <a href="/mt3501-lnotes/01-intro">
       
       Section 1 - Intro
       </a>
     </li>
     
     <li>
-      <a href="/02-vector-spaces">
+      <a href="/mt3501-lnotes/02-vector-spaces">
       
       Section 2 - Vector spaces
       </a>
     </li>
     
     <li>
-      <a href="/03-algorithms-to-live-by">
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by">
       
       Section 3 - Algorithms to live by
       </a>
     </li>
     
     <li>
-      <a href="/04-linear-transf">
+      <a href="/mt3501-lnotes/04-linear-transf">
       
       Section 4 - Linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/05-l-v-w">
+      <a href="/mt3501-lnotes/05-l-v-w">
       
       Section 5 - The vector space of linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/06-direct-sums">
+      <a href="/mt3501-lnotes/06-direct-sums">
       
       Section 6 - Direct sums
       </a>
     </li>
     
     <li>
-      <a href="/07-dual-space">
+      <a href="/mt3501-lnotes/07-dual-space">
       
       Section 7 - The dual space
       </a>
     </li>
     
     <li>
-      <a href="/08-eigen-stuff">
+      <a href="/mt3501-lnotes/08-eigen-stuff">
       
       Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
       </a>
     </li>
     
     <li>
-      <a href="/09-diagonal">
+      <a href="/mt3501-lnotes/09-diagonal">
       
       Section 9 - Diagonalisation
       </a>
     </li>
     
     <li>
-      <a href="/10-jnf">
+      <a href="/mt3501-lnotes/10-jnf">
       
       Section 10 - Jordan normal form
       </a>
     </li>
     
     <li>
-      <a href="/11-inner-products">
+      <a href="/mt3501-lnotes/11-inner-products">
       
       Section 11 - Inner products
       </a>
@@ -297,9 +297,9 @@
 <div class="proof">
 <p><em>Proof.</em> <strong>(1)</strong> If <span class="math inline">\(x \in \operatorname{im} T\)</span>, then <span class="math inline">\(x = T(v)\)</span> for some <span class="math inline">\(v \in V\)</span>. We can write <span class="math inline">\(v = \sum_{i=1}^{n} \alpha_{i}v_{i}\)</span> for some <span class="math inline">\(\alpha_{i} \in  F\)</span>. Then <span class="math display">\[x = T(v) = T\biggl( \sum_{i=1}^{n} \alpha_{i}v_{i} \biggr) =
     \sum_{i=1}^{n} \alpha_{i} T(v_{i}) = \sum_{i=1}^{n} \alpha_{i}y_{i} \in
-    \operatorname{Span}{y_1, y_2, \ldots, y_n}.\]</span> Hence <span class="math inline">\(\operatorname{im} T \subseteq \operatorname{Span}{y_1, y_2, \ldots, y_n}\)</span>. On the other hand, since <span class="math inline">\(y_i = T(v_i)\in \operatorname{im} T\)</span> for all <span class="math inline">\(i\)</span>, and <span class="math inline">\(\operatorname{im} T\)</span> is a subspace of <span class="math inline">\(W\)</span> (<a href="http://example.org/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>), it follows that <span class="math inline">\(\operatorname{Span}{y_1, y_2, \ldots, y_n} \subseteq \operatorname{im} T\)</span>. Thus <span class="math inline">\(\operatorname{im} T = \operatorname{Span}{y_1, y_2,  \ldots, y_n}\)</span>.</p>
-<p><strong>(2)</strong> (<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. By part (1), <span class="math inline">\(\operatorname{im} T =  \operatorname{Span}{y_{1},y_{2},\dots,y_{n}}\)</span> and so by <a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_thm-basissubset_Corollary-2.4.10">Corollary 2.4.10</a>, <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> contains a linearly independent subset <span class="math inline">\(\mathscr{B}\)</span> such that <span class="math inline">\(\operatorname{Span}{\mathscr{B}} = \operatorname{Span}{y_1, y_2, \ldots, y_n} = \operatorname{im} T\)</span>. It follows that <span class="math inline">\(|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank} T\)</span>. By the Rank-Nullity Theorem, <span class="math inline">\(\dim V = n =  \operatorname{rank} T + \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T\)</span>, since <span class="math inline">\(\operatorname{null} T = \dim \ker T =  0\)</span>. Therefore <span class="math inline">\(\mathscr{B} = \{y_1, y_2, \ldots, y_n\}\)</span> and so <span class="math inline">\(\{y_1, y_2,  \ldots, y_n\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> and, in particular, it is linearly independent.</p>
-<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is linearly independent, then since <span class="math inline">\(\operatorname{Span}{y_{1},y_{2},\dots,y_{n}} = \operatorname{im} T\)</span>, it follows that <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> (<a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8">Theorem 2.4.8</a>) and so <span class="math inline">\(\operatorname{rank} T = n\)</span>. Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim \ker T = \operatorname{null} T = \dim V - \operatorname{rank} V = n - n = 0\)</span>, and so <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p>
+    \operatorname{Span}{y_1, y_2, \ldots, y_n}.\]</span> Hence <span class="math inline">\(\operatorname{im} T \subseteq \operatorname{Span}{y_1, y_2, \ldots, y_n}\)</span>. On the other hand, since <span class="math inline">\(y_i = T(v_i)\in \operatorname{im} T\)</span> for all <span class="math inline">\(i\)</span>, and <span class="math inline">\(\operatorname{im} T\)</span> is a subspace of <span class="math inline">\(W\)</span> (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>), it follows that <span class="math inline">\(\operatorname{Span}{y_1, y_2, \ldots, y_n} \subseteq \operatorname{im} T\)</span>. Thus <span class="math inline">\(\operatorname{im} T = \operatorname{Span}{y_1, y_2,  \ldots, y_n}\)</span>.</p>
+<p><strong>(2)</strong> (<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. By part (1), <span class="math inline">\(\operatorname{im} T =  \operatorname{Span}{y_{1},y_{2},\dots,y_{n}}\)</span> and so by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_thm-basissubset_Corollary-2.4.10">Corollary 2.4.10</a>, <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> contains a linearly independent subset <span class="math inline">\(\mathscr{B}\)</span> such that <span class="math inline">\(\operatorname{Span}{\mathscr{B}} = \operatorname{Span}{y_1, y_2, \ldots, y_n} = \operatorname{im} T\)</span>. It follows that <span class="math inline">\(|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank} T\)</span>. By the Rank-Nullity Theorem, <span class="math inline">\(\dim V = n =  \operatorname{rank} T + \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T\)</span>, since <span class="math inline">\(\operatorname{null} T = \dim \ker T =  0\)</span>. Therefore <span class="math inline">\(\mathscr{B} = \{y_1, y_2, \ldots, y_n\}\)</span> and so <span class="math inline">\(\{y_1, y_2,  \ldots, y_n\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> and, in particular, it is linearly independent.</p>
+<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is linearly independent, then since <span class="math inline">\(\operatorname{Span}{y_{1},y_{2},\dots,y_{n}} = \operatorname{im} T\)</span>, it follows that <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> (<a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8">Theorem 2.4.8</a>) and so <span class="math inline">\(\operatorname{rank} T = n\)</span>. Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim \ker T = \operatorname{null} T = \dim V - \operatorname{rank} V = n - n = 0\)</span>, and so <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p>
 <p><strong>Alternative direct proof of (2).</strong> (<span class="math inline">\(\Leftarrow\)</span>) Suppose that <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is linearly independent. If <span class="math inline">\(v\in  \ker T\)</span> is arbitrary, then <span class="math inline">\(v = \sum_{i=1}^{n} \alpha_{i}v_{i}\)</span> for some <span class="math inline">\(\alpha_i\in F\)</span> and <span class="math display">\[\vec{0} = T(v) = \sum_{i=1}^{n} \alpha_{i}T(v_{i}) =
     \sum_{i=1}^{n} \alpha_{i}y_{i}.\]</span> Since <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is linearly independent, it follows that <span class="math inline">\(\alpha_i = 0\)</span> for all <span class="math inline">\(i\)</span> and so <span class="math inline">\(v = \vec{0}\)</span>.</p>
 <p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. If <span class="math inline">\(\sum_{i=1}^{n} \alpha_{i}y_{i} = \vec{0}\in W\)</span> for some <span class="math inline">\(\alpha_i\in F\)</span>, then <span class="math display">\[T\left(\sum_{i=1}^{n} \alpha_{i}v_{i}\right) = \sum_{i=1}^{n}
@@ -316,8 +316,8 @@
     \alpha \;\;\,\qquad -\gamma   &amp; = 0  \\
     -\alpha + 2\beta + 4\gamma    &amp; = 0.
   \end{aligned}\]</span> The second equation tells us that <span class="math inline">\(\gamma = \alpha\)</span> while the first says <span class="math inline">\(\beta = 2\alpha\)</span>. Substituting for <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> in the third equation gives <span class="math display">\[-\alpha + 4\alpha + 4\alpha = 7\alpha = 0.\]</span> Hence <span class="math inline">\(\alpha = 0\)</span> and consequently <span class="math inline">\(\beta = \gamma = 0\)</span>.</p>
-<p>This shows <span class="math inline">\(\{ \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3} \}\)</span> is linearly independent. Consequently, <span class="math inline">\(\ker T = \{\vec{0}\}\)</span> by <a href="http://example.org/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>. The Rank-Nullity Theorem now says <span class="math display">\[\dim \operatorname{im} T = \dim \mathbb{R}^{3} - \dim \ker T = 3 - 0 = 3.\]</span> Therefore <span class="math inline">\(\operatorname{im} T = \mathbb{R}^{3}\)</span> as it has the same dimension.</p>
-<p>[Alternatively, since <span class="math inline">\(\dim \mathbb{R}^{3} = 3\)</span> and <span class="math inline">\(\{ \vec{y}_{1},  \vec{y}_{2}, \vec{y}_{3} \}\)</span> is linearly independent, this set must be a basis for <span class="math inline">\(\mathbb{R}^{3}\)</span> (see <a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8">Theorem 2.4.8</a>). Therefore, by <a href="http://example.org/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(1), <span class="math display">\[\operatorname{im} T = \operatorname{Span}{\vec{y}_{1},\vec{y}_{2},\vec{y}_{3}} = \mathbb{R}^{3},\]</span> once again.]</p>
+<p>This shows <span class="math inline">\(\{ \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3} \}\)</span> is linearly independent. Consequently, <span class="math inline">\(\ker T = \{\vec{0}\}\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>. The Rank-Nullity Theorem now says <span class="math display">\[\dim \operatorname{im} T = \dim \mathbb{R}^{3} - \dim \ker T = 3 - 0 = 3.\]</span> Therefore <span class="math inline">\(\operatorname{im} T = \mathbb{R}^{3}\)</span> as it has the same dimension.</p>
+<p>[Alternatively, since <span class="math inline">\(\dim \mathbb{R}^{3} = 3\)</span> and <span class="math inline">\(\{ \vec{y}_{1},  \vec{y}_{2}, \vec{y}_{3} \}\)</span> is linearly independent, this set must be a basis for <span class="math inline">\(\mathbb{R}^{3}\)</span> (see <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8">Theorem 2.4.8</a>). Therefore, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(1), <span class="math display">\[\operatorname{im} T = \operatorname{Span}{\vec{y}_{1},\vec{y}_{2},\vec{y}_{3}} = \mathbb{R}^{3},\]</span> once again.]</p>
 </div>
 <div class="omittedexamp">
 <p>Let <span class="math inline">\(T : \mathbb{R}^{4} \to \mathbb{R}^{3}\)</span> be the linear transformation defined in terms of the standard basis <span class="math inline">\(\mathscr{B} = \{ \vec{e}_{1}, \vec{e}_{2},  \vec{e}_{3}, \vec{e}_{4} \}\)</span> by <span class="math display">\[\begin{aligned}
@@ -328,7 +328,7 @@
   \end{aligned}\]</span> Find a basis for the image of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="solution">
-<p>This is the linear transformation considered in <a href="http://example.org/04-linear-transf/#ex:linmap1">Example 4.1A</a>. We observed there that <span class="math inline">\(\dim \operatorname{im} T =  \operatorname{rank} T = 2\)</span>. We also know from <a href="http://example.org/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a> that <span class="math display">\[\operatorname{im} T = \operatorname{Span}{ \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3},
+<p>This is the linear transformation considered in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#ex:linmap1">Example 4.1A</a>. We observed there that <span class="math inline">\(\dim \operatorname{im} T =  \operatorname{rank} T = 2\)</span>. We also know from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a> that <span class="math display">\[\operatorname{im} T = \operatorname{Span}{ \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3},
       \vec{y}_{4} },\]</span> so we conclude that <span class="math inline">\(\operatorname{im} T\)</span> has a basis <span class="math inline">\(\mathscr{C}\)</span> containing <span class="math inline">\(2\)</span> vectors and satisfying <span class="math inline">\(\mathscr{C} \subseteq \{ \vec{y}_{1},  \vec{y}_{2}, \vec{y}_{3}, \vec{y}_{4} \}\)</span>. Note that <span class="math display">\[\{ \vec{y}_{1}, \vec{y}_{2} \} = \left\{ \begin{pmatrix} 2 \\ 1 \\ 3 \\ \end{pmatrix},
     \begin{pmatrix} -1 \\ 0 \\ 1 \\ \end{pmatrix} \right\}\]</span> is linearly independent. Indeed if <span class="math display">\[\alpha \begin{pmatrix} 2 \\ 1 \\ 3 \\ \end{pmatrix} + \beta \begin{pmatrix} -1 \\ 0 \\ 1 \\ \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ \end{pmatrix}\]</span> then we deduce straight away <span class="math inline">\(\alpha = 0\)</span> and then <span class="math inline">\(\beta = 0\)</span>. We now have a linearly independent subset of <span class="math inline">\(\operatorname{im} T\)</span> of the right size to be a basis. Hence <span class="math inline">\(\mathscr{C} = \{ \vec{y}_{1}, \vec{y}_{2}  \}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span>.</p>
 </div>
@@ -455,7 +455,7 @@
 <li><p>the rank of <span class="math inline">\(T\)</span> equals the column-rank of <span class="math inline">\(A\)</span>, i.e. <span class="math inline">\(\operatorname{rank}(T) = \dim  \operatorname{Col}(A)\)</span>.</p></li>
 </ol>
 </div>
-<p>It is not the case that the row-space of <span class="math inline">\(A\)</span> in <a href="http://example.org/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a> is <span class="math inline">\(\ker(T)\)</span>, although <span class="math inline">\(\operatorname{Row}(A)\)</span> and <span class="math inline">\(\ker(T)\)</span> are related.</p>
+<p>It is not the case that the row-space of <span class="math inline">\(A\)</span> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a> is <span class="math inline">\(\ker(T)\)</span>, although <span class="math inline">\(\operatorname{Row}(A)\)</span> and <span class="math inline">\(\ker(T)\)</span> are related.</p>
 <h2 id="change-of-basis">Change of basis</h2>
 <p>Suppose we are given two bases <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> for the same vector space <span class="math inline">\(V\)</span>. We shall now describe how <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> and <span class="math inline">\(\operatorname{Mat}_{\mathscr{C},\mathscr{C}}(T)\)</span> are related for some linear transformation <span class="math inline">\(T : V \to V\)</span>. (A similar description can be given for a linear transformation <span class="math inline">\(V \to W\)</span> with two bases <span class="math inline">\(\mathscr{B},\mathscr{B}&#39;\)</span> for <span class="math inline">\(V\)</span> and two bases <span class="math inline">\(\mathscr{C},\mathscr{C}&#39;\)</span> for <span class="math inline">\(W\)</span>. This would be more complicated, but essentially the same ideas apply.)</p>
 <div class="thm">
@@ -470,14 +470,14 @@
     =
     \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)}.\]</span></p>
 </div>
-<p>The more general version of <a href="http://example.org/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> is the next result which is included just for interest.</p>
+<p>The more general version of <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> is the next result which is included just for interest.</p>
 <div class="thm">
 <p><span id="thm-general-base-change" label="thm-general-base-change"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T: V \to W\)</span> be a linear transformation. If <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{B}&#39;\)</span> are bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathscr{C}\)</span> and <span class="math inline">\(\mathscr{C}&#39;\)</span> are basis for <span class="math inline">\(W\)</span>, then <span class="math display">\[\operatorname{Mat}_{\mathscr{B}&#39;, \mathscr{C}&#39;}(T) = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}&#39;}(\operatorname{id)_W}
     \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)
     \operatorname{Mat}_{\mathscr{B}&#39;, \mathscr{B}}(\operatorname{id)_V},\]</span> where <span class="math inline">\(\operatorname{id}_V : V \to V\)</span> and <span class="math inline">\(\operatorname{id}_W: W \to W\)</span> are the identity linear transformations.</p>
 </div>
-<p>If <span class="math inline">\(\dim V = n\)</span> and <span class="math inline">\(\dim W = m\)</span> in <a href="http://example.org/04-linear-transf/#thm-general-base-change">Theorem 4.3.2</a>, then <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}&#39;}(\operatorname{id)_W}\)</span> is an <span class="math inline">\(m\times m\)</span> matrix, <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span> is an <span class="math inline">\(m\times n\)</span> matrix, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}&#39;}(\operatorname{id)_V}\)</span> is an <span class="math inline">\(n \times n\)</span> matrix, and so <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}&#39;, \mathscr{C}&#39;}(T)\)</span> is an <span class="math inline">\(m \times  n\)</span> matrix.</p>
-<p>Let us illustrate <a href="http://example.org/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> with an example.</p>
+<p>If <span class="math inline">\(\dim V = n\)</span> and <span class="math inline">\(\dim W = m\)</span> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-general-base-change">Theorem 4.3.2</a>, then <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}&#39;}(\operatorname{id)_W}\)</span> is an <span class="math inline">\(m\times m\)</span> matrix, <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span> is an <span class="math inline">\(m\times n\)</span> matrix, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}&#39;}(\operatorname{id)_V}\)</span> is an <span class="math inline">\(n \times n\)</span> matrix, and so <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}&#39;, \mathscr{C}&#39;}(T)\)</span> is an <span class="math inline">\(m \times  n\)</span> matrix.</p>
+<p>Let us illustrate <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> with an example.</p>
 <div class="exampjupyter">
 <p>Let <span class="math inline">\(V\)</span> be a <span class="math inline">\(2\)</span>-dimensional vector space over <span class="math inline">\(\mathbb{R}\)</span> with basis <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2} \}\)</span>. Let <span class="math display">\[w_{1} = 3v_{1} - 5v_{2}, \qquad w_{2} = -v_{1}+2v_{2}\]</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2} \}\)</span>. Define the linear transformation <span class="math inline">\(T : V \to V\)</span> by <span class="math display">\[\begin{aligned}
     T(v_{1}) &amp; = 16v_{1} - 30v_{2} \\
@@ -536,7 +536,7 @@
       1  &amp; 0  &amp; -1 \\
       -1 &amp; -1 &amp; 0
     \end{pmatrix}.\]</span></p>
-<p>(3) <a href="http://example.org/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> says <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) =  P^{-1}AP\)</span> (as the matrix of <span class="math inline">\(A\)</span> with respect to the standard basis is <span class="math inline">\(A\)</span> itself). We first calculate the inverse of <span class="math inline">\(P\)</span> via the usual row operation method: <span class="math display">\[\begin{aligned}
+<p>(3) <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> says <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) =  P^{-1}AP\)</span> (as the matrix of <span class="math inline">\(A\)</span> with respect to the standard basis is <span class="math inline">\(A\)</span> itself). We first calculate the inverse of <span class="math inline">\(P\)</span> via the usual row operation method: <span class="math display">\[\begin{aligned}
     \left( \begin{matrix}
         0  &amp; 1  &amp; 2  \\
         1  &amp; 0  &amp; -1 \\
@@ -639,27 +639,27 @@
 <p><span id="thm-bijection-basis" label="thm-bijection-basis"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(\mathscr{B} = \{v_1, \ldots, v_n\}\)</span> be any basis for <span class="math inline">\(V\)</span>. If <span class="math inline">\(T: V \to W\)</span> is an isomorphism, then <span class="math inline">\(T(\mathscr{B}) = \{T(v_1), \ldots,  T(v_n)\}\)</span> is a basis for <span class="math inline">\(W\)</span>. Conversely, if <span class="math inline">\(\mathscr{C} = \{w_1, \ldots, w_n\}\)</span> is any basis for <span class="math inline">\(W\)</span>, then the unique linear transformation <span class="math inline">\(T: V \to W\)</span> such that <span class="math inline">\(T(v_i) = w_i\)</span> for every <span class="math inline">\(i\)</span> is an isomorphism.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Let <span class="math inline">\(T: V \to W\)</span> be any isomorphism from <span class="math inline">\(V\)</span> to <span class="math inline">\(W\)</span>. Since <span class="math inline">\(T\)</span> is a bijection, it follows that <span class="math inline">\(\operatorname{ker}(T) = \{\vec{0}\}\)</span>. Hence, by <a href="http://example.org/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(2), <span class="math inline">\(T(\mathscr{B}) = \{T(v_1), \ldots,  T(v_n)\}\)</span> is a linearly independent set. Also, by <a href="http://example.org/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(1) and since <span class="math inline">\(T\)</span> is a bijection, <span class="math inline">\(W = \operatorname{im} T =  \operatorname{Span}(T(v_1), \ldots, T(v_n))\)</span>. Therefore <span class="math inline">\(T(\mathscr{B})\)</span> is a linearly independent spanning set for <span class="math inline">\(W\)</span>, and so <span class="math inline">\(T(\mathscr{B})\)</span> is a basis for <span class="math inline">\(W\)</span>.</p>
+<p><em>Proof.</em> Let <span class="math inline">\(T: V \to W\)</span> be any isomorphism from <span class="math inline">\(V\)</span> to <span class="math inline">\(W\)</span>. Since <span class="math inline">\(T\)</span> is a bijection, it follows that <span class="math inline">\(\operatorname{ker}(T) = \{\vec{0}\}\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(2), <span class="math inline">\(T(\mathscr{B}) = \{T(v_1), \ldots,  T(v_n)\}\)</span> is a linearly independent set. Also, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>(1) and since <span class="math inline">\(T\)</span> is a bijection, <span class="math inline">\(W = \operatorname{im} T =  \operatorname{Span}(T(v_1), \ldots, T(v_n))\)</span>. Therefore <span class="math inline">\(T(\mathscr{B})\)</span> is a linearly independent spanning set for <span class="math inline">\(W\)</span>, and so <span class="math inline">\(T(\mathscr{B})\)</span> is a basis for <span class="math inline">\(W\)</span>.</p>
 <p>The converse is shown in Problem 3(c) on Problem Sheet II. ◻</p>
 </div>
 <div class="cor">
 <p><span id="thm-isomorphism" label="thm-isomorphism"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. Then <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are isomorphic if and only if <span class="math inline">\(\dim V = \dim W\)</span>.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> (<span class="math inline">\(\Rightarrow\)</span>) If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are isomorphic, then there is an isomorphism <span class="math inline">\(T: V \to W\)</span>. If <span class="math inline">\(\mathscr{B}\)</span> is any basis for <span class="math inline">\(V\)</span>, then <span class="math inline">\(T(\mathscr{B})\)</span> is a basis for <span class="math inline">\(W\)</span> by <a href="http://example.org/04-linear-transf/#thm-bijection-basis">Theorem 4.4.2</a>. Since <span class="math inline">\(T\)</span> is a bijection, <span class="math inline">\(\dim W =  |T(\mathscr{B})| = |\mathscr{B}| = \dim V\)</span>.</p>
-<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\mathscr{B} = \{v_1, \ldots, v_m\}\)</span> is any basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathscr{C}  = \{w_1, ldots, w_n\}\)</span> is any basis for <span class="math inline">\(W\)</span>, then <span class="math inline">\(m = \dim V = \dim W = n\)</span>. So, by <a href="http://example.org/04-linear-transf/#thm-bijection-basis">Theorem 4.4.2</a>, the unique linear transformation <span class="math inline">\(T : V\to  W\)</span> such that <span class="math inline">\(T(v_i) = w_i\)</span> for every <span class="math inline">\(i\)</span> is an isomorphism. ◻</p>
+<p><em>Proof.</em> (<span class="math inline">\(\Rightarrow\)</span>) If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are isomorphic, then there is an isomorphism <span class="math inline">\(T: V \to W\)</span>. If <span class="math inline">\(\mathscr{B}\)</span> is any basis for <span class="math inline">\(V\)</span>, then <span class="math inline">\(T(\mathscr{B})\)</span> is a basis for <span class="math inline">\(W\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-bijection-basis">Theorem 4.4.2</a>. Since <span class="math inline">\(T\)</span> is a bijection, <span class="math inline">\(\dim W =  |T(\mathscr{B})| = |\mathscr{B}| = \dim V\)</span>.</p>
+<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\mathscr{B} = \{v_1, \ldots, v_m\}\)</span> is any basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathscr{C}  = \{w_1, ldots, w_n\}\)</span> is any basis for <span class="math inline">\(W\)</span>, then <span class="math inline">\(m = \dim V = \dim W = n\)</span>. So, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-bijection-basis">Theorem 4.4.2</a>, the unique linear transformation <span class="math inline">\(T : V\to  W\)</span> such that <span class="math inline">\(T(v_i) = w_i\)</span> for every <span class="math inline">\(i\)</span> is an isomorphism. ◻</p>
 </div>
 <div class="cor">
 <p><span id="cor-f-to-the-n" label="cor-f-to-the-n"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(\dim V = n\in \mathbb{N}\)</span>, then <span class="math inline">\(V\)</span> is isomorphic to <span class="math inline">\(F ^ n\)</span>.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> By <a href="http://example.org/04-linear-transf/#thm-isomorphism">Corollary 4.4.3</a>, <span class="math inline">\(V\)</span> is isomorphic to any vector space over <span class="math inline">\(F\)</span> of dimension <span class="math inline">\(\dim V = n\)</span>. We showed in <a href="http://example.org/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a> that <span class="math inline">\(F ^ n\)</span> is a vector space over <span class="math inline">\(F\)</span> and, in <a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_ex-standard-basis_Example-2.4.5">Example 2.4.5</a>, that <span class="math inline">\(\dim F ^ n = n\)</span>. ◻</p>
+<p><em>Proof.</em> By <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-isomorphism">Corollary 4.4.3</a>, <span class="math inline">\(V\)</span> is isomorphic to any vector space over <span class="math inline">\(F\)</span> of dimension <span class="math inline">\(\dim V = n\)</span>. We showed in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a> that <span class="math inline">\(F ^ n\)</span> is a vector space over <span class="math inline">\(F\)</span> and, in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_ex-standard-basis_Example-2.4.5">Example 2.4.5</a>, that <span class="math inline">\(\dim F ^ n = n\)</span>. ◻</p>
 </div>
 <div class="example">
-<p>We showed in <a href="http://example.org/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(1) that the set <span class="math inline">\(\mathcal{P}_n\)</span>, of polynomials with real coefficients and degree at most <span class="math inline">\(n\in \mathbb{N}\)</span>, <span class="math inline">\(n \geq 0\)</span>, is a vector space over <span class="math inline">\(\mathbb{R}\)</span> and, in <a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_ex-standard-basis_Example-2.4.5">Example 2.4.5</a>(2), that <span class="math inline">\(\dim \mathcal{P}_n = n + 1\)</span>. It follows by <a href="http://example.org/04-linear-transf/#cor-f-to-the-n">Corollary 4.4.4</a> that <span class="math inline">\(\mathcal{P}_n \cong \mathbb{R} ^ {n + 1}\)</span>.</p>
+<p>We showed in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(1) that the set <span class="math inline">\(\mathcal{P}_n\)</span>, of polynomials with real coefficients and degree at most <span class="math inline">\(n\in \mathbb{N}\)</span>, <span class="math inline">\(n \geq 0\)</span>, is a vector space over <span class="math inline">\(\mathbb{R}\)</span> and, in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_ex-standard-basis_Example-2.4.5">Example 2.4.5</a>(2), that <span class="math inline">\(\dim \mathcal{P}_n = n + 1\)</span>. It follows by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#cor-f-to-the-n">Corollary 4.4.4</a> that <span class="math inline">\(\mathcal{P}_n \cong \mathbb{R} ^ {n + 1}\)</span>.</p>
 </div>
 <div class="example">
-<p>We showed in <a href="http://example.org/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(2) that the set <span class="math inline">\(\mathbb{C}\)</span> is a vector space over <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\dim \mathbb{C} = 2\)</span>. It follows by <a href="http://example.org/04-linear-transf/#cor-f-to-the-n">Corollary 4.4.4</a> that <span class="math inline">\(\mathbb{C}\cong \mathbb{R} ^ {2}\)</span>.</p>
+<p>We showed in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(2) that the set <span class="math inline">\(\mathbb{C}\)</span> is a vector space over <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\dim \mathbb{C} = 2\)</span>. It follows by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#cor-f-to-the-n">Corollary 4.4.4</a> that <span class="math inline">\(\mathbb{C}\cong \mathbb{R} ^ {2}\)</span>.</p>
 </div>
 
 

@@ -21,84 +21,84 @@
 <ul>
     
     <li>
-      <a href="/">
+      <a href="/mt3501-lnotes/">
       
       Home
       </a>
     </li>
     
     <li>
-      <a href="/01-intro">
+      <a href="/mt3501-lnotes/01-intro">
       
       Section 1 - Intro
       </a>
     </li>
     
     <li>
-      <a href="/02-vector-spaces">
+      <a href="/mt3501-lnotes/02-vector-spaces">
       
       Section 2 - Vector spaces
       </a>
     </li>
     
     <li>
-      <a href="/03-algorithms-to-live-by">
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by">
       
       Section 3 - Algorithms to live by
       </a>
     </li>
     
     <li>
-      <a href="/04-linear-transf">
+      <a href="/mt3501-lnotes/04-linear-transf">
       
       Section 4 - Linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/05-l-v-w">
+      <a href="/mt3501-lnotes/05-l-v-w">
       
       Section 5 - The vector space of linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/06-direct-sums">
+      <a href="/mt3501-lnotes/06-direct-sums">
       
       Section 6 - Direct sums
       </a>
     </li>
     
     <li>
-      <a href="/07-dual-space">
+      <a href="/mt3501-lnotes/07-dual-space">
       
       Section 7 - The dual space
       </a>
     </li>
     
     <li>
-      <a href="/08-eigen-stuff">
+      <a href="/mt3501-lnotes/08-eigen-stuff">
       
       Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
       </a>
     </li>
     
     <li>
-      <a href="/09-diagonal">
+      <a href="/mt3501-lnotes/09-diagonal">
       
       Section 9 - Diagonalisation
       </a>
     </li>
     
     <li>
-      <a href="/10-jnf">
+      <a href="/mt3501-lnotes/10-jnf">
       
       Section 10 - Jordan normal form
       </a>
     </li>
     
     <li>
-      <a href="/11-inner-products">
+      <a href="/mt3501-lnotes/11-inner-products">
       
       Section 11 - Inner products
       </a>
@@ -215,7 +215,7 @@
 </ol>
 </div>
 <p>There can be many echelon matrices that are row-equivalent to a given matrix, but only one reduced row-echelon matrix.</p>
-<p><strong><em>Elementary column operations</em></strong>, <strong><em>column-equivalent</em></strong>, <strong><em>column-echelon</em></strong>, and <strong><em>reduced column-echelon</em></strong> are defined analogously to their “row” counterparts, and the analogue of <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2">Proposition 3.2.2</a> holds too.</p>
+<p><strong><em>Elementary column operations</em></strong>, <strong><em>column-equivalent</em></strong>, <strong><em>column-echelon</em></strong>, and <strong><em>reduced column-echelon</em></strong> are defined analogously to their “row” counterparts, and the analogue of <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2">Proposition 3.2.2</a> holds too.</p>
 <div class="defn">
 <p>If <span class="math inline">\(A\)</span> is an <span class="math inline">\(m \times n\)</span> matrix with entries from a field <span class="math inline">\(F\)</span>, then the set <span class="math inline">\(\mathcal{R}\)</span> of rows of <span class="math inline">\(A\)</span> can be viewed as row vectors in <span class="math inline">\(F ^ n\)</span>. The subspace of <span class="math inline">\(F ^ n\)</span> spanned by <span class="math inline">\(\mathcal{R}\)</span> is called the <strong><em>row-space</em></strong> of <span class="math inline">\(A\)</span>; and is denoted by <span class="math inline">\(\operatorname{Row}(A)\)</span>.</p>
 <p>If <span class="math inline">\(\mathcal{C}\)</span> is the set of columns of <span class="math inline">\(A\)</span>, then the <strong><em>column-space</em></strong> of <span class="math inline">\(A\)</span> is just <span class="math inline">\(\operatorname{Span}(\mathcal{C})\)</span> in <span class="math inline">\(F ^ m\)</span> and is denoted <span class="math inline">\(\operatorname{Col}(A)\)</span>.</p>
@@ -227,7 +227,7 @@
 <li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are column-equivalent if and only if <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Col}(B)\)</span>.</p></li>
 </ol>
 </div>
-<p>Another way of stating <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a>(1) is to say that the row-space of a matrix is <em>invariant</em> (i.e. does not change) under elementary row operations. Similarly, the column-space of a matrix is invariant under elementary column operations.</p>
+<p>Another way of stating <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a>(1) is to say that the row-space of a matrix is <em>invariant</em> (i.e. does not change) under elementary row operations. Similarly, the column-space of a matrix is invariant under elementary column operations.</p>
 <div class="examp">
 <p><span id="HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5" label="HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5"></span> Show that the column space of the matrix <span class="math display">\[A =
     \begin{pmatrix}
@@ -246,7 +246,7 @@
 <p><span id="HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6" label="HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6"></span> The non-zero rows in a row echelon form matrix <span class="math inline">\(E\)</span> form a basis for the row-space <span class="math inline">\(\operatorname{Row}(E)\)</span>.</p>
 <p>The non-zero columns in a column echelon form matrix <span class="math inline">\(E\)</span> form a basis for the column-space <span class="math inline">\(\operatorname{Col}(E)\)</span>.</p>
 </div>
-<p>We end this section by stating a theorem that you might not have see before, but which in any case you might have used. We saw in <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5">Example 3.2.5</a> that row-operations do not preserve the column-space of a matrix, but they do preserve its null-space.</p>
+<p>We end this section by stating a theorem that you might not have see before, but which in any case you might have used. We saw in <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5">Example 3.2.5</a> that row-operations do not preserve the column-space of a matrix, but they do preserve its null-space.</p>
 <div class="thm">
 <p><span id="HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7" label="HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7"></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be row-equivalent <span class="math inline">\(m \times n\)</span> matrices with entries in a field <span class="math inline">\(F\)</span>, and let <span class="math inline">\(\vec{v}\in F ^ n\)</span>. Then <span class="math inline">\(A\vec{v} = \vec{0}\)</span> if and only if <span class="math inline">\(B\vec{v} = \vec{0}\)</span>.</p>
 </div>
@@ -391,11 +391,11 @@
 </ol>
 </div>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2" label="HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2"></span> <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a> is valid.</p>
+<p><span id="HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2" label="HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a> is valid.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> [Omitted from the course.] Suppose that we enter the vectors in <span class="math inline">\(\mathscr{A}\)</span> as columns in a matrix <span class="math inline">\(A\)</span> in part (1), and perform elementary column operations in part (2) to obtain a matrix <span class="math inline">\(E\)</span> in column echelon form. Then, by <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a>, <span class="math inline">\(A\)</span> and <span class="math inline">\(E\)</span> are column-equivalent, and so <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Col}(E)\)</span>. Hence, by <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6">Proposition 3.2.6</a>, the non-zero columns in <span class="math inline">\(E\)</span> are a basis for <span class="math inline">\(\operatorname{Col}(E)\)</span>. But <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Span}(\mathscr{A})\)</span> by definition and <span class="math inline">\(\mathscr{A}\)</span> is linearly independent if and only if the <span class="math inline">\(\operatorname{dim}\operatorname{Span}(\mathscr{A}) = |\mathscr{A}|\)</span> if and only if the number of non-zero columns in <span class="math inline">\(E\)</span>, which equals <span class="math inline">\(\operatorname{dim}\operatorname{Col}(E) = \operatorname{dim}\operatorname{Span}(\mathscr{A})  = |\mathscr{A}|\)</span>.</p>
-<p>If we perform row operations rather than column operations in <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(2) or obtain the row echelon form for <span class="math inline">\(A\)</span>, then we must use the fact that the row and column rank of a matrix (see Theorem 7.5.3) are equal to prove that <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a> is valid. ◻</p>
+<p><em>Proof.</em> [Omitted from the course.] Suppose that we enter the vectors in <span class="math inline">\(\mathscr{A}\)</span> as columns in a matrix <span class="math inline">\(A\)</span> in part (1), and perform elementary column operations in part (2) to obtain a matrix <span class="math inline">\(E\)</span> in column echelon form. Then, by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a>, <span class="math inline">\(A\)</span> and <span class="math inline">\(E\)</span> are column-equivalent, and so <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Col}(E)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6">Proposition 3.2.6</a>, the non-zero columns in <span class="math inline">\(E\)</span> are a basis for <span class="math inline">\(\operatorname{Col}(E)\)</span>. But <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Span}(\mathscr{A})\)</span> by definition and <span class="math inline">\(\mathscr{A}\)</span> is linearly independent if and only if the <span class="math inline">\(\operatorname{dim}\operatorname{Span}(\mathscr{A}) = |\mathscr{A}|\)</span> if and only if the number of non-zero columns in <span class="math inline">\(E\)</span>, which equals <span class="math inline">\(\operatorname{dim}\operatorname{Col}(E) = \operatorname{dim}\operatorname{Span}(\mathscr{A})  = |\mathscr{A}|\)</span>.</p>
+<p>If we perform row operations rather than column operations in <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(2) or obtain the row echelon form for <span class="math inline">\(A\)</span>, then we must use the fact that the row and column rank of a matrix (see Theorem 7.5.3) are equal to prove that <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a> is valid. ◻</p>
 </div>
 <div class="exampjupyter">
 <p>Is the collection <span class="math display">\[\mathscr{A} =
@@ -407,7 +407,7 @@
 </div>
 <div class="solution">
 <p>We must put the vectors in <span class="math inline">\(\mathscr{A}\)</span> in a matrix <span class="math inline">\(A\)</span>, then perform elementary operations to <span class="math inline">\(A\)</span> to put it into echelon form. The set <span class="math inline">\(\mathscr{A}\)</span> is linearly independent if and only if the number of non-zero rows in the echelon form of <span class="math inline">\(A\)</span> is <span class="math inline">\(3\)</span>.</p>
-<p>Do we enter the vectors as rows or columns of <span class="math inline">\(A\)</span>? Do we perform row operations or column operations? What is valid here exactly? The argument in <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2">Theorem 3.3.2</a> says that it does not matter, and that all approaches are valid here.</p>
+<p>Do we enter the vectors as rows or columns of <span class="math inline">\(A\)</span>? Do we perform row operations or column operations? What is valid here exactly? The argument in <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2">Theorem 3.3.2</a> says that it does not matter, and that all approaches are valid here.</p>
 <p>Set <span class="math inline">\(A\)</span> to be the matrix with rows equal to <span class="math inline">\(\mathscr{A}\)</span>: <span class="math display">\[A =
     \begin{pmatrix}
       2 &amp; 1 &amp; 0 &amp; 0 \\
@@ -508,16 +508,16 @@
   \end{pmatrix}\right\}
     \subseteq F ^ n.\]</span></p>
 <ol type="1">
-<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(1).</p></li>
-<li><p>Perform elementary row operations or elementary column operations to the matrix from step (1) until it is in row or column echelon form; this is identical to <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(2).</p></li>
+<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(1).</p></li>
+<li><p>Perform elementary row operations or elementary column operations to the matrix from step (1) until it is in row or column echelon form; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(2).</p></li>
 <li><p>The number of non-zero rows in the row echelon form of the matrix from step (1) is the dimension of the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>. The number of non-zero columns in the column echelon form of the matrix from step (1) is the dimension of the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p></li>
 </ol>
 </div>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2" label="HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2"></span> <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1">Algorithm 3.4.1</a> is valid.</p>
+<p><span id="HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2" label="HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1">Algorithm 3.4.1</a> is valid.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> In the proof of <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2">Theorem 3.3.2</a> we showed that if <span class="math inline">\(E\)</span> is the column echelon form of the matrix <span class="math inline">\(A\)</span> with columns equal to the vectors in <span class="math inline">\(\mathscr{A}\)</span>, then <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E) = \operatorname{dim} \operatorname{Span}(\mathscr{A})\)</span> and that <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E)\)</span> is the number of non-zero columns in <span class="math inline">\(E\)</span>. ◻</p>
+<p><em>Proof.</em> In the proof of <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2">Theorem 3.3.2</a> we showed that if <span class="math inline">\(E\)</span> is the column echelon form of the matrix <span class="math inline">\(A\)</span> with columns equal to the vectors in <span class="math inline">\(\mathscr{A}\)</span>, then <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E) = \operatorname{dim} \operatorname{Span}(\mathscr{A})\)</span> and that <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E)\)</span> is the number of non-zero columns in <span class="math inline">\(E\)</span>. ◻</p>
 </div>
 <div class="exampjupyter">
 <p>Find the dimension of the subspace of <span class="math inline">\(\mathbb{R} ^ 3\)</span> spanned by the vectors <span class="math display">\[\begin{pmatrix}
@@ -648,17 +648,17 @@
     \begin{pmatrix} v_{1,m} \\  v_{2, m}\\\vdots \\vec{v}_{n, m} \end{pmatrix}  \right\}
     \subseteq F ^ n.\]</span></p>
 <ol type="1">
-<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(1).</p></li>
+<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1">Algorithm 3.3.1</a>(1).</p></li>
 <li><p>If in step (1) you entered <span class="math inline">\(\mathscr{A}\)</span> as rows, then perform elementary row operations to obtain the matrix in row echelon form. If in step (1) you entered <span class="math inline">\(\mathscr{A}\)</span> as columns, then perform elementary column operations to obtain the matrix in column echelon form.</p></li>
 <li><p>The non-zero rows in the row echelon form of the matrix from step (1) is a basis for the row-space of that matrix, which is also the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p>
 <p>The non-zero columns in the column echelon form of the matrix from step (1) is a basis for the column-space of that matrix, which is also the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p></li>
 </ol>
 </div>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2" label="HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2"></span> <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1">Algorithm 3.5.1</a> is valid.</p>
+<p><span id="HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2" label="HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1">Algorithm 3.5.1</a> is valid.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Suppose that the vectors in <span class="math inline">\(\mathscr{A}\)</span> are entered as the rows in a matrix <span class="math inline">\(A\)</span>. Then part (2) of the algorithm says that we must perform elementary row operations to <span class="math inline">\(A\)</span> to obtain a matrix <span class="math inline">\(E\)</span> in row-echelon form for <span class="math inline">\(A\)</span>. It follows by <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a> that <span class="math inline">\(\operatorname{Row}(A) =  \operatorname{Row}(E)\)</span> and by <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2">Proposition 3.2.2</a> that the non-zero rows of <span class="math inline">\(E\)</span> form a basis for <span class="math inline">\(\operatorname{Row}(E)\)</span>.</p>
+<p><em>Proof.</em> Suppose that the vectors in <span class="math inline">\(\mathscr{A}\)</span> are entered as the rows in a matrix <span class="math inline">\(A\)</span>. Then part (2) of the algorithm says that we must perform elementary row operations to <span class="math inline">\(A\)</span> to obtain a matrix <span class="math inline">\(E\)</span> in row-echelon form for <span class="math inline">\(A\)</span>. It follows by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4">Proposition 3.2.4</a> that <span class="math inline">\(\operatorname{Row}(A) =  \operatorname{Row}(E)\)</span> and by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2">Proposition 3.2.2</a> that the non-zero rows of <span class="math inline">\(E\)</span> form a basis for <span class="math inline">\(\operatorname{Row}(E)\)</span>.</p>
 <p>The proof using columns instead of rows is similar. ◻</p>
 </div>
 <div class="omittedexampjupyter">
@@ -749,7 +749,7 @@
     2\alpha + \beta + \gamma &amp; = &amp; 0 \\
     -\gamma &amp; = &amp; 0 \\
     -\beta  &amp; = &amp; 0
-  \end{aligned}\]</span> and so <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>, and the vectors <span class="math inline">\(\vec{w}_1\)</span>, <span class="math inline">\(\vec{w}_2\)</span>, and <span class="math inline">\(\vec{w}_3\)</span> are linearly independent. It follows from <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1">Algorithm 3.5.1</a> that <span class="math inline">\(\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}\)</span> is a basis for <span class="math inline">\(U\)</span> and that <span class="math inline">\(\operatorname{dim} U = 3\)</span>.</p>
+  \end{aligned}\]</span> and so <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>, and the vectors <span class="math inline">\(\vec{w}_1\)</span>, <span class="math inline">\(\vec{w}_2\)</span>, and <span class="math inline">\(\vec{w}_3\)</span> are linearly independent. It follows from <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1">Algorithm 3.5.1</a> that <span class="math inline">\(\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}\)</span> is a basis for <span class="math inline">\(U\)</span> and that <span class="math inline">\(\operatorname{dim} U = 3\)</span>.</p>
 <p>It is possible to double check that <span class="math inline">\(\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3) = U\)</span> by showing that <span class="math inline">\(\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4, \vec{v}_5\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)\)</span>. Since <span class="math inline">\(\vec{v}_4 =  \vec{w}_2\)</span> and <span class="math inline">\(\vec{v}_5 = \vec{w}_3\)</span>, it suffices to show that <span class="math inline">\(\vec{v}_1, \vec{v}_2, \vec{v}_3\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)\)</span>. This follows because: <span class="math display">\[\begin{aligned}
     \vec{v}_1 &amp; = &amp; \begin{pmatrix} 1 \\ -1 \\ 0 \\ 3 \end{pmatrix} = \vec{w}_1 - 3 \vec{w}_2 \\
     \vec{v}_2 &amp; = &amp; \begin{pmatrix} 2 \\ 1 \\ 1 \\ 0 \end{pmatrix}  = \vec{w}_1 - \vec{w}_3 \\
@@ -784,13 +784,13 @@
 <li><p>Suppose that we entered <span class="math inline">\(\mathscr{A}\)</span> as the columns of <span class="math inline">\(A\)</span> and that <span class="math display">\[\vec{\alpha} = \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\\alpha_{m + 1} \end{pmatrix}
             \in F ^ {m + 1}\]</span> is such that <span class="math display">\[E\vec{\alpha} = \vec{0}.\]</span> This gives a homogeneous system of linear equations in the variables <span class="math inline">\(\alpha_{i}\)</span>, which can be solved for the variables <span class="math inline">\(\alpha_1, \ldots, \alpha_{m + 1}\)</span>. In particular, you have found a specific vector <span class="math inline">\(\vec{\alpha}\)</span> such that <span class="math inline">\(E\vec{\alpha} = \vec{0}\)</span>.</p>
 <p>If you entered <span class="math inline">\(\mathscr{A}\)</span> as the columns of <span class="math inline">\(A\)</span>, then the process is similar.</p></li>
-<li><p>By <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7">Theorem 3.2.7</a>, since <span class="math inline">\(A\)</span> and <span class="math inline">\(E\)</span> are row-equivalent, <span class="math inline">\(A \vec{\alpha} = \vec{0}\)</span> also. In particular, <span class="math display">\[\alpha_1\vec{v}_1 + \alpha_2\vec{v}_2 + \cdots + \alpha_m\vec{v}_m -
+<li><p>By <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7">Theorem 3.2.7</a>, since <span class="math inline">\(A\)</span> and <span class="math inline">\(E\)</span> are row-equivalent, <span class="math inline">\(A \vec{\alpha} = \vec{0}\)</span> also. In particular, <span class="math display">\[\alpha_1\vec{v}_1 + \alpha_2\vec{v}_2 + \cdots + \alpha_m\vec{v}_m -
             \alpha_{m + 1} \vec{u} = \vec{0},\]</span> and so rearranging, we obtain, <span class="math display">\[\vec{u} = \frac{\alpha_1}{\alpha_{m + 1}}\vec{v}_1 +
             \frac{\alpha_2}{\alpha_{m + 1}}\vec{v}_2 + \cdots +
             \frac{\alpha_m}{\alpha_{m + 1}}\vec{v}_m.\]</span></p></li>
 </ol>
 </div>
-<p>That <a href="http://example.org/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1">Algorithm 3.4.1</a> is valid, was shown in the statement of the algorithm.</p>
+<p>That <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1">Algorithm 3.4.1</a> is valid, was shown in the statement of the algorithm.</p>
 <div class="exampjupyter">
 <p>Suppose that <span class="math display">\[\vec{v}_1 = 
     \begin{pmatrix} 

@@ -21,84 +21,84 @@
 <ul>
     
     <li>
-      <a href="/">
+      <a href="/mt3501-lnotes/">
       
       Home
       </a>
     </li>
     
     <li>
-      <a href="/01-intro">
+      <a href="/mt3501-lnotes/01-intro">
       
       Section 1 - Intro
       </a>
     </li>
     
     <li>
-      <a href="/02-vector-spaces">
+      <a href="/mt3501-lnotes/02-vector-spaces">
       
       Section 2 - Vector spaces
       </a>
     </li>
     
     <li>
-      <a href="/03-algorithms-to-live-by">
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by">
       
       Section 3 - Algorithms to live by
       </a>
     </li>
     
     <li>
-      <a href="/04-linear-transf">
+      <a href="/mt3501-lnotes/04-linear-transf">
       
       Section 4 - Linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/05-l-v-w">
+      <a href="/mt3501-lnotes/05-l-v-w">
       
       Section 5 - The vector space of linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/06-direct-sums">
+      <a href="/mt3501-lnotes/06-direct-sums">
       
       Section 6 - Direct sums
       </a>
     </li>
     
     <li>
-      <a href="/07-dual-space">
+      <a href="/mt3501-lnotes/07-dual-space">
       
       Section 7 - The dual space
       </a>
     </li>
     
     <li>
-      <a href="/08-eigen-stuff">
+      <a href="/mt3501-lnotes/08-eigen-stuff">
       
       Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
       </a>
     </li>
     
     <li>
-      <a href="/09-diagonal">
+      <a href="/mt3501-lnotes/09-diagonal">
       
       Section 9 - Diagonalisation
       </a>
     </li>
     
     <li>
-      <a href="/10-jnf">
+      <a href="/mt3501-lnotes/10-jnf">
       
       Section 10 - Jordan normal form
       </a>
     </li>
     
     <li>
-      <a href="/11-inner-products">
+      <a href="/mt3501-lnotes/11-inner-products">
       
       Section 11 - Inner products
       </a>
@@ -184,7 +184,7 @@
 <p>Inner products are, in some sense, a generalisation of the notion of the <strong>angle</strong> between two vectors.</p>
 <div class="example">
 <p>The vector space <span class="math inline">\(\mathbb{R}^{n}\)</span> of column vectors of real numbers is an inner product space with respect to the usual <em>dot product</em>: <span class="math display">\[\left\langle \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}, \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} \right\rangle =
-    \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \cdot \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = \sum_{i=1}^{n} x_{i}y_{i}.\]</span> Note that if <span class="math inline">\(\vec{v} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}\)</span>, then <span class="math display">\[\langle \vec{v}, \vec{v} \rangle = \sum_{i=1}^{n} x_{i}^{2}\]</span> and from this <a href="http://example.org/11-inner-products/#defn-inner-product">Definition 11.2.1</a> (4) follows immediately.</p>
+    \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \cdot \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = \sum_{i=1}^{n} x_{i}y_{i}.\]</span> Note that if <span class="math inline">\(\vec{v} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}\)</span>, then <span class="math display">\[\langle \vec{v}, \vec{v} \rangle = \sum_{i=1}^{n} x_{i}^{2}\]</span> and from this <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#defn-inner-product">Definition 11.2.1</a> (4) follows immediately.</p>
 </div>
 <div class="example">
 <p>The vector space <span class="math inline">\(\mathbb{C} ^ n\)</span> is an inner product space with respect to <span class="math display">\[\left\langle \begin{pmatrix} z_1 \\ z_2 \\ \vdots \\ z_n \end{pmatrix}, \begin{pmatrix} w_1 \\ w_2 \\ \vdots \\ w_n \end{pmatrix} \right\rangle =
@@ -198,7 +198,7 @@
   \end{aligned}\]</span> for <span class="math inline">\(f,g \in C[a,b]\)</span> and <span class="math inline">\(\alpha \in \mathbb{R}\)</span>. In fact, <span class="math inline">\(C[a,b]\)</span> is an inner product space when we define <span class="math display">\[\langle f,g \rangle = \int_{a}^{b} f(x)g(x) \, \mathrm{d} x.\]</span> Since <span class="math inline">\(f(x)^{2} \geq 0\)</span> for all <span class="math inline">\(x\)</span>, we have <span class="math display">\[\langle f,f \rangle = \int_{a}^{b} f(x)^{2} \, \mathrm{d} x \geq 0.\]</span></p>
 </div>
 <div class="example">
-<p>The space <span class="math inline">\(\mathcal{P}_{n}\)</span> of real polynomials of degree at most <span class="math inline">\(n\)</span> is a real vector space of dimension <span class="math inline">\(n+1\)</span>. It becomes an inner product space by inheriting the inner product from <a href="http://example.org/11-inner-products/#ex-cont-inner-product">Example 11.2.4</a>: <span class="math display">\[\langle f,g \rangle = \int_{0}^{1} f(x) g(x) \, \mathrm{d} x\]</span> for real polynomials <span class="math inline">\(f(x),g(x) \in \mathcal{P}_{n}\)</span>.</p>
+<p>The space <span class="math inline">\(\mathcal{P}_{n}\)</span> of real polynomials of degree at most <span class="math inline">\(n\)</span> is a real vector space of dimension <span class="math inline">\(n+1\)</span>. It becomes an inner product space by inheriting the inner product from <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#ex-cont-inner-product">Example 11.2.4</a>: <span class="math display">\[\langle f,g \rangle = \int_{0}^{1} f(x) g(x) \, \mathrm{d} x\]</span> for real polynomials <span class="math inline">\(f(x),g(x) \in \mathcal{P}_{n}\)</span>.</p>
 <p>Similarly, the space <span class="math inline">\(\mathbb{C}[x]\)</span> of polynomials <span class="math display">\[f(x) = \alpha_{n} x^{n} + \alpha_{n-1} x^{n-1} + \dots +
     \alpha_{1} x + \alpha_{0}\]</span> where <span class="math inline">\(\alpha_{0}, \alpha_{1}, \dots, \alpha_{n} \in \mathbb{C}\)</span> becomes an inner product space when we define <span class="math display">\[\langle f,g \rangle = \int_{0}^{1} f(x) \overline{g(x)} \, \mathrm{d} x\]</span> where <span class="math display">\[\overline{f(x)} = \bar{\alpha}_{n} x^{n} + \bar{\alpha}_{n-1}
     x^{n-1} + \dots + \bar{\alpha}_{1} x + \bar{\alpha}_{0}.\]</span></p>
@@ -241,7 +241,7 @@
 <p><strong>(2).</strong> If <span class="math inline">\(\mathopen{|}v\mathclose{|} = \langle v,v \rangle &gt; 0\)</span>, then <span class="math inline">\(v \neq  \vec{0}\)</span> by positivity (part (4) of the definition of inner products). Conversely, if <span class="math inline">\(v\neq \vec{0}\)</span>, then <span class="math inline">\(\mathopen{|}v\mathclose{|} = \langle  v,v \rangle &gt; 0\)</span>, by definiteness (part (5) of the definition of inner products).</p>
 <p><strong>(3).</strong> This follows immediately from part (2). ◻</p>
 </div>
-<p>By <a href="http://example.org/11-inner-products/#lemma-norm-elementary">Lemma 11.3.2</a>(3), if <span class="math inline">\(u, v\in V\)</span> are arbitrary, then <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = 0\)</span> if and only if <span class="math inline">\(u - v = \vec{0}\)</span> if and only if <span class="math inline">\(u = v\)</span>. Hence we’ve established identity of indiscernibles for norms.</p>
+<p>By <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#lemma-norm-elementary">Lemma 11.3.2</a>(3), if <span class="math inline">\(u, v\in V\)</span> are arbitrary, then <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = 0\)</span> if and only if <span class="math inline">\(u - v = \vec{0}\)</span> if and only if <span class="math inline">\(u = v\)</span>. Hence we’ve established identity of indiscernibles for norms.</p>
 <div class="thm">
 <p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle  \cdot,\cdot \rangle\)</span>. Then <span class="math display">\[\mathopen{|}\langle u,v \rangle\mathclose{|} \leq \mathopen{|}u\mathclose{|} \cdot \mathopen{|}v\mathclose{|}\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
 </div>
@@ -288,7 +288,7 @@
                    &amp; = ( \mathopen{|}u\mathclose{|} + \mathopen{|}v\mathclose{|} )^{2}
   \end{aligned}\]</span> and taking square roots gives the result. ◻</p>
 </div>
-<p>If <span class="math inline">\(u, v, w\in V\)</span>, then <span class="math display">\[\mathopen{|}u - v\mathclose{|} = \mathopen{|}(u - w) + (w - v)\mathclose{|} \leq \mathopen{|}u - w\mathclose{|} + \mathopen{|}w - v\mathclose{|}\]</span> and so <a href="http://example.org/11-inner-products/#cor-triangle">Corollary 11.3.4</a> implies that norms satisfy the triangle inequality from the start of this section.</p>
+<p>If <span class="math inline">\(u, v, w\in V\)</span>, then <span class="math display">\[\mathopen{|}u - v\mathclose{|} = \mathopen{|}(u - w) + (w - v)\mathclose{|} \leq \mathopen{|}u - w\mathclose{|} + \mathopen{|}w - v\mathclose{|}\]</span> and so <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#cor-triangle">Corollary 11.3.4</a> implies that norms satisfy the triangle inequality from the start of this section.</p>
 <p>The triangle inequality is a fundamental observation that tells us we can use the norm to measure distance on an inner product space in the same way that modulus <span class="math inline">\(\mathopen{|}x\mathclose{|}\)</span> is used to measure distance on <span class="math inline">\(\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>. We can then perform analysis and speak of continuity and convergence. This topic is addressed in greater detail in the study of Functional Analysis.</p>
 <h2 id="orthogonality-and-orthonormal-bases">Orthogonality and orthonormal bases</h2>
 <div class="defn">
@@ -373,7 +373,7 @@
   \end{array}\]</span> Hence <span class="math display">\[\langle e_{k}, e_{j} \rangle = \left\langle
     \frac{1}{\mathopen{|}w_{k\mathclose{|}}}w_{k}, e_{j} \right\rangle =
     \frac{1}{\mathopen{|}w_{k\mathclose{|}}} \langle w_{k}, e_{j} \rangle = 0\]</span> for <span class="math inline">\(j = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(k-1\)</span>.</p>
-<p>We conclude that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is an orthonormal set. <a href="http://example.org/11-inner-products/#thm:orthog-linindep">Theorem 11.4.5</a> tells us that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is linearly independent and hence a basis for <span class="math inline">\(V\)</span> (since <span class="math inline">\(\dim V = n\)</span>). ◻</p>
+<p>We conclude that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is an orthonormal set. <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#thm:orthog-linindep">Theorem 11.4.5</a> tells us that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is linearly independent and hence a basis for <span class="math inline">\(V\)</span> (since <span class="math inline">\(\dim V = n\)</span>). ◻</p>
 </div>
 <div class="exampjupyter">
 <p>Consider <span class="math inline">\(\mathbb{R}^{3}\)</span> with the usual inner product. Find an orthonormal basis for the subspace <span class="math inline">\(U\)</span> spanned by the vectors <span class="math display">\[\vec{v}_{1} = \begin{pmatrix}
@@ -619,7 +619,7 @@
     \frac{1}{\surd2}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix},
     \frac{1}{\surd2}\begin{pmatrix} 0 \\ 0 \\ 1 \\ 1 \end{pmatrix},
     \frac{1}{2}\begin{pmatrix} 1 \\ 1 \\ 1 \\ -1 \end{pmatrix} \right\}\]</span> is the orthonormal basis for <span class="math inline">\(\mathbb{R}^{4}\)</span> obtained by applying the Gram–Schmidt Process to <span class="math inline">\(\mathscr{A}\)</span>.</p>
-<p>(2) In terms of the notation of (1),  <span class="math inline">\(U =  \operatorname{Span}(\vec{v}_{1},\vec{v}_{2})\)</span>. However, the method of the Gram–Schmidt Process (see the proof of <a href="http://example.org/11-inner-products/#thm:Gram-Schmidt">Theorem 11.4.6</a>) shows that <span class="math display">\[\operatorname{Span}(\vec{e}_{1}, \vec{e}_{2}) = \operatorname{Span}(\vec{v}_{1},
+<p>(2) In terms of the notation of (1),  <span class="math inline">\(U =  \operatorname{Span}(\vec{v}_{1},\vec{v}_{2})\)</span>. However, the method of the Gram–Schmidt Process (see the proof of <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#thm:Gram-Schmidt">Theorem 11.4.6</a>) shows that <span class="math display">\[\operatorname{Span}(\vec{e}_{1}, \vec{e}_{2}) = \operatorname{Span}(\vec{v}_{1},
       \vec{v}_{2}) = U.\]</span></p>
 <p>If <span class="math inline">\(\vec{v} = \alpha\vec{e}_{1} + \beta\vec{e}_{2} +  \gamma\vec{e}_{3} + \delta\vec{e}_{4}\)</span> is an arbitrary vector of <span class="math inline">\(\mathbb{R}^{4}\)</span> (expressed in terms of our orthonormal basis), then <span class="math display">\[\langle \vec{v}, \vec{e}_{1} \rangle = \alpha \qquad \text{and}
     \qquad \langle \vec{v}, \vec{e}_{2} \rangle = \beta.\]</span> Hence if <span class="math inline">\(\vec{v} \in U^{\perp}\)</span>, then in particular <span class="math inline">\(\alpha =  \beta = 0\)</span>, so <span class="math inline">\(U^{\perp} \subseteq \operatorname{Span}(\vec{e}_{3},  \vec{e}_{4})\)</span>. Conversely, if <span class="math inline">\(\vec{v} = \gamma\vec{e}_{3} +  \delta\vec{e}_{4} \in \operatorname{Span}(\vec{e}_{3}, \vec{e}_{4})\)</span>, then <span class="math display">\[\langle \zeta\vec{e}_{1} + \eta \vec{e}_{2}, \gamma\vec{e}_{3} +

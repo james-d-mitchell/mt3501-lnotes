@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contents on MT3501 Lecture Notes</title>
-    <link>http://example.org/</link>
+    <link>https://jdbm.me/mt3501-lnotes/</link>
     <description>Recent content in Contents on MT3501 Lecture Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jdbm.me/mt3501-lnotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://example.org/archives/</link>
+      <link>https://jdbm.me/mt3501-lnotes/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/archives/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>http://example.org/post/markdown-syntax/</link>
+      <link>https://jdbm.me/mt3501-lnotes/post/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/markdown-syntax/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/post/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Rich Content</title>
-      <link>http://example.org/post/rich-content/</link>
+      <link>https://jdbm.me/mt3501-lnotes/post/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/rich-content/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/post/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Placeholder Text</title>
-      <link>http://example.org/post/placeholder-text/</link>
+      <link>https://jdbm.me/mt3501-lnotes/post/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/placeholder-text/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/post/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Math Typesetting</title>
-      <link>http://example.org/post/math-typesetting/</link>
+      <link>https://jdbm.me/mt3501-lnotes/post/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/math-typesetting/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/post/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emoji Support</title>
-      <link>http://example.org/post/emoji-support/</link>
+      <link>https://jdbm.me/mt3501-lnotes/post/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/emoji-support/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/post/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/01-intro/</link>
+      <link>https://jdbm.me/mt3501-lnotes/01-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/01-intro/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/01-intro/</guid>
       <description>Introduction body { counter-reset: chapter 0; }  What is linear mathematics? The aims of this module are stated on the School website as:
  “This module continues the study of vector spaces and linear transformations begun in MT2501. It aims to show the importance of linearity in many areas of mathematics ranging from linear algebra through to geometric applications to linear operators and special functions. The main topics covered include: diagonalisation and the minimum polynomial; Jordan normal form; inner product spaces; orthonormal sets and the Gram-Schmidt process; adjoint and self-adjoint operators.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/02-vector-spaces/</link>
+      <link>https://jdbm.me/mt3501-lnotes/02-vector-spaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/02-vector-spaces/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/02-vector-spaces/</guid>
       <description>Vector spaces body { counter-reset: chapter 1; }  Definition and examples of vector spaces The first step in the definition of a vector space is to define what we mean by “scalars”.
  A field is a set \(F\) together with two binary operations \[\begin{aligned} F \times F &amp;amp; \to F &amp;amp; F \times F &amp;amp; \to F \\ (\alpha, \beta) &amp;amp; \mapsto \alpha + \beta &amp;amp; (\alpha,\beta) &amp;amp; \mapsto \alpha\beta \end{aligned}\] called addition and multiplication, respectively, such that the following hold:</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/03-algorithms-to-live-by/</link>
+      <link>https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/03-algorithms-to-live-by/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/</guid>
       <description>Algorithms to live by body { counter-reset: chapter 2; }  Preamble You learned one algorithm in MT2501, and this is really the only algorithm required for the linear algebra computations in this course too. The algorithm is Gaussian elimination. The following are the different types of problems you can solve using Gaussian elimination:
 Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is linearly independent or linearly dependent;</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/04-linear-transf/</link>
+      <link>https://jdbm.me/mt3501-lnotes/04-linear-transf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/04-linear-transf/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/04-linear-transf/</guid>
       <description>Linear transformations body { counter-reset: chapter 3; }  Definition and basic properties Linear transformations are functions between vector spaces that interact well with the vector space structure and probably the most important thing we study in linear algebra.
  Let \(V\) and \(W\) be vector spaces over the same field \(F\). A linear transformation from \(V\) to \(W\) is a function \(T : V \to W\) such that
 \(T(u+v) = T(u) + T(v)\) for all \(u,v \in V\), and</description>
@@ -104,20 +104,20 @@ Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is lin
     
     <item>
       <title></title>
-      <link>http://example.org/05-l-v-w/</link>
+      <link>https://jdbm.me/mt3501-lnotes/05-l-v-w/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/05-l-v-w/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/05-l-v-w/</guid>
       <description>The vector space of linear transformations body { counter-reset: chapter 4; }  \(\mathcal{L}(V, W)\) The theme of this part of the course is how to construct new vector spaces from existing ones.
  Let \(V\) and \(W\) be a vector spaces over a field \(F\) and let \(\mathcal{L}(V, W)\) denote the set of all linear transformations from \(V\) to \(W\). Then \(\mathcal{L}(V, W)\) is a vector space with addition and scalar multiplication are defined by \[(S + T)(v) = S(v) + T(v) \qquad\text{and}\qquad (\alpha T)(v) = \alpha T(v)\] for all \(v\in V\), and where \(S, T\in \mathcal{L}(V, W)\) and \(\alpha \in F\).</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/06-direct-sums/</link>
+      <link>https://jdbm.me/mt3501-lnotes/06-direct-sums/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/06-direct-sums/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/06-direct-sums/</guid>
       <description>Direct sums body { counter-reset: chapter 5; }  Definition and basic properties  Let \(V\) be a vector space and \(U_{1}\) and \(U_{2}\) be subspaces of \(V\). We say that \(V\) is the direct sum of \(U_{1}\) and \(U_{2}\), written \(V = U_{1} \oplus U_{2}\) if the following conditions hold:
 \(V = U_{1} + U_{2}\),
  \(U_{1} \cap U_{2} = \{\vec{0}\}\).
@@ -126,29 +126,29 @@ Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is lin
     
     <item>
       <title></title>
-      <link>http://example.org/07-dual-space/</link>
+      <link>https://jdbm.me/mt3501-lnotes/07-dual-space/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/07-dual-space/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/07-dual-space/</guid>
       <description>The dual space body { counter-reset: chapter 6; }  We saw in Theorem 5.1.1 that the set \(\mathcal{L}(V, W)\) of all linear transformations from a vector space \(V\) to a vector space \(W\) (over the same field \(F\)) is itself a vector space. One particular example of \(\mathcal{L}(V, W)\) plays a special role in linear mathematics, and this is the topic of this section. Recall that every field \(F\) is a vector space of dimension \(1\) over itself.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/08-eigen-stuff/</link>
+      <link>https://jdbm.me/mt3501-lnotes/08-eigen-stuff/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/08-eigen-stuff/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/08-eigen-stuff/</guid>
       <description>Eigenvectors, eigenvalues, and the characteristic polynomial body { counter-reset: chapter 7; }  Eigenvectors and eigenvalues  Let \(V\) be a vector space over a field \(F\) and let \(T : V \to V\) be a linear transformation. A non-zero vector \(v\) is an eigenvector for \(T\) with eigenvalue \(\lambda \in F\) if \[T(v) = \lambda v.\]
  Note that \(T(\vec{0}) = \vec{0} = \lambda\vec{0}\) for every \(\lambda \in F\), which is why \(v\) is non-zero in Definition 8.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/09-diagonal/</link>
+      <link>https://jdbm.me/mt3501-lnotes/09-diagonal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/09-diagonal/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/09-diagonal/</guid>
       <description>Diagonalisation of linear transformations body { counter-reset: chapter 8; }  In this section, we will discuss the diagonalisation of a linear transformation.
 Diagonalisability A linear transformation \(T : V \to V\) of a finite-dimensional vector space \(V\) is diagonalisable if there is a basis \(\mathscr{B}\) for \(V\) such that \(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\) is a diagonal matrix.
 A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\) such that \(P^{-1}AP\) is diagonal.</description>
@@ -156,19 +156,19 @@ A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\)
     
     <item>
       <title></title>
-      <link>http://example.org/10-jnf/</link>
+      <link>https://jdbm.me/mt3501-lnotes/10-jnf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/10-jnf/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/10-jnf/</guid>
       <description>Jordan normal form body { counter-reset: chapter 9; }  In the previous section we discussed at great length the diagonalisation of linear transformations. This is useful since it is much easier to work with diagonal matrices than arbitrary matrices. However, as we saw, not every linear transformation can be diagonalised. In this section, we discuss an alternative which, at least in the case of vector spaces over \(\mathbb{C}\), can be used for any linear transformation or matrix.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/11-inner-products/</link>
+      <link>https://jdbm.me/mt3501-lnotes/11-inner-products/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/11-inner-products/</guid>
+      <guid>https://jdbm.me/mt3501-lnotes/11-inner-products/</guid>
       <description>Inner product spaces body { counter-reset: chapter 10; }  In this section we consider the topic of inner product spaces. An “inner product” is essentially a generalisation of the dot product: \[\begin{pmatrix} x_1 \\ y_1 \\ z_1 \\ \end{pmatrix} \cdot \begin{pmatrix} x_2 \\ y_2 \\ z_2 \\ \end{pmatrix} = x_1x_2 + y_1y_2 + z_1z_2\] on \(\mathbb{R} ^ 3\). Inner products allow us to define the notion of “length” of a vector, and “angle” between vectors, in abstract vector spaces, not only in Euclidean spaces such as \(\mathbb{R} ^ 3\).</description>
     </item>
     

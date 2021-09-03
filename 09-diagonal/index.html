@@ -21,84 +21,84 @@
 <ul>
     
     <li>
-      <a href="/">
+      <a href="/mt3501-lnotes/">
       
       Home
       </a>
     </li>
     
     <li>
-      <a href="/01-intro">
+      <a href="/mt3501-lnotes/01-intro">
       
       Section 1 - Intro
       </a>
     </li>
     
     <li>
-      <a href="/02-vector-spaces">
+      <a href="/mt3501-lnotes/02-vector-spaces">
       
       Section 2 - Vector spaces
       </a>
     </li>
     
     <li>
-      <a href="/03-algorithms-to-live-by">
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by">
       
       Section 3 - Algorithms to live by
       </a>
     </li>
     
     <li>
-      <a href="/04-linear-transf">
+      <a href="/mt3501-lnotes/04-linear-transf">
       
       Section 4 - Linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/05-l-v-w">
+      <a href="/mt3501-lnotes/05-l-v-w">
       
       Section 5 - The vector space of linear transformations
       </a>
     </li>
     
     <li>
-      <a href="/06-direct-sums">
+      <a href="/mt3501-lnotes/06-direct-sums">
       
       Section 6 - Direct sums
       </a>
     </li>
     
     <li>
-      <a href="/07-dual-space">
+      <a href="/mt3501-lnotes/07-dual-space">
       
       Section 7 - The dual space
       </a>
     </li>
     
     <li>
-      <a href="/08-eigen-stuff">
+      <a href="/mt3501-lnotes/08-eigen-stuff">
       
       Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
       </a>
     </li>
     
     <li>
-      <a href="/09-diagonal">
+      <a href="/mt3501-lnotes/09-diagonal">
       
       Section 9 - Diagonalisation
       </a>
     </li>
     
     <li>
-      <a href="/10-jnf">
+      <a href="/mt3501-lnotes/10-jnf">
       
       Section 10 - Jordan normal form
       </a>
     </li>
     
     <li>
-      <a href="/11-inner-products">
+      <a href="/mt3501-lnotes/11-inner-products">
       
       Section 11 - Inner products
       </a>
@@ -207,7 +207,7 @@
 <div class="defn">
 <p><span id="de-min-poly" label="de-min-poly"></span> Let <span class="math inline">\(T : V \to V\)</span> be a linear transformation of an <span class="math inline">\(n\)</span>-dimensional vector space over the field <span class="math inline">\(F\)</span>. Then the monic polynomial <span class="math inline">\(m_T(x)\)</span> with coefficients in <span class="math inline">\(F\)</span> of smallest degree such that <span class="math inline">\(m_T(T) = 0\)</span> is called the <strong><em>minimum polynomial</em></strong> of <span class="math inline">\(T\)</span>.</p>
 </div>
-<p>It is not at all clear from the definition that the minimum polynomial of a linear transformation even exists; see <a href="http://example.org/09-diagonal/#prop-min-poly">Proposition 9.4.1</a> for a proof that it does.</p>
+<p>It is not at all clear from the definition that the minimum polynomial of a linear transformation even exists; see <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-min-poly">Proposition 9.4.1</a> for a proof that it does.</p>
 <p>The main theorem in this section is the following.</p>
 <div class="thm">
 <p><span id="thm-diagonalisation" label="thm-diagonalisation"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T: V\to V\)</span> be a linear transformation. Then the following are equivalent:</p>
@@ -225,7 +225,7 @@
 <li><p>if <span class="math inline">\(T\)</span> has <span class="math inline">\(n\)</span> distinct eigenvalues, then <span class="math inline">\(T\)</span> is diagonalisable.</p></li>
 </ol>
 </div>
-<p>We will prove <a href="http://example.org/09-diagonal/#thm-diagonalisation">Theorem 9.1.5</a> in the following three sections; we will do several examples in <a href="#section-diag-examples" data-reference-type="ref" data-reference="section-diag-examples">1.5</a>.</p>
+<p>We will prove <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm-diagonalisation">Theorem 9.1.5</a> in the following three sections; we will do several examples in <a href="#section-diag-examples" data-reference-type="ref" data-reference="section-diag-examples">1.5</a>.</p>
 <h2 id="basis-consisting-of-eigenvectors">Basis consisting of eigenvectors</h2>
 <div class="thm">
 <p><span id="thm-basis-eigenvectors" label="thm-basis-eigenvectors"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T: V\to V\)</span> be a linear transformation. Then <span class="math inline">\(T\)</span> is diagonalisable if and only if <span class="math inline">\(V\)</span> has a basis consisting of eigenvectors of <span class="math inline">\(T\)</span>.</p>
@@ -252,7 +252,7 @@
       0 &amp; \lambda_{2} &amp; \cdots &amp; 0 \\
       dots &amp; \vdots &amp; \ddots &amp; \vdots \\
       0 &amp; 0 &amp; \cdots &amp; \lambda_{n}
-    \end{pmatrix}\]</span> for some <span class="math inline">\(\lambda_{1},\lambda_{2},\dots,\lambda_{n} \in F\)</span> (possibly including repeats). The characteristic polynomial of <span class="math inline">\(T\)</span> does not depend on the choice of basis (<a href="http://example.org/08-eigen-stuff/#prop-char-poly-indep">Proposition 8.2.4</a>), so <span class="math display">\[\begin{aligned}
+    \end{pmatrix}\]</span> for some <span class="math inline">\(\lambda_{1},\lambda_{2},\dots,\lambda_{n} \in F\)</span> (possibly including repeats). The characteristic polynomial of <span class="math inline">\(T\)</span> does not depend on the choice of basis (<a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-char-poly-indep">Proposition 8.2.4</a>), so <span class="math display">\[\begin{aligned}
     c_{T}(x) = \det(xI-A) &amp; = \det 
     \begin{pmatrix}
       x - \lambda_{1} &amp; 0 &amp; \cdots &amp; 0\\
@@ -303,13 +303,13 @@
 </div>
 <div class="proof">
 <p><em>Proof.</em> (<span class="math inline">\(\Leftarrow\)</span>) Suppose that <span class="math display">\[c_{T}(x) = (x-\lambda_{1})^{a_{1}} (x-\lambda_{2})^{a_{2}} \dots
-    (x-\lambda_{k})^{a_{k}}\]</span> where <span class="math inline">\(\lambda_{1}\)</span>, <span class="math inline">\(\lambda_{2}\)</span>, …, <span class="math inline">\(\lambda_{k}\)</span> are the distinct eigenvalues of <span class="math inline">\(T\)</span>. By <a href="http://example.org/09-diagonal/#prop-alg-geo">Proposition 9.3.2</a>(1), <span class="math display">\[a_{1} + a_{2} + \cdots + a_{k} = n = \dim V.\]</span> Let <span class="math inline">\(g_{i} = \dim E_{\lambda_{i}}\)</span> be the geometric multiplicity of <span class="math inline">\(\lambda_{i}\)</span>.</p>
+    (x-\lambda_{k})^{a_{k}}\]</span> where <span class="math inline">\(\lambda_{1}\)</span>, <span class="math inline">\(\lambda_{2}\)</span>, …, <span class="math inline">\(\lambda_{k}\)</span> are the distinct eigenvalues of <span class="math inline">\(T\)</span>. By <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-alg-geo">Proposition 9.3.2</a>(1), <span class="math display">\[a_{1} + a_{2} + \cdots + a_{k} = n = \dim V.\]</span> Let <span class="math inline">\(g_{i} = \dim E_{\lambda_{i}}\)</span> be the geometric multiplicity of <span class="math inline">\(\lambda_{i}\)</span>.</p>
 <p>We assume for this implication that <span class="math inline">\(g_{i} = a_{i}\)</span> for all <span class="math inline">\(i\)</span>. Choose a basis <span class="math inline">\(\mathscr{B}_{i} = \{v_{i1}, v_{i2}, \ldots, v_{ig_i}\}\)</span> for each <span class="math inline">\(E_{\lambda_{i}}\)</span> and let <span class="math display">\[\mathscr{B} = \mathscr{B}_{1} \cup \mathscr{B}_{2} \cup \dots \cup \mathscr{B}_{k} = \{v_{ij} : i = 1, 2,
-    \ldots, k,\  j = 1, 2, \ldots, g_i\}.\]</span> We will show that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent in a moment. Assuming that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent, we have that <span class="math display">\[|\mathscr{B}| = g_1 + g_2 + \cdots + g_k = a_{1} + a_{2} + \cdots + a_{k} = n.\]</span> Hence <span class="math inline">\(\mathscr{B}\)</span> is a linearly independent set of size equal to the dimension of <span class="math inline">\(V\)</span>. Therefore <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(V\)</span> and it consists of eigenvectors for <span class="math inline">\(T\)</span>. Hence <span class="math inline">\(T\)</span> is diagonalisable by <a href="http://example.org/09-diagonal/#thm-basis-eigenvectors">Theorem 9.2.1</a>.</p>
+    \ldots, k,\  j = 1, 2, \ldots, g_i\}.\]</span> We will show that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent in a moment. Assuming that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent, we have that <span class="math display">\[|\mathscr{B}| = g_1 + g_2 + \cdots + g_k = a_{1} + a_{2} + \cdots + a_{k} = n.\]</span> Hence <span class="math inline">\(\mathscr{B}\)</span> is a linearly independent set of size equal to the dimension of <span class="math inline">\(V\)</span>. Therefore <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(V\)</span> and it consists of eigenvectors for <span class="math inline">\(T\)</span>. Hence <span class="math inline">\(T\)</span> is diagonalisable by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm-basis-eigenvectors">Theorem 9.2.1</a>.</p>
 <p>We conclude the proof by showing that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Suppose <span class="math display">\[\sum_{\substack{1\leq i\leq k\\1\leq j \leq g_{i}}} \alpha_{ij}
-    v_{ij} = ec{0}.\]</span> If <span class="math inline">\(w_{i} = \sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} \in E_{\lambda_i}\)</span>, then <span class="math display">\[w_{1} + w_{2} + \dots + w_{k} = ec{0}.\]</span> <a href="http://example.org/09-diagonal/#lemma-eigenvectors-linear-indep">Lemma 9.3.3</a> says that eigenvectors for distinct eigenvalues are linearly independent, so the <span class="math inline">\(w_{i}\)</span> cannot be eigenvectors. Since <span class="math inline">\(w_i\in E_{\lambda_i}\)</span>, and the only non-eigenvector in <span class="math inline">\(E_{\lambda_i}\)</span> is <span class="math inline">\(ec{0}\)</span>, it follows that <span class="math inline">\(w_{i} = \vec{0}\)</span> for all <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(k\)</span>. Hence <span class="math display">\[\sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} = w_i = ec{0} \qquad \text{for~$i = 1$,
+    v_{ij} = ec{0}.\]</span> If <span class="math inline">\(w_{i} = \sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} \in E_{\lambda_i}\)</span>, then <span class="math display">\[w_{1} + w_{2} + \dots + w_{k} = ec{0}.\]</span> <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#lemma-eigenvectors-linear-indep">Lemma 9.3.3</a> says that eigenvectors for distinct eigenvalues are linearly independent, so the <span class="math inline">\(w_{i}\)</span> cannot be eigenvectors. Since <span class="math inline">\(w_i\in E_{\lambda_i}\)</span>, and the only non-eigenvector in <span class="math inline">\(E_{\lambda_i}\)</span> is <span class="math inline">\(ec{0}\)</span>, it follows that <span class="math inline">\(w_{i} = \vec{0}\)</span> for all <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(k\)</span>. Hence <span class="math display">\[\sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} = w_i = ec{0} \qquad \text{for~$i = 1$,
       $2$, \dots,~$k$}.\]</span> Since <span class="math inline">\(\mathscr{B}_{i}\)</span> is a basis for <span class="math inline">\(E_{\lambda_{i}}\)</span>, it is linearly independent and so <span class="math inline">\(\alpha_{ij} = 0\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. Hence <span class="math inline">\(\mathscr{B}\)</span> is a linearly independent set.</p>
-<p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(T\)</span> is diagonalisable. We have already observed that <span class="math inline">\(c_{T}(x)\)</span> is a product of linear factors (<a href="http://example.org/09-diagonal/#prop-diag-linfactors">Proposition 9.3.1</a>). We may therefore maintain the notation of the first part of this proof. Since <span class="math inline">\(T\)</span> is diagonalisable, there is a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> consisting of eigenvectors for <span class="math inline">\(T\)</span>. Let <span class="math inline">\(\mathscr{B}_{i} = \mathscr{B} \cap E_{\lambda_{i}}\)</span>, that is, <span class="math inline">\(\mathscr{B}_{i}\)</span> consists of those vectors from <span class="math inline">\(\mathscr{B}\)</span> that have eigenvalue <span class="math inline">\(\lambda_{i}\)</span>. As every vector in <span class="math inline">\(\mathscr{B}\)</span> is an eigenvector, <span class="math display">\[\mathscr{B} = \mathscr{B}_{1} \cup \mathscr{B}_{2} \cup \dots \cup \mathscr{B}_{k}.\]</span> As <span class="math inline">\(\mathscr{B}\)</span> is linearly independent, so is <span class="math inline">\(\mathscr{B}_{i}\)</span> and <a href="http://example.org/02-vector-spaces/#HUGO_REPLACE_lemma-dim-dim_Lemma-2.4.3">Lemma 2.4.3</a> tells us <span class="math display">\[|\mathscr{B}_{i}| \leq \dim E_{\lambda_{i}} = g_{i} .\]</span> Hence <span class="math display">\[n = |\mathscr{B}| = |\mathscr{B}_{1}| + |\mathscr{B}_{2}| + \dots +
+<p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(T\)</span> is diagonalisable. We have already observed that <span class="math inline">\(c_{T}(x)\)</span> is a product of linear factors (<a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-diag-linfactors">Proposition 9.3.1</a>). We may therefore maintain the notation of the first part of this proof. Since <span class="math inline">\(T\)</span> is diagonalisable, there is a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> consisting of eigenvectors for <span class="math inline">\(T\)</span>. Let <span class="math inline">\(\mathscr{B}_{i} = \mathscr{B} \cap E_{\lambda_{i}}\)</span>, that is, <span class="math inline">\(\mathscr{B}_{i}\)</span> consists of those vectors from <span class="math inline">\(\mathscr{B}\)</span> that have eigenvalue <span class="math inline">\(\lambda_{i}\)</span>. As every vector in <span class="math inline">\(\mathscr{B}\)</span> is an eigenvector, <span class="math display">\[\mathscr{B} = \mathscr{B}_{1} \cup \mathscr{B}_{2} \cup \dots \cup \mathscr{B}_{k}.\]</span> As <span class="math inline">\(\mathscr{B}\)</span> is linearly independent, so is <span class="math inline">\(\mathscr{B}_{i}\)</span> and <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_lemma-dim-dim_Lemma-2.4.3">Lemma 2.4.3</a> tells us <span class="math display">\[|\mathscr{B}_{i}| \leq \dim E_{\lambda_{i}} = g_{i} .\]</span> Hence <span class="math display">\[n = |\mathscr{B}| = |\mathscr{B}_{1}| + |\mathscr{B}_{2}| + \dots +
     |\mathscr{B}_{k}| \leq g_{1} + g_{2} + \dots + g_{k}.\]</span> But <span class="math inline">\(g_{i} \leq a_{i}\)</span> and <span class="math inline">\(a_{1} + a_{2} + \dots + a_{k} = n\)</span>, so we deduce <span class="math inline">\(g_{i} = a_{i}\)</span> for all <span class="math inline">\(i\)</span>. ◻</p>
 </div>
 <h2 id="minimum-polynomial">Minimum polynomial</h2>
@@ -340,7 +340,7 @@
 </div>
 <div class="proof">
 <p><em>Proof.</em> <strong>(1).</strong> Attempt to divide <span class="math inline">\(f(x)\)</span> by the minimum polynomial <span class="math inline">\(m_{T}(x)\)</span>: <span class="math display">\[f(x) = m_{T}(x) q(x) + r(x)\]</span> for some polynomials <span class="math inline">\(q(x)\)</span> and <span class="math inline">\(r(x)\)</span> with either <span class="math inline">\(r(x) = 0\)</span> or <span class="math inline">\(\deg r(x) &lt; \deg m_{T}(x)\)</span> (possible by the Division Algorithm for polynomials). Substituting the transformation <span class="math inline">\(T\)</span> for the variable <span class="math inline">\(x\)</span> gives <span class="math display">\[0 = f(T) = m_{T}(T) q(T) + r(T) = r(T)\]</span> since <span class="math inline">\(m_{T}(T) = 0\)</span> by definition. But <span class="math inline">\(m_{T}\)</span> has the smallest degree among non-zero polynomials <span class="math inline">\(f\)</span> such that <span class="math inline">\(f(T) = 0\)</span>. If <span class="math inline">\(r(x)\not=0\)</span>, then <span class="math inline">\(r\)</span> is a polynomial with <span class="math inline">\(\deg r(x) &lt; \deg m_{T}(x)\)</span> and <span class="math inline">\(r(T) = 0\)</span>, which is a contradiction. Hence <span class="math inline">\(r(x) = 0\)</span> and so <span class="math display">\[f(x) = m_{T}(x) q(x).\]</span> In other words, <span class="math inline">\(m_{T}(x)\)</span> divides <span class="math inline">\(f(x)\)</span>.</p>
-<p><strong>(2).</strong> By the Cayley–Hamilton Theorem (<a href="http://example.org/08-eigen-stuff/#thm-cayley-hamilton">Theorem 8.4.1</a>), <span class="math inline">\(c_T(T) = 0\)</span>, and so, by part (1), <span class="math inline">\(m_T(x)\)</span> divides <span class="math inline">\(c_T(x)\)</span>.</p>
+<p><strong>(2).</strong> By the Cayley–Hamilton Theorem (<a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#thm-cayley-hamilton">Theorem 8.4.1</a>), <span class="math inline">\(c_T(T) = 0\)</span>, and so, by part (1), <span class="math inline">\(m_T(x)\)</span> divides <span class="math inline">\(c_T(x)\)</span>.</p>
 <p><strong>(3).</strong> Let <span class="math inline">\(\lambda\)</span> be a root of <span class="math inline">\(m_{T}(x)\)</span>. Then <span class="math inline">\(m_T(x) = (x-\lambda)f(x)\)</span> for some polynomial <span class="math inline">\(f\)</span> with degree <span class="math inline">\(\deg m_T(x) - 1\)</span>. By part (2), <span class="math inline">\(m_T(x)\)</span> divides <span class="math inline">\(c_T(x)\)</span> and so <span class="math inline">\(c_T(x) = m_T(x) g(x)\)</span> for some polynomial <span class="math inline">\(g\)</span>. It follows that <span class="math display">\[c_T(x) = m_T(x)\ g(x) = (x-\lambda)\ f(x)\ g(x)\]</span> and so <span class="math inline">\(\lambda\)</span> is a root of <span class="math inline">\(c_T(x)\)</span> also. ◻</p>
 </div>
 <div class="lemma">
@@ -383,7 +383,7 @@
       0      &amp; \cdots &amp; 0      \\
       dots &amp;        &amp; \vdots \\
       0      &amp; \cdots &amp; 0
-    \end{pmatrix} = 0,\]</span> so <span class="math display">\[(T-\lambda_{1}I) (T-\lambda_{2}I) \cdots (T-\lambda_{k}I) = 0.\]</span> Thus <span class="math inline">\(m_{T}(x)\)</span> divides <span class="math inline">\((x-\lambda_{1})(x-\lambda_{2})\cdots(x-\lambda_{k})\)</span> by <a href="http://example.org/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2). Hence <span class="math inline">\(m_{T}(x)\)</span> is a product of distinct linear factors.</p>
+    \end{pmatrix} = 0,\]</span> so <span class="math display">\[(T-\lambda_{1}I) (T-\lambda_{2}I) \cdots (T-\lambda_{k}I) = 0.\]</span> Thus <span class="math inline">\(m_{T}(x)\)</span> divides <span class="math inline">\((x-\lambda_{1})(x-\lambda_{2})\cdots(x-\lambda_{k})\)</span> by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2). Hence <span class="math inline">\(m_{T}(x)\)</span> is a product of distinct linear factors.</p>
 <p>(<span class="math inline">\(\Leftarrow\)</span>) Suppose that the minimum polynomial of <span class="math inline">\(T\)</span> consists of distinct linear factors. Then <span class="math display">\[m_T(T) = (T - \lambda_1 I)\cdots (T - \lambda_k I)\]</span> for some <span class="math inline">\(\lambda_1, \lambda_2, \ldots, \lambda_k\in F\)</span>. Also by the definition of the minimum polynomial <span class="math inline">\(m_T(T)\)</span> is the zero linear transformation. Hence <span class="math display">\[\begin{array}{rclr}
       \dim V
        &amp; =                                                        &amp; \dim\ker (T - \lambda_1 I)\cdots (T - \lambda_k I)
@@ -402,7 +402,7 @@
        &amp; \leq                                                     &amp; a_1 + \cdots + a_k                                 &amp; \text{by \cref{prop-alg-geo}(2)} \\
        &amp; \leq                                                     &amp; \deg c_T(x)                                                                             \\
        &amp; \leq                                                     &amp; \dim V                                                                                  \\
-    \end{array}\]</span> yielding equality throughout. Hence <span class="math inline">\(a_1 + \cdots + a_k = \deg c_T(x)\)</span> and so <span class="math inline">\(c_T(x)\)</span> is a product of linear factors. Finally, since <span class="math inline">\(g_i \leq a_i\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(a_1 + \cdots + a_k = g_1 + \cdots + g_k\)</span>, it follows that <span class="math inline">\(a_i = g_i\)</span> for all <span class="math inline">\(i\)</span>. Hence, by <a href="http://example.org/09-diagonal/#thm-diag-algebraic-geometric">Theorem 9.3.4</a>, <span class="math inline">\(T\)</span> is diagonalisable. ◻</p>
+    \end{array}\]</span> yielding equality throughout. Hence <span class="math inline">\(a_1 + \cdots + a_k = \deg c_T(x)\)</span> and so <span class="math inline">\(c_T(x)\)</span> is a product of linear factors. Finally, since <span class="math inline">\(g_i \leq a_i\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(a_1 + \cdots + a_k = g_1 + \cdots + g_k\)</span>, it follows that <span class="math inline">\(a_i = g_i\)</span> for all <span class="math inline">\(i\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm-diag-algebraic-geometric">Theorem 9.3.4</a>, <span class="math inline">\(T\)</span> is diagonalisable. ◻</p>
 </div>
 <h2 id="section-diag-examples">Examples</h2>
 <div class="exampjupyter">
@@ -413,7 +413,7 @@
     \end{pmatrix}.\]</span> Show that <span class="math inline">\(T\)</span> is not diagonalisable.</p>
 </div>
 <div class="solution">
-<p>By <a href="http://example.org/09-diagonal/#thm-diag-algebraic-geometric">Theorem 9.3.4</a>, <span class="math inline">\(T\)</span> is diagonalisable if and only if <span class="math inline">\(c_T(x)\)</span> is a product of linear factors and the algebraic multiplicity of every eigenvalue equals the geometric multiplicity.</p>
+<p>By <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm-diag-algebraic-geometric">Theorem 9.3.4</a>, <span class="math inline">\(T\)</span> is diagonalisable if and only if <span class="math inline">\(c_T(x)\)</span> is a product of linear factors and the algebraic multiplicity of every eigenvalue equals the geometric multiplicity.</p>
 <p>To find the characteristic polynomial: <span class="math display">\[\begin{aligned}
     c_{T}(x) = \det(xI-B) &amp; = \det \begin{pmatrix}
       x-8 &amp; -3  &amp; 0   \\
@@ -424,7 +424,7 @@
                           &amp; = (x-2) \left( (x-8)(x+7) + 54 \right)          \\
                           &amp; = (x-2) (x^{2}-x-2)                             \\
                           &amp; = (x+1)(x-2)^{2}.
-  \end{aligned}\]</span> Since the eigenvalues of <span class="math inline">\(T\)</span> correspond to the roots of the characteristic polynomial (<a href="http://example.org/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a>), it follows that the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(2\)</span>. The algebraic multiplicities are <span class="math inline">\(a_{-1} = 1\)</span> and <span class="math inline">\(a_{2} = 2\)</span>.</p>
+  \end{aligned}\]</span> Since the eigenvalues of <span class="math inline">\(T\)</span> correspond to the roots of the characteristic polynomial (<a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a>), it follows that the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(2\)</span>. The algebraic multiplicities are <span class="math inline">\(a_{-1} = 1\)</span> and <span class="math inline">\(a_{2} = 2\)</span>.</p>
 <p><span class="math inline">\(\mathbf{\lambda = -1.}\)</span> Since <span class="math inline">\(g_{-1} \leq a_{-1}\leq 1\)</span> and because <span class="math inline">\(g_{-1} \geq 1\)</span>, it follows that <span class="math inline">\(g_{-1} = 1\)</span>.</p>
 <p>If <span class="math inline">\(\in E_{2}\)</span>, then <span class="math inline">\(T(\vec{v}) = 2\vec{v}\)</span> and so <span class="math inline">\((T-2I)(\vec{v}) =  \vec{0}\)</span>. In other words, <span class="math display">\[(B - 2I)
     \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
@@ -506,14 +506,14 @@
     \operatorname{Span}\left(\begin{pmatrix} 1 \\ 2 \\ 2 \\ \end{pmatrix}\right)\]</span> and we conclude <span class="math inline">\(\dim E_{1} = 1\)</span>. Thus the geometric multiplicity of <span class="math inline">\(1\)</span> is not equal to the algebraic multiplicity, so <span class="math inline">\(A\)</span> is not diagonalisable.</p>
 </div>
 <div class="examp">
-<p>In <a href="http://example.org/09-diagonal/#ex-non-diag">Example 9.5.1</a>, we showed that the linear transformation <span class="math inline">\(T : \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> whose matrix with respect to the standard basis for <span class="math inline">\(\mathbb{R} ^ 3\)</span> is <span class="math display">\[B = \begin{pmatrix}
+<p>In <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#ex-non-diag">Example 9.5.1</a>, we showed that the linear transformation <span class="math inline">\(T : \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> whose matrix with respect to the standard basis for <span class="math inline">\(\mathbb{R} ^ 3\)</span> is <span class="math display">\[B = \begin{pmatrix}
       8   &amp; 3  &amp; 0 \\
       -18 &amp; -7 &amp; 0 \\
       -9  &amp; -4 &amp; 2
     \end{pmatrix}\]</span> is not diagonalisable, and that <span class="math inline">\(c_T(x) = (x + 1)(x - 2) ^ 2\)</span>. Find the minimum polynomial of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="solution">
-<p>Since <span class="math inline">\(B\)</span> is not diagonalisable, it follows by <a href="http://example.org/09-diagonal/#thm:m-diag-condn">Theorem 9.4.4</a> that the minimum polynomial <span class="math inline">\(m_T(x)\)</span> is not a product of distinct linear factors. But, by <a href="http://example.org/09-diagonal/#prop-min-poly">Proposition 9.4.1</a>, <span class="math inline">\(m_T(x)\)</span> divides <span class="math inline">\(c_T(x)\)</span> and the roots of <span class="math inline">\(m_T(x)\)</span> equal those of <span class="math inline">\(c_T(x)\)</span>. Hence <span class="math inline">\(m_T(x) = (x + 1)(x  -2)\)</span> or <span class="math inline">\(m_T(x) = (x + 1)(x - 2) ^ 2 = c_T(x)\)</span>. The first possibility is a product of distinct linear factors, which we already ruled out, and so <span class="math inline">\(m_T(x) = c_T(x)\)</span>.</p>
+<p>Since <span class="math inline">\(B\)</span> is not diagonalisable, it follows by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm:m-diag-condn">Theorem 9.4.4</a> that the minimum polynomial <span class="math inline">\(m_T(x)\)</span> is not a product of distinct linear factors. But, by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-min-poly">Proposition 9.4.1</a>, <span class="math inline">\(m_T(x)\)</span> divides <span class="math inline">\(c_T(x)\)</span> and the roots of <span class="math inline">\(m_T(x)\)</span> equal those of <span class="math inline">\(c_T(x)\)</span>. Hence <span class="math inline">\(m_T(x) = (x + 1)(x  -2)\)</span> or <span class="math inline">\(m_T(x) = (x + 1)(x - 2) ^ 2 = c_T(x)\)</span>. The first possibility is a product of distinct linear factors, which we already ruled out, and so <span class="math inline">\(m_T(x) = c_T(x)\)</span>.</p>
 </div>
 <div class="exampjupyter">
 <p><span id="ex:diagonalise" label="ex:diagonalise"></span> Let <span class="math inline">\(T : \mathbb{R} ^ 3 \to \mathbb{R} ^ 3\)</span> be such that the matrix of <span class="math inline">\(T\)</span> with respect to the standard basis for <span class="math inline">\(\mathbb{R} ^ 3\)</span> is <span class="math display">\[A = \begin{pmatrix}
@@ -542,8 +542,8 @@
                          &amp; = (x-2)(x+1)(x-2)                              \\
                          &amp; = (x+1)(x-2)^{2},
           \end{aligned}\]</span> so <span class="math display">\[c_{T}(x) = (x+1)(x-2)^{2}.\]</span></p></li>
-<li><p><a href="http://example.org/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a> states the roots of <span class="math inline">\(c_T(x)\)</span> are in one-to-one correspondence with the eigenvalues of <span class="math inline">\(T\)</span>. Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-1\)</span> and <span class="math inline">\(2\)</span>.</p>
-<p><a href="http://example.org/09-diagonal/#prop-alg-geo">Proposition 9.3.2</a> states that <span class="math inline">\(T\)</span> is diagonalisable if and only if <span class="math inline">\(c_T(x)\)</span> is a product of linear factors and the algebraic multiplicity <span class="math inline">\(a_{\lambda}\)</span> of every eigenvalue <span class="math inline">\(\lambda\)</span> equals the geometric multiplicity <span class="math inline">\(g_{\lambda}\)</span> of <span class="math inline">\(\lambda\)</span>.</p>
+<li><p><a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a> states the roots of <span class="math inline">\(c_T(x)\)</span> are in one-to-one correspondence with the eigenvalues of <span class="math inline">\(T\)</span>. Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-1\)</span> and <span class="math inline">\(2\)</span>.</p>
+<p><a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-alg-geo">Proposition 9.3.2</a> states that <span class="math inline">\(T\)</span> is diagonalisable if and only if <span class="math inline">\(c_T(x)\)</span> is a product of linear factors and the algebraic multiplicity <span class="math inline">\(a_{\lambda}\)</span> of every eigenvalue <span class="math inline">\(\lambda\)</span> equals the geometric multiplicity <span class="math inline">\(g_{\lambda}\)</span> of <span class="math inline">\(\lambda\)</span>.</p>
 <p>We showed in part (1) that <span class="math inline">\(c_T(x)\)</span> is a product of linear factors, and so it suffices to show that <span class="math inline">\(a_{-1} = g_{-1} = 1\)</span> and <span class="math inline">\(a_{2} = g_{2} = 2\)</span>.</p>
 <p><span class="math inline">\(\mathbf{\lambda = -1.}\)</span> We want to find <span class="math inline">\(g_{-1} = \dim E_{-1} = \dim \ker (T + I)\)</span>. Since <span class="math inline">\(g_{-1} \leq a_{-1} = 1\)</span>, it suffices to show that <span class="math inline">\(g_{-1}  \not= 0\)</span>. But <span class="math display">\[(A + I)
             =
@@ -551,7 +551,7 @@
               9  &amp; 6  &amp; 0 \\
               -9 &amp; -6 &amp; 0 \\
               3  &amp; 3  &amp; 3
-            \end{pmatrix}\]</span> and clearly the row rank of <span class="math inline">\(A + I\)</span> is <span class="math inline">\(2\)</span>. Hence the column rank of <span class="math inline">\(A + I\)</span> is strictly less than <span class="math inline">\(3\)</span>, and so <span class="math inline">\(\dim \operatorname{im} (T  + I) &lt; 3\)</span> by <a href="http://example.org/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1) (the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A\)</span> equals <span class="math inline">\(\dim\operatorname{im} T\)</span>). Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim  \ker (T + I) &gt; 0\)</span>, and so <span class="math inline">\(g_{-1} = 1\)</span>.</p>
+            \end{pmatrix}\]</span> and clearly the row rank of <span class="math inline">\(A + I\)</span> is <span class="math inline">\(2\)</span>. Hence the column rank of <span class="math inline">\(A + I\)</span> is strictly less than <span class="math inline">\(3\)</span>, and so <span class="math inline">\(\dim \operatorname{im} (T  + I) &lt; 3\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1) (the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A\)</span> equals <span class="math inline">\(\dim\operatorname{im} T\)</span>). Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim  \ker (T + I) &gt; 0\)</span>, and so <span class="math inline">\(g_{-1} = 1\)</span>.</p>
 <p>[Note that an alternative (longer) solution to this would be to calculate the dimension of <span class="math inline">\(\dim E_{-1}\)</span> by finding a basis for it explicitly.]</p>
 <p><span class="math inline">\(\mathbf{\lambda = 2.}\)</span> In this case, we want to find <span class="math inline">\(g_2 = \dim E_{2} = \dim \ker (T - 2I)\)</span>. As in the previous case, <span class="math display">\[(A - 2I)
             \begin{pmatrix}
@@ -565,7 +565,7 @@
               0  &amp; 2 &amp; 0 \\
               0  &amp; 0 &amp; 2
             \end{pmatrix}.\]</span></p></li>
-<li><p>It follows by <a href="http://example.org/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) that <span class="math inline">\(m_T(x) =  (x+1)(x-2)\)</span> or <span class="math inline">\(m_T(x) = (x+1)(x-2)^{2}\)</span>. By part (2), we know that <span class="math inline">\(T\)</span> is diagonalisable, and so, by <a href="http://example.org/09-diagonal/#thm:m-diag-condn">Theorem 9.4.4</a>, <span class="math inline">\(m_T(x)\)</span> is a product of distinct linear factors, i.e. <span class="math inline">\(m_T(x) = (x + 1)(x - 2)\)</span>.</p>
+<li><p>It follows by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) that <span class="math inline">\(m_T(x) =  (x+1)(x-2)\)</span> or <span class="math inline">\(m_T(x) = (x+1)(x-2)^{2}\)</span>. By part (2), we know that <span class="math inline">\(T\)</span> is diagonalisable, and so, by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#thm:m-diag-condn">Theorem 9.4.4</a>, <span class="math inline">\(m_T(x)\)</span> is a product of distinct linear factors, i.e. <span class="math inline">\(m_T(x) = (x + 1)(x - 2)\)</span>.</p>
 <p>You can verify that <span class="math inline">\((A+I)(A-2I) = 0\)</span> as an exercise.</p></li>
 </ol>
 </div>
