@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-uk" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="../css/math.css">
+    
+    
+    <title>MT3501 Lecture Notes | </title>
+    <style type="text/css">
+  body {
+    font-size: 150%;
+    font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  }
+</style>
+
+</head>
+<body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
+
+<ul>
+    
+    <li>
+      <a href="/">
+      
+      Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/01-intro">
+      
+      Section 1 - Intro
+      </a>
+    </li>
+    
+    <li>
+      <a href="/02-vector-spaces">
+      
+      Section 2 - Vector spaces
+      </a>
+    </li>
+    
+    <li>
+      <a href="/03-algorithms-to-live-by">
+      
+      Section 3 - Algorithms to live by
+      </a>
+    </li>
+    
+    <li>
+      <a href="/04-linear-transf">
+      
+      Section 4 - Linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/05-l-v-w">
+      
+      Section 5 - The vector space of linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/06-direct-sums">
+      
+      Section 6 - Direct sums
+      </a>
+    </li>
+    
+    <li>
+      <a href="/07-dual-space">
+      
+      Section 7 - The dual space
+      </a>
+    </li>
+    
+    <li>
+      <a href="/08-eigen-stuff">
+      
+      Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
+      </a>
+    </li>
+    
+    <li>
+      <a href="/09-diagonal">
+      
+      Section 9 - Diagonalisation
+      </a>
+    </li>
+    
+    <li>
+      <a href="/10-jnf">
+      
+      Section 10 - Jordan normal form
+      </a>
+    </li>
+    
+    <li>
+      <a href="/11-inner-products">
+      
+      Section 11 - Inner products
+      </a>
+    </li>
+    
+</ul>
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+<h1 id="introduction">Introduction</h1>
+<style type="text/css" scoped>
+  body {
+    counter-reset: chapter 0;
+  }
+</style>
+
+<h2 id="what-is-linear-mathematics">What is linear mathematics?</h2>
+<p>The aims of this module are stated on the School website as:</p>
+<blockquote>
+<p>“This module continues the study of vector spaces and linear transformations begun in MT2501. It aims to show the importance of linearity in many areas of mathematics ranging from linear algebra through to geometric applications to linear operators and special functions. The main topics covered include: diagonalisation and the minimum polynomial; Jordan normal form; inner product spaces; orthonormal sets and the Gram-Schmidt process; adjoint and self-adjoint operators.”</p>
+</blockquote>
+<p>The study of linear algebra comprises three central components:</p>
+<ol type="1">
+<li><p>mathematical underpinnings (i.e. theorems and their proofs);</p></li>
+<li><p>computation (for instance, computing the eigenvectors of a linear transformation);</p></li>
+<li><p>geometric understanding (for example, finding answers to: why is matrix multiplication defined the way it is, what is the meaning of the determinant of a matrix, and so on?).</p></li>
+</ol>
+<p>After MT2501, you are probably most familiar with the computational aspects of linear algebra. In this module, we will concentrate in equal parts on the mathematical underpinnings and computation (although not exactly in the same sense as you did in MT2501), and, to a somewhat lesser extent to geometric understanding.</p>
+<h2 id="why-is-linear-mathematics-important">Why is linear mathematics important?</h2>
+<p>Linear algebra arises out of the study of matrices and vectors. In MT1002, or equivalent previous mathematical studies, we have seen how matrices arise naturally in two settings, first in the context of solving systems of linear equations and second as specifying certain geometric transformations. Vectors also arise naturally in the geometric setting of 2-dimensional and 3-dimensional real space. In this course, we shall see how the concept of a vector space has been generalised from its geometric origins to an algebraic object which has applications in a range of different settings:</p>
+<ul>
+<li><p>pure mathematics (e.g., geometry, algebra, functional analysis, etc.),</p></li>
+<li><p>applied mathematics (e.g., spaces of solutions to differential equations, etc.),</p></li>
+<li><p>physics (e.g., quantum mechanics, etc.),</p></li>
+<li><p>etc.</p></li>
+</ul>
+<h2 id="overview-of-course-content">Overview of course content</h2>
+<ol type="1">
+<li><p><strong>Review of the prerequisites from MT2501</strong></p>
+<ul>
+<li><p>vector spaces, elementary row operations, subspaces;</p></li>
+<li><p>linear independence and bases: spanning sets, linear independence, bases, dimension;</p></li>
+<li><p>linear transformations: matrix of a linear transformation, rank and nullity, change of basis; isomorphisms of vector spaces;</p></li>
+<li><p>eigenvalues, eigenvectors, and diagonalisation.</p></li>
+</ul></li>
+<li><p><strong>Vector space constructions (new vector spaces from old)</strong></p>
+<ul>
+<li><p>the vector space <span class="math inline">\(\mathcal{L}(V, W)\)</span> of linear transformations from a vector space <span class="math inline">\(V\)</span> to another vector space <span class="math inline">\(W\)</span>;</p></li>
+<li><p>direct sums, projection maps;</p></li>
+<li><p>the dual space <span class="math inline">\(V ^ * = \mathcal{L}(V,F)\)</span>;</p></li>
+<li><p>the transpose of a linear transformation;</p></li>
+<li><p>the quotient space and quotient linear transformation.</p></li>
+</ul></li>
+<li><p><strong>Invariants of vector spaces under change of basis</strong></p>
+<ul>
+<li><p>more about eigenvalues, eigenvectors, and eigenspaces;</p></li>
+<li><p>characteristic polynomial;</p></li>
+<li><p>the Cayley-Hamilton theorem;</p></li>
+<li><p>diagonalizability;</p></li>
+<li><p>minimum polynomial;</p></li>
+<li><p>Jordan normal form: method for determining the Jordan normal form.</p></li>
+</ul></li>
+<li><p><strong>Advanced material</strong></p>
+<ul>
+<li><p>Inner products</p></li>
+<li><p>Maybe more <span class="math inline">\(\ldots\)</span></p></li>
+</ul></li>
+</ol>
+<h2 id="comment-about-lecture-content">Comment about lecture content</h2>
+<p>The lecture notes are available on MMS. The notes contain a number of examples that will not be covered in any classes. This is an attempt to provide more examples, while not decreasing the amount of material covered. These omitted examples are numbered in the form “<strong>2.1A</strong>” (etc.) in these notes.</p>
+<h2 id="recommended-texts">Recommended texts</h2>
+<p>The following texts are recommended for further reading and further problems to solve.</p>
+<ul>
+<li><a href="https://bit.ly/3BqR6BG">S. Axler, <em>Linear Algebra Done Right</em>, Undergraduate Texts in Mathematics, Springer (2015).</a></li>
+</ul>
+<p>This book is available electronically via the library.</p>
+
+
+
+
+
+
+
+<p><a href="#">Back to top</a></p>
+</body>
+</html>

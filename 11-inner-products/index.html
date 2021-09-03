@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-uk" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="../css/math.css">
+    
+    
+    <title>MT3501 Lecture Notes | </title>
+    <style type="text/css">
+  body {
+    font-size: 150%;
+    font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  }
+</style>
+
+</head>
+<body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
+
+<ul>
+    
+    <li>
+      <a href="/">
+      
+      Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/01-intro">
+      
+      Section 1 - Intro
+      </a>
+    </li>
+    
+    <li>
+      <a href="/02-vector-spaces">
+      
+      Section 2 - Vector spaces
+      </a>
+    </li>
+    
+    <li>
+      <a href="/03-algorithms-to-live-by">
+      
+      Section 3 - Algorithms to live by
+      </a>
+    </li>
+    
+    <li>
+      <a href="/04-linear-transf">
+      
+      Section 4 - Linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/05-l-v-w">
+      
+      Section 5 - The vector space of linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/06-direct-sums">
+      
+      Section 6 - Direct sums
+      </a>
+    </li>
+    
+    <li>
+      <a href="/07-dual-space">
+      
+      Section 7 - The dual space
+      </a>
+    </li>
+    
+    <li>
+      <a href="/08-eigen-stuff">
+      
+      Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
+      </a>
+    </li>
+    
+    <li>
+      <a href="/09-diagonal">
+      
+      Section 9 - Diagonalisation
+      </a>
+    </li>
+    
+    <li>
+      <a href="/10-jnf">
+      
+      Section 10 - Jordan normal form
+      </a>
+    </li>
+    
+    <li>
+      <a href="/11-inner-products">
+      
+      Section 11 - Inner products
+      </a>
+    </li>
+    
+</ul>
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+<h1 id="chapter-inner-product">Inner product spaces</h1>
+<style type="text/css" scoped>
+  body {
+    counter-reset: chapter 10;
+  }
+</style>
+
+<p>In this section we consider the topic of inner product spaces. An “inner product” is essentially a generalisation of the dot product: <span class="math display">\[\begin{pmatrix} x_1 \\ y_1 \\ z_1 \\ \end{pmatrix} \cdot \begin{pmatrix} x_2
+  \\ y_2 \\ z_2 \\ \end{pmatrix} = x_1x_2 + y_1y_2 + z_1z_2\]</span> on <span class="math inline">\(\mathbb{R} ^ 3\)</span>. Inner products allow us to define the notion of “length” of a vector, and “angle” between vectors, in abstract vector spaces, not only in Euclidean spaces such as <span class="math inline">\(\mathbb{R} ^ 3\)</span>.</p>
+<p>Throughout this section, we will only consider real and complex vector spaces.</p>
+<h2 id="complex-numbers-redux">Complex numbers – redux</h2>
+<p>We require the following definitions relating to complex numbers.</p>
+<div class="defn">
+<p>If <span class="math inline">\(\alpha = a + ib \in \mathbb{C}\)</span>, the <strong><em>complex conjugate</em></strong> of <span class="math inline">\(\alpha\)</span> is given by <span class="math display">\[\bar{\alpha} = a - ib\]</span> The <strong><em>modulus</em></strong> of <span class="math inline">\(\alpha\)</span> is <span class="math display">\[|\alpha| = \sqrt{a ^ 2 + b ^ 2}.\]</span> The <strong><em>real part</em></strong> of <span class="math inline">\(\alpha\)</span> is <span class="math display">\[\Re(\alpha) = a.\]</span></p>
+</div>
+<p>Note that if <span class="math inline">\(\alpha\in \mathbb{R}\)</span>, then <span class="math inline">\(\bar{\alpha} = \alpha\)</span> and <span class="math inline">\(|\alpha|\)</span> is the usual absolute value of <span class="math inline">\(\alpha\)</span>. We also require the following elementary results about complex numbers.</p>
+<div class="prop">
+<p>Let <span class="math inline">\(\alpha, \beta \in \mathbb{C}\)</span>. Then the following hold:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\overline{\alpha\beta} = \overline{\alpha}\overline{\beta}\)</span>;</p></li>
+<li><p><span class="math inline">\(\overline{\alpha + \beta} = \overline{\alpha} + \overline{\beta}\)</span>;</p></li>
+<li><p><span class="math inline">\(\alpha \overline{\alpha} = |\alpha| ^ 2\)</span>;</p></li>
+<li><p><span class="math inline">\(\alpha + \overline{\alpha} = 2 \Re(\alpha)\)</span>;</p></li>
+<li><p><span class="math inline">\(\Re(\alpha) \leq |\alpha|\)</span>.</p></li>
+</ol>
+</div>
+<h2 id="definition-and-examples">Definition and examples</h2>
+<div class="defn">
+<p><span id="defn-inner-product" label="defn-inner-product"></span> An <strong><em>inner product</em></strong> on a real or complex vector space <span class="math inline">\(V\)</span> is a function: <span class="math display">\[\begin{aligned}
+    \langle ., .\rangle : V \times V &amp; \to F                       \\
+    (v,w)                            &amp; \mapsto \langle v,w \rangle
+  \end{aligned}\]</span> such that</p>
+<ol type="1">
+<li><p>(<strong>additivity:</strong>) <span class="math inline">\(\langle u+v, w \rangle = \langle u,w \rangle + \langle v,w  \rangle\)</span> for all <span class="math inline">\(u,v,w \in V\)</span>;</p></li>
+<li><p>(<strong>homogeneity:</strong>) <span class="math inline">\(\langle \alpha v, w \rangle = \alpha \langle v,w \rangle\)</span> for all <span class="math inline">\(v,w \in V\)</span> and <span class="math inline">\(\alpha \in F\)</span>;</p></li>
+<li><p>(<strong>conjugate symmetric:</strong>) <span class="math inline">\(\langle v,w \rangle = \overline{\langle w,v \rangle}\)</span> for all <span class="math inline">\(v,w \in V\)</span>;</p></li>
+<li><p>(<strong>positivity:</strong>) <span class="math inline">\(\langle v,v \rangle\)</span> is a real number satisfying <span class="math inline">\(\langle v,v  \rangle \geq 0\)</span> for all <span class="math inline">\(v \in V\)</span>;</p></li>
+<li><p>(<strong>definiteness:</strong>) <span class="math inline">\(\langle v,v \rangle = 0\)</span> if and only if <span class="math inline">\(v = \vec{0}\)</span> for all <span class="math inline">\(v\in V\)</span>.</p></li>
+</ol>
+<p>A vector space <span class="math inline">\(V\)</span> with an inner product is called an <em>inner product space</em>.</p>
+</div>
+<p>Inner products are, in some sense, a generalisation of the notion of the <strong>angle</strong> between two vectors.</p>
+<div class="example">
+<p>The vector space <span class="math inline">\(\mathbb{R}^{n}\)</span> of column vectors of real numbers is an inner product space with respect to the usual <em>dot product</em>: <span class="math display">\[\left\langle \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}, \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} \right\rangle =
+    \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \cdot \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = \sum_{i=1}^{n} x_{i}y_{i}.\]</span> Note that if <span class="math inline">\(\vec{v} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}\)</span>, then <span class="math display">\[\langle \vec{v}, \vec{v} \rangle = \sum_{i=1}^{n} x_{i}^{2}\]</span> and from this <a href="http://example.org/11-inner-products/#defn-inner-product">Definition 11.2.1</a> (4) follows immediately.</p>
+</div>
+<div class="example">
+<p>The vector space <span class="math inline">\(\mathbb{C} ^ n\)</span> is an inner product space with respect to <span class="math display">\[\left\langle \begin{pmatrix} z_1 \\ z_2 \\ \vdots \\ z_n \end{pmatrix}, \begin{pmatrix} w_1 \\ w_2 \\ \vdots \\ w_n \end{pmatrix} \right\rangle =
+    \sum_{i=1}^{n} z_{i} \bar{w}_{i}.\]</span> Note that if <span class="math inline">\(\vec{v} = \begin{pmatrix} z_1 \\ z_2 \\ \vdots \\ z_n \end{pmatrix}\)</span>, then <span class="math display">\[\langle \vec{v}, \vec{v} \rangle = \sum_{i=1}^{n} z_{i}
+    \bar{z}_{i} = \sum_{i=1}^{n} \mathopen{|}z_{i\mathclose{|}}^{2}.\]</span></p>
+</div>
+<div class="example">
+<p><span id="ex-cont-inner-product" label="ex-cont-inner-product"></span> If <span class="math inline">\(a &lt; b\)</span>, the set <span class="math inline">\(C[a,b]\)</span> of continuous functions <span class="math inline">\(f :  [a,b] \to \mathbb{R}\)</span> is a real vector space when we define <span class="math display">\[\begin{aligned}
+    (f+g)(x)      &amp; = f(x) + g(x)       \\
+    (\alpha f)(x) &amp; = \alpha \cdot f(x)
+  \end{aligned}\]</span> for <span class="math inline">\(f,g \in C[a,b]\)</span> and <span class="math inline">\(\alpha \in \mathbb{R}\)</span>. In fact, <span class="math inline">\(C[a,b]\)</span> is an inner product space when we define <span class="math display">\[\langle f,g \rangle = \int_{a}^{b} f(x)g(x) \, \mathrm{d} x.\]</span> Since <span class="math inline">\(f(x)^{2} \geq 0\)</span> for all <span class="math inline">\(x\)</span>, we have <span class="math display">\[\langle f,f \rangle = \int_{a}^{b} f(x)^{2} \, \mathrm{d} x \geq 0.\]</span></p>
+</div>
+<div class="example">
+<p>The space <span class="math inline">\(\mathcal{P}_{n}\)</span> of real polynomials of degree at most <span class="math inline">\(n\)</span> is a real vector space of dimension <span class="math inline">\(n+1\)</span>. It becomes an inner product space by inheriting the inner product from <a href="http://example.org/11-inner-products/#ex-cont-inner-product">Example 11.2.4</a>: <span class="math display">\[\langle f,g \rangle = \int_{0}^{1} f(x) g(x) \, \mathrm{d} x\]</span> for real polynomials <span class="math inline">\(f(x),g(x) \in \mathcal{P}_{n}\)</span>.</p>
+<p>Similarly, the space <span class="math inline">\(\mathbb{C}[x]\)</span> of polynomials <span class="math display">\[f(x) = \alpha_{n} x^{n} + \alpha_{n-1} x^{n-1} + \dots +
+    \alpha_{1} x + \alpha_{0}\]</span> where <span class="math inline">\(\alpha_{0}, \alpha_{1}, \dots, \alpha_{n} \in \mathbb{C}\)</span> becomes an inner product space when we define <span class="math display">\[\langle f,g \rangle = \int_{0}^{1} f(x) \overline{g(x)} \, \mathrm{d} x\]</span> where <span class="math display">\[\overline{f(x)} = \bar{\alpha}_{n} x^{n} + \bar{\alpha}_{n-1}
+    x^{n-1} + \dots + \bar{\alpha}_{1} x + \bar{\alpha}_{0}.\]</span></p>
+</div>
+<div class="lemma">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle \cdot,  \cdot \rangle\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(\langle v,\alpha w \rangle = \bar{\alpha} \langle v,w  \rangle\)</span> for all <span class="math inline">\(v,w \in V\)</span> and <span class="math inline">\(\alpha \in F\)</span>;</p></li>
+<li><p><span class="math inline">\(\langle u, v + w\rangle = \langle u, v\rangle + \langle u, w\rangle\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <strong>(1).</strong> <span class="math inline">\(\langle v,\alpha w \rangle = \overline{\langle \alpha w,v \rangle} =  \overline{\alpha \langle w,v \rangle} = \bar{\alpha}  \overline{\langle w,v \rangle} = \bar{\alpha} \langle v,w \rangle.\)</span></p>
+<p><strong>(2).</strong> <span class="math inline">\(\langle u, v + w\rangle = \overline{\langle v + w, u\rangle}  = \overline{\langle v, u\rangle  + \langle w, u \rangle}  = \overline{\langle v, u\rangle}  + \overline{\langle w, u \rangle}  = \langle u, v \rangle + \langle u, w \rangle\)</span>. ◻</p>
+</div>
+<h2 id="norms">Norms</h2>
+<div class="defn">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle \cdot, \cdot  \rangle\)</span>. Then the <strong><em>norm</em></strong> (associated to the inner product) is the function <span class="math inline">\(\mathopen{|}\cdot\mathclose{|} : V \to \mathbb{R}\)</span> defined by <span class="math display">\[\mathopen{|}v\mathclose{|} = \sqrt{\langle v,v \rangle}.\]</span></p>
+</div>
+<p>Since <span class="math inline">\(\langle v, v \rangle \geq 0\)</span> for all <span class="math inline">\(v\in V\)</span>, it follows that we can always take the square root of this value, and obtain a real number.</p>
+<p>If <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are vectors in an inner product space <span class="math inline">\(V\)</span>, then <span class="math inline">\(\mathopen{|}u\mathclose{|}\)</span> can be thought of, in some sense, the <strong>length</strong> of <span class="math inline">\(u\)</span> and <span class="math inline">\(\mathopen{|}u - v\mathclose{|}\)</span> can be thought of as the <strong>distance</strong> between <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>. However, it isn’t really clear from the definition that <span class="math inline">\(\mathopen{|}u - v\mathclose{|}\)</span> satisfies the usual properties that you’d expect of a notion of <strong>distance</strong>. In particular, any reasonable notion of distance ought to satisfy:</p>
+<ol type="1">
+<li><p><strong>identity of indiscernibles:</strong> <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = 0\)</span> if and only if <span class="math inline">\(u = v\)</span>;</p></li>
+<li><p><strong>symmetry:</strong> <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = \mathopen{|}v - u\mathclose{|}\)</span>;</p></li>
+<li><p><strong>triangle inequality:</strong> <span class="math inline">\(\mathopen{|}u - v\mathclose{|} \leq \mathopen{|}u - w\mathclose{|} + \mathopen{|}w - v\mathclose{|}\)</span>;</p></li>
+</ol>
+<p>for all <span class="math inline">\(u, v, w\in V\)</span>.</p>
+<p>Symmetry <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = \mathopen{|}v - u\mathclose{|}\)</span> follows immediately from additivity of the inner product and the definition of the norm.</p>
+<p>The triangle inequality essentially says that the distance from <span class="math inline">\(u\)</span> to <span class="math inline">\(v\)</span> is not less than the distance from <span class="math inline">\(u\)</span> to some intermediate vector <span class="math inline">\(w\)</span> plus the distance from <span class="math inline">\(w\)</span> to <span class="math inline">\(v\)</span>. The triangle inequality is the hardest of these three conditions to verify, and is the subject of the remainder of this section.</p>
+<div class="lemma">
+<p><span id="lemma-norm-elementary" label="lemma-norm-elementary"></span> Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle \cdot,  \cdot \rangle\)</span>, let <span class="math inline">\(v\in V\)</span>, and <span class="math inline">\(\alpha\in F\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathopen{|}\alpha v\mathclose{|} = \mathopen{|}\alpha\mathclose{|} \cdot \mathopen{|}v\mathclose{|}\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathopen{|}v\mathclose{|} &gt; 0\)</span> if and only if <span class="math inline">\(v \neq \vec{0}\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathopen{|}v\mathclose{|} = 0\)</span> if and only if <span class="math inline">\(v = \vec{0}\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <strong>(1).</strong> <span class="math inline">\(\mathopen{|}\alpha v\mathclose{|}^{2} = \langle \alpha v,\alpha v \rangle = \alpha  \langle v,\alpha v \rangle = \alpha \bar{\alpha} \langle v,v \rangle  = \mathopen{|}\alpha\mathclose{|}^{2} \mathopen{|}v\mathclose{|}^{2}\)</span> and taking square roots gives the result.</p>
+<p><strong>(2).</strong> If <span class="math inline">\(\mathopen{|}v\mathclose{|} = \langle v,v \rangle &gt; 0\)</span>, then <span class="math inline">\(v \neq  \vec{0}\)</span> by positivity (part (4) of the definition of inner products). Conversely, if <span class="math inline">\(v\neq \vec{0}\)</span>, then <span class="math inline">\(\mathopen{|}v\mathclose{|} = \langle  v,v \rangle &gt; 0\)</span>, by definiteness (part (5) of the definition of inner products).</p>
+<p><strong>(3).</strong> This follows immediately from part (2). ◻</p>
+</div>
+<p>By <a href="http://example.org/11-inner-products/#lemma-norm-elementary">Lemma 11.3.2</a>(3), if <span class="math inline">\(u, v\in V\)</span> are arbitrary, then <span class="math inline">\(\mathopen{|}u - v\mathclose{|} = 0\)</span> if and only if <span class="math inline">\(u - v = \vec{0}\)</span> if and only if <span class="math inline">\(u = v\)</span>. Hence we’ve established identity of indiscernibles for norms.</p>
+<div class="thm">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle  \cdot,\cdot \rangle\)</span>. Then <span class="math display">\[\mathopen{|}\langle u,v \rangle\mathclose{|} \leq \mathopen{|}u\mathclose{|} \cdot \mathopen{|}v\mathclose{|}\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> If <span class="math inline">\(v = \vec{0}\)</span>, then <span class="math display">\[\langle u,v \rangle = \langle u,\vec{0} \rangle = \langle
+    u,0\cdot\vec{0}\rangle = 0 \langle u,\vec{0} \rangle = 0.\]</span> Hence <span class="math inline">\(\mathopen{|}\langle u,v \rangle\mathclose{|} = \mathopen{|}0\mathclose{|} = 0\)</span> and, since <span class="math inline">\(\mathopen{|}v\mathclose{|}  = 0\)</span>, it follows that <span class="math display">\[\mathopen{|}\langle u,v \rangle\mathclose{|} = 0 = \mathopen{|}u\mathclose{|} \cdot \mathopen{|}v\mathclose{|}.\]</span></p>
+<p>In the remainder of the proof we assume <span class="math inline">\(v \neq \vec{0}\)</span>. If <span class="math inline">\(\alpha\)</span> is a scalar and <span class="math inline">\(w = u + \alpha v\)</span>, then <span class="math display">\[\begin{aligned}
+    0 \leq \langle w,w \rangle &amp; = \langle u+\alpha v, u+\alpha v \rangle \\
+                               &amp; = \langle u, u + \alpha v \rangle + \langle
+                                   \alpha v, u + \alpha v\rangle \\
+                               &amp; = \langle u,u \rangle + \alpha \langle v,u \rangle + \bar{\alpha}
+    \langle u,v \rangle + \alpha \bar{\alpha} \langle v,v \rangle                                  \\
+                               &amp; = \mathopen{|}u\mathclose{|}^{2} + \alpha \overline{\langle u,v \rangle} +
+    \bar{\alpha} \langle u,v \rangle + \mathopen{|}\alpha\mathclose{|}^{2} \mathopen{|}v\mathclose{|}^{2}.
+  \end{aligned}\]</span> Setting <span class="math inline">\(\alpha = -\langle u,v \rangle / \mathopen{|}v\mathclose{|}^{2}\)</span>, we deduce that <span class="math display">\[\begin{aligned}
+    0 &amp; \leq &amp; \mathopen{|}u\mathclose{|}^{2} - \frac{ \langle u,v \rangle
+      \overline{\langle u,v \rangle} }{ \mathopen{|}v\mathclose{|}^{2} } - \frac{
+      \overline{\langle u,v \rangle} \langle u,v \rangle
+      }{\mathopen{|}v\mathclose{|}^{2}} + \frac{\mathopen{|} \langle u,v \rangle
+  \mathclose{|}^{2}}{\mathopen{|}v\mathclose{|}^{4}} \mathopen{|}v\mathclose{|}^{2}                                \\
+       &amp; = &amp;
+      \mathopen{|}u\mathclose{|}^{2} - \frac{|\langle u, v\rangle| ^ 2}{ \mathopen{|}v\mathclose{|}^{2} } 
+                   - \frac{|\langle u, v\rangle| ^ 2}{ \mathopen{|}v\mathclose{|}^{2} }
+                   + \frac{|\langle u, v\rangle| ^ 2}{ \mathopen{|}v\mathclose{|}^{2} }\\
+      &amp; = &amp; \mathopen{|}u\mathclose{|}^{2} - \frac{ \mathopen{|}\langle u,v \rangle\mathclose{|}^{2} }{
+      \mathopen{|}v\mathclose{|}^{2} },
+  \end{aligned}\]</span> so <span class="math display">\[\mathopen{|} \langle u,v \rangle \mathclose{|}^{2} \leq \mathopen{|}u\mathclose{|}^{2} \mathopen{|}v\mathclose{|}^{2}\]</span> and taking square roots gives the result. ◻</p>
+</div>
+<div class="cor">
+<p><span id="cor-triangle" label="cor-triangle"></span> Let <span class="math inline">\(V\)</span> be an inner product space. Then <span class="math display">\[\mathopen{|}u+v\mathclose{|} \leq \mathopen{|}u\mathclose{|} + \mathopen{|}v\mathclose{|}\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math display">\[\begin{aligned}
+    \mathopen{|}u+v\mathclose{|}^{2} &amp; = \langle u+v, u+v \rangle                                                                         \\
+                   &amp; = \langle u,u \rangle + \langle u,v \rangle + \langle v,u \rangle
+    + \langle v,v \rangle                                                                                               \\
+                   &amp; = \mathopen{|}u\mathclose{|}^{2} + \langle u,v \rangle + \overline{\langle u,v
+    \rangle} + \mathopen{|}v\mathclose{|}^{2}                                                                                             \\
+                   &amp; = \mathopen{|}u\mathclose{|}^{2} + 2 \Re \langle u,v \rangle + \mathopen{|}v\mathclose{|}^{2}                                          \\
+                   &amp; \leq \mathopen{|}u\mathclose{|}^{2} + 2 \mathopen{|} \langle u,v \rangle \mathclose{|} + \mathopen{|}v\mathclose{|}^{2}
+    \\
+                   &amp; \leq \mathopen{|}u\mathclose{|}^{2} + 2 \mathopen{|}u\mathclose{|} \cdot \mathopen{|}v\mathclose{|} + \mathopen{|}v\mathclose{|}^{2}
+                   &amp;                                                                      &amp; \text{(by Cauchy--Schwarz)} \\
+                   &amp; = ( \mathopen{|}u\mathclose{|} + \mathopen{|}v\mathclose{|} )^{2}
+  \end{aligned}\]</span> and taking square roots gives the result. ◻</p>
+</div>
+<p>If <span class="math inline">\(u, v, w\in V\)</span>, then <span class="math display">\[\mathopen{|}u - v\mathclose{|} = \mathopen{|}(u - w) + (w - v)\mathclose{|} \leq \mathopen{|}u - w\mathclose{|} + \mathopen{|}w - v\mathclose{|}\]</span> and so <a href="http://example.org/11-inner-products/#cor-triangle">Corollary 11.3.4</a> implies that norms satisfy the triangle inequality from the start of this section.</p>
+<p>The triangle inequality is a fundamental observation that tells us we can use the norm to measure distance on an inner product space in the same way that modulus <span class="math inline">\(\mathopen{|}x\mathclose{|}\)</span> is used to measure distance on <span class="math inline">\(\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>. We can then perform analysis and speak of continuity and convergence. This topic is addressed in greater detail in the study of Functional Analysis.</p>
+<h2 id="orthogonality-and-orthonormal-bases">Orthogonality and orthonormal bases</h2>
+<div class="defn">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space and let <span class="math inline">\(v, w \in V\)</span>. Then <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> are said to be <strong><em>orthogonal</em></strong> if <span class="math inline">\(\langle v,w \rangle = 0\)</span>. A set <span class="math inline">\(\mathscr{A}\)</span> of vectors is <strong><em>orthogonal</em></strong> if every pair of vectors in <span class="math inline">\(\mathscr{A}\)</span> are orthogonal.</p>
+</div>
+<p>Note that <span class="math inline">\(\vec{0}\)</span> is orthogonal to every vector, and it is the only vector that’s orthogonal to itself.</p>
+<div class="defn">
+<p>A set <span class="math inline">\(\mathscr{A}\)</span> of vectors is <strong><em>orthonormal</em></strong> if it is orthogonal and <span class="math inline">\(\mathopen{|}v\mathclose{|} = 1\)</span> for every <span class="math inline">\(v\in \mathscr{A}\)</span>. An <strong><em>orthonormal basis</em></strong> for an inner product space <span class="math inline">\(V\)</span> is a basis which is itself an orthonormal set.</p>
+</div>
+<p>A reformulation of the definition of orthonormal, is that the set <span class="math inline">\(\mathscr{A} = \{ v_{1},v_{2},\dots,v_{k} \}\)</span> is orthonormal if <span class="math display">\[\langle v_{i},v_{j} \rangle = \delta_{ij} = \begin{cases}
+    0 &amp; \text{if $i \neq j$} \\
+    1 &amp; \text{if $i = j$}.
+  \end{cases}\]</span></p>
+<div class="example">
+<p>The standard basis <span class="math inline">\(\mathscr{E} = \{ \vec{e}_{1}, \vec{e}_{2}, \dots,  \vec{e}_{n} \}\)</span> is an orthonormal basis for <span class="math inline">\(\mathbb{R}^{n}\)</span> (with the dot product): <span class="math display">\[\langle \vec{e}_{i},\vec{e}_{j} \rangle = \vec{e}_{i} \cdot \vec{e}_{j}
+    = \begin{cases}
+      0 &amp; \text{if $i \neq j$} \\
+      1 &amp; \text{if $i = j$}.
+    \end{cases}\]</span></p>
+</div>
+<div class="example">
+<p>Consider the inner product space <span class="math inline">\(C[-\pi,\pi]\)</span>, consisting of all continuous functions <span class="math inline">\(f : [-\pi,\pi] \to \mathbb{R}\)</span>, with inner product <span class="math display">\[\langle f,g \rangle = \int_{-\pi}^{\pi} f(x) g(x) \, \mathrm{d} x.\]</span> Define <span class="math display">\[\begin{aligned}
+    e_{0}(x) &amp; = \frac{1}{\sqrt{2\pi}}     \\
+    e_{n}(x) &amp; = \frac{1}{\surd\pi}\cos nx \\
+    f_{n}(x) &amp; = \frac{1}{\surd\pi}\sin nx
+  \end{aligned}\]</span> for <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(2\)</span>, …. These functions (without the scaling) were studied in MT2501. We have the following facts <span class="math display">\[\begin{aligned}
+    \langle e_{m}, e_{n} \rangle &amp; = 0 &amp;  &amp; \text{if $m \neq n$,}   \\
+    \langle f_{m}, f_{n} \rangle &amp; = 0 &amp;  &amp; \text{if $m \neq n$,}   \\
+    \langle e_{m}, f_{n} \rangle &amp; = 0 &amp;  &amp; \text{for all $m$,~$n$}
+  \end{aligned}\]</span> and <span class="math display">\[\mathopen{|}e_{n\mathclose{|}} = \mathopen{|}f_{n\mathclose{|}} = 1 \qquad \text{for all $n$}.\]</span> (The reason for the scaling factors is to achieve unit norm for each function.) The topic of Fourier series relates to expressing functions as linear combinations of the orthonormal set <span class="math display">\[\{e_{0}, e_{n}, f_{n} : n = 1, 2, 3, \dots \}.\]</span></p>
+</div>
+<div class="thm">
+<p><span id="thm:orthog-linindep" label="thm:orthog-linindep"></span> An orthogonal set of non-zero vectors is linearly independent.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Let <span class="math inline">\(\mathscr{A} = \{ v_{1},v_{2},\dots,v_{k} \}\)</span> be an orthogonal set of non-zero vectors. Suppose that <span class="math display">\[\sum_{i=1}^{k} \alpha_{i} v_{i} = \vec{0}.\]</span> If <span class="math inline">\(j \in \{1, 2, \ldots, k\}\)</span> is arbitrary, then, by additivity of the inner product, <span class="math display">\[0 = \biggl\langle \sum_{i=1}^{k} \alpha_{i}v_{i}, v_{j}
+    \biggr\rangle = \sum_{i=1}^{k} \alpha_{i} \langle v_{i},v_{j}
+    \rangle = \alpha_{j} \mathopen{|}v_{j\mathclose{|}}^{2},\]</span> since by assumption <span class="math inline">\(\langle v_{i},v_{j} \rangle = 0\)</span> for <span class="math inline">\(i \neq j\)</span>. By assumption, <span class="math inline">\(v_{j} \neq \vec{0}\)</span>, and so <span class="math inline">\(\mathopen{|}v_{j\mathclose{|}} \neq 0\)</span>. Hence <span class="math inline">\(\alpha_{j}  = 0\)</span> and, since <span class="math inline">\(j\)</span> was arbitrary, <span class="math inline">\(\mathscr{A}\)</span> is linearly independent. ◻</p>
+</div>
+<div class="thm">
+<p><span id="thm:Gram-Schmidt" label="thm:Gram-Schmidt"></span> Suppose that <span class="math inline">\(V\)</span> is a finite-dimensional inner product space with basis <span class="math inline">\(\{  v_{1},v_{2},\dots,v_{n} \}\)</span>. The following procedure constructs an orthonormal basis <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> for <span class="math inline">\(V\)</span>:</p>
+<h5 id="step-1">Step 1:</h5>
+<p>Define <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1\mathclose{|}}} v_{1}\)</span>.</p>
+<h5 id="step-k">Step <span class="math inline">\(k\)</span>:</h5>
+<p>Suppose <span class="math inline">\(e_{1},e_{2},\ldots,e_{k-1}\)</span> have been constructed. Define <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i}\qquad
+    \text{and} \qquad e_{k} = \frac{1}{\mathopen{|}w_{k\mathclose{|}}} w_{k}.\]</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> We claim that for every <span class="math inline">\(k\in \{1, \ldots, n\}\)</span> the set <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k} \}\)</span> is orthonormal and that <span class="math display">\[e_{1},e_{2},\dots,e_{k}\in 
+  \operatorname{Span}(v_{1},v_{2},\dots,v_{k}).\]</span></p>
+<h5 id="step-1-1">Step 1:</h5>
+<p>Since <span class="math inline">\(v_{1}\)</span> is a non-zero vector, <span class="math inline">\(\mathopen{|}v_{1\mathclose{|}}  \neq 0\)</span> and hence <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1\mathclose{|}}}v_{1}\)</span> is defined.</p>
+<p><span class="math display">\[\mathopen{|}e_{1\mathclose{|}} = \left\| \frac{1}{\mathopen{|}v_{1\mathclose{|}}} v_{1} \right\| 
+  = |\frac{1}{\mathopen{|}v_{1\mathclose{|}}}| \cdot \mathopen{|}v_{1\mathclose{|}}
+  = \frac{1}{\mathopen{|}v_{1\mathclose{|}}} \cdot \mathopen{|}v_{1\mathclose{|}} = 1.\]</span> There is no orthogonality to check in the set <span class="math inline">\(\{e_1\}\)</span>, since it contains a single vector. Hence <span class="math inline">\(\{ e_{1} \}\)</span> is an orthonormal set and by definition <span class="math inline">\(e_{1} \in \operatorname{Span}(v_{1})\)</span>.</p>
+<h5 id="step-k-1">Step <span class="math inline">\(k\)</span>:</h5>
+<p>Suppose that <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k-1} \}\)</span> is an orthonormal set contained in <span class="math inline">\(\operatorname{Span}(v_{1},v_{2},\dots,v_{k-1})\)</span> for some <span class="math inline">\(k \geq 2\)</span>. Set <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle.\]</span> If <span class="math inline">\(w_{k} = \vec{0}\)</span>, then <span class="math display">\[\begin{aligned}
+    v_{k} = \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i} \in
+    \operatorname{Span}(e_{1},\dots,e_{k-1}) \subseteq
+    \operatorname{Span}(v_{1},\dots,v_{k-1}),
+  \end{aligned}\]</span> which contradicts the assumption that <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> is linearly independent. Thus <span class="math inline">\(w_{k} \neq \vec{0}\)</span> and <span class="math inline">\(e_{k} =  \frac{1}{\mathopen{|}w_{k\mathclose{|}}}w_{k}\)</span> is defined.</p>
+<p>By construction, <span class="math inline">\(\mathopen{|}e_{k\mathclose{|}} = 1\)</span> and <span class="math display">\[\begin{aligned}
+    e_{k}  = \frac{1}{\mathopen{|}w_{k\mathclose{|}}} \biggl( v_{k} - \sum_{i=1}^{k-1}
+    \langle v_{k},e_{i} \rangle e_{i} \biggr)                         
+    \in \operatorname{Span}( e_{1}, \dots, e_{k-1}, v_{k})                 
+    \subseteq \operatorname{Span}( v_{1}, \dots, v_{k-1}, v_{k}).
+  \end{aligned}\]</span> It remains to check that <span class="math inline">\(e_{k}\)</span> is orthogonal to <span class="math inline">\(e_{j}\)</span> for <span class="math inline">\(j =  1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(k-1\)</span>. We calculate <span class="math display">\[\begin{array}{rcll}
+      \langle w_{k},e_{j} \rangle &amp; = &amp; \biggl\langle v_{k} -
+    \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i} , e_{j} \biggr\rangle
+    \\
+                                  &amp; = &amp; \langle v_{k},e_{j} \rangle - \sum_{i=1}^{k-1} \langle
+      v_{k},e_{i} \rangle \langle e_{i},e_{j} \rangle &amp; \text{(by additivity
+      and homogeneity)}
+    \\
+                                                      &amp; = &amp;\langle v_{k},e_{j} \rangle - \langle v_{k},e_{j} \rangle
+    \mathopen{|}e_{j\mathclose{|}}^{2}            
+                                &amp; \text{(by assumption that } \{e_1, e_2,
+                                \ldots, e_{k - 1}\} \text{ is orthogonal)} \\
+                                &amp; = &amp; \langle v_{k},e_{j} \rangle - \langle
+      v_{k},e_{j} \rangle &amp; (\mathopen{|}e_j\mathclose{|} = 1) \\
+                                &amp; = &amp; 0.
+  \end{array}\]</span> Hence <span class="math display">\[\langle e_{k}, e_{j} \rangle = \left\langle
+    \frac{1}{\mathopen{|}w_{k\mathclose{|}}}w_{k}, e_{j} \right\rangle =
+    \frac{1}{\mathopen{|}w_{k\mathclose{|}}} \langle w_{k}, e_{j} \rangle = 0\]</span> for <span class="math inline">\(j = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(k-1\)</span>.</p>
+<p>We conclude that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is an orthonormal set. <a href="http://example.org/11-inner-products/#thm:orthog-linindep">Theorem 11.4.5</a> tells us that <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> is linearly independent and hence a basis for <span class="math inline">\(V\)</span> (since <span class="math inline">\(\dim V = n\)</span>). ◻</p>
+</div>
+<div class="exampjupyter">
+<p>Consider <span class="math inline">\(\mathbb{R}^{3}\)</span> with the usual inner product. Find an orthonormal basis for the subspace <span class="math inline">\(U\)</span> spanned by the vectors <span class="math display">\[\vec{v}_{1} = \begin{pmatrix}
+      1 \\
+      0 \\
+      -1 \\
+    \end{pmatrix} \qquad \text{and} \qquad
+    \vec{v}_{2} = \begin{pmatrix}
+      2 \\
+      3 \\
+      1 \\
+    \end{pmatrix}.\]</span></p>
+</div>
+<div class="solution">
+<p>We apply the Gram–Schmidt Process to <span class="math inline">\(\{\vec{v}_{1},\vec{v}_{2}\}\)</span>. <span class="math display">\[\mathopen{|}\vec{v\mathclose{|}_{1}}^{2} = \left\langle \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
+    \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix} \right\rangle = 1^{2} + (-1)^{2} = 2.\]</span> Take <span class="math display">\[\vec{e}_{1} = \frac{1}{\mathopen{|}\vec{v\mathclose{|}_{1}}} \vec{v}_{1} =
+    \frac{1}{\surd2} \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}.\]</span> Now <span class="math display">\[\langle \vec{v}_{2}, \vec{e}_{1} \rangle = \left\langle
+    \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix}, \frac{1}{\surd2}\begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}
+    \right\rangle = \frac{1}{\surd2} (2-1) = \frac{1}{\surd2}.\]</span> Put <span class="math display">\[\begin{aligned}
+    \vec{w}_{2} &amp; = \vec{v}_{2} - \langle \vec{v}_{2}, \vec{e}_{1}
+    \rangle \vec{e}_{1}                                                           \\
+                 &amp; = \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix} - \frac{1}{\surd2} \cdot \frac{1}{\surd2}
+    \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}                                                           \\
+                 &amp; = \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix} - \begin{pmatrix} 1/2 \\ 0 \\ -1/2 \\ \end{pmatrix} =
+    \begin{pmatrix} 3/2 \\ 3 \\ 3/2 \\ \end{pmatrix}.
+  \end{aligned}\]</span> So <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{2}}^{2} = (3/2)^{2} + 3^{2} + (3/2)^{2} = \frac{27}{2}\]</span> and <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{2}} = \frac{3\surd3}{\surd2}.\]</span> Take <span class="math display">\[\vec{e}_{2} = \frac{1}{\mathopen{|}\vec{w\mathclose{|}_{2}}} \vec{w}_{2} =
+    \sqrt{\frac{2}{3}} \begin{pmatrix} 1/2 \\ 1 \\ 1/2 \\ \end{pmatrix} = \frac{1}{\surd6}
+    \begin{pmatrix} 1 \\ 2 \\ 1 \\ \end{pmatrix}.\]</span> Thus <span class="math display">\[\left\{ \frac{1}{\surd2}\begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
+    \frac{1}{\surd6}\begin{pmatrix} 1 \\ 2 \\ 1 \\ \end{pmatrix} \right\}\]</span> is an orthonormal basis for <span class="math inline">\(U\)</span>.</p>
+</div>
+<div class="exampjupyter">
+<p>We can define an inner product on the space <span class="math inline">\(\mathcal{P}\)</span> of real polynomials <span class="math inline">\(f(x)\)</span> by <span class="math display">\[\langle f,g \rangle = \int_{0}^{\infty} f(x)g(x)\mathrm{e}^{-x} \,
+    \mathrm{d} x.\]</span> The <em>Laguerre polynomials</em> form the orthonormal basis for <span class="math inline">\(\mathcal{P}\)</span> that is produced when we apply the Gram–Schmidt process to the standard basis <span class="math display">\[\{ 1, x, x^{2}, x^{3}, \dots \}\]</span> of monomials.</p>
+<p><em>Determine the first three Laguerre polynomials.</em></p>
+</div>
+<div class="solution">
+<p>We apply the Gram–Schmidt process to the basis <span class="math inline">\(\{ 1, x, x^{2} \}\)</span> for the inner product space <span class="math inline">\(\mathcal{P}_{2}\)</span>, of polynomials of degree at most <span class="math inline">\(2\)</span>, with inner product as above. We shall make use of the fact (determined by induction and integration by parts) that <span class="math display">\[\int_{0}^{\infty} x^{n}\mathrm{e}^{-x} \, \mathrm{d} x = n!\]</span></p>
+<p>Define <span class="math inline">\(f_{i}(x) = x^{i}\)</span> for <span class="math inline">\(i = 0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>. Then <span class="math display">\[\mathopen{|}f_{0\mathclose{|}}^{2} = \int_{0}^{\infty} f_{0}(x)^{2} \mathrm{e}^{-x} \,
+    \mathrm{d} x = \int_{0}^{\infty} \mathrm{e}^{-x} \, \mathrm{d} x = 1,\]</span> so <span class="math display">\[L_{0}(x) = \frac{1}{\mathopen{|}f_{0\mathclose{|}}} f_{0}(x) = 1.\]</span></p>
+<p>We now calculate <span class="math inline">\(L_{1}\)</span>. First <span class="math display">\[\langle f_{1},L_{0} \rangle = \int_{0}^{\infty} f_{1}(x) L_{0}(x)
+    \mathrm{e}^{-x} \, \mathrm{d} x = \int_{0}^{\infty} x \mathrm{e}^{-x} \,
+    \mathrm{d} x = 1.\]</span> The Gram-Schmidt process says we first put <span class="math display">\[w_{1}(x) = f_{1}(x) - \langle f_{1},L_{0} \rangle L_{0}(x) = x - 1.\]</span> Now <span class="math display">\[\begin{aligned}
+    \mathopen{|}w_{1\mathclose{|}}^{2} &amp; = \int_{0}^{\infty} w_{1}(x)^{2} \mathrm{e}^{-x}
+    \, \mathrm{d} x                                                                         \\
+                     &amp; = \int_{0}^{\infty} (x^{2}\mathrm{e}^{-x} - 2x\mathrm{e}^{-x} +
+    \mathrm{e}^{-x}) \, \mathrm{d} x                                                        \\
+                     &amp; = 2 - 2 + 1 = 1.
+  \end{aligned}\]</span> Hence <span class="math display">\[L_{1}(x) = \frac{1}{\mathopen{|}w_{1\mathclose{|}}} w_{1}(x) = x-1.\]</span></p>
+<p>In the next step of the Gram–Schmidt process, we calculate <span class="math display">\[\langle f_{2},L_{0} \rangle = \int_{0}^{\infty} x^{2}
+    \mathrm{e}^{-x} \, \mathrm{d} x = 2\]</span> and <span class="math display">\[\begin{aligned}
+    \langle f_{2},L_{1} \rangle &amp; = \int_{0}^{\infty} x^{2}(x-1)
+    \mathrm{e}^{-x} \, \mathrm{d} x                                                       \\
+                                &amp; = \int_{0}^{\infty} (x^{3} \mathrm{e}^{-x} - x^{2}
+    \mathrm{e}^{-x}) \, \mathrm{d} x                                                      \\
+                                &amp; = 3! - 2! = 6-2 = 4.
+  \end{aligned}\]</span> So we put <span class="math display">\[\begin{aligned}
+    w_{2}(x) &amp; = f_{2}(x) - \langle f_{2},L_{0} \rangle L_{0}(x) -
+    \langle f_{2},L_{1} \rangle L_{1}(x)                           \\
+             &amp; = x^{2} - 4(x-1) - 2                                \\
+             &amp; = x^{2} - 4x + 2.
+  \end{aligned}\]</span> Now <span class="math display">\[\begin{aligned}
+    \mathopen{|}w_{2\mathclose{|}}^{2} &amp; = \int_{0}^{\infty} w_{2}(x)^{2} \mathrm{e}^{-x}
+    \, \mathrm{d} x                                                                  \\
+                     &amp; = \int_{0}^{\infty} (x^{4} - 8x^{3} + 20x^{2} - 16x + 4)
+    \mathrm{e}^{-x} \, \mathrm{d} x                                                  \\
+                     &amp; = 4! - 8\cdot 3! + 20\cdot2! - 16 + 4                    \\
+                     &amp; = 4.
+  \end{aligned}\]</span> Hence we take <span class="math display">\[L_{2}(x) = \frac{1}{\mathopen{|}w_{2\mathclose{|}}} w_{2}(x) = \textstyle\frac{1}{2}(x^{2} - 4x + 2).\]</span></p>
+<p>Similar calculations can be performed to determine <span class="math inline">\(L_{3}\)</span>, <span class="math inline">\(L_{4}\)</span>, …, but they become increasingly more complicated (and consequently less suitable for presenting on a whiteboard!).</p>
+</div>
+<div class="examplejupyter">
+<p>Define an inner product on the space <span class="math inline">\(\mathcal{P}\)</span> of real polynomials by <span class="math display">\[\langle f,g \rangle = \int_{-1}^{1} f(x) g(x) \, \mathrm{d} x.\]</span> Applying the Gram–Schmidt process to the monomials <span class="math inline">\(\{ 1, x, x^{2},  x^{3}, \dots \}\)</span> produces an orthonormal basis (with respect to this inner product). The polynomials produced are scalar multiples of the <em>Legendre polynomials</em>: <span class="math display">\[\begin{aligned}
+    P_{0}(x) &amp; = 1               \\
+    P_{1}(x) &amp; = x               \\
+    P_{2}(x) &amp; = \textstyle\frac{1}{2}(3x^{2}-1) \\
+             &amp; \vdots
+  \end{aligned}\]</span> The set <span class="math inline">\(\{P_{n}(x) : n = 0,1,2,\dots\}\)</span> of Legendre polynomials is <em>orthogonal</em>, but <em>not</em> orthonormal. This is the reason why the Gram–Schmidt process only produces a scalar multiple of them. The scalars appearing are determined by the norms of the <span class="math inline">\(P_{n}\)</span> with respect to this inner product.</p>
+<p>For example, <span class="math display">\[\mathopen{|}P_{0\mathclose{|}}^{2} = \int_{-1}^{1} P_{0}(x)^{2} \, \mathrm{d} x =
+    \int_{-1}^{1} \mathrm{d} x = 2,\]</span> so the polynomial of unit norm produced will be <span class="math inline">\(\frac{1}{\surd2}P_{0}(x)\)</span>. Similar calculations (of increasing length) can be performed for the other polynomials.</p>
+</div>
+<div class="examplejupyter">
+<p>The <em>Hermite polynomials</em> form an orthogonal set in the space <span class="math inline">\(\mathcal{P}\)</span> when we endow it with the following inner product <span class="math display">\[\langle f,g \rangle = \int_{-\infty}^{\infty} f(x)g(x)
+    \mathrm{e}^{-x^{2}/2} \, \mathrm{d} x.\]</span> Again the orthonormal basis produced by applying the Gram–Schmidt process to the monomials are scalar multiples of the Hermite polynomials.</p>
+</div>
+<h2 id="orthogonal-complements">Orthogonal complements</h2>
+<div class="defn">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space. If <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, the <strong><em>orthogonal complement</em></strong> to <span class="math inline">\(U\)</span> is <span class="math display">\[U^{\perp} = \{ v \in V  : \text{$\langle v,u \rangle = 0$ for
+        all~$u \in U$}\}.\]</span></p>
+</div>
+<p>Thus <span class="math inline">\(U^{\perp}\)</span> consists of those vectors which are orthogonal to every single vector in <span class="math inline">\(U\)</span>.</p>
+<div class="lemma">
+<p>Let <span class="math inline">\(V\)</span> be an inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(U^{\perp}\)</span> is a subspace of <span class="math inline">\(V\)</span>, and</p></li>
+<li><p><span class="math inline">\(U \cap U^{\perp} = \{\vec{0}\}\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <strong>(1).</strong> It suffices to check the Subspace Criteria. Since <span class="math inline">\(\langle \vec{0},u \rangle = 0\)</span> for all <span class="math inline">\(u \in U\)</span>, it follows that <span class="math inline">\(\vec{0} \in U^{\perp}\)</span> and so <span class="math inline">\(U ^ {\perp} \not= \varnothing\)</span>. If <span class="math inline">\(v, w  \in U^{\perp}\)</span> and <span class="math inline">\(\alpha \in F\)</span>, then <span class="math display">\[\langle v+w, u \rangle = \langle v,u \rangle + \langle w,u \rangle =
+    0 + 0 = 0\]</span> and <span class="math display">\[\langle \alpha v, u \rangle = \alpha \langle v,u \rangle = \alpha
+    \cdot 0 = 0\]</span> for all <span class="math inline">\(u \in U\)</span>. So we deduce <span class="math inline">\(v+w \in U^{\perp}\)</span> and <span class="math inline">\(\alpha v  \in U^{\perp}\)</span>. This shows that <span class="math inline">\(U^{\perp}\)</span> is a subspace.</p>
+<p><strong>(2).</strong> Let <span class="math inline">\(u \in U \cap U^{\perp}\)</span>. Then <span class="math inline">\(\mathopen{|}u\mathclose{|}^{2} = \langle u,u \rangle = 0\)</span> (since <span class="math inline">\(u\)</span> is, in particular, orthogonal to itself). Hence <span class="math inline">\(u = \vec{0}\)</span> (by definiteness in the definition of an inner product). ◻</p>
+</div>
+<div class="thm">
+<p><span id="thm:orthogsum" label="thm:orthogsum"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Then <span class="math inline">\(V = U \oplus U^{\perp}\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> We already know that <span class="math inline">\(U \cap U^{\perp} = \{\vec{0}\}\)</span>, so it remains to show <span class="math inline">\(V = U + U^{\perp}\)</span>.</p>
+<p>Let <span class="math inline">\(\{ v_{1}, v_{2}, \dots, v_{k} \}\)</span> be a basis for <span class="math inline">\(U\)</span>. Extend <span class="math inline">\(\{ v_{1}, v_{2}, \dots, v_{k} \}\)</span> to a basis <span class="math display">\[\mathscr{B} = \{ v_{1}, v_{2}, \dots, v_{k}, w_{k+1}, \dots, w_{n} \}\]</span> for <span class="math inline">\(V\)</span>. Applying the Gram–Schmidt process to <span class="math inline">\(\mathscr{B}\)</span>, we produce an orthonormal basis <span class="math inline">\(\mathscr{E} = \{ e_{1}, e_{2}, \dots,  e_{n} \}\)</span> for <span class="math inline">\(V\)</span>. By construction, <span class="math display">\[\{ e_{1}, e_{2}, \dots, e_{k} \} \subseteq \operatorname{Span}(v_{1}, v_{2},
+    \dots, v_{k}) = U\]</span> and, since <span class="math inline">\(\{ e_{1}, e_{2}, \dots, e_{k} \} \subseteq \mathscr{E}\)</span> is a basis for <span class="math inline">\(V\)</span>, <span class="math inline">\(\{e_{1},e_{2},\dots,e_{k} \}\)</span> is linearly independent. Therefore, since <span class="math inline">\(k = \dim U\)</span>, <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{k} \}\)</span> is a basis for <span class="math inline">\(U\)</span>.</p>
+<p>If <span class="math inline">\(u \in U\)</span> is arbitrary, then <span class="math inline">\(u\)</span> can be written uniquely as <span class="math inline">\(u =  \sum_{i=1}^{k} \alpha_{i}e_{i}\)</span> for some scalars <span class="math inline">\(\alpha_1, \ldots,  \alpha_k\)</span>. So, if <span class="math inline">\(j = k+1\)</span>, <span class="math inline">\(k+2\)</span>, …, <span class="math inline">\(n\)</span>, then <span class="math display">\[\langle u,e_{j} \rangle = \biggl\langle \sum_{i=1}^{k}
+    \alpha_{i}e_{i}, e_{j} \biggr\rangle = \sum_{i=1}^{k} \alpha_{i}
+    \langle e_{i},e_{j} \rangle = 0.\]</span> In other words, <span class="math inline">\(e_{k+1},e_{k+2},\dots,e_{n} \in U^{\perp}\)</span>.</p>
+<p>Finally, if <span class="math inline">\(v \in V\)</span>, then we can write <span class="math display">\[v = \beta_{1}e_{1} + \dots + \beta_{k}e_{k} + \beta_{k+1}e_{k+1} +
+    \dots + \beta_{n}e_{n}\]</span> for some scalars <span class="math inline">\(\beta_{1}\)</span>, <span class="math inline">\(\beta_{2}\)</span>, …, <span class="math inline">\(\beta_{n}\)</span> and <span class="math display">\[\beta_{1}e_{1} + \dots + \beta_{k}e_{k} \in U \qquad \text{and}
+    \qquad \beta_{k+1}e_{k+1} + \dots + \beta_{n}e_{n} \in U^{\perp}.\]</span> This shows that every vector in <span class="math inline">\(V\)</span> is the sum of a vector in <span class="math inline">\(U\)</span> and one in <span class="math inline">\(U^{\perp}\)</span>, so <span class="math display">\[V = U + U^{\perp},\]</span> as required to complete the proof. ◻</p>
+</div>
+<p>Recall from <a href="#section-projection-maps" data-reference-type="ref" data-reference="section-projection-maps">[section-projection-maps]</a> that associated to every direct sum are (at least) two projection maps. In particular, if <span class="math inline">\(V\)</span> is any vector space and <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, then <span class="math inline">\(V = U \oplus U ^ {\perp}\)</span> and so there is a projection <span class="math inline">\(P_{U} : V \to V\)</span> onto <span class="math inline">\(U\)</span>. The projection <span class="math inline">\(P_U\)</span> is defined by <span class="math display">\[P_{U}(v) = u\]</span> where <span class="math inline">\(v = u+w\)</span> is the unique decomposition of <span class="math inline">\(v\)</span> with <span class="math inline">\(u \in U\)</span> and <span class="math inline">\(w \in U^{\perp}\)</span>.</p>
+<div class="thm">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Let <span class="math inline">\(P_{U} : V \to V\)</span> be the projection map onto <span class="math inline">\(U\)</span> associated to the direct sum decomposition <span class="math inline">\(V = U \oplus  U^{\perp}\)</span>. If <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(\mathopen{|}v - P_{U\mathclose{|}(v)} \leq \mathopen{|}v - u\mathclose{|}\)</span> for all <span class="math inline">\(u \in U\)</span>. (In other words, <span class="math inline">\(P_{U}(v)\)</span> is the closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(v\)</span>.)</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Since <span class="math inline">\(V = U \oplus U^{\perp}\)</span>, we can write <span class="math inline">\(v = u_{0} + w_{0}\)</span> where <span class="math inline">\(u_{0} \in U\)</span> and <span class="math inline">\(w_{0} \in U^{\perp}\)</span>, so that <span class="math inline">\(P_{U}(v) = u_{0}\)</span>. Then if <span class="math inline">\(u\)</span> is any vector in <span class="math inline">\(U\)</span>, <span class="math display">\[\begin{aligned}
+    \mathopen{|}v-u\mathclose{|}^{2} &amp; = \mathopen{|}v-u_{0\mathclose{|} + (u_{0} - u)}^{2} 
+                   &amp; (v - u = v-u_{0} + (u_{0} - u)) \\
+                   &amp; = \mathopen{|}w_{0\mathclose{|} + (u_{0} - u)}^{2}  &amp; (v - u_0 = w_0) \\
+                   &amp; = \langle w_{0} + (u_{0}-u), w_{0} + (u_{0}-u) \rangle 
+                   &amp; (\text{definition of the norm}) \\
+                   &amp; = \langle w_{0},w_{0} \rangle 
+                       + \langle w_{0},u_{0}-u \rangle 
+                       + \langle u_{0}-u, w_{0} \rangle 
+                       + \langle u_{0}-u, u_{0}-u \rangle 
+                   &amp; (\text{additivity})\\
+                   &amp; = \mathopen{|}w_{0\mathclose{|}}^{2} + \mathopen{|}u_{0\mathclose{|}-u}^{2}
+                   &amp; \text{(since $w_{0}$~is orthogonal to $u_{0}-u \in U$)} \\
+                   &amp; \geq \mathopen{|}w_{0\mathclose{|}}^{2} 
+                   &amp; \text{(since $\mathopen{|}u_{0\mathclose{|}-u} \geq 0$)} \\
+                   &amp; = \mathopen{|}v - u_{0\mathclose{|}}^{2} \\
+                   &amp; = \mathopen{|}v - P_{U\mathclose{|}(v)}^{2}.
+  \end{aligned}\]</span> Hence <span class="math inline">\(\mathopen{|}v-u\mathclose{|} \geq \mathopen{|}v - P_{U\mathclose{|}(v)}\)</span> for all <span class="math inline">\(u \in U\)</span>. ◻</p>
+</div>
+<div class="exampjupyter">
+<p>Find the distance from the vector <span class="math inline">\(\vec{w}_{0} =  \begin{pmatrix}  -1 \\  5 \\  1 \\  \end{pmatrix}\)</span> in <span class="math inline">\(\mathbb{R}^{3}\)</span> to the subspace <span class="math display">\[U = \operatorname{Span} \left( \begin{pmatrix}
+        1 \\
+        1 \\
+        1 \\
+      \end{pmatrix},
+      \begin{pmatrix}
+        0 \\
+        1 \\
+        -2 \\
+    \end{pmatrix} \right).\]</span></p>
+</div>
+<div class="solution">
+<p>We need to find <span class="math inline">\(U^{\perp}\)</span>, which must be a <span class="math inline">\(1\)</span>-dimensional subspace since <span class="math inline">\(\mathbb{R}^{3} = U \oplus U^{\perp}\)</span>. We solve the condition <span class="math inline">\(\langle \vec{v},\vec{u} \rangle = 0\)</span> for all <span class="math inline">\(\vec{u} \in U\)</span>: <span class="math display">\[\left\langle \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}, \begin{pmatrix} 1 \\ 1 \\ 1 \\ \end{pmatrix} \right\rangle
+    = \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 1 \\ 1 \\ \end{pmatrix} = x+y+z\]</span> and <span class="math display">\[\left\langle \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ -2 \\ \end{pmatrix} \right\rangle
+    = \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ -2 \\ \end{pmatrix} = y-2z.\]</span> Hence <span class="math display">\[x+y+z = y-2z = 0.\]</span> Given arbitrary <span class="math inline">\(z\)</span>, we take <span class="math inline">\(y = 2z\)</span> and <span class="math inline">\(x = -y-z = -3z\)</span>. Therefore <span class="math display">\[U^{\perp} = \left\{ \begin{pmatrix} -3z \\ 2z \\ z \\ \end{pmatrix} \;\middle|\; z \in \mathbb{R} \right\}
+    = \operatorname{Span} \left( \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix} \right).\]</span></p>
+<p>The closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(\vec{w}_{0}\)</span> is <span class="math inline">\(P_{U}(\vec{w}_{0})\)</span> where <span class="math inline">\(P_{U} : \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> is the projection onto <span class="math inline">\(U\)</span> associated to <span class="math inline">\(\mathbb{R}^{3} = U \oplus U^{\perp}\)</span>. To determine this we solve <span class="math display">\[\vec{w}_{0} = \begin{pmatrix} -1 \\ 5 \\ 1 \\ \end{pmatrix} = \alpha \begin{pmatrix} 1 \\ 1 \\ 1 \\ \end{pmatrix} +
+    \beta \begin{pmatrix} 0 \\ 1 \\ -2 \\ \end{pmatrix} + \gamma \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    \alpha \qquad\;\, - 3\gamma   &amp; = -1  \\
+    \alpha \;\; + \beta + 2\gamma &amp; = 5  \\
+    \alpha - 2\beta \;\; + \gamma &amp; = 1. 
+  \end{aligned}\]</span> Multiplying the second equation by <span class="math inline">\(2\)</span> and adding to the third equation gives <span class="math display">\[3\alpha + 5\gamma = 11.\]</span> Then multiplying the first equation by <span class="math inline">\(3\)</span> and subtracting gives <span class="math display">\[14\gamma = 14.\]</span> Hence <span class="math inline">\(\gamma = 1\)</span>,  <span class="math inline">\(\alpha = -1 + 3\gamma = 2\)</span> and <span class="math inline">\(\beta = 5 -  \alpha - 2\gamma = 1\)</span>. We conclude <span class="math display">\[\begin{aligned}
+    \vec{w}_{0} &amp; = 2\begin{pmatrix} 1 \\ 1 \\ 1 \\ \end{pmatrix} + \begin{pmatrix} 0 \\ 1 \\ -2 \\ \end{pmatrix} +
+    \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix}                                           \\
+                 &amp; = P_{U}(\vec{w}_{0}) + \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix}.
+  \end{aligned}\]</span> We know <span class="math inline">\(P_{U}(\vec{w}_{0})\)</span> is the nearest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(\vec{w}_{0}\)</span>, so the distance of <span class="math inline">\(\vec{w}_{0}\)</span> to <span class="math inline">\(U\)</span> is <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{0} - P_{U}(\vec{w}_{0})} = \left\|
+    \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix} \right\| = \sqrt{(-3)^{2} + 2^{2} + 1^{2}} =
+    \sqrt{14}.\]</span></p>
+</div>
+<div class="omittedexampjupyter">
+<p>Let <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span> denote the usual inner product on <span class="math inline">\(\mathbb{R}^{4}\)</span>, namely <span class="math display">\[\langle \vec{u}, \vec{v} \rangle = \sum_{i=1}^{4} x_{i} y_{i}\]</span> for <span class="math inline">\(\vec{u} = \begin{pmatrix} x_{1} \\ x_{2} \\ x_{3} \\ x_{4}\end{pmatrix}\)</span> and <span class="math inline">\(\vec{v} = \begin{pmatrix} y_{1} \\ y_{2} \\ y_{3} \\ y_{4}\end{pmatrix}\)</span>.</p>
+<ol type="1">
+<li><p>Apply the Gram–Schmidt Process to the set <span class="math display">\[\mathscr{A} = \left\{ \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}, \begin{pmatrix} 3 \\ 1 \\ -2 \\ 2 \end{pmatrix},
+            \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} \right\}\]</span> to produce an orthonormal basis for <span class="math inline">\(\mathbb{R}^{4}\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(U\)</span> be the subspace of <span class="math inline">\(\mathbb{R}^{4}\)</span> spanned by <span class="math display">\[\mathscr{B} = \left\{ \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}, \begin{pmatrix} 3 \\ 1 \\ -2 \\ 2 \end{pmatrix} \right\}.\]</span> Find a basis for the orthogonal complement to <span class="math inline">\(U\)</span> in <span class="math inline">\(\mathbb{R}^{4}\)</span>.</p></li>
+<li><p>Find the vector in <span class="math inline">\(U\)</span> that is nearest to <span class="math inline">\(\begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix}\)</span>.</p></li>
+</ol>
+</div>
+<div class="solution">
+<p>(1) Define <span class="math display">\[\vec{v}_{1} = \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}, \quad \vec{v}_{2} =
+    \begin{pmatrix} 3 \\ 1 \\ -2 \\ 2 \end{pmatrix}, \quad \vec{v}_{3} = \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix},
+    \quad \vec{v}_{4} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}.\]</span> We perform the steps of the Gram–Schmidt Process:</p>
+<h5 id="step-1-2">Step 1:</h5>
+<p><span class="math display">\[\mathopen{|}\vec{v\mathclose{|}_{1}}^{2} = 1^{2} + 1^{2} + (-1)^{2} + 1^{2} = 4,\]</span> so <span class="math display">\[\mathopen{|}\vec{v\mathclose{|}_{1}} = 2.\]</span> Take <span class="math display">\[\vec{e}_{1} = \frac{1}{\mathopen{|}\vec{v\mathclose{|}_{1}}} \vec{v}_{1} = \frac{1}{2}
+    \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}.\]</span></p>
+<h5 id="step-2">Step 2:</h5>
+<p><span class="math display">\[\langle \vec{v}_{2}, \vec{e}_{1} \rangle = \frac{1}{2} \left\langle
+    \begin{pmatrix} 3 \\ 1 \\ -2 \\ 2 \end{pmatrix}, \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} \right\rangle = \textstyle\frac{1}{2}
+    (3+1+2+2) = 4.\]</span> Take <span class="math display">\[\vec{w}_{2} = \vec{v}_{2} - \langle \vec{v}_{2},\vec{e}_{1}
+    \rangle \vec{e}_{1} = \begin{pmatrix} 3 \\ 1 \\ -2 \\ 2 \end{pmatrix} - 2 \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}
+    = \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}.\]</span> Then <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{2}}^{2} = 1^{2} + (-1)^{2} = 2,\]</span> so take <span class="math display">\[\vec{e}_{2} = \frac{1}{\mathopen{|}\vec{w\mathclose{|}_{2}}} \vec{w}_{2} =
+    \frac{1}{\surd2} \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}.\]</span></p>
+<h5 id="step-3">Step 3:</h5>
+<p><span class="math display">\[\begin{aligned}
+    \langle \vec{v}_{3}, \vec{e}_{1} \rangle &amp; = \frac{1}{2}
+    \left\langle \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}
+    \right\rangle = \textstyle\frac{1}{2} ( 2 - 4 -3 + 1) = -2                      \\
+    \langle \vec{v}_{3}, \vec{e}_{2} \rangle &amp; = \frac{1}{\surd2}
+    \left\langle \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}
+    \right\rangle = {\textstyle\frac{1}{\surd2}} ( 2 + 4 + 0 + 0 ) =
+    \frac{6}{\surd2} = 3\surd2.
+  \end{aligned}\]</span> Take <span class="math display">\[\begin{aligned}
+    \vec{w}_{3} &amp; = \vec{v}_{3} - \langle \vec{v}_{3}, \vec{e}_{1}
+    \rangle \vec{e}_{1} - \langle \vec{v}_{3}, \vec{e}_{2} \rangle
+    \vec{e}_{2}                                                       \\
+                 &amp; = \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix} + 2 \cdot \frac{1}{2}
+    \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} - 3\surd2 \cdot \frac{1}{\surd2}
+    \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}                                              \\
+                 &amp; = \begin{pmatrix} 2 \\ -4 \\ 3 \\ 1 \end{pmatrix} + \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} - 3
+    \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}
+    = \begin{pmatrix} 0 \\ 0 \\ 2 \\ 2 \end{pmatrix}.
+  \end{aligned}\]</span> Then <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{3}}^{2} = 2^{2} + 2^{2} = 8,\]</span> so take <span class="math display">\[\vec{e}_{3} = \frac{1}{\mathopen{|}\vec{w\mathclose{|}_{3}}} \vec{w}_{3} =
+    \frac{1}{2\surd2}\vec{w}_{3} = \frac{1}{\surd2}\begin{pmatrix} 0 \\ 0 \\ 1 \\ 1 \end{pmatrix}.\]</span></p>
+<h5 id="step-4">Step 4:</h5>
+<p><span class="math display">\[\begin{aligned}
+    \langle \vec{v}_{4}, \vec{e}_{1} \rangle &amp; = \frac{1}{0}
+    \left\langle \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix}
+    \right\rangle = \textstyle\frac{1}{2}                                           \\
+    \langle \vec{v}_{4}, \vec{e}_{2} \rangle &amp; = \frac{1}{\surd2}
+    \left\langle \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}
+    \right\rangle = \frac{1}{\surd2}                                \\
+    \langle \vec{v}_{4}, \vec{e}_{3} \rangle &amp; = \frac{1}{\surd2}
+    \left\langle \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \\ 1 \end{pmatrix}
+    \right\rangle = 0.
+  \end{aligned}\]</span> Take <span class="math display">\[\begin{aligned}
+    \vec{w}_{4} &amp; = \vec{v}_{4} - \langle \vec{v}_{4}, \vec{e}_{1}
+    \rangle \vec{e}_{1} - \langle \vec{v}_{4}, \vec{e}_{2} \rangle
+    \vec{e}_{2} - \langle \vec{v}_{4}, \vec{e}_{3} \rangle
+    \vec{e}_{3}                                                                \\
+                 &amp; = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} - \frac{1}{2} \cdot \frac{1}{2}
+    \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} - \frac{1}{\surd2} \cdot \frac{1}{\surd2}
+    \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}                                                       \\
+                 &amp; = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} - \frac{1}{4} \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} -
+    \frac{1}{2} \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}                                           \\
+                 &amp; = \begin{pmatrix} 1/4 \\ 1/4 \\ 1/4 \\ -1/4 \end{pmatrix}.
+  \end{aligned}\]</span> Then <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{4}}^{2} = {\textstyle \left(\frac{1}{4}\right)^{2} +
+    \left(\frac{1}{4}\right)^{2} + \left(\frac{1}{4}\right)^{2} +
+    \left(-\frac{1}{4}\right)^{2} } = \frac{1}{4},\]</span> so take <span class="math display">\[\vec{e}_{4} = \frac{1}{\mathopen{|}\vec{w\mathclose{|}_{4}}} \vec{w}_{4} =
+    \frac{1}{2} \begin{pmatrix} 1 \\ 1 \\ 1 \\ -1 \end{pmatrix}.\]</span></p>
+<p>Hence <span class="math display">\[\left\{ \frac{1}{2}\begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix},
+    \frac{1}{\surd2}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix},
+    \frac{1}{\surd2}\begin{pmatrix} 0 \\ 0 \\ 1 \\ 1 \end{pmatrix},
+    \frac{1}{2}\begin{pmatrix} 1 \\ 1 \\ 1 \\ -1 \end{pmatrix} \right\}\]</span> is the orthonormal basis for <span class="math inline">\(\mathbb{R}^{4}\)</span> obtained by applying the Gram–Schmidt Process to <span class="math inline">\(\mathscr{A}\)</span>.</p>
+<p>(2) In terms of the notation of (1),  <span class="math inline">\(U =  \operatorname{Span}(\vec{v}_{1},\vec{v}_{2})\)</span>. However, the method of the Gram–Schmidt Process (see the proof of <a href="http://example.org/11-inner-products/#thm:Gram-Schmidt">Theorem 11.4.6</a>) shows that <span class="math display">\[\operatorname{Span}(\vec{e}_{1}, \vec{e}_{2}) = \operatorname{Span}(\vec{v}_{1},
+      \vec{v}_{2}) = U.\]</span></p>
+<p>If <span class="math inline">\(\vec{v} = \alpha\vec{e}_{1} + \beta\vec{e}_{2} +  \gamma\vec{e}_{3} + \delta\vec{e}_{4}\)</span> is an arbitrary vector of <span class="math inline">\(\mathbb{R}^{4}\)</span> (expressed in terms of our orthonormal basis), then <span class="math display">\[\langle \vec{v}, \vec{e}_{1} \rangle = \alpha \qquad \text{and}
+    \qquad \langle \vec{v}, \vec{e}_{2} \rangle = \beta.\]</span> Hence if <span class="math inline">\(\vec{v} \in U^{\perp}\)</span>, then in particular <span class="math inline">\(\alpha =  \beta = 0\)</span>, so <span class="math inline">\(U^{\perp} \subseteq \operatorname{Span}(\vec{e}_{3},  \vec{e}_{4})\)</span>. Conversely, if <span class="math inline">\(\vec{v} = \gamma\vec{e}_{3} +  \delta\vec{e}_{4} \in \operatorname{Span}(\vec{e}_{3}, \vec{e}_{4})\)</span>, then <span class="math display">\[\langle \zeta\vec{e}_{1} + \eta \vec{e}_{2}, \gamma\vec{e}_{3} +
+    \delta \vec{e}_{4} \rangle = 0\]</span> since <span class="math inline">\(\langle \vec{e}_{i}, \vec{e}_{j} \rangle = 0\)</span> for <span class="math inline">\(i \neq  j\)</span>. Hence every vector in <span class="math inline">\(\operatorname{Span}(\vec{e}_{3},\vec{e}_{4})\)</span> is orthogonal to every vector in <span class="math inline">\(U\)</span> and we conclude <span class="math display">\[U^{\perp} = \operatorname{Span}(\vec{e}_{3},\vec{e}_{4}).\]</span> Thus <span class="math inline">\(\{ \vec{e}_{3}, \vec{e}_{4} \}\)</span> is a basis for <span class="math inline">\(U^{\perp}\)</span>.</p>
+<p>(3) Let <span class="math inline">\(P : V \to V\)</span> be the projection onto <span class="math inline">\(U\)</span> associated to the direct sum decomposition <span class="math inline">\(V = U \oplus U^{\perp}\)</span>. Then <span class="math inline">\(P(\vec{v})\)</span> is the vector in <span class="math inline">\(U\)</span> closest to <span class="math inline">\(v\)</span>. Now in our application of the Gram–Schmidt Process, <span class="math display">\[\vec{w}_{3} = \vec{v}_{3} - \langle \vec{v}_{3}, \vec{e}_{1}
+    \rangle \vec{e}_{1} - \langle \vec{v}_{3}, \vec{e}_{2} \rangle \vec{e}_{2},\]</span> so <span class="math display">\[P(\vec{w}_{3}) = P(\vec{v}_{3}) - \langle \vec{v}_{3},
+    \vec{e}_{1} \rangle P(\vec{e}_{1}) - \langle \vec{v}_{3},
+    \vec{e}_{1} \rangle P(\vec{e}_{2}).\]</span> Therefore <span class="math display">\[\vec{0} = P(\vec{v}_{3}) - \langle \vec{v}_{3}, \vec{e}_{1} \rangle
+    \vec{e}_{1} - \langle \vec{v}_{3}, \vec{e}_{2} \rangle \vec{e}_{2},\]</span> since <span class="math inline">\(\vec{w}_{3} = \mathopen{|}\vec{w\mathclose{|}_{3}}\vec{e}_{3} \in U^{\perp}\)</span> and <span class="math inline">\(\vec{e}_{1},\vec{e}_{2} \in U\)</span>. Hence the closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(\vec{v}_{3}\)</span> is <span class="math display">\[\begin{aligned}
+    P(\vec{v}_{3}) &amp; = \langle \vec{v}_{3}, \vec{e}_{1} \rangle
+    \vec{e}_{1} + \langle \vec{v}_{3}, \vec{e}_{2} \rangle
+    \vec{e}_{2}                                                                     \\
+                    &amp; = (-2) \cdot \frac{1}{2} \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} + 3\surd2 \cdot
+    \frac{1}{\surd2} \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}                                           \\
+                    &amp; = - \begin{pmatrix} 1 \\ 1 \\ -1 \\ 1 \end{pmatrix} + 3 \begin{pmatrix} 1 \\ -1 \\ 0 \\ 0 \end{pmatrix}            \\
+                    &amp; = \begin{pmatrix} 2 \\ -4 \\ 1 \\ -1 \end{pmatrix}.
+  \end{aligned}\]</span></p>
+</div>
+
+
+
+
+
+
+
+<p><a href="#">Back to top</a></p>
+</body>
+</html>
