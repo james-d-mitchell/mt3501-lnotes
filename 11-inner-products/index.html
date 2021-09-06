@@ -333,27 +333,27 @@
 <div class="thm">
 <p><span id="thm:Gram-Schmidt" label="thm:Gram-Schmidt"></span> Suppose that <span class="math inline">\(V\)</span> is a finite-dimensional inner product space with basis <span class="math inline">\(\{  v_{1},v_{2},\dots,v_{n} \}\)</span>. The following procedure constructs an orthonormal basis <span class="math inline">\(\{ e_{1},e_{2},\dots,e_{n} \}\)</span> for <span class="math inline">\(V\)</span>:</p>
 <h5 id="step-1">Step 1:</h5>
-<p>Define <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1\mathclose{|}}} v_{1}\)</span>.</p>
+<p>Define <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1}\mathclose{|}} v_{1}\)</span>.</p>
 <h5 id="step-k">Step <span class="math inline">\(k\)</span>:</h5>
 <p>Suppose <span class="math inline">\(e_{1},e_{2},\ldots,e_{k-1}\)</span> have been constructed. Define <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i}\qquad
-    \text{and} \qquad e_{k} = \frac{1}{\mathopen{|}w_{k\mathclose{|}}} w_{k}.\]</span></p>
+    \text{and} \qquad e_{k} = \frac{1}{\mathopen{|}w_{k}\mathclose{|}} w_{k}.\]</span></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> We claim that for every <span class="math inline">\(k\in \{1, \ldots, n\}\)</span> the set <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k} \}\)</span> is orthonormal and that <span class="math display">\[e_{1},e_{2},\dots,e_{k}\in 
   \operatorname{Span}(v_{1},v_{2},\dots,v_{k}).\]</span></p>
 <h5 id="step-1-1">Step 1:</h5>
-<p>Since <span class="math inline">\(v_{1}\)</span> is a non-zero vector, <span class="math inline">\(\mathopen{|}v_{1\mathclose{|}}  \neq 0\)</span> and hence <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1\mathclose{|}}}v_{1}\)</span> is defined.</p>
+<p>Since <span class="math inline">\(v_{1}\)</span> is a non-zero vector, <span class="math inline">\(\mathopen{|}v_{1}\mathclose{|}  \neq 0\)</span> and hence <span class="math inline">\(e_{1} = \frac{1}{\mathopen{|}v_{1}\mathclose{|}}v_{1}\)</span> is defined.</p>
 <p><span class="math display">\[\mathopen{|}e_{1\mathclose{|}} = \left\| \frac{1}{\mathopen{|}v_{1\mathclose{|}}} v_{1} \right\| 
-  = |\frac{1}{\mathopen{|}v_{1\mathclose{|}}}| \cdot \mathopen{|}v_{1\mathclose{|}}
-  = \frac{1}{\mathopen{|}v_{1\mathclose{|}}} \cdot \mathopen{|}v_{1\mathclose{|}} = 1.\]</span> There is no orthogonality to check in the set <span class="math inline">\(\{e_1\}\)</span>, since it contains a single vector. Hence <span class="math inline">\(\{ e_{1} \}\)</span> is an orthonormal set and by definition <span class="math inline">\(e_{1} \in \operatorname{Span}(v_{1})\)</span>.</p>
+  = |\frac{1}{\mathopen{|}v_{1}\mathclose{|}}| \cdot \mathopen{|}v_{1}\mathclose{|}
+= \frac{1}{\mathopen{|}v_{1}\mathclose{|}} \cdot \mathopen{|}v_{1}\mathclose{|} = 1.\]</span> There is no orthogonality to check in the set <span class="math inline">\(\{e_1\}\)</span>, since it contains a single vector. Hence <span class="math inline">\(\{ e_{1} \}\)</span> is an orthonormal set and by definition <span class="math inline">\(e_{1} \in \operatorname{Span}(v_{1})\)</span>.</p>
 <h5 id="step-k-1">Step <span class="math inline">\(k\)</span>:</h5>
 <p>Suppose that <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k-1} \}\)</span> is an orthonormal set contained in <span class="math inline">\(\operatorname{Span}(v_{1},v_{2},\dots,v_{k-1})\)</span> for some <span class="math inline">\(k \geq 2\)</span>. Set <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle.\]</span> If <span class="math inline">\(w_{k} = \vec{0}\)</span>, then <span class="math display">\[\begin{aligned}
     v_{k} = \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i} \in
     \operatorname{Span}(e_{1},\dots,e_{k-1}) \subseteq
     \operatorname{Span}(v_{1},\dots,v_{k-1}),
-  \end{aligned}\]</span> which contradicts the assumption that <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> is linearly independent. Thus <span class="math inline">\(w_{k} \neq \vec{0}\)</span> and <span class="math inline">\(e_{k} =  \frac{1}{\mathopen{|}w_{k\mathclose{|}}}w_{k}\)</span> is defined.</p>
+  \end{aligned}\]</span> which contradicts the assumption that <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> is linearly independent. Thus <span class="math inline">\(w_{k} \neq \vec{0}\)</span> and <span class="math inline">\(e_{k} = \frac{1}{\mathopen{|}w_{k}\mathclose{|}}w_{k}\)</span> is defined.</p>
 <p>By construction, <span class="math inline">\(\mathopen{|}e_{k\mathclose{|}} = 1\)</span> and <span class="math display">\[\begin{aligned}
-    e_{k}  = \frac{1}{\mathopen{|}w_{k\mathclose{|}}} \biggl( v_{k} - \sum_{i=1}^{k-1}
+    e_{k}  = \frac{1}{\mathopen{|}w_{k}\mathclose{|}} \biggl( v_{k} - \sum_{i=1}^{k-1}
     \langle v_{k},e_{i} \rangle e_{i} \biggr)                         
     \in \operatorname{Span}( e_{1}, \dots, e_{k-1}, v_{k})                 
     \subseteq \operatorname{Span}( v_{1}, \dots, v_{k-1}, v_{k}).
@@ -390,19 +390,23 @@
     \end{pmatrix}.\]</span></p>
 </div>
 <div class="solution">
-<p>We apply the Gram–Schmidt Process to <span class="math inline">\(\{\vec{v}_{1},\vec{v}_{2}\}\)</span>. <span class="math display">\[\mathopen{|}\vec{v\mathclose{|}_{1}}^{2} = \left\langle \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
-    \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix} \right\rangle = 1^{2} + (-1)^{2} = 2.\]</span> Take <span class="math display">\[\vec{e}_{1} = \frac{1}{\mathopen{|}\vec{v\mathclose{|}_{1}}} \vec{v}_{1} =
+<p>We apply the Gram–Schmidt Process to <span class="math inline">\(\{\vec{v}_{1},\vec{v}_{2}\}\)</span>. <span class="math display">\[\mathopen{|}\vec{v}_{1}\mathclose{|}^{2} = \left\langle \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
+    \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix} \right\rangle = 1^{2} + (-1)^{2} = 2.\]</span> Take <span class="math display">\[\vec{e}_{1} = \frac{1}{\mathopen{|}\vec{v}_{1}\mathclose{|}} \vec{v}_{1} =
     \frac{1}{\surd2} \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}.\]</span> Now <span class="math display">\[\langle \vec{v}_{2}, \vec{e}_{1} \rangle = \left\langle
-    \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix}, \frac{1}{\surd2}\begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}
-    \right\rangle = \frac{1}{\surd2} (2-1) = \frac{1}{\surd2}.\]</span> Put <span class="math display">\[\begin{aligned}
+    \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix}, 
+    \frac{1}{\surd2}\begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}
+    \right\rangle 
+    = \frac{1}{\surd2} (2-1) 
+    = \frac{1}{\surd2}.\]</span> Put <span class="math display">\[\begin{aligned}
     \vec{w}_{2} &amp; = \vec{v}_{2} - \langle \vec{v}_{2}, \vec{e}_{1}
     \rangle \vec{e}_{1}                                                           \\
-                 &amp; = \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix} - \frac{1}{\surd2} \cdot \frac{1}{\surd2}
+                &amp; = \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix} - \frac{1}{\surd2} \cdot \frac{1}{\surd2}
     \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix}                                                           \\
                  &amp; = \begin{pmatrix} 2 \\ 3 \\ 1 \\ \end{pmatrix} - \begin{pmatrix} 1/2 \\ 0 \\ -1/2 \\ \end{pmatrix} =
     \begin{pmatrix} 3/2 \\ 3 \\ 3/2 \\ \end{pmatrix}.
-  \end{aligned}\]</span> So <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{2}}^{2} = (3/2)^{2} + 3^{2} + (3/2)^{2} = \frac{27}{2}\]</span> and <span class="math display">\[\mathopen{|}\vec{w\mathclose{|}_{2}} = \frac{3\surd3}{\surd2}.\]</span> Take <span class="math display">\[\vec{e}_{2} = \frac{1}{\mathopen{|}\vec{w\mathclose{|}_{2}}} \vec{w}_{2} =
-    \sqrt{\frac{2}{3}} \begin{pmatrix} 1/2 \\ 1 \\ 1/2 \\ \end{pmatrix} = \frac{1}{\surd6}
+  \end{aligned}\]</span> So <span class="math display">\[\mathopen{|}\vec{w}_2\mathclose{|}^{2} = (3/2)^{2} + 3^{2} + (3/2)^{2} = \frac{27}{2}\]</span> and <span class="math display">\[\mathopen{|}\vec{w}_2\mathclose{|} = \frac{3\surd3}{\surd2}.\]</span> Take <span class="math display">\[\vec{e}_{2} = \frac{1}{\mathopen{|}\vec{w}_2\mathclose{|}} \vec{w}_{2} =
+    \sqrt{\frac{2}{3}} \begin{pmatrix} 1/2 \\ 1 \\ 1/2 \\ \end{pmatrix} =
+    \frac{1}{\surd6}
     \begin{pmatrix} 1 \\ 2 \\ 1 \\ \end{pmatrix}.\]</span> Thus <span class="math display">\[\left\{ \frac{1}{\surd2}\begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
     \frac{1}{\surd6}\begin{pmatrix} 1 \\ 2 \\ 1 \\ \end{pmatrix} \right\}\]</span> is an orthonormal basis for <span class="math inline">\(U\)</span>.</p>
 </div>
@@ -413,17 +417,18 @@
 </div>
 <div class="solution">
 <p>We apply the Gram–Schmidt process to the basis <span class="math inline">\(\{ 1, x, x^{2} \}\)</span> for the inner product space <span class="math inline">\(\mathcal{P}_{2}\)</span>, of polynomials of degree at most <span class="math inline">\(2\)</span>, with inner product as above. We shall make use of the fact (determined by induction and integration by parts) that <span class="math display">\[\int_{0}^{\infty} x^{n}\mathrm{e}^{-x} \, \mathrm{d} x = n!\]</span></p>
-<p>Define <span class="math inline">\(f_{i}(x) = x^{i}\)</span> for <span class="math inline">\(i = 0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>. Then <span class="math display">\[\mathopen{|}f_{0\mathclose{|}}^{2} = \int_{0}^{\infty} f_{0}(x)^{2} \mathrm{e}^{-x} \,
-    \mathrm{d} x = \int_{0}^{\infty} \mathrm{e}^{-x} \, \mathrm{d} x = 1,\]</span> so <span class="math display">\[L_{0}(x) = \frac{1}{\mathopen{|}f_{0\mathclose{|}}} f_{0}(x) = 1.\]</span></p>
+<p>Define <span class="math inline">\(f_{i}(x) = x^{i}\)</span> for <span class="math inline">\(i = 0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>. Then <span class="math display">\[\mathopen{|}f_{0}\mathclose{|}^{2} = \int_{0}^{\infty} f_{0}(x)^{2}
+    \mathrm{e}^{-x} \,
+    \mathrm{d} x = \int_{0}^{\infty} \mathrm{e}^{-x} \, \mathrm{d} x = 1,\]</span> so <span class="math display">\[L_{0}(x) = \frac{1}{\mathopen{|}f_{0}\mathclose{|}} f_{0}(x) = 1.\]</span></p>
 <p>We now calculate <span class="math inline">\(L_{1}\)</span>. First <span class="math display">\[\langle f_{1},L_{0} \rangle = \int_{0}^{\infty} f_{1}(x) L_{0}(x)
     \mathrm{e}^{-x} \, \mathrm{d} x = \int_{0}^{\infty} x \mathrm{e}^{-x} \,
     \mathrm{d} x = 1.\]</span> The Gram-Schmidt process says we first put <span class="math display">\[w_{1}(x) = f_{1}(x) - \langle f_{1},L_{0} \rangle L_{0}(x) = x - 1.\]</span> Now <span class="math display">\[\begin{aligned}
-    \mathopen{|}w_{1\mathclose{|}}^{2} &amp; = \int_{0}^{\infty} w_{1}(x)^{2} \mathrm{e}^{-x}
+  \mathopen{|}w_{1}\mathclose{|}^{2} &amp; = \int_{0}^{\infty} w_{1}(x)^{2} \mathrm{e}^{-x}
     \, \mathrm{d} x                                                                         \\
                      &amp; = \int_{0}^{\infty} (x^{2}\mathrm{e}^{-x} - 2x\mathrm{e}^{-x} +
     \mathrm{e}^{-x}) \, \mathrm{d} x                                                        \\
                      &amp; = 2 - 2 + 1 = 1.
-  \end{aligned}\]</span> Hence <span class="math display">\[L_{1}(x) = \frac{1}{\mathopen{|}w_{1\mathclose{|}}} w_{1}(x) = x-1.\]</span></p>
+  \end{aligned}\]</span> Hence <span class="math display">\[L_{1}(x) = \frac{1}{\mathopen{|}w_{1}\mathclose{|}} w_{1}(x) = x-1.\]</span></p>
 <p>In the next step of the Gram–Schmidt process, we calculate <span class="math display">\[\langle f_{2},L_{0} \rangle = \int_{0}^{\infty} x^{2}
     \mathrm{e}^{-x} \, \mathrm{d} x = 2\]</span> and <span class="math display">\[\begin{aligned}
     \langle f_{2},L_{1} \rangle &amp; = \int_{0}^{\infty} x^{2}(x-1)
@@ -437,13 +442,13 @@
              &amp; = x^{2} - 4(x-1) - 2                                \\
              &amp; = x^{2} - 4x + 2.
   \end{aligned}\]</span> Now <span class="math display">\[\begin{aligned}
-    \mathopen{|}w_{2\mathclose{|}}^{2} &amp; = \int_{0}^{\infty} w_{2}(x)^{2} \mathrm{e}^{-x}
+  \mathopen{|}w_{2}\mathclose{|}^{2} &amp; = \int_{0}^{\infty} w_{2}(x)^{2} \mathrm{e}^{-x}
     \, \mathrm{d} x                                                                  \\
                      &amp; = \int_{0}^{\infty} (x^{4} - 8x^{3} + 20x^{2} - 16x + 4)
     \mathrm{e}^{-x} \, \mathrm{d} x                                                  \\
                      &amp; = 4! - 8\cdot 3! + 20\cdot2! - 16 + 4                    \\
                      &amp; = 4.
-  \end{aligned}\]</span> Hence we take <span class="math display">\[L_{2}(x) = \frac{1}{\mathopen{|}w_{2\mathclose{|}}} w_{2}(x) = \textstyle\frac{1}{2}(x^{2} - 4x + 2).\]</span></p>
+  \end{aligned}\]</span> Hence we take <span class="math display">\[L_{2}(x) = \frac{1}{\mathopen{|}w_{2}\mathclose{|}} w_{2}(x) = \textstyle\frac{1}{2}(x^{2} - 4x + 2).\]</span></p>
 <p>Similar calculations can be performed to determine <span class="math inline">\(L_{3}\)</span>, <span class="math inline">\(L_{4}\)</span>, …, but they become increasingly more complicated (and consequently less suitable for presenting on a whiteboard!).</p>
 </div>
 <div class="examplejupyter">
@@ -453,8 +458,10 @@
     P_{2}(x) &amp; = \textstyle\frac{1}{2}(3x^{2}-1) \\
              &amp; \vdots
   \end{aligned}\]</span> The set <span class="math inline">\(\{P_{n}(x) : n = 0,1,2,\dots\}\)</span> of Legendre polynomials is <em>orthogonal</em>, but <em>not</em> orthonormal. This is the reason why the Gram–Schmidt process only produces a scalar multiple of them. The scalars appearing are determined by the norms of the <span class="math inline">\(P_{n}\)</span> with respect to this inner product.</p>
-<p>For example, <span class="math display">\[\mathopen{|}P_{0\mathclose{|}}^{2} = \int_{-1}^{1} P_{0}(x)^{2} \, \mathrm{d} x =
-    \int_{-1}^{1} \mathrm{d} x = 2,\]</span> so the polynomial of unit norm produced will be <span class="math inline">\(\frac{1}{\surd2}P_{0}(x)\)</span>. Similar calculations (of increasing length) can be performed for the other polynomials.</p>
+<p>For example, <span class="math display">\[\mathopen{|}P_{0}\mathclose{|}^{2} 
+    = \int_{-1}^{1} P_{0}(x)^{2} \, \mathrm{d} x 
+    = \int_{-1}^{1} \mathrm{d} x 
+    = 2,\]</span> so the polynomial of unit norm produced will be <span class="math inline">\(\frac{1}{\surd2}P_{0}(x)\)</span>. Similar calculations (of increasing length) can be performed for the other polynomials.</p>
 </div>
 <div class="examplejupyter">
 <p>The <em>Hermite polynomials</em> form an orthogonal set in the space <span class="math inline">\(\mathcal{P}\)</span> when we endow it with the following inner product <span class="math display">\[\langle f,g \rangle = \int_{-\infty}^{\infty} f(x)g(x)
@@ -474,7 +481,7 @@
 </ol>
 </div>
 <div class="proof">
-<p><em>Proof.</em> <strong>(1).</strong> It suffices to check the Subspace Criteria. Since <span class="math inline">\(\langle \vec{0},u \rangle = 0\)</span> for all <span class="math inline">\(u \in U\)</span>, it follows that <span class="math inline">\(\vec{0} \in U^{\perp}\)</span> and so <span class="math inline">\(U ^ {\perp} \not= \varnothing\)</span>. If <span class="math inline">\(v, w  \in U^{\perp}\)</span> and <span class="math inline">\(\alpha \in F\)</span>, then <span class="math display">\[\langle v+w, u \rangle = \langle v,u \rangle + \langle w,u \rangle =
+<p><em>Proof.</em> <strong>(1).</strong> It suffices to check the Subspace Criteria. Since <span class="math inline">\(\langle \vec{0},u \rangle  = 0\)</span> for all <span class="math inline">\(u \in U\)</span>, it follows that <span class="math inline">\(\vec{0} \in U^{\perp}\)</span> and so <span class="math inline">\(U ^  {\perp} \not= \varnothing\)</span>. If <span class="math inline">\(v, w \in U^{\perp}\)</span> and <span class="math inline">\(\alpha \in F\)</span>, then <span class="math display">\[\langle v+w, u \rangle = \langle v,u \rangle + \langle w,u \rangle =
     0 + 0 = 0\]</span> and <span class="math display">\[\langle \alpha v, u \rangle = \alpha \langle v,u \rangle = \alpha
     \cdot 0 = 0\]</span> for all <span class="math inline">\(u \in U\)</span>. So we deduce <span class="math inline">\(v+w \in U^{\perp}\)</span> and <span class="math inline">\(\alpha v  \in U^{\perp}\)</span>. This shows that <span class="math inline">\(U^{\perp}\)</span> is a subspace.</p>
 <p><strong>(2).</strong> Let <span class="math inline">\(u \in U \cap U^{\perp}\)</span>. Then <span class="math inline">\(\mathopen{|}u\mathclose{|}^{2} = \langle u,u \rangle = 0\)</span> (since <span class="math inline">\(u\)</span> is, in particular, orthogonal to itself). Hence <span class="math inline">\(u = \vec{0}\)</span> (by definiteness in the definition of an inner product). ◻</p>
@@ -495,13 +502,13 @@
 </div>
 <p>Recall from <a href="#section-projection-maps" data-reference-type="ref" data-reference="section-projection-maps">[section-projection-maps]</a> that associated to every direct sum are (at least) two projection maps. In particular, if <span class="math inline">\(V\)</span> is any vector space and <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, then <span class="math inline">\(V = U \oplus U ^ {\perp}\)</span> and so there is a projection <span class="math inline">\(P_{U} : V \to V\)</span> onto <span class="math inline">\(U\)</span>. The projection <span class="math inline">\(P_U\)</span> is defined by <span class="math display">\[P_{U}(v) = u\]</span> where <span class="math inline">\(v = u+w\)</span> is the unique decomposition of <span class="math inline">\(v\)</span> with <span class="math inline">\(u \in U\)</span> and <span class="math inline">\(w \in U^{\perp}\)</span>.</p>
 <div class="thm">
-<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Let <span class="math inline">\(P_{U} : V \to V\)</span> be the projection map onto <span class="math inline">\(U\)</span> associated to the direct sum decomposition <span class="math inline">\(V = U \oplus  U^{\perp}\)</span>. If <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(\mathopen{|}v - P_{U\mathclose{|}(v)} \leq \mathopen{|}v - u\mathclose{|}\)</span> for all <span class="math inline">\(u \in U\)</span>. (In other words, <span class="math inline">\(P_{U}(v)\)</span> is the closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(v\)</span>.)</p>
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Let <span class="math inline">\(P_{U}:V \to V\)</span> be the projection map onto <span class="math inline">\(U\)</span> associated to the direct sum decomposition <span class="math inline">\(V = U \oplus  U^{\perp}\)</span>. If <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(\mathopen{|}v - P_{U(v)}\mathclose{|} \leq  \mathopen{|}v - u\mathclose{|}\)</span> for all <span class="math inline">\(u \in U\)</span>. (In other words, <span class="math inline">\(P_{U}(v)\)</span> is the closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(v\)</span>.)</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Since <span class="math inline">\(V = U \oplus U^{\perp}\)</span>, we can write <span class="math inline">\(v = u_{0} + w_{0}\)</span> where <span class="math inline">\(u_{0} \in U\)</span> and <span class="math inline">\(w_{0} \in U^{\perp}\)</span>, so that <span class="math inline">\(P_{U}(v) = u_{0}\)</span>. Then if <span class="math inline">\(u\)</span> is any vector in <span class="math inline">\(U\)</span>, <span class="math display">\[\begin{aligned}
-    \mathopen{|}v-u\mathclose{|}^{2} &amp; = \mathopen{|}v-u_{0\mathclose{|} + (u_{0} - u)}^{2} 
+  \mathopen{|}v-u\mathclose{|}^{2} &amp; = \mathopen{|}v-u_{0}\mathclose{|} + (u_{0} - u)^{2} 
                    &amp; (v - u = v-u_{0} + (u_{0} - u)) \\
-                   &amp; = \mathopen{|}w_{0\mathclose{|} + (u_{0} - u)}^{2}  &amp; (v - u_0 = w_0) \\
+                   &amp; = \mathopen{|}w_{0}\mathclose{|} + (u_{0} - u)^{2}  &amp; (v - u_0 = w_0) \\
                    &amp; = \langle w_{0} + (u_{0}-u), w_{0} + (u_{0}-u) \rangle 
                    &amp; (\text{definition of the norm}) \\
                    &amp; = \langle w_{0},w_{0} \rangle 
@@ -648,5 +655,96 @@
 
 
 <p><a href="#">Back to top</a></p>
+<ul>
+    
+    <li>
+      <a href="/mt3501-lnotes/">
+      
+      Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/01-intro/">
+      
+      Section 1 - Intro
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/02-vector-spaces/">
+      
+      Section 2 - Vector spaces
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by/">
+      
+      Section 3 - Algorithms to live by
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/04-linear-transf/">
+      
+      Section 4 - Linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/05-l-v-w/">
+      
+      Section 5 - The vector space of linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/06-direct-sums/">
+      
+      Section 6 - Direct sums
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/07-dual-space/">
+      
+      Section 7 - The dual space
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/08-eigen-stuff/">
+      
+      Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/09-diagonal/">
+      
+      Section 9 - Diagonalisation
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/10-jnf/">
+      
+      Section 10 - Jordan normal form
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/11-inner-products/">
+      
+      Section 11 - Inner products
+      </a>
+    </li>
+    
+</ul>
+<footer>
+<hr>⚡️
+	2021  © J. D. Mitchell  
+</footer>
 </body>
 </html>

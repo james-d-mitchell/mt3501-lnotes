@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="../css/math.css" />
+    
+    
+    <title>MT3501 Lecture Notes | MT3501: Section 2.</title>
+    <style type="text/css">
+  body {
+    font-size: 150%;
+    font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  }
+</style>
+
+</head>
+<body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
+
+<ul>
+    
+    <li>
+      <a href="/mt3501-lnotes/">
+      
+      Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/01-intro/">
+      
+      Section 1 - Intro
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/02-vector-spaces/">
+      
+      Section 2 - Vector spaces
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by/">
+      
+      Section 3 - Algorithms to live by
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/04-linear-transf/">
+      
+      Section 4 - Linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/05-l-v-w/">
+      
+      Section 5 - The vector space of linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/06-direct-sums/">
+      
+      Section 6 - Direct sums
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/07-dual-space/">
+      
+      Section 7 - The dual space
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/08-eigen-stuff/">
+      
+      Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/09-diagonal/">
+      
+      Section 9 - Diagonalisation
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/10-jnf/">
+      
+      Section 10 - Jordan normal form
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/11-inner-products/">
+      
+      Section 11 - Inner products
+      </a>
+    </li>
+    
+</ul>
+
+
+
+    <script
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"
+        type="text/javascript"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+
+
+
+
+
+  
+  <p>by J. D. Mitchell
+
+
+
+
+
+<section id="definition-and-examples" class="frame">
+<h2>2.1 Definition and examples</h2>
+<p>Before we can define vectors spaces, we must define .</p>
+<p>Scalars are just any element in a <span class="alert">field</span>.</p>
+<div class="center">
+<figure>
+<img src="field.png" style="width:50.0%" alt="A field in minecraft" /><figcaption aria-hidden="true">A field in minecraft</figcaption>
+</figure>
+</div>
+<p>Most of the time, if you want to keep things simple, you can think of scalars as being .</p>
+</section>
+<div class="frame">
+<div class="defn">
+<p><strong>Definition 1</strong> (Field.). <em>A <span class="alert">field</span> is a set <span class="math inline">\(F\)</span> with two binary operations <span class="math inline">\(F\times F \to F\)</span> <span class="math display">\[\begin{aligned}
+      (\alpha,\beta) &amp; \mapsto \alpha+\beta &amp; (\alpha,\beta) &amp; \mapsto
+      \alpha\beta
+    \end{aligned}\]</span> called <span class="alert">addition</span> and <span class="alert">multiplication</span> such that always</em></p>
+<ol type="i">
+<li><p><em><span class="math inline">\(\alpha + \beta = \beta + \alpha\)</span>  <span class="math inline">\((\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)\)</span></em></p></li>
+<li><p><em>there exists <span class="math inline">\(0 \in F\)</span> with <span class="math inline">\(\alpha + 0 = \alpha\)</span></em></p></li>
+<li><p><em>each <span class="math inline">\(\alpha \in F\)</span> has a negative <span class="math inline">\(-\alpha\)</span> with <span class="math inline">\(\alpha +  (-\alpha) = 0\)</span></em></p></li>
+<li><p><em><span class="math inline">\(\alpha \beta = \beta \alpha\)</span>  <span class="math inline">\((\alpha \beta) \gamma = \alpha (\beta \gamma)\)</span></em></p></li>
+<li><p><em><span class="math inline">\(\alpha (\beta + \gamma) = \alpha \beta + \alpha \gamma\)</span></em></p></li>
+<li><p><em>there exists <span class="math inline">\(1 \in F\)</span> with <span class="math inline">\(1 \neq 0\)</span> and <span class="math inline">\(1\alpha =  \alpha\)</span></em></p></li>
+<li><p><em>each <span class="math inline">\(\alpha \in F\)</span> with <span class="math inline">\(\alpha \neq 0\)</span> has <span class="math inline">\(\alpha^{-1}\)</span> (or <span class="math inline">\(1/\alpha\)</span>) with <span class="math inline">\(\alpha \alpha^{-1} = 1\)</span>.</em></p></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<div class="ex">
+<p><strong>Example 2</strong> (<strong>Examples of fields.</strong>).</p>
+<ol type="i">
+<li><p><em><span class="math inline">\(\mathbb{Q}= \{\, m/n \mid m,n \in \mathbb{Z}, \; n \neq 0 \,\}\)</span> (the <span class="alert">rationals</span>)</em></p></li>
+<li><p><em><span class="math inline">\(\mathbb{R}\)</span> (the <span class="alert">reals</span>)</em></p></li>
+<li><p><em><span class="math inline">\(\mathbb{C}= \{\, x+iy \mid x,y \in \mathbb{R}\,\}\)</span> (the <span class="alert">complex numbers</span>)</em></p></li>
+<li><p><em><span class="math inline">\(\mathbb{Z}/p\mathbb{Z}= \{ 0,1,\dots,p-1 \}\)</span>, where <span class="math inline">\(p\)</span> is a prime number, with addition and multiplication being performed modulo <span class="math inline">\(p\)</span>.</em></p></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<p>What is a vector? There are a number of different perspectives on this:</p>
+<ol type="1">
+<li><p>an arrow pointing in space:</p>
+<div class="center">
+
+</div></li>
+<li><p>a column (or row) of numbers <span class="math display">\[\vec{v} = 
+            \begin{pmatrix}
+              -1 \\
+              2 
+            \end{pmatrix}\]</span></p></li>
+<li><p>an abstract vector <span class="math inline">\(v \in V\)</span>.</p></li>
+</ol>
+<p>Which of these is correct or best?</p>
+</div>
+<div class="frame">
+<p>The essential featuresAddition of vectors</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>The essential featuresAddition of vectors</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>The essential featuresAddition of vectors</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>The essential featuresScalar multiplication</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>The essential featuresScalar multiplication</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>Abstract vectors</p>
+<div class="defn">
+<p><strong>Definition 3</strong> (Vector space.). <em>Let <span class="math inline">\(F\)</span> be a field. A <span class="alert">vector space</span> over <span class="math inline">\(F\)</span> is a set <span class="math inline">\(V\)</span> with operations <span class="math display">\[\begin{aligned}
+      V \times V &amp; \to V       &amp; F \times V &amp; \to V            \\
+      (u,v)      &amp; \mapsto u+v &amp; (\alpha,v) &amp; \mapsto \alpha v
+    \end{aligned}\]</span> called <span class="alert">addition</span> and <span class="alert">scalar multiplication</span> such that always</em></p>
+<ol type="i">
+<li><p><em><span class="math inline">\(u + v = v + u\)</span> <span class="math inline">\((u + v) + w = u + (v + w)\)</span></em></p></li>
+<li><p><em>there is a vector <span class="math inline">\(\vec{0}\)</span> with <span class="math inline">\(v + \vec{0} = v\)</span></em></p></li>
+<li><p><em>each vector <span class="math inline">\(v\)</span> has a negative <span class="math inline">\(-v\)</span> with <span class="math inline">\(v + (-v) = \vec{0}\)</span></em></p></li>
+<li><p><em><span class="math inline">\(\alpha (u + v) = \alpha u + \alpha v\)</span></em></p></li>
+<li><p><em><span class="math inline">\((\alpha + \beta)v = \alpha v + \beta v\)</span></em></p></li>
+<li><p><em><span class="math inline">\((\alpha \beta)v = \alpha (\beta v)\)</span></em></p></li>
+<li><p><em><span class="math inline">\(1 v = v\)</span>.</em></p></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<p>Example ..: Standard examples (i)</p>
+<p>Let <span class="math inline">\(F\)</span> be a field and define <span class="math display">\[\alert{F^{n}} = \left\{ \begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{pmatrix}
+    \;\middle|\; x_{i} \in F \right\}.\]</span></p>
+<div class="block">
+<p>Vector space operations: <span class="math display">\[\begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{pmatrix} +
+      \begin{pmatrix} y_{1} \\ y_{2} \\ \vdots \\ y_{n} \end{pmatrix} =
+      \begin{pmatrix} x_{1}+y_{1} \\ x_{2}+y_{2} \\ \vdots \\
+        x_{n}+y_{n}\end{pmatrix}, \qquad \pause
+      \alpha \begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\
+        x_{n}\end{pmatrix} = \begin{pmatrix} \alpha x_{1} \\ \alpha x_{2}
+        \\ \vdots \\ \alpha x_{n}\end{pmatrix}\]</span></p>
+</div>
+</div>
+<div class="frame">
+<p>Example ..: Standard examples (ii)</p>
+<p>The complex numbers <span class="math inline">\(\mathbb{C}\)</span> form a vector space over <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div class="block">
+<p>Vector space operations: <span class="math display">\[(x_{1} + iy_{1}) + (x_{2}+iy_{2}) = (x_{1}+x_{2}) + i(y_{1}+y_{2})\]</span> <span class="math display">\[\alpha (x + iy) = (\alpha x) + i(\alpha y) \quad \text{for $\alpha
+          \in \mathbb{R}$}.\]</span></p>
+</div>
+</div>
+<div class="frame">
+<p>Example ..: Standard examples (iii)</p>
+<p><span class="alert"><span class="math inline">\(F[x]\)</span></span>: the set of all polynomials <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m}\]</span> where <span class="math inline">\(a_{0},a_{1},\dots,a_{m} \in F\)</span>.</p>
+<div class="block">
+<p>Vector space operations: If <span class="math inline">\(f(x) = \sum a_{i}x^{i}\)</span> and <span class="math inline">\(g(x) = \sum b_{i}x^{i}\)</span>, then <span class="math display">\[f(x) + g(x) = \sum_{i} (a_{i}+b_{i})x^{i}\]</span> <span class="math display">\[\alpha f(x) = \sum_{i} (\alpha a_{i})x^{i}\]</span></p>
+</div>
+</div>
+<div class="frame">
+<p>Example ..: Standard examples (iv)</p>
+<p><span class="alert"><span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span></span>: the set of all functions <span class="math inline">\(f \colon \mathbb{R}\to \mathbb{R}\)</span></p>
+<div class="block">
+<p>Vector space operations: <span class="math display">\[(f+g)(x) = f(x) + g(x)\]</span> <span class="math display">\[(\alpha f)(x) = \alpha \cdot f(x)\]</span> <span class="math display">\[(-f)(x) = -f(x)\]</span> <span class="math display">\[\vec{0} \colon x \mapsto 0 \quad \text{for all $x \in \mathbb{R}$}\]</span></p>
+</div>
+</div>
+<div class="frame">
+<p>Some important points</p>
+<ul>
+<li><p>The <span class="alert">zero</span> of a field is denoted <span class="math inline">\(0\)</span>.</p></li>
+<li><p>The <span class="alert">zero vector</span> will always be denoted by <span class="math inline">\(\vec{0}\)</span>.</p></li>
+<li><p><span class="math inline">\(0\)</span> and <span class="math inline">\(\vec{0}\)</span> are almost never equal, so beware!</p></li>
+<li><p>We write <span class="math inline">\(\vec{v} \in F ^ n\)</span> to represent column vectors, and <span class="math inline">\(v\in V\)</span> to represent (abstract) vectors.</p></li>
+</ul>
+</div>
+<div class="frame">
+<p>Basic properties of vector spaces</p>
+<div class="prop">
+<p><strong>Proposition 4</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, let <span class="math inline">\(v \in V\)</span>, and let <span class="math inline">\(\alpha  \in F\)</span>. Then</em></p>
+<ol type="i">
+<li><p><em><span class="alert"><span class="math inline">\(\alpha \vec{0} = \vec{0}\)</span></span></em></p></li>
+<li><p><em><span class="alert"><span class="math inline">\(0 v = \vec{0}\)</span></span></em></p></li>
+<li><p><em><span class="alert">if <span class="math inline">\(\alpha v = \vec{0}\)</span>, either <span class="math inline">\(\alpha = 0\)</span> or <span class="math inline">\(v = \vec{0}\)</span></span></em></p></li>
+<li><p><em><span class="alert"><span class="math inline">\((-\alpha)v = -\alpha v =  \alpha(-v)\)</span></span>.</em></p></li>
+</ol>
+</div>
+</div>
+<h2 id="subspaces">Subspaces</h2>
+<div class="frame">
+<p>. ..</p>
+<div class="defn">
+<p><strong>Definition 5</strong> (Subspace.). <em>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. A <span class="alert">subspace</span> <span class="math inline">\(W\)</span> of <span class="math inline">\(V\)</span> is a non-empty subset of <span class="math inline">\(V\)</span> which is a vector space over <span class="math inline">\(F\)</span> under the same operations as <span class="math inline">\(V\)</span>.</em></p>
+</div>
+<div id="lem:subspace" class="lem">
+<p><strong>Lemma 6</strong>. <em>Let <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(V\)</span>. Then</em></p>
+<ol type="i">
+<li></li>
+<li><em>.</em></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<p>Proof of Lemma <a href="#lem:subspace" data-reference-type="ref" data-reference="lem:subspace">Lemma 6</a></p>
+</div>
+<div class="frame">
+<p>The subspace criteria</p>
+<div id="thm-subspace-criteria" class="thm">
+<p><strong>Theorem 7</strong> (Subspace criteria (cf. MT2501).). <em>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(W\)</span> be a subset of <span class="math inline">\(V\)</span>. Then <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(V\)</span> if and only if</em></p>
+<ol type="i">
+<li><p><em><span class="math inline">\(W\)</span> is non-empty;</em></p></li>
+<li><p><em>if <span class="math inline">\(u,v \in W\)</span>, then <span class="math inline">\(u+v \in W\)</span>; and</em></p></li>
+<li><p><em>if <span class="math inline">\(v \in W\)</span> and <span class="math inline">\(\alpha \in F\)</span>, then <span class="math inline">\(\alpha v \in W\)</span>.</em></p></li>
+</ol>
+</div>
+<figure>
+<img src="starship" style="width:60.0%" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<blockquote>
+<p>“Logic is the beginning of wisdom, not the end.”</p>
+</blockquote>
+</div>
+<div class="frame">
+<p>Example of a subspace The set of vectors contained in any plane containing the origin in <span class="math inline">\(\mathbb{R}^ 3\)</span> is a subspace (remember the vectors have to “start” at the origin).</p>
+</div>
+<div class="frame">
+<p>Example of a subspace The set of vectors contained in any plane containing the origin in <span class="math inline">\(\mathbb{R}^ 3\)</span> is a subspace (remember the vectors have to “start” at the origin).</p>
+</div>
+<div class="frame">
+<p>Example of a subspace</p>
+<p>Subspaces in the two-dimensional vector space over the finite field <span class="math inline">\(\mathbb{Z}/ 5  \mathbb{Z}\)</span>.</p>
+<figure>
+<img src="subspaces.png" style="width:50.0%" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+</div>
+<div class="frame">
+<div class="defn">
+<p><strong>Definition 8</strong> (Intersection, sum of subspaces.). <em>If <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> are subspaces of <span class="math inline">\(V\)</span>, then we define</em></p>
+<ol type="i">
+<li><p><em>the <span class="alert">intersection</span>:  <span class="math inline">\(U \cap W = \{\,v\mid\text{$v \in
+          U$ and $v \in W$}\,\}\)</span></em></p></li>
+<li><p><em>the <span class="alert">sum</span>:  <span class="math inline">\(U + W = \{\,u+w\mid u \in U, \; w \in W\,\}\)</span></em></p></li>
+</ol>
+</div>
+<div id="prop-sum-is-subspace" class="prop">
+<p><strong>Proposition 9</strong> (cf. MT2501). <em>If <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> are subspaces of a vector space <span class="math inline">\(V\)</span>, then</em></p>
+<ol type="i">
+<li></li>
+<li></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<p>Proof of Proposition <a href="#prop-sum-is-subspace" data-reference-type="ref" data-reference="prop-sum-is-subspace">Proposition 9</a>(i) <span class="alert"><span class="math inline">\(U \cap W\)</span> is a subspace of <span class="math inline">\(V\)</span></span></p>
+<p>See MT2501.</p>
+</div>
+<div class="frame">
+<p>Proof of Proposition <a href="#prop-sum-is-subspace" data-reference-type="ref" data-reference="prop-sum-is-subspace">Proposition 9</a>(ii) <span class="alert"><span class="math inline">\(U + W\)</span> is a subspace of <span class="math inline">\(V\)</span></span></p>
+</div>
+<div class="frame">
+<p>Intersection of subspaces</p>
+</div>
+<div class="frame">
+<div class="cor">
+<p><strong>Corollary 10</strong>. <em>If <span class="math inline">\(U_{1},\dots,U_{k}\)</span> are subspaces, then so is <span class="math display">\[U_{1} + \dots + U_{k} = \{\, u_{1} + \dots + u_{k} \mid%
+        \text{$u_{i} \in U_{i}$ for each~$i$}\,\}.\]</span></em></p>
+</div>
+</div>
+<h2 id="spanning-sets">Spanning sets</h2>
+<div class="frame">
+<p>. ..</p>
+<div id="def:span" class="defn">
+<p><strong>Definition 11</strong> (<strong>Linear combination, span</strong>). <em>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(\mathscr{A}= \{ v_{1}, v_{2},  \dots\}\subset V\)</span>. A <span class="alert">linear combination</span> of vectors in <span class="math inline">\(\mathscr{A}\)</span> is: <span class="math display">\[\sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_{1}v_{1} + \alpha_{2}v_{2} + \dots +
+  \alpha_{k}v_{k}\]</span> where <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F\)</span>. The set <span class="math display">\[\begin{aligned}
+    \operatorname{Span}(\mathscr{A}) &amp; = &amp; \operatorname{Span}(v_{1},v_{2}, \dots) \\
+              &amp; = &amp; \biggl\{ \sum_{i=1}^{k} \alpha_{i}v_{i} \biggm|
+                    v_{1},v_{2},\dots,v_{k} \in \mathscr{A}, \;
+  \alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F \biggr\}
+  \end{aligned}\]</span> of all linear combinations is called the <span class="alert">span</span> of <span class="math inline">\(\mathscr{A}\)</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<p>A corner case The symbol <span class="math inline">\(\varnothing\)</span> denotes the empty set, the unique set with size 0, and no elements.</p>
+<p>By convention, <span class="math display">\[\operatorname{Span}(\varnothing) = \{\vec{0}\}.\]</span></p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>Spanning sets</p>
+<div class="prop">
+<p><strong>Proposition 12</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(\mathscr{A}\subseteq V\)</span>. Then <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> is a subspace of <span class="math inline">\(V\)</span>.</em></p>
+</div>
+<div class="defn">
+<p><strong>Definition 13</strong> (<strong>Spanning set.</strong>). <em>A <span class="alert">spanning set</span> for a subspace <span class="math inline">\(W\)</span> is a set <span class="math inline">\(\mathscr{A}\)</span> of vectors such that <span class="math inline">\(\operatorname{Span}(\mathscr{A}) = W\)</span>. If <span class="math inline">\(\operatorname{Span}(\mathscr{A}) = W\)</span>, then for all <span class="math inline">\(v\in W\)</span>, we can write <span class="math display">\[v = \sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_1v_1 + \alpha_2 v_2 + \cdots +
+    \alpha_k v_k\]</span> for some <span class="math inline">\(v_{1},v_{2},\dots,v_{k} \in \mathscr{A}\)</span> and some <span class="math inline">\(\alpha_{1}\)</span>, <span class="math inline">\(\alpha_{2}\)</span>, …, <span class="math inline">\(\alpha_{k}\)</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<p>Example of a spanning set Suppose that <span class="math display">\[\vec{e}_1 = \begin{pmatrix}1\\0\end{pmatrix},\quad \vec{e}_2 = \begin{pmatrix}0\\1\end{pmatrix}.\]</span> Then <span class="math inline">\(\operatorname{Span}(\vec{e}_1, \vec{e}_2) = \mathbb{R}^ 2\)</span>.</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>Example of a spanning set Suppose that <span class="math display">\[\vec{e}_1 = \begin{pmatrix}1\\0\end{pmatrix},\quad \vec{e}_2 = \begin{pmatrix}0\\1\end{pmatrix}.\]</span> Then <span class="math inline">\(\operatorname{Span}(\vec{e}_1, \vec{e}_2) = \mathbb{R}^ 2\)</span>.</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>Example of a spanning set Suppose that <span class="math display">\[\vec{e}_1 = \begin{pmatrix}1\\0\end{pmatrix},\quad \vec{e}_2 = \begin{pmatrix}0\\1\end{pmatrix}.\]</span> Then <span class="math inline">\(\operatorname{Span}(\vec{e}_1, \vec{e}_2) = \mathbb{R}^ 2\)</span>.</p>
+<div class="center">
+
+</div>
+</div>
+<div class="frame">
+<p>Example 2.3.4(i)Spanning sets Suppose that <span class="math display">\[\vec{e}_1 = \begin{pmatrix}1\\0\\0\end{pmatrix},\quad \vec{e}_2 =
+      \begin{pmatrix}0\\1\\0\end{pmatrix},\quad \vec{e}_3 = \begin{pmatrix}0\\0\\1\end{pmatrix}.\]</span> Then <span class="math inline">\(\operatorname{Span}(\vec{e}_1, \vec{e}_2, \vec{e}_3) = \mathbb{R}^ 3\)</span>.</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>Example 2.3.4(ii)Spanning sets Suppose that <span class="math display">\[\mathscr{A}= \left\{ \begin{pmatrix}1\\1\\0\end{pmatrix}, \begin{pmatrix}1\\-1\\0\end{pmatrix},
+      \begin{pmatrix}0\\0\\1\end{pmatrix} \right\}.\]</span> Then <span class="math display">\[\begin{pmatrix}x\\y\\z\end{pmatrix} = \frac{x+y}{2} \begin{pmatrix}1\\1\\0\end{pmatrix} +
+    \frac{x-y}{2} \begin{pmatrix}1\\-1\\0\end{pmatrix} + z \begin{pmatrix}0\\0\\1\end{pmatrix},\]</span> for any <span class="math inline">\(x, y, z\in \mathbb{R}\)</span> and so <span class="math inline">\(\operatorname{Span}(\mathscr{A}) = \mathbb{R}^ 3\)</span>.</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>ExampleLinear combo</p>
+</div>
+<div class="frame">
+<p>Example 2.3.4(iii)Spanning sets If <span class="math inline">\(\mathscr{A}\)</span> is a spanning set for a vector space <span class="math inline">\(W\)</span>, and <span class="math inline">\(w\in W\)</span> is any vector, then <span class="math inline">\(\operatorname{Span}(\mathscr{A}\cup \{w\}) = \operatorname{Span}(\mathscr{A})\)</span>.</p>
+<p>In other words, if you have a spanning set for a vector space <span class="math inline">\(W\)</span>, you can always add additional redundant vectors from <span class="math inline">\(W\)</span> and the set will continue to span <span class="math inline">\(W\)</span>.</p>
+</div>
+<div class="frame">
+<p>Example 2.3.4(iv)Spanning sets In the vector space <span class="math inline">\(F[x]\)</span> (of polynomials over the field <span class="math inline">\(F\)</span>) every polynomial can be written <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m} \in \operatorname{Span}(1, x, x
+      ^ 2,\ldots).\]</span> Hence the set <span class="math display">\[\mathscr{M} = \{ 1, x, x^{2}, x^{3}, \dots \}\]</span> of all <span class="alert">monomials</span> is a spanning set for <span class="math inline">\(F[x]\)</span>.</p>
+</div>
+<h2 id="linearly-independent-vectors-and-bases">Linearly independent vectors and bases</h2>
+<div class="frame">
+<p>. ..</p>
+<div class="defn">
+<p><strong>Definition 14</strong> (Linear independence.). <em>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. A set <span class="math inline">\(\mathscr{A}= \{  v_{1},v_{2},\dots\}\)</span> is called <span class="alert">linearly independent</span> if the only solution to the equation <span class="math display">\[\sum_{i=1}^{k} \alpha_{i} v_{i} = \alpha_1v_1 + \alpha_2v_2 + \cdots +
+    \alpha_kv_k = \vec{0}\]</span> (with <span class="math inline">\(\alpha_{i} \in F\)</span> and <span class="math inline">\(k\geqslant 1\)</span>) is <span class="math inline">\(\alpha_{1} = \alpha_{2} = \dots  =  \alpha_{k} = 0\)</span>.</em></p>
+<p><em>If <span class="math inline">\(\mathscr{A}\)</span> is not linearly independent, it is <span class="alert">linearly dependent</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<p>Example of linearly independent vectors</p>
+</div>
+<div class="frame">
+<p>Example of linearly dependent vectors</p>
+</div>
+<div class="frame">
+<p>Corner cases <strong>0 vectors:</strong> The empty set <span class="math inline">\(\varnothing\)</span> is vacuously linearly independent.</p>
+<p><strong>1 vector:</strong> if <span class="math inline">\(v\in V\)</span> is any non-zero vector, then <span class="math inline">\(\{v\}\)</span> is linearly independent.</p>
+<p><strong>1 vector:</strong> <span class="math inline">\(\{\vec{0}\}\)</span> is linearly dependent.</p>
+<p><strong>2 vectors:</strong> if <span class="math inline">\(u, v\in V\)</span>, then <span class="math inline">\(\{u, v\}\)</span> is linearly independent if and only if <span class="math inline">\(u\)</span> is not a scalar multiple of <span class="math inline">\(v\)</span>.</p>
+</div>
+<div class="frame">
+<p>Linear dependence</p>
+<div id="cor-dep-lincomb" class="lem">
+<p><strong>Lemma 15</strong> (Linear dependence lemma (cf. MT2501).). <em>Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in a vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\mathscr{A}\)</span> is linearly dependent if and only if there exists <span class="math inline">\(v\in \mathscr{A}\)</span> such that <span class="math inline">\(v\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{A}\setminus \{v\}\)</span>.</em></p>
+</div>
+<div id="lemma-dim-dim" class="lem">
+<p><strong>Lemma 16</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space. If <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{m}  \}\)</span> is a linearly independent set of vectors in <span class="math inline">\(V\)</span> and <span class="math inline">\(\{  w_{1},w_{2},\dots,w_{n} \}\)</span> is a spanning set for <span class="math inline">\(V\)</span>, then <span class="math inline">\(m \leqslant n\)</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<div class="defn">
+<p><strong>Definition 17</strong> (<strong>Basis, finite-dimensional, dimension.</strong>). <em>Let <span class="math inline">\(V\)</span> be a vector space over the field <span class="math inline">\(F\)</span>. A <span class="alert">basis</span> for <span class="math inline">\(V\)</span> is a linearly independent spanning set. We say that <span class="math inline">\(V\)</span> is <span class="alert">finite-dimensional</span> if it has a finite basis. The <span class="alert">dimension</span> of <span class="math inline">\(V\)</span> is the size of any basis for <span class="math inline">\(V\)</span> and is denoted by <span class="math inline">\(\dim V\)</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<p>Example 2.4.5 The set <span class="math display">\[\mathscr{B}= \left\{ \vec{e}_1 =\begin{pmatrix}1\\0\\0\\\vdots\\0\end{pmatrix},
+      \vec{e}_2 =\begin{pmatrix}0\\1\\0\\\vdots\\0\end{pmatrix},
+      \dots, \vec{e}_n=\begin{pmatrix}0\\0\\\vdots\\0\\1\end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(V = F^{n}\)</span>. We shall call it the <span class="alert">standard basis</span> for <span class="math inline">\(F^{n}\)</span>. Hence <span class="math inline">\(\dim F^{n} = n\)</span> (as you might expect).</p>
+<p><span class="alert">Warning!</span> We refer to the dimension of <span class="math inline">\(F ^ {n}\)</span> as if it does not depend on the choice of basis. In fact it doesn’t which we will show later.</p>
+</div>
+<div class="frame">
+<p>Example 2.4.6</p>
+<p>The set <span class="math inline">\(\mathcal{P}_{n}\)</span> of polynomials over the field <span class="math inline">\(F\)</span> of degree at most <span class="math inline">\(n\)</span>: <span class="math display">\[\mathcal{P}_{n} = \{ \, f(x) \mid \text{$f(x) = a_{0} + a_{1}x +
+        a_{2}x^{2} + \dots + a_{n}x^{n}$} 
+      \ \text{for some $a_{i} \in F$} \, \}\]</span> is a vector space (it’s a subspace of <span class="math inline">\(F[x]\)</span>).</p>
+<p>The set of monomials <span class="math display">\[\{ 1, x, x^{2}, \dots, x^{n}\}\]</span> is a basis for <span class="math inline">\(\mathcal{P}_{n}\)</span> and <span class="math inline">\(\dim\mathcal{P}_{n} = n+1\)</span>.</p>
+<p><span class="alert">Warning!</span> We refer to the dimension of <span class="math inline">\(\mathcal{P}_n\)</span> as if it does not depend on the choice of basis. In fact it doesn’t which we will show later.</p>
+</div>
+<div class="frame">
+<p>Uniqueness of linear combinations</p>
+<div id="lem:basis-uniqueexpr" class="lem">
+<p><strong>Lemma 18</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span>. Then every vector in <span class="math inline">\(V\)</span> can be expressed as a <span class="alert">unique</span> linear combination of the vectors in <span class="math inline">\(\mathscr{B}\)</span>.</em></p>
+</div>
+<p>Note that although the collection <span class="math inline">\(\mathscr{B}\)</span> in Lemma <a href="#lem:basis-uniqueexpr" data-reference-type="ref" data-reference="lem:basis-uniqueexpr">Lemma 18</a> might be <strong>infinite</strong>, linear combinations are always <strong>finite</strong>.</p>
+</div>
+<div class="frame">
+<p>2 out of 3</p>
+<div id="thm-3-conditions" class="thm">
+<p><strong>Theorem 19</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a finite dimensional vector space and let <span class="math inline">\(\mathscr{A}\)</span> be a finite collection of vectors in <span class="math inline">\(V\)</span>. If <span class="math inline">\(\mathscr{A}\)</span> satisfies any <span class="alert">two</span> of the following three conditions, then <span class="math inline">\(\mathscr{A}\)</span> is a basis of <span class="math inline">\(V\)</span> (and hence satisfies all three conditions):</em></p>
+<ol type="1">
+<li><p><em>it is a spanning set for <span class="math inline">\(V\)</span>;</em></p></li>
+<li><p><em>it is linearly independent;</em></p></li>
+<li><p><em>it contains precisely <span class="math inline">\(\dim V\)</span> vectors.</em></p></li>
+</ol>
+</div>
+</div>
+<div class="frame">
+<p>Reduction and extension to bases</p>
+<div id="thm-new-linear-indep" class="thm">
+<p><strong>Theorem 20</strong>. <em>If <span class="math inline">\(\mathscr{A}\)</span> is any collection of vectors in a vector space <span class="math inline">\(V\)</span>, and <span class="math inline">\(\mathscr{C}\)</span> is a linearly independent subset of <span class="math inline">\(\mathscr{A}\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> such that <span class="math inline">\(\mathscr{C}\subseteq  \mathscr{B}\)</span>.</em></p>
+</div>
+<div id="thm:basissubset" class="cor">
+<p><strong>Corollary 21</strong> (Reduction to basis (cf. MT2501).). <em>If <span class="math inline">\(\mathscr{A}\)</span> is a subset of a vector space <span class="math inline">\(V\)</span>, then <span class="math inline">\(\mathscr{A}\)</span> contains a basis for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span>.</em></p>
+</div>
+<div id="prop:extend2basis" class="cor">
+<p><strong>Corollary 22</strong> (Extension to basis (cf. MT2501)). <em><span id="prop-extension" label="prop-extension">[prop-extension]</span> If <span class="math inline">\(\mathscr{A}\)</span> is a linearly independent subset of a vector space <span class="math inline">\(V\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math inline">\(\mathscr{A}\subseteq \mathscr{B}\)</span>.</em></p>
+</div>
+</div>
+<div class="frame">
+<p>Dimension is well-defined</p>
+<div id="cor:dim-unique" class="lem">
+<p><strong>Lemma 23</strong> (cf. MT2501). <em>Let <span class="math inline">\(V\)</span> be a vector space. Then any two bases for <span class="math inline">\(V\)</span> have the same size and consequently <span class="math inline">\(\dim V\)</span> is uniquely determined.</em></p>
+</div>
+</div>
+
+
+
+
+
+
+
+<p><a href="#">Back to top</a></p>
+<ul>
+    
+    <li>
+      <a href="/mt3501-lnotes/">
+      
+      Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/01-intro/">
+      
+      Section 1 - Intro
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/02-vector-spaces/">
+      
+      Section 2 - Vector spaces
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/03-algorithms-to-live-by/">
+      
+      Section 3 - Algorithms to live by
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/04-linear-transf/">
+      
+      Section 4 - Linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/05-l-v-w/">
+      
+      Section 5 - The vector space of linear transformations
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/06-direct-sums/">
+      
+      Section 6 - Direct sums
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/07-dual-space/">
+      
+      Section 7 - The dual space
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/08-eigen-stuff/">
+      
+      Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/09-diagonal/">
+      
+      Section 9 - Diagonalisation
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/10-jnf/">
+      
+      Section 10 - Jordan normal form
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/11-inner-products/">
+      
+      Section 11 - Inner products
+      </a>
+    </li>
+    
+</ul>
+<footer>
+<hr>⚡️
+	2021  © J. D. Mitchell  
+</footer>
+</body>
+</html>

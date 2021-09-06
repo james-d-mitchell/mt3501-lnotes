@@ -194,3 +194,9 @@ h2 {
   counter-increment: section 1;
   counter-reset: omitted css-counter;
 }
+
+h1.title::before {
+  content: "";
+}
+
+h1.title {}

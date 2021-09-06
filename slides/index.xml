@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on MT3501 Lecture Notes</title>
+    <link>https://jdbm.me/mt3501-lnotes/slides/</link>
+    <description>Recent content in Slides on MT3501 Lecture Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© J. D. Mitchell</copyright><atom:link href="https://jdbm.me/mt3501-lnotes/slides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MT3501: Section .</title>
+      <link>https://jdbm.me/mt3501-lnotes/slides/01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdbm.me/mt3501-lnotes/slides/01-intro/</guid>
+      <description>Introduction Course info  . .. Lecturer: James Mitchell (jdm3@).
+Prerequisite: MT2501.
+Lectures: Mon (even), Tue &amp;amp; Thu 12 noon, via Teams.
+Tutorials: These begin in Week 2 (online in Week 2, possibly in person from Week 3 onwards, more details in class):
+Times: M̄on 2pm (Maths Theatre B), M̄on 3pm (Maths Theatre B),
+T̄ues 3pm (Maths Theatre B), T̄ues 4pm (Maths Theatre B),
+T̄hurs 2pm (Maths Theatre B), F̄ri 1pm (online)</description>
+    </item>
+    
+    <item>
+      <title>MT3501: Section 2.</title>
+      <link>https://jdbm.me/mt3501-lnotes/slides/02-vector-spaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdbm.me/mt3501-lnotes/slides/02-vector-spaces/</guid>
+      <description>2.1 Definition and examples Before we can define vectors spaces, we must define .
+Scalars are just any element in a field.
+ A field in minecraft   Most of the time, if you want to keep things simple, you can think of scalars as being .
+ Definition 1 (Field.). A field is a set \(F\) with two binary operations \(F\times F \to F\) \[\begin{aligned} (\alpha,\beta) &amp;amp; \mapsto \alpha+\beta &amp;amp; (\alpha,\beta) &amp;amp; \mapsto \alpha\beta \end{aligned}\] called addition and multiplication such that always</description>
+    </item>
+    
+  </channel>
+</rss>
