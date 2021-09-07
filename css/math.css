@@ -86,7 +86,7 @@ div.omittedexamp {
 }
 
 div.exampjupyter:before {
-  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ". †";
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ". 💻";
   font-weight: bold;
 }
 
@@ -97,8 +97,22 @@ div.exampjupyter {
   padding-left: 10px;
 }
 
+div.examplejupyter:before {
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ". 💻";
+  font-weight: bold;
+}
+
+div.examplejupyter {
+  counter-increment: css-counter 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+
 div.omittedexampjupyter:before {
-  content: "Example " counter(chapter) "." counter(section) counter(omitted, upper-latin) ".";
+  content: "Example " counter(chapter) "." counter(section) counter(omitted, upper-latin) ". 💻";
+  content:;
   font-weight: bold;
 }
 
@@ -179,7 +193,7 @@ div.solution {
 }
 
 h1::before {
-  content: "Section " counter(chapter) " - ";
+  content: "Section " counter(chapter) " -x ";
 }
 
 h1 {
@@ -199,4 +213,30 @@ h1.title::before {
   content: "";
 }
 
+h1#problems::before {
+  content: "";
+}
+
+h1#course-info::before {
+  content: "";
+}
+
 h1.title {}
+h1#problems {} 
+h1#course-info {}
+
+div.question ol li::marker {
+  content: "(" counter(list-item, lower-alpha) ") ";
+}
+
+div.questionjupyter p:before {
+  content: "💻 ";
+}
+
+div.questionjupyter ol li::marker {
+  content: "(" counter(list-item, lower-alpha) ") ";
+}
+
+div.questionjupyter ol p:before {
+  content: "";
+}

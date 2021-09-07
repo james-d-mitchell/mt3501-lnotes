@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -787,6 +794,153 @@
     0              &amp; 0              &amp; J_{1}(\lambda)
   \end{pmatrix},\]</span> which both have characteristic polynomial <span class="math inline">\((x-\lambda)^{7}\)</span>, minimum polynomial <span class="math inline">\((x-\lambda)^{3}\)</span> and geometric multiplicity <span class="math inline">\(g_{\lambda} =  \dim E_{\lambda} = 3\)</span>. To deal with such possible Jordan normal forms one needs to generalise <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(3) to consider the dimension of generalisations of eigenspaces: <span class="math display">\[\dim \ker (T-\lambda I)^{2}, \quad \dim \ker (T-\lambda I)^{3}, \quad
   \dots.\]</span> We leave the details to the interested and enthused student.</p>
+<h2 id="problems-10-jnf">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-10-01" label="problem-10-01"></span></p>
+<div class="question">
+<p>Find all possible Jordan normal forms (discounting rearrangements of the Jordan blocks) for those linear transformations whose characteristic polynomial <span class="math inline">\(c_{T}(x)\)</span> and minimum polynomial <span class="math inline">\(m_{T}(x)\)</span> are as follows:</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: center;"><span class="math inline">\(c_{T}(x)\)</span></td>
+<td></td>
+<td style="text-align: center;"><span class="math inline">\(m_{T}(x)\)</span></td>
+</tr>
+<tr class="even">
+<td>(a)</td>
+<td style="text-align: center;"><span class="math inline">\((x-2)^{4}(x-3)^{2}\)</span></td>
+<td></td>
+<td style="text-align: center;"><span class="math inline">\((x-2)^{2}(x-3)^{2}\)</span>;</td>
+</tr>
+<tr class="odd">
+<td>(b)</td>
+<td style="text-align: center;"><span class="math inline">\((x-7)^{5}\)</span></td>
+<td></td>
+<td style="text-align: center;"><span class="math inline">\((x-7)^{2}\)</span>;</td>
+</tr>
+<tr class="even">
+<td>(c)</td>
+<td style="text-align: center;"><span class="math inline">\((x-2)^{7}\)</span></td>
+<td></td>
+<td style="text-align: center;"><span class="math inline">\((x-2)^{3}\)</span>;</td>
+</tr>
+<tr class="odd">
+<td>(d)</td>
+<td style="text-align: center;"><span class="math inline">\((x-3)^{4}(x-5)^{4}\)</span></td>
+<td></td>
+<td style="text-align: center;"><span class="math inline">\((x-3)^{2}(x-5)^{2}\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>[Hint: How can the dimension of the vector space be deduced from knowledge of the characteristic polynomial?]</p>
+</div></li>
+<li><p><span id="problem-10-02" label="problem-10-02"></span></p>
+<div class="question">
+<p>Determine all possible Jordan normal forms for a linear transformation <span class="math inline">\(T \colon V \to V\)</span> whose characteristic polynomial is <span class="math inline">\(c_{T}(x) =  (x-2)^{3}(x-5)^{2}\)</span>.</p>
+</div></li>
+<li><p><span id="problem-10-03" label="problem-10-03"></span></p>
+<div class="question">
+<p>Determine all possible Jordan normal forms for a <span class="math inline">\(5 \times 5\)</span> matrix whose minimum polynomial is <span class="math inline">\((x-3)^{2}\)</span>.</p>
+</div></li>
+<li><p><span id="problem-10-04" label="problem-10-04"></span></p>
+<div class="question">
+<p>For each of the following matrices <span class="math inline">\(A\)</span> of real numbers, determine a Jordan normal form of <span class="math inline">\(A\)</span>: <span class="math display">\[\begin{array}{rlrlrl}
+  \mbox{(a)} &amp; \begin{pmatrix}
+    3 &amp; -4 &amp; 0 \\
+    0 &amp; -1 &amp; 0 \\
+    0 &amp; 6 &amp; 2
+  \end{pmatrix}
+  &amp;\quad
+  \mbox{(b)} &amp; \begin{pmatrix}
+    1 &amp; 1 &amp; -1 \\
+    -2 &amp; 4 &amp; -2 \\
+    0 &amp; 1 &amp; 0
+  \end{pmatrix}
+  &amp;\quad
+  \mbox{(c)} &amp;\begin{pmatrix}
+    5 &amp; 2 &amp; 2 \\
+    2 &amp; 2 &amp; -4 \\
+    2 &amp; -4 &amp; 2
+  \end{pmatrix}
+  \\[20pt]
+  \mbox{(d)} &amp; \begin{pmatrix}
+    3 &amp; 4 &amp; 4 \\
+    1 &amp; 3 &amp; 0 \\
+    -2 &amp; -4 &amp; -1
+  \end{pmatrix}
+  &amp;
+  \mbox{(e)} &amp; \begin{pmatrix}
+    1 &amp; 0 &amp; 1 \\
+    0 &amp; 2 &amp; 1 \\
+    -1 &amp; 0 &amp; 3
+  \end{pmatrix}.
+\end{array}\]</span> [Hint: These matrices appeared on the Problem Sheets for Sections 8 and 9!]</p>
+</div></li>
+<li><p><span id="problem-10-05" label="problem-10-05"></span></p>
+<div class="questionjupyter">
+<p>For each matrix <span class="math inline">\(A\)</span> appearing in Problem 4, find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form.</p>
+</div></li>
+<li><p><span id="problem-10-06" label="problem-10-06"></span></p>
+<div class="questionjupyter">
+<p>Show that the matrix of real numbers <span class="math display">\[A = \begin{pmatrix}
+      0 &amp; 1 &amp; 2 \\
+      0 &amp; 0 &amp; 3 \\
+      0 &amp; 0 &amp; 0
+    \end{pmatrix}\]</span> is not diagonalisable. Find a Jordan normal form <span class="math inline">\(J\)</span> of <span class="math inline">\(A\)</span> and an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}AP = J\)</span>.</p>
+</div></li>
+<li><p><span id="problem-10-07" label="problem-10-07"></span></p>
+<div class="questionjupyter">
+<p>For each of the following matrices <span class="math inline">\(A\)</span>, determine a Jordan normal form of <span class="math inline">\(A\)</span> and find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form. <span class="math display">\[\begin{array}{rlrlrl}
+  \mbox{(a)} &amp; \begin{pmatrix}
+    1 &amp; 0 &amp; 0 &amp; 0 \\
+    -6 &amp; -1 &amp; 1 &amp; 0 \\
+    -4 &amp; 0 &amp; -1 &amp; 0 \\
+    13 &amp; 0 &amp; 6 &amp; 1
+  \end{pmatrix}
+  &amp;\quad
+  \mbox{(b)} &amp; \begin{pmatrix}
+    -14 &amp; 1 &amp; 0 &amp; 14 \\
+    -6 &amp; 0 &amp; 0 &amp; 6 \\
+    6 &amp; -3 &amp; -3 &amp; -6 \\
+    -11 &amp; 1 &amp; 0 &amp; 11
+  \end{pmatrix}
+  \\[40pt]
+  \mbox{(c)} &amp;\begin{pmatrix}
+    -2 &amp; 1 &amp; 0 &amp; -9 \\
+    0 &amp; 1 &amp; 0 &amp; 0 \\
+    2 &amp; 1 &amp; 1 &amp; 7 \\
+    1 &amp; 0 &amp; 0 &amp; 4
+  \end{pmatrix}
+             &amp; \quad
+  \mbox{(d)} &amp; 
+  \begin{pmatrix}
+    -4       &amp; 0               &amp; 2  &amp; -4 \\
+    -2       &amp; -2              &amp; 3  &amp; -4 \\
+    0        &amp; 0               &amp; -2 &amp; 0 \\
+    1        &amp; 0               &amp; -1 &amp; 0
+  \end{pmatrix}
+  \\[40pt]
+  \mbox{(e)} &amp; \begin{pmatrix}
+    -3       &amp; 2               &amp; \textstyle\frac{1}{2} &amp; -2 \\
+    0        &amp; 0               &amp; 0                     &amp; 1 \\
+    0        &amp; -3              &amp; -3                    &amp; 3 \\
+    0        &amp; 0               &amp; 0                     &amp; 1
+  \end{pmatrix}
+  &amp;
+  \mbox{(f)} &amp; \begin{pmatrix}
+    -2 &amp; 2 &amp; 0 &amp; -6 \\
+    -2 &amp; 3 &amp; 0 &amp; -3 \\
+    -2 &amp; 1 &amp; 2 &amp; -3 \\
+    2 &amp; -1 &amp; 0 &amp; 5
+  \end{pmatrix}.
+\end{array}\]</span></p>
+</div></li>
+</ol>
+
 
 
 
@@ -801,6 +955,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     

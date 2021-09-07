@@ -150,7 +150,7 @@ Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is lin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jdbm.me/mt3501-lnotes/09-diagonal/</guid>
-      <description>Diagonalisation of linear transformations body { counter-reset: chapter 8; }  In this section, we will discuss the diagonalisation of a linear transformation.
+      <description>Diagonalisation of linear transformations body { counter-reset: chapter 8; }  In this section, we will discuss the diagonalisation of linear transformations.
 Diagonalisability A linear transformation \(T : V \to V\) of a finite-dimensional vector space \(V\) is diagonalisable if there is a basis \(\mathscr{B}\) for \(V\) such that \(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\) is a diagonal matrix.
 A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\) such that \(P^{-1}AP\) is diagonal.</description>
     </item>
@@ -175,45 +175,35 @@ A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\)
     
     <item>
       <title></title>
-      <link>https://jdbm.me/mt3501-lnotes/3501handouts-jdm/</link>
+      <link>https://jdbm.me/mt3501-lnotes/course-info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jdbm.me/mt3501-lnotes/3501handouts-jdm/</guid>
-      <description>Lecturer: James Mitchell.
+      <guid>https://jdbm.me/mt3501-lnotes/course-info/</guid>
+      <description>Course info Lecturer: James Mitchell.
 Prerequisite: MT2501.
 Lectures: Mon (even), Tue &amp;amp; Thu 12 noon, via Teams.
-Tutorials: These begin in Week 2:
-Times: M̄on 2pm (Maths Theatre B), M̄on 3pm (Maths Theatre B),
-T̄ues 3pm (Maths Theatre B), T̄ues 4pm (Maths Theatre B),
-T̄hurs 2pm (Maths Theatre B), F̄ri 1pm (online)
- At least one of the tutorials will be recorded in case you can’t attend, there’s also the possibility of us running additional online tutorials if necessary.</description>
+Tutorials: These begin in Week 2.
+Times:
+ Mon 2pm and 3pm (Maths Theatre B) [Collin Bleak] Tues 3pm and 4pm (Maths Theatre B) [James Mitchell] Thurs 2pm (Maths Theatre B), Fri 1pm (online) [Yoav Len]  At least one of the tutorials will be recorded in case you can’t attend, there’s also the possibility of the balance of in-person and online tutorials being tweaked as the situation evolves.</description>
     </item>
     
     <item>
-      <title>MT3501: Section .</title>
-      <link>https://jdbm.me/mt3501-lnotes/slides/01-intro/</link>
+      <title></title>
+      <link>https://jdbm.me/mt3501-lnotes/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jdbm.me/mt3501-lnotes/slides/01-intro/</guid>
-      <description>Introduction Course info  . .. Lecturer: James Mitchell (jdm3@).
-Prerequisite: MT2501.
-Lectures: Mon (even), Tue &amp;amp; Thu 12 noon, via Teams.
-Tutorials: These begin in Week 2 (online in Week 2, possibly in person from Week 3 onwards, more details in class):
-Times: M̄on 2pm (Maths Theatre B), M̄on 3pm (Maths Theatre B),
-T̄ues 3pm (Maths Theatre B), T̄ues 4pm (Maths Theatre B),
-T̄hurs 2pm (Maths Theatre B), F̄ri 1pm (online)</description>
+      <guid>https://jdbm.me/mt3501-lnotes/overview/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>MT3501: Section 2.</title>
-      <link>https://jdbm.me/mt3501-lnotes/slides/02-vector-spaces/</link>
+      <title></title>
+      <link>https://jdbm.me/mt3501-lnotes/problems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jdbm.me/mt3501-lnotes/slides/02-vector-spaces/</guid>
-      <description>2.1 Definition and examples Before we can define vectors spaces, we must define .
-Scalars are just any element in a field.
- A field in minecraft   Most of the time, if you want to keep things simple, you can think of scalars as being .
- Definition 1 (Field.). A field is a set \(F\) with two binary operations \(F\times F \to F\) \[\begin{aligned} (\alpha,\beta) &amp;amp; \mapsto \alpha+\beta &amp;amp; (\alpha,\beta) &amp;amp; \mapsto \alpha\beta \end{aligned}\] called addition and multiplication such that always</description>
+      <guid>https://jdbm.me/mt3501-lnotes/problems/</guid>
+      <description>Problems The tutorial problems related to any section can be found in the last subsection of that section:
+ Section 2 - Vector spaces Section 4 - Linear transformations Section 5 - The vector space of linear transformations Section 6 - Direct sums Section 7 - Dual space Section 8 - Eigen stuff Section 9 - Diagonalisation Section 10 - Jordan normal form Section 11 - Inner products  </description>
     </item>
     
   </channel>

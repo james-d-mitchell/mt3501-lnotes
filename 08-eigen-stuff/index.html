@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -325,9 +332,9 @@
 <h2 id="the-cayleyhamilton-theorem">The Cayley–Hamilton Theorem</h2>
 <p>The subject of this section is the following theorem.</p>
 <div class="thm">
-<p><span id="thm-cayley-hamilton" label="thm-cayley-hamilton"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T : V \to V\)</span> be a linear transformation. If <span class="math inline">\(c_{T}(x)\)</span> is the characteristic polynomial of <span class="math inline">\(T\)</span>, then <span class="math inline">\(c_{T}(T) = \vec{0}_{\L(V, V)}\)</span>, where <span class="math inline">\(\vec{0}_{\L(V, V)}\)</span> is the linear transformation of <span class="math inline">\(V\)</span> mapping every vector <span class="math inline">\(v\in V\)</span> to <span class="math inline">\(\vec{0}_V\)</span>.</p>
+<p><span id="thm-cayley-hamilton" label="thm-cayley-hamilton"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T : V \to V\)</span> be a linear transformation. If <span class="math inline">\(c_{T}(x)\)</span> is the characteristic polynomial of <span class="math inline">\(T\)</span>, then <span class="math inline">\(c_{T}(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>, where <span class="math inline">\(\vec{0}_{\mathcal{L}(V, V)}\)</span> is the linear transformation of <span class="math inline">\(V\)</span> mapping every vector <span class="math inline">\(v\in V\)</span> to <span class="math inline">\(\vec{0}_V\)</span>.</p>
 </div>
-<p>We showed in Problem 5 on the Problem Sheet for Section 8 (Eigen etc) that the matrix of the linear transformation <span class="math inline">\(c_T(T)\)</span> equals <span class="math inline">\(c_T(A)\)</span> where <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span>. It follows that <span class="math inline">\(c_T(A)\)</span> is the zero matrix.</p>
+<p>We showed in Problem <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#problem-08-05">5</a> in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#problems-08-eigen-stuff">Section 8.5</a> that the matrix of the linear transformation <span class="math inline">\(c_T(T)\)</span> equals <span class="math inline">\(c_T(A)\)</span> where <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span>. It follows that <span class="math inline">\(c_T(A)\)</span> is the zero matrix.</p>
 <div class="exampjupyter">
 <p>We showed in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#ex-no-eigenvalues">Example 8.2.6</a> that the characteristic polynomial of <span class="math inline">\(T: \mathbb{R} ^ 2 \to \mathbb{R} ^ 2\)</span> with matrix <span class="math display">\[A =
     \begin{pmatrix}
@@ -371,14 +378,102 @@
     &amp; \vdots &amp;  \\
     &amp; \subseteq &amp; (T - \alpha_{11}\operatorname{id})(W_1) \\
     &amp; \subseteq &amp; W_0 = \{\vec{0}_{V}\}.
-  \end{aligned}\]</span> Therefore <span class="math inline">\(c_T(T)(v) = \vec{0}_V\)</span> for every <span class="math inline">\(v\in V\)</span> and so <span class="math inline">\(c_T(T) = \vec{0}_{\L(V, V)}\)</span>, as required. ◻</p>
+  \end{aligned}\]</span> Therefore <span class="math inline">\(c_T(T)(v) = \vec{0}_V\)</span> for every <span class="math inline">\(v\in V\)</span> and so <span class="math inline">\(c_T(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>, as required. ◻</p>
 </div>
+<h2 id="problems-08-eigen-stuff">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-08-01" label="problem-08-01"></span></p>
+<div class="questionjupyter">
+<p>Let <span class="math inline">\(T \colon \mathbb{R}^{2} \to \mathbb{R}^{2}\)</span> be the linear transformation having matrix <span class="math display">\[A = \begin{pmatrix}
+      -13 &amp; -5 \\
+      34 &amp; 13
+    \end{pmatrix}\]</span> with respect to the standard basis. Calculate the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
+</div></li>
+<li><p><span id="problem-08-02" label="problem-08-02"></span></p>
+<div class="questionjupyter">
+<p>For each matrix <span class="math inline">\(A\)</span> below, let <span class="math inline">\(T \colon \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> be the linear transformation having matrix <span class="math inline">\(A\)</span> with respect to the standard basis, that is, <span class="math display">\[\begin{aligned}
+  T \colon \mathbb{R}^{3} &amp;\to \mathbb{R}^{3} \\
+  \vec{v} &amp;\mapsto A\vec{v}.
+  \end{aligned}\]</span> Calculate the characteristic polynomial of <span class="math inline">\(T\)</span> and find the eigenvalues of <span class="math inline">\(T\)</span>. <span class="math display">\[\begin{array}{rlrlrl}
+      \mbox{(a)} &amp; \begin{pmatrix}
+        3 &amp; -4 &amp; 0 \\
+        0 &amp; -1 &amp; 0 \\
+        0 &amp; 6 &amp; 2
+      \end{pmatrix}
+      &amp;\quad
+      \mbox{(b)} &amp; \begin{pmatrix}
+        1 &amp; 1 &amp; -1 \\
+        -2 &amp; 4 &amp; -2 \\
+        0 &amp; 1 &amp; 0
+      \end{pmatrix}
+      &amp;\quad
+      \mbox{(c)} &amp;\begin{pmatrix}
+        5 &amp; 2 &amp; 2 \\
+        2 &amp; 2 &amp; -4 \\
+        2 &amp; -4 &amp; 2
+      \end{pmatrix}
+      \\[20pt]
+      \mbox{(d)} &amp; \begin{pmatrix}
+        3 &amp; 4 &amp; 4 \\
+        1 &amp; 3 &amp; 0 \\
+        -2 &amp; -4 &amp; -1
+      \end{pmatrix}
+      &amp;
+      \mbox{(e)} &amp; \begin{pmatrix}
+        1 &amp; 0 &amp; 1 \\
+        0 &amp; 2 &amp; 1 \\
+        -1 &amp; 0 &amp; 3
+      \end{pmatrix}
+      &amp;
+      \mbox{(f)} &amp; \begin{pmatrix}
+        2 &amp; -1 &amp; 0 \\
+        0 &amp; 2 &amp; 0 \\
+        -1 &amp; 1 &amp; 2
+      \end{pmatrix}
+      \\[20pt]
+      \mbox{(g)} &amp; \begin{pmatrix}
+        -2 &amp; -3 &amp; 0 \\
+        3 &amp; 4 &amp; 0 \\
+        6 &amp; 6 &amp; 1
+      \end{pmatrix}.
+    \end{array}\]</span></p>
+</div></li>
+<li><p><span id="problem-08-03" label="problem-08-03"></span></p>
+<div class="questionjupyter">
+<p>Let <span class="math display">\[A = \begin{pmatrix}
+          1 &amp; 1 &amp; 0 \\
+          0 &amp; 2 &amp; 0 \\
+          0 &amp; 0 &amp; 1
+        \end{pmatrix}
+        \qquad \text{and} \qquad
+        B = \begin{pmatrix}
+          2 &amp; 0 &amp; 0 \\
+          0 &amp; 2 &amp; 2 \\
+          0 &amp; 0 &amp; 1
+        \end{pmatrix}.\]</span> Show that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have different characteristic polynomials.</p>
+</div></li>
+<li><p><span id="problem-08-04" label="problem-08-04"></span></p>
+<div class="questionjupyter">
+<p>Let <span class="math inline">\(T \colon \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> be the linear transformation given by the matrix <span class="math display">\[A = \begin{pmatrix}
+          2 &amp; 1 &amp; 0 &amp; -1 \\
+          -2 &amp; 5 &amp; -1 &amp; -7 \\
+          -12 &amp; 16 &amp; -4 &amp; -15 \\
+          -2 &amp; 3 &amp; -1 &amp; -5
+        \end{pmatrix}.\]</span> Calculate the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
+</div></li>
+<li><p><span id="problem-08-05" label="problem-08-05"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(T \colon V \to V\)</span> be a linear transformation of a finite-dimensional vector space <span class="math inline">\(V\)</span> over a field <span class="math inline">\(F\)</span>. Let <span class="math inline">\(f(x)\)</span> be a polynomial over <span class="math inline">\(F\)</span>,  <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(A =  \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span>. Show that <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) = f(A).\]</span> Deduce that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(c_T(T)) = c_T(A)\)</span>.</p>
+</div></li>
+</ol>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
 <li id="fn1" role="doc-endnote"><p>The general case can be reduced to the case when <span class="math inline">\(F\)</span> is algebraically closed via the observation that for any matrix <span class="math inline">\(A\)</span> with entries in <span class="math inline">\(F\)</span>, <span class="math inline">\(c_A(x)\)</span> does not change if we interpret <span class="math inline">\(A\)</span> as having entries in the algebraic closure <span class="math inline">\(\bar F\)</span>. For example, interpret a real matrix as having complex entries. Interested and Galois-theoretically inclined students can chase down the details.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+
 
 
 
@@ -393,6 +488,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     

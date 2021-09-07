@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -282,7 +289,7 @@
 </ol>
 </div>
 <div class="proof">
-<p><em>Proof.</em> See Problem 1 on the Problem Sheet for Section 7. ◻</p>
+<p><em>Proof.</em> See Problem <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problem-07-01">1</a> in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problems-07-dual-space">Section 7.6</a>. ◻</p>
 </div>
 <h2 id="the-matrix-of-the-dual-of-a-linear-transformation">The matrix of the dual of a linear transformation</h2>
 <p>In this section we consider the matrix of the dual of a linear transformation.</p>
@@ -362,21 +369,87 @@
 <p><span id="lemma-rank-im-dual-transf" label="lemma-rank-im-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T  : V \to W\)</span> is a linear transformation, then <span class="math inline">\(\dim \operatorname{im} T = \dim \operatorname{im} T ^ *\)</span> where <span class="math inline">\(T ^ *: W ^ * \to V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> In Problem 2(d) on the Problem Sheet for Section 7, it is shown that <span class="math inline">\(\dim  \ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>. Also <span class="math inline">\(\dim \operatorname{im} T ^ * = \dim W ^*  - \dim \ker T ^ *\)</span> by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>). Since <span class="math inline">\(\dim W ^ * = \dim W\)</span>, (<a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#prop-dim-dual-space">Proposition 7.1.3</a>), it follows that <span class="math display">\[\begin{aligned}
-    \dim \operatorname{im} T ^ * &amp; = &amp; \dim W - \dim \ker T ^ *                  \\
-    &amp; = &amp; \dim W - ( \dim \ker T + \dim W - \dim V) \\
-    &amp; = &amp; \dim V - \dim \ker T                      \\
-    &amp; = &amp; \dim V - (\dim V - \dim \operatorname{im} T)            \\
-    &amp; = &amp; \dim \operatorname{im} T.
+<p><em>Proof.</em> In Problem <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problem-07-02">2</a>(d) in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problems-07-dual-space">Section 7.6</a>, it is shown that <span class="math inline">\(\dim \ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>. Also <span class="math inline">\(\dim  \operatorname{im} T ^ * = \dim W ^* - \dim \ker T ^ *\)</span> by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>). Since <span class="math inline">\(\dim W ^ * = \dim W\)</span>, (<a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#prop-dim-dual-space">Proposition 7.1.3</a>), it follows that <span class="math display">\[\begin{aligned}
+    \dim \operatorname{im} T ^ * &amp; = &amp; \dim W - \dim \ker T ^ *                     \\
+                                 &amp; = &amp; \dim W - ( \dim \ker T + \dim W - \dim V)    \\
+                                 &amp; = &amp; \dim V - \dim \ker T                         \\
+                                 &amp; = &amp; \dim V - (\dim V - \dim \operatorname{im} T) \\
+                                 &amp; = &amp; \dim \operatorname{im} T.
   \end{aligned}\]</span> ◻</p>
 </div>
 <div class="thm">
 <p><span id="thm-row-rank-is-col-rank" label="thm-row-rank-is-col-rank"></span> If <span class="math inline">\(A\)</span> is a matrix with entries in a field <span class="math inline">\(F\)</span>, then the row rank of <span class="math inline">\(A\)</span> equals the column rank.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Recall from Problem 6 on the Problem Sheet for Section 4, that if <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are the standard bases for <span class="math inline">\(F ^ m\)</span> and <span class="math inline">\(F ^  n\)</span>, respectively, then <span class="math inline">\(T : F ^ m \to F ^ n\)</span> defined by <span class="math inline">\(T(\vec{v}) =  A\vec{v}\)</span> is a linear transformation, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T) = A\)</span>. It follows that the column rank of <span class="math inline">\(A\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), the column rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(\dim  \operatorname{im} T\)</span>. <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#lemma-rank-im-dual-transf">Lemma 7.5.2</a>, implies that <span class="math display">\[\dim
+<p><em>Proof.</em> Recall from Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-06">6</a> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>, that if <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are the standard bases for <span class="math inline">\(F ^ m\)</span> and <span class="math inline">\(F ^ n\)</span>, respectively, then <span class="math inline">\(T : F ^ m \to F ^ n\)</span> defined by <span class="math inline">\(T(\vec{v})  = A\vec{v}\)</span> is a linear transformation, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T) = A\)</span>. It follows that the column rank of <span class="math inline">\(A\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), the column rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(\dim  \operatorname{im} T\)</span>. <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#lemma-rank-im-dual-transf">Lemma 7.5.2</a>, implies that <span class="math display">\[\dim
   \operatorname{im} T = \dim \operatorname{im} T ^ *\]</span> and <span class="math inline">\(\dim  \operatorname{im} T ^ *\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *)\)</span> (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1)). But we showed in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a> that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^  *, \mathscr{B}  ^ *}(T ^ *)\)</span> equals the transpose of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T)\)</span>. Hence <span class="math inline">\(\dim \operatorname{im} T ^ *\)</span> is the column rank of the transpose of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>, which is the row rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) = A\)</span>. ◻</p>
 </div>
+<h2 id="problems-07-dual-space">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-07-01" label="problem-07-01"></span></p>
+<div class="question">
+<p>Suppose that <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are vector spaces over a field <span class="math inline">\(F\)</span>. Show that the following hold:</p>
+<ol type="1">
+<li><p>if <span class="math inline">\(S, T \in \mathcal{L}(V, W)\)</span>, then <span class="math inline">\((S + T) ^ * = S ^ * + T ^ *\)</span>;</p></li>
+<li><p>if <span class="math inline">\(\alpha \in F\)</span> and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then <span class="math inline">\((\alpha T) ^ * = \alpha T ^ *\)</span>;</p></li>
+<li><p>if <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span> and <span class="math inline">\(S\in \mathcal{L}(W, U)\)</span>, then <span class="math inline">\((S\circ T) ^ * = T ^ * \circ S ^ *\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-07-02" label="problem-07-02"></span></p>
+<div class="question">
+<p>If <span class="math inline">\(U\)</span> is a subset (not necessarily a subspace) of a vector space <span class="math inline">\(V\)</span>, then the <strong><em>annihilator</em></strong> of <span class="math inline">\(U\)</span> is defined to be the set: <span class="math display">\[U ^ 0 = \{f \in V ^ *: f(u) = 0,\ \text{for all }u\in U\}.\]</span></p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(U ^ 0\)</span> is a subspace of <span class="math inline">\(V ^ *\)</span>.</p></li>
+<li><p>If <span class="math inline">\(V\)</span> is finite-dimensional and <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, then prove that <span class="math inline">\(\dim U + \dim U ^ 0 = \dim V\)</span>.</p></li>
+<li><p>If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then show that <span class="math inline">\(\ker T ^ * = (\operatorname{im} T) ^ 0\)</span>, that is, that the kernel of the dual transformation of <span class="math inline">\(T\)</span> equals the annihilator of the image of <span class="math inline">\(T\)</span>.</p></li>
+<li><p>If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then show that <span class="math inline">\(\dim\ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-07-03" label="problem-07-03"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V = \mathcal{P}\)</span> be the vector space of polynomials with coefficients in <span class="math inline">\(\mathbb{R}\)</span> and indeterminant <span class="math inline">\(x\)</span>, and let <span class="math display">\[U = \{x ^ 4 p : p \in V\}.\]</span> In other words, <span class="math inline">\(U\)</span> is the set of all polynomials that are a multiple of <span class="math inline">\(x ^ 4\)</span> in <span class="math inline">\(V\)</span>.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Prove that <span class="math inline">\(f:V \to \mathbb{R}\)</span> defined by <span class="math inline">\(f(p) = p&#39;(0)\)</span> is a linear functional.</p></li>
+<li><p>Show that <span class="math inline">\(f \in V ^ *\)</span> from part (b) belongs to the annihilator <span class="math inline">\(U ^  0\)</span> of <span class="math inline">\(U\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-07-04" label="problem-07-04"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(\mathscr{B} =\{ \vec{e}_1, \vec{e}_2, \vec{e}_3, \vec{e}_4\}\)</span> be the standard basis for <span class="math inline">\(\mathbb{R} ^ 4\)</span>, and let <span class="math inline">\(\mathscr{B} ^ * = \{f_1,  f_2, f_3, f_4\}\subseteq (\mathbb{R} ^ 4) ^ *\)</span> be the dual basis for <span class="math inline">\(\mathscr{B}\)</span>. Show that the annihilator <span class="math inline">\(U ^ 0\)</span> of <span class="math inline">\(U =  \operatorname{Span}(\vec{e}_1, \vec{e}_3)\)</span> is <span class="math inline">\(\operatorname{Span}(f_2,  f_4)\)</span>.</p>
+</div></li>
+<li><p><span id="problem-07-05" label="problem-07-05"></span></p>
+<div class="question">
+<p>Suppose that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are matrices with entries in a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(A  ^ t\)</span> denotes the transpose of <span class="math inline">\(A\)</span>, then show that the following hold:</p>
+<ol type="1">
+<li><p>if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <span class="math inline">\(m\times n\)</span> matrices, then <span class="math inline">\((A + B) ^ t = A ^ t + B ^ t\)</span>;</p></li>
+<li><p><span class="math inline">\((\gamma A) ^ t = \gamma A ^ t\)</span> for all <span class="math inline">\(\gamma\in F\)</span>;</p></li>
+<li><p>if <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\times n\)</span> matrix and <span class="math inline">\(B\)</span> is a <span class="math inline">\(n\times k\)</span> matrix, then <span class="math inline">\((AB) ^ t = B ^ t A ^ t\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-07-06" label="problem-07-06"></span></p>
+<div class="question">
+<p>If <span class="math inline">\(V\)</span> is a vector space, show that every linear functional <span class="math inline">\(f\)</span> over <span class="math inline">\(V\)</span> is either surjective or <span class="math inline">\(f(v) = 0\)</span> for all <span class="math inline">\(v\in V\)</span>.</p>
+</div></li>
+<li><p><span id="problem-07-07" label="problem-07-07"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be any vector space. Show that the dual transformation of the identity linear transformation on <span class="math inline">\(V\)</span> is the identity transformation on the dual space <span class="math inline">\(V ^ *\)</span>.</p>
+</div></li>
+<li><p><span id="problem-07-08" label="problem-07-08"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(T :\mathbb{R} ^ 4\to \mathbb{R} ^ 4\)</span> be defined by the following formula: <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} =
+      \begin{pmatrix} x + 4y \\ y \\ 2z + t \\ z + 2t \end{pmatrix}.\]</span> Let <span class="math inline">\(\mathscr{B} = \{ \vec{e}_{1},\vec{e}_{2},\vec{e}_{3},\vec{e}_{4} \}\)</span> denote the standard basis for <span class="math inline">\(\mathbb{R}^{4}\)</span> and let <span class="math inline">\(\mathscr{C}\)</span> be the basis <span class="math display">\[\mathscr{C} = \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \} =
+        \left\{ \begin{pmatrix} 2 \\ 0 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix}
+        0 \\ 1 \\ -1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0
+        \end{pmatrix}, \begin{pmatrix} 3 \\ 0 \\ 0 \\ 1 \end{pmatrix} \right\}.\]</span> Find <span class="math inline">\(\operatorname{Mat}_{\mathscr{B} ^ *, \mathscr{C} ^ *}(T ^ *)\)</span> where <span class="math inline">\(T^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span> and <span class="math inline">\(\mathscr{B} ^ *\)</span> and <span class="math inline">\(\mathscr{C} ^ *\)</span> are the dual bases of <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span>, respectively.</p>
+</div></li>
+<li><p><span id="problem-07-09" label="problem-07-09"></span></p>
+<div class="question">
+<p>Suppose that <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional, and suppose that <span class="math inline">\(\phi:  \mathcal{L}(V, W) \to \mathcal{L}(W ^ *, V ^ *)\)</span> is defined by <span class="math inline">\(\phi(T) =  T ^ *\)</span>. In other words, <span class="math inline">\(\phi\)</span> maps every linear transformation from <span class="math inline">\(V\)</span> to <span class="math inline">\(W\)</span> to its dual transformation. Show that <span class="math inline">\(\phi\)</span> is an isomorphism of vector spaces.</p>
+</div></li>
+</ol>
+
 
 
 
@@ -391,6 +464,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     

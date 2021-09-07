@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -184,7 +191,7 @@
 </div>
 <p>The latter example is important in the context of pure mathematics. For the purposes many applications of linear algebra in applied mathematics and the physical sciences, the examples <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\mathbb{C}\)</span> are the most important. For those of a pure mathematical bent, however, it is worth noting that much of what is done in this course will work over an arbitrary field.</p>
 <div class="defn">
-<p><span id="HUGO_REPLACE_def-vspace_Definition-2.1.3" label="HUGO_REPLACE_def-vspace_Definition-2.1.3"></span> Let <span class="math inline">\(F\)</span> be a field. A <strong><em>vector space</em></strong> over <span class="math inline">\(F\)</span> is a set <span class="math inline">\(V\)</span> together with the following operations <span class="math display">\[\begin{aligned}
+<p><span id="def-vspace" label="def-vspace"></span> Let <span class="math inline">\(F\)</span> be a field. A <strong><em>vector space</em></strong> over <span class="math inline">\(F\)</span> is a set <span class="math inline">\(V\)</span> together with the following operations <span class="math display">\[\begin{aligned}
     V \times V &amp; \to V       &amp; F \times V &amp; \to V             \\
     (u,v)      &amp; \mapsto u+v &amp; (\alpha,v) &amp; \mapsto \alpha v,
   \end{aligned}\]</span> called <em>addition</em> and <em>scalar multiplication</em>, respectively, such that</p>
@@ -226,7 +233,7 @@
 </div>
 <p>We end this section by stating some basic properties of vector spaces that you probably remember from MT2501.</p>
 <div class="prop">
-<p><span id="HUGO_REPLACE_prop-vectorbasic_Proposition-2.1.5" label="HUGO_REPLACE_prop-vectorbasic_Proposition-2.1.5"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, let <span class="math inline">\(v \in V\)</span>, and let <span class="math inline">\(\alpha  \in F\)</span>. Then</p>
+<p><span id="prop-vectorbasic" label="prop-vectorbasic"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, let <span class="math inline">\(v \in V\)</span>, and let <span class="math inline">\(\alpha  \in F\)</span>. Then</p>
 <ol type="1">
 <li><p><span class="math inline">\(\alpha \vec{0} = \vec{0}\)</span>;</p></li>
 <li><p><span class="math inline">\(0 v = \vec{0}\)</span>;</p></li>
@@ -240,18 +247,18 @@
 <p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. A <strong><em>subspace</em></strong> <span class="math inline">\(W\)</span> of <span class="math inline">\(V\)</span> is a non-empty subset of <span class="math inline">\(V\)</span> which itself forms a vector space over <span class="math inline">\(F\)</span> under the same operations as <span class="math inline">\(V\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="HUGO_REPLACE_lem:subspace_Lemma-2.2.7" label="HUGO_REPLACE_lem:subspace_Lemma-2.2.7"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(V\)</span>. Then:</p>
+<p><span id="lem-subspace" label="lem-subspace"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(V\)</span>. Then:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\vec{0} \in W\)</span> (where <span class="math inline">\(\vec{0}\)</span> is the zero vector of <span class="math inline">\(V\)</span>);</p></li>
 <li><p>if <span class="math inline">\(v \in W\)</span>, then <span class="math inline">\(-v \in W\)</span> (where <span class="math inline">\(-v\)</span> is the additive inverse of the vector <span class="math inline">\(v\)</span> in <span class="math inline">\(V\)</span>).</p></li>
 </ol>
 </div>
 <div class="proof">
-<p><em>Proof.</em> <strong>1.</strong> Since <span class="math inline">\(W\)</span> is non-empty, there exists at least one vector <span class="math inline">\(u \in W\)</span>. Since <span class="math inline">\(W\)</span> is closed under scalar multiplication (it is a vector space), it follows that <span class="math inline">\(\vec{0}=0u \in W\)</span> (by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_prop-vectorbasic_Proposition-2.1.5">Proposition 2.1.5</a>(1)).</p>
-<p><strong>2.</strong> If <span class="math inline">\(v\in W\)</span>, then <span class="math inline">\(W\)</span> contains <span class="math inline">\((-1)v = -1v = -v\)</span> (by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_prop-vectorbasic_Proposition-2.1.5">Proposition 2.1.5</a>(4)). ◻</p>
+<p><em>Proof.</em> <strong>1.</strong> Since <span class="math inline">\(W\)</span> is non-empty, there exists at least one vector <span class="math inline">\(u \in W\)</span>. Since <span class="math inline">\(W\)</span> is closed under scalar multiplication (it is a vector space), it follows that <span class="math inline">\(\vec{0}=0u \in W\)</span> (by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#prop-vectorbasic">Proposition 2.1.5</a>(1)).</p>
+<p><strong>2.</strong> If <span class="math inline">\(v\in W\)</span>, then <span class="math inline">\(W\)</span> contains <span class="math inline">\((-1)v = -1v = -v\)</span> (by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#prop-vectorbasic">Proposition 2.1.5</a>(4)). ◻</p>
 </div>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-subspace-criteria_Theorem-2.2.8" label="HUGO_REPLACE_thm-subspace-criteria_Theorem-2.2.8"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(W\)</span> be a subset of <span class="math inline">\(V\)</span>. Then <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(V\)</span> if and only if</p>
+<p><span id="thm-subspace-criteria" label="thm-subspace-criteria"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(W\)</span> be a subset of <span class="math inline">\(V\)</span>. Then <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(V\)</span> if and only if</p>
 <ol type="1">
 <li><p><span class="math inline">\(W\)</span> is non-empty;</p></li>
 <li><p>if <span class="math inline">\(u,v \in W\)</span>, then <span class="math inline">\(u+v \in W\)</span>; and</p></li>
@@ -277,7 +284,7 @@
 </div>
 <p>Since <span class="math inline">\(V\)</span> is a vector space, addition of a vector <span class="math inline">\(u \in U \subseteq  V\)</span> and <span class="math inline">\(w \in W \subseteq V\)</span> makes sense. Thus the sum <span class="math inline">\(U + W\)</span> is a sensible collection of vectors in <span class="math inline">\(V\)</span>.</p>
 <div class="prop">
-<p><span id="HUGO_REPLACE_prop-sum-is-subspace_Proposition-2.2.10" label="HUGO_REPLACE_prop-sum-is-subspace_Proposition-2.2.10"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> be subspaces of <span class="math inline">\(V\)</span>. Then</p>
+<p><span id="prop-sum-is-subspace" label="prop-sum-is-subspace"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> be subspaces of <span class="math inline">\(V\)</span>. Then</p>
 <ol type="1">
 <li><p><span class="math inline">\(U \cap W\)</span> is a subspace of <span class="math inline">\(V\)</span>;</p></li>
 <li><p><span class="math inline">\(U + W\)</span> is a subspace of <span class="math inline">\(V\)</span>.</p></li>
@@ -297,14 +304,14 @@
 <h2 id="spanning-sets">Spanning sets</h2>
 <p>In this section we recall the notion of a spanning set, which is the standard means of defining a subspace of a vector space.</p>
 <div class="defn">
-<p><span id="HUGO_REPLACE_def-span_Definition-2.3.1" label="HUGO_REPLACE_def-span_Definition-2.3.1"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and suppose that <span class="math inline">\(\mathscr{A} = \{  v_{1}, v_{2}, \dots\}\)</span> is a set of vectors in <span class="math inline">\(V\)</span>. A <strong><em>linear combination</em></strong> of these vectors is a vector of the form <span class="math display">\[\sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_{1}v_{1} + \alpha_{2}v_{2} + \dots +
+<p><span id="def-span" label="def-span"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and suppose that <span class="math inline">\(\mathscr{A} = \{  v_{1}, v_{2}, \dots\}\)</span> is a set of vectors in <span class="math inline">\(V\)</span>. A <strong><em>linear combination</em></strong> of these vectors is a vector of the form <span class="math display">\[\sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_{1}v_{1} + \alpha_{2}v_{2} + \dots +
     \alpha_{k}v_{k}\]</span> for some <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F\)</span>. The set <span class="math display">\[\operatorname{Span}(\mathscr{A}) = \operatorname{Span}(v_{1},~v_{2}, \dots) =
     \biggl\{ \sum_{i=1}^{k} \alpha_{i}v_{i} \biggm|
     v_{1},v_{2},\dots,v_{k} \in \mathscr{A}, \;
     \alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F \biggr\}\]</span> of all linear combinations is called the <strong><em>span</em></strong> of the vectors <span class="math inline">\(v_{1}\)</span>, <span class="math inline">\(v_{2}\)</span>, <span class="math inline">\(\dots\)</span>.</p>
 </div>
 <div class="prop">
-<p><span id="HUGO_REPLACE_prop-span-is-subspace_Proposition-2.3.2" label="HUGO_REPLACE_prop-span-is-subspace_Proposition-2.3.2"></span> Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in the vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> is a subspace of <span class="math inline">\(V\)</span>.</p>
+<p><span id="prop-span-is-subspace" label="prop-span-is-subspace"></span> Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in the vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> is a subspace of <span class="math inline">\(V\)</span>.</p>
 </div>
 <div class="defn">
 <p>A <strong><em>spanning set</em></strong> for a subspace <span class="math inline">\(W\)</span> is a set <span class="math inline">\(\mathscr{A}\)</span> of vectors such that <span class="math inline">\(\operatorname{Span}(\mathscr{A}) = W\)</span>. If <span class="math inline">\(\operatorname{Span}(\mathscr{A}) = W\)</span>, then for all <span class="math inline">\(v\in W\)</span>, we may write <span class="math display">\[v = \sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_1v_1 + \alpha_2 v_2 + \cdots +
@@ -312,7 +319,7 @@
 </div>
 <p>Every subspace <span class="math inline">\(W\)</span> of a vector space <span class="math inline">\(V\)</span> has a spanning set, namely <span class="math inline">\(W\)</span> itself, <span class="math inline">\(W = \operatorname{Span}(W)\)</span>. However, what we typically want is a spanning set <span class="math inline">\(\mathscr{A}\)</span> where <span class="math inline">\(\mathscr{A}\)</span> is reasonably small.</p>
 <div class="example">
-<p><span id="HUGO_REPLACE_ex-spanning_Example-2.3.4" label="HUGO_REPLACE_ex-spanning_Example-2.3.4"></span></p>
+<p><span id="ex-spanning" label="ex-spanning"></span></p>
 <ol type="1">
 <li><p>Suppose that <span class="math display">\[\vec{e}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},\quad
           \vec{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix},\quad \vec{e}_3
@@ -333,16 +340,16 @@
 <p>If <span class="math inline">\(\mathscr{A}\)</span> is not linearly independent, we shall call it <strong><em>linearly dependent</em></strong>.</p>
 </div>
 <div class="lemma">
-<p><span id="HUGO_REPLACE_cor-dep-lincomb_Lemma-2.4.2" label="HUGO_REPLACE_cor-dep-lincomb_Lemma-2.4.2"></span> Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in a vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\mathscr{A}\)</span> is linearly dependent if and only if there exists <span class="math inline">\(v\in \mathscr{A}\)</span> such that <span class="math inline">\(v\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{A}\setminus \{v\}\)</span>.</p>
+<p><span id="cor-dep-lincomb" label="cor-dep-lincomb"></span> Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in a vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\mathscr{A}\)</span> is linearly dependent if and only if there exists <span class="math inline">\(v\in \mathscr{A}\)</span> such that <span class="math inline">\(v\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{A}\setminus \{v\}\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="HUGO_REPLACE_lemma-dim-dim_Lemma-2.4.3" label="HUGO_REPLACE_lemma-dim-dim_Lemma-2.4.3"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space. If <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{m}  \}\)</span> is a linearly independent set of vectors in <span class="math inline">\(V\)</span> and <span class="math inline">\(\{  w_{1},w_{2},\dots,w_{n} \}\)</span> is a spanning set for <span class="math inline">\(V\)</span>, then <span class="math inline">\(m \leq n\)</span>.</p>
+<p><span id="lemma-dim-dim" label="lemma-dim-dim"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space. If <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{m}  \}\)</span> is a linearly independent set of vectors in <span class="math inline">\(V\)</span> and <span class="math inline">\(\{  w_{1},w_{2},\dots,w_{n} \}\)</span> is a spanning set for <span class="math inline">\(V\)</span>, then <span class="math inline">\(m \leq n\)</span>.</p>
 </div>
 <div class="defn">
 <p>Let <span class="math inline">\(V\)</span> be a vector space over the field <span class="math inline">\(F\)</span>. A <em>basis</em> for <span class="math inline">\(V\)</span> is a linearly independent spanning set. We say that <span class="math inline">\(V\)</span> is <strong><em>finite-dimensional</em></strong> if it has a finite basis. The <strong><em>dimension</em></strong> of <span class="math inline">\(V\)</span> is the size of any basis for <span class="math inline">\(V\)</span> and is denoted by <span class="math inline">\(\dim V\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="HUGO_REPLACE_ex-standard-basis_Example-2.4.5" label="HUGO_REPLACE_ex-standard-basis_Example-2.4.5"></span> The set <span class="math display">\[\mathscr{B} = \left\{ \vec{e}_1 =\begin{pmatrix}1\\0\\0\\\vdots\\0\end{pmatrix},
+<p><span id="ex-standard-basis" label="ex-standard-basis"></span> The set <span class="math display">\[\mathscr{B} = \left\{ \vec{e}_1 =\begin{pmatrix}1\\0\\0\\\vdots\\0\end{pmatrix},
       \vec{e}_2 =\begin{pmatrix}0\\1\\0\\\vdots\\0\end{pmatrix},
     \dots, \vec{e}_n=\begin{pmatrix}0\\0\\\vdots\\0\\1\end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(V = F^{n}\)</span>. We shall call it the <strong><em>standard basis</em></strong> for <span class="math inline">\(F^{n}\)</span>. Hence <span class="math inline">\(\dim F^{n} = n\)</span> (as you might expect).</p>
 <p>[Verification (omitted in lectures): If <span class="math inline">\(\vec{v}\)</span> is an arbitrary vector in <span class="math inline">\(V\)</span>, say <span class="math display">\[\vec{v} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \sum_{i=1}^{n} x_{i}\vec{e}_{i}\]</span> (where <span class="math inline">\(x_{i} \in F\)</span>). Thus <span class="math inline">\(\mathscr{B} = \{ \vec{e}_{1},\vec{e}_{2},\dots,\vec{e}_{n}  \}\)</span> spans <span class="math inline">\(V\)</span>. Suppose there exist scalars <span class="math inline">\(\alpha_{1}\)</span>, <span class="math inline">\(\alpha_{2}\)</span>, …, <span class="math inline">\(\alpha_{n}\)</span> such that <span class="math display">\[\sum_{i=1}^{n} \alpha_{i}\vec{e}_{i} = \vec{0} ;\]</span> that is, <span class="math display">\[\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} = 
@@ -355,11 +362,11 @@
 </div>
 <p>In these examples we have referred to dimension as though it is uniquely determined. We will show that it is at the end of this section. Beforehand, however, we shall observe how bases are efficient as spanning sets, since they produce a uniqueness to the linear combinations required.</p>
 <div class="lemma">
-<p><span id="HUGO_REPLACE_lem-basis-uniqueexpr_Lemma-2.4.7" label="HUGO_REPLACE_lem-basis-uniqueexpr_Lemma-2.4.7"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span>. Then every vector in <span class="math inline">\(V\)</span> can be expressed as a <em>unique</em> linear combination of the vectors in <span class="math inline">\(\mathscr{B}\)</span>.</p>
+<p><span id="lem-basis-uniqueexpr" label="lem-basis-uniqueexpr"></span> Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span>. Then every vector in <span class="math inline">\(V\)</span> can be expressed as a <em>unique</em> linear combination of the vectors in <span class="math inline">\(\mathscr{B}\)</span>.</p>
 </div>
-<p>Note that although the collection <span class="math inline">\(\mathscr{B}\)</span> in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_lem-basis-uniqueexpr_Lemma-2.4.7">Lemma 2.4.7</a> might be <strong>infinite</strong>, linear combinations are always <strong>finite</strong>.</p>
+<p>Note that although the collection <span class="math inline">\(\mathscr{B}\)</span> in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#lem-basis-uniqueexpr">Lemma 2.4.7</a> might be <strong>infinite</strong>, linear combinations are always <strong>finite</strong>.</p>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8" label="HUGO_REPLACE_thm-3-conditions_Theorem-2.4.8"></span> Let <span class="math inline">\(V\)</span> be a finite dimensional vector space and let <span class="math inline">\(\mathscr{A}\)</span> be a finite collection of vectors in <span class="math inline">\(V\)</span>. If <span class="math inline">\(\mathscr{A}\)</span> satisfies any <em>two</em> of the following three conditions, then <span class="math inline">\(\mathscr{A}\)</span> is a basis of <span class="math inline">\(V\)</span> (and hence satisfies all three conditions):</p>
+<p><span id="thm-3-conditions" label="thm-3-conditions"></span> Let <span class="math inline">\(V\)</span> be a finite dimensional vector space and let <span class="math inline">\(\mathscr{A}\)</span> be a finite collection of vectors in <span class="math inline">\(V\)</span>. If <span class="math inline">\(\mathscr{A}\)</span> satisfies any <em>two</em> of the following three conditions, then <span class="math inline">\(\mathscr{A}\)</span> is a basis of <span class="math inline">\(V\)</span> (and hence satisfies all three conditions):</p>
 <ol type="1">
 <li><p><span class="math inline">\(\mathscr{A}\)</span> is a spanning set for <span class="math inline">\(V\)</span>;</p></li>
 <li><p><span class="math inline">\(\mathscr{A}\)</span> is linearly independent;</p></li>
@@ -367,17 +374,17 @@
 </ol>
 </div>
 <div class="thm">
-<p><span id="HUGO_REPLACE_thm-new-linear-indep_Theorem-2.4.9" label="HUGO_REPLACE_thm-new-linear-indep_Theorem-2.4.9"></span> If <span class="math inline">\(\mathscr{A}\)</span> is any collection of vectors in a vector space <span class="math inline">\(V\)</span>, and <span class="math inline">\(\mathscr{C}\)</span> is a linearly independent subset of <span class="math inline">\(\mathscr{A}\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> such that <span class="math inline">\(\mathscr{C}\subseteq  \mathscr{B}\)</span>.</p>
+<p><span id="thm-new-linear-indep" label="thm-new-linear-indep"></span> If <span class="math inline">\(\mathscr{A}\)</span> is any collection of vectors in a vector space <span class="math inline">\(V\)</span>, and <span class="math inline">\(\mathscr{C}\)</span> is a linearly independent subset of <span class="math inline">\(\mathscr{A}\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> such that <span class="math inline">\(\mathscr{C}\subseteq  \mathscr{B}\)</span>.</p>
 </div>
 <div class="cor">
-<p><span id="HUGO_REPLACE_thm-basissubset_Corollary-2.4.10" label="HUGO_REPLACE_thm-basissubset_Corollary-2.4.10"></span> If <span class="math inline">\(\mathscr{A}\)</span> is a subset of a vector space <span class="math inline">\(V\)</span>, then <span class="math inline">\(\mathscr{A}\)</span> contains a basis for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span>.</p>
+<p><span id="thm-basis-subset" label="thm-basis-subset"></span> If <span class="math inline">\(\mathscr{A}\)</span> is a subset of a vector space <span class="math inline">\(V\)</span>, then <span class="math inline">\(\mathscr{A}\)</span> contains a basis for <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span>.</p>
 </div>
-<p><a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#HUGO_REPLACE_thm-basissubset_Corollary-2.4.10">Corollary 2.4.10</a> implies that you can go from a spanning set to a linearly independent spanning set by omitting the correct choice of vectors.</p>
+<p><a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-basis-subset">Corollary 2.4.10</a> implies that you can go from a spanning set to a linearly independent spanning set by omitting the correct choice of vectors.</p>
 <div class="cor">
-<p><span id="HUGO_REPLACE_prop-extension_Corollary-2.4.11" label="HUGO_REPLACE_prop-extension_Corollary-2.4.11"></span> If <span class="math inline">\(\mathscr{A}\)</span> is a linearly independent subset of a vector space <span class="math inline">\(V\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math inline">\(\mathscr{A} \subseteq \mathscr{B}\)</span>.</p>
+<p><span id="prop-extension" label="prop-extension"></span> If <span class="math inline">\(\mathscr{A}\)</span> is a linearly independent subset of a vector space <span class="math inline">\(V\)</span>, then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math inline">\(\mathscr{A} \subseteq \mathscr{B}\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="HUGO_REPLACE_cor-dim-unique_Lemma-2.4.12" label="HUGO_REPLACE_cor-dim-unique_Lemma-2.4.12"></span> Let <span class="math inline">\(V\)</span> be a vector space. Then any two bases for <span class="math inline">\(V\)</span> have the same size and consequently <span class="math inline">\(\dim V\)</span> is uniquely determined.</p>
+<p><span id="cor-dom-unique" label="cor-dom-unique"></span> Let <span class="math inline">\(V\)</span> be a vector space. Then any two bases for <span class="math inline">\(V\)</span> have the same size and consequently <span class="math inline">\(\dim V\)</span> is uniquely determined.</p>
 </div>
 <h2 id="examples-of-infinite-dimensional-vector-spaces">Examples of infinite-dimensional vector spaces</h2>
 <p>Although not the focus of this course, we give some examples of infinite-dimensional vector spaces, in particular for those of you studying physics who have encountered these previously.</p>
@@ -450,6 +457,164 @@
 <div class="omittedexamp">
 <p>Every field is a vector space over any subfield. In particular, <span class="math inline">\(\mathbb{R}\)</span> is a vector space over <span class="math inline">\(\mathbb{Q}\)</span>. It can be shown that any subspace of <span class="math inline">\(\mathbb{R}\)</span> spanned by a countable collection is itself countable, and so the dimension of <span class="math inline">\(\mathbb{R}\)</span> over the field <span class="math inline">\(\mathbb{Q}\)</span> is uncountable. It is possible to show that <span class="math display">\[\sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{6}, \ldots \not\in \mathbb{Q}\]</span> is linearly independent, and so too is: <span class="math display">\[\pi, \pi ^ 2, \pi ^ 3, \ldots.\]</span> Both of these collections are countable, and so neither is a basis for <span class="math inline">\(\mathbb{R}\)</span> over <span class="math inline">\(\mathbb{Q}\)</span>. It turns out it is much easier to show that a basis for <span class="math inline">\(\mathbb{R}\)</span> over <span class="math inline">\(\mathbb{Q}\)</span> exists (assuming something called the <em>Axiom of Choice</em>), than it is to describe it explicitly.</p>
 </div>
+<h2 id="problems-02-vector-spaces">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-02-01" label="problem-02-01"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(M_{n}(F)\)</span> denote the set of all <span class="math inline">\(n \times n\)</span> matrices over <span class="math inline">\(F\)</span>.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(M_{n}(F)\)</span> is a vector space over <span class="math inline">\(F\)</span> with respect to the usual addition of matrices and where scalar multiplication is given by <span class="math display">\[\alpha 
+  \begin{pmatrix}
+    x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1n} \\
+    x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n} \\
+    \vdots &amp; \vdots &amp; &amp; \vdots \\
+    x_{{n}1} &amp; x_{{n}2} &amp; \cdots &amp; x_{nn}
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \alpha x_{11} &amp; \alpha x_{12} &amp; \cdots &amp; \alpha x_{1n} \\
+    \alpha x_{21} &amp; \alpha x_{22} &amp; \cdots &amp; \alpha x_{2n} \\
+    \alpha \vdots &amp; \vdots &amp; &amp; \vdots \\
+    \alpha x_{{n}1} &amp; \alpha x_{{n}2} &amp; \cdots &amp; \alpha x_{nn}
+  \end{pmatrix}\]</span> for <span class="math inline">\(\alpha \in F\)</span> and <span class="math inline">\([x_{ij}] \in M_{n}(F)\)</span>. What is the zero vector in this vector space?</p></li>
+<li><p>Let <span class="math inline">\(W\)</span> consist of the set of <strong><em>symmetric</em></strong> matrices in <span class="math inline">\(M_{n}(F)\)</span>. (A matrix <span class="math inline">\([x_{ij}]\)</span> is symmetric if <span class="math inline">\(x_{ij} =  x_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.) Show that <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
+<li><p>Fix a matrix <span class="math inline">\(A\)</span> in <span class="math inline">\(M_{n}(F)\)</span> and let <span class="math display">\[V = \{X \in M_{n}(F) : AX = XA\}.\]</span> Show that <span class="math inline">\(V\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(Z\)</span> be the set of matrices in <span class="math inline">\(M_{n}(F)\)</span> of zero determinant. If <span class="math inline">\(n &gt; 1\)</span>, show that <span class="math inline">\(Z\)</span> is not a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
+<li><p>Take <span class="math inline">\(F = \mathbb{R}\)</span> and let <span class="math inline">\(I\)</span> be the set of matrices <span class="math inline">\(B\)</span> in <span class="math inline">\(M_{n}(\mathbb{R})\)</span> satisfying <span class="math inline">\(B^{2} = B\)</span>. Show that <span class="math inline">\(I\)</span> is not a subspace of <span class="math inline">\(M_{n}(\mathbb{R})\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-02" label="problem-02-02"></span></p>
+<div class="question">
+<p>Consider the vector space <span class="math inline">\(\mathbb{R}[x]\)</span> of polynomials over the real numbers. Determine whether the following subsets are subspaces of <span class="math inline">\(\mathbb{R}[x]\)</span>:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\{f(x) : f(1) = 0\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x):\text{the constant term of~$f(x)$ is~$0$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x) : \text{$f(x)$~is a polynomial of degree
+      precisely~$3$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x) :\text{$f(x)$~is a polynomial of degree at
+      most~$3$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x): \text{$f(x)$~is a polynomial of even degree}\}\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-03" label="problem-02-03"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span> be the following subspaces of the space <span class="math inline">\(\mathbb{R}[x]\)</span> of polynomials over the real numbers: <span class="math display">\[W_{1} = \{f(x) : f(1) = 0\} \qquad \text{and} \qquad W_{2} =
+\{f(x) : f(2) = 0\}.\]</span></p>
+<ol type="1">
+<li><p>Give a simple description of <span class="math inline">\(W_{1} \cap W_{2}\)</span>.</p></li>
+<li><p>Show that every element of <span class="math inline">\(\mathbb{R}[x]\)</span> can be written in the form <span class="math display">\[f(x) =
+  g_{1}(x) + g_{2}(x)\]</span> where <span class="math inline">\(g_{1}(x) \in W_{1}\)</span> and <span class="math inline">\(g_{2}(x) \in  W_{2}\)</span>. Is this decomposition unique?</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-04" label="problem-02-04"></span></p>
+<div class="questionjupyter">
+<p>Suppose that <span class="math display">\[W = 
+  \left\{ 
+  \begin{pmatrix} 
+    x+y-z \\
+    y-x+z \\
+    2x    \\
+  \end{pmatrix} 
+  \biggm | 
+  x,y,z \in \mathbb{R} 
+  \right\}.\]</span></p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
+<li><p>Show that <span class="math display">\[\mathcal{A} =   
+        \left\{ \begin{pmatrix} 1 \\
+          -1 \\
+          2 \\
+        \end{pmatrix}, \begin{pmatrix} 1 \\
+          1 \\
+          0 \\
+        \end{pmatrix},
+        \begin{pmatrix} -1 \\
+          1 \\
+          0 \\
+        \end{pmatrix} \right\}\]</span> is a spanning set for <span class="math inline">\(W\)</span>. Is <span class="math inline">\(\mathcal{A}\)</span> linearly independent?</p></li>
+<li><p>Determine the dimension of <span class="math inline">\(W\)</span> and hence whether or not <span class="math inline">\(W =  \mathbb{R}^{3}\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-05" label="problem-02-05"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a vector space and let <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span> be finite-dimensional subspaces of <span class="math inline">\(V\)</span>.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(\mathscr{A}_{1}\)</span> and <span class="math inline">\(\mathscr{A}_{2}\)</span> span <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span>, respectively, show that <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> is a spanning set for <span class="math inline">\(W_{1} + W_{2}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathscr{A}_{1}\)</span> and <span class="math inline">\(\mathscr{A}_2\)</span> are bases for <span class="math inline">\(W_1\)</span> and <span class="math inline">\(W_2\)</span>, respectively, is <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> necesssarily a basis for <span class="math inline">\(W_{1}+W_{2}\)</span>? Provide a counterexample if not.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-06" label="problem-02-06"></span></p>
+<div class="questionjupyter">
+<p>Let <span class="math display">\[\vec{v}_{1} = \begin{pmatrix} 2 \\
+ 1 \\
+ 0 \\
+ -1 \\
+ \end{pmatrix}, \vec{v}_{2} = \begin{pmatrix} 4 \\
+ 8 \\
+ -4 \\
+ -3 \\
+ \end{pmatrix},
+\vec{v}_{3} = \begin{pmatrix} 1 \\
+ -3 \\
+ 2 \\
+ 0 \\
+ \end{pmatrix}, \\
+\vec{v}_{4} = \begin{pmatrix} 1 \\
+ 10 \\
+ -6 \\
+ -2 \\
+ \end{pmatrix}, \vec{v}_{5} = \begin{pmatrix} -2 \\
+ 0 \\
+ 6 \\
+ 1 \\
+ \end{pmatrix},
+\vec{v}_{6} = \begin{pmatrix} 3 \\
+ -1 \\
+ 2 \\
+ 4 \\
+ \end{pmatrix}\]</span> be six vectors in the vector space <span class="math inline">\(\mathbb{R}^{4}\)</span>. Let <span class="math inline">\(U = \operatorname{Span}(\vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4})\)</span> and <span class="math inline">\(W = \operatorname{Span}(\vec{v}_{4},\vec{v}_{5},\vec{v}_{6})\)</span>. Determine the following:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\dim U\)</span></p></li>
+<li><p><span class="math inline">\(\dim W\)</span></p></li>
+<li><p><span class="math inline">\(\dim U + W\)</span></p></li>
+</ol>
+<p>[Hint: Determine whether <span class="math inline">\(\{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \}\)</span> is linearly independent. If not, pass to a subset which also spans <span class="math inline">\(U\)</span>. Similarly, for <span class="math inline">\(W\)</span> and <span class="math inline">\(U+W\)</span>, making use of the previous question to provide spanning set for the sum.]</p>
+</div></li>
+<li><p><span id="problem-02-07" label="problem-02-07"></span></p>
+<div class="questionjupyter">
+<p>Consider the following set <span class="math inline">\(\mathscr{A}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^{3}\)</span> or <span class="math inline">\(\mathbb{R}^{4}\)</span> (respectively). Find a subset <span class="math inline">\(\mathscr{B}\)</span> of <span class="math inline">\(\mathscr{A}\)</span> that is a basis for the subspace <span class="math inline">\(U = \operatorname{Span}(\mathscr{A})\)</span>.</p>
+<ol type="1">
+<li><p><span class="math inline">\(\displaystyle \mathscr{A} = \left\{ \begin{pmatrix} 2 \\  -1 \\  2 \\  \end{pmatrix},  \begin{pmatrix} 1 \\  1 \\  3 \\  \end{pmatrix}, \begin{pmatrix} 0 \\  1 \\  1 \\  \end{pmatrix}, \begin{pmatrix} 4 \\  -1 \\  3 \\  \end{pmatrix}  \right\}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathscr{A} = \left\{ \begin{pmatrix} 0 \\  2 \\  -3 \\  -3 \\  \end{pmatrix},  \begin{pmatrix} 1 \\  1 \\  -2 \\  0 \\  \end{pmatrix}, \begin{pmatrix} 2 \\  0 \\  -1 \\  3 \\  \end{pmatrix},  \begin{pmatrix} -7 \\  3 \\  -1 \\  -15 \\  \end{pmatrix} \right\}\)</span></p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-08" label="problem-02-08"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be the subspace of the space <span class="math inline">\(\mathbb{R}[x]\)</span> of real polynomials spanned by the following polynomials: <span class="math display">\[f_{1}(x) = x^{3} + 2x^{2} + 1, \qquad f_{2}(x) = x^{2} + 3x + 4,
+\qquad f_{3}(x) = 2x^{3} - 12x - 2.\]</span></p>
+<ol type="1">
+<li><p>Find a subset <span class="math inline">\(\mathscr{A}\)</span> of <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x) \}\)</span> which is a basis for <span class="math inline">\(V\)</span> and hence determine the dimension of <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Find a basis <span class="math inline">\(\mathscr{B}\)</span> for the subspace <span class="math inline">\(\mathbb{R}[x]\)</span> consisting of polynomials of degree at most <span class="math inline">\(4\)</span> such that <span class="math inline">\(\mathscr{A} \subseteq \mathscr{B}\)</span>. [That is, extend <span class="math inline">\(\mathscr{A}\)</span> to a basis <span class="math inline">\(\mathscr{B}\)</span> for the space of polynomials of degree at most <span class="math inline">\(4\)</span>.]</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-09" label="problem-02-09"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(V\)</span>.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(W\)</span> is finite-dimensional and that <span class="math inline">\(\dim W \leq \dim V\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(V = W\)</span> if and only if <span class="math inline">\(\dim V = \dim W\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-02-10" label="problem-02-10"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space with subspaces <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>. Let <span class="math inline">\(\mathscr{A} = \{ v_{1},v_{2},\dots,v_{k} \}\)</span> be a basis for <span class="math inline">\(U \cap W\)</span>. Extend <span class="math inline">\(\mathscr{A}\)</span> to a basis <span class="math inline">\(\mathscr{B}_{1} = \{ v_{1},v_{2},\dots,v_{k},u_{k+1},\dots,u_{m} \}\)</span> for <span class="math inline">\(U\)</span> and extend <span class="math inline">\(\mathscr{A}\)</span> to a basis <span class="math inline">\(\mathscr{B}_{2} = \{ v_{1},v_{2},\dots,v_{k},w_{k+1},\dots,w_{n} \}\)</span> for <span class="math inline">\(W\)</span>.</p>
+<p>Show that the set <span class="math display">\[\mathscr{B}_{1} \cup \mathscr{B}_{2} = \{
+      v_{1},v_{2},\dots,v_{k},u_{k+1},\dots,u_{m},w_{k+1},\dots,w_{n} \}\]</span> is a basis for <span class="math inline">\(U + W\)</span>.</p>
+<p>Deduce that <span class="math inline">\(\dim(U+W) = \dim U + \dim W - \dim(U \cap W)\)</span>.</p>
+</div></li>
+</ol>
+
 
 
 
@@ -464,6 +629,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     

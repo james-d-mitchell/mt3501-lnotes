@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -300,6 +307,91 @@
 <div class="prop">
 <p>Let <span class="math inline">\(V\)</span> be a vector space with subspaces <span class="math inline">\(U_{1}\)</span>, <span class="math inline">\(U_{2}\)</span>, …, <span class="math inline">\(U_{k}\)</span>. Then <span class="math inline">\(V = U_{1} \oplus U_{2} \oplus \dots \oplus U_{k}\)</span> if and only if every vector in <span class="math inline">\(V\)</span> can be <em>uniquely</em> expressed in the form <span class="math inline">\(u_{1} + u_{2} +  \dots + u_{k}\)</span> where <span class="math inline">\(u_{i} \in U_{i}\)</span> for each <span class="math inline">\(i\)</span>.</p>
 </div>
+<h2 id="problems-06-direct-sums">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-06-01" label="problem-06-01"></span></p>
+<div class="questionjupyter">
+<p>Consider the vector space <span class="math inline">\(\mathbb{R}^{4}\)</span>. Let <span class="math display">\[U = \operatorname{Span} \left( \begin{pmatrix}
+          3 \\
+          1 \\
+          0 \\
+          4 \\
+        \end{pmatrix},
+        \begin{pmatrix}
+          1 \\
+          0 \\
+          -2 \\
+          1 \\
+      \end{pmatrix} \right) \qquad \text{and} \qquad W =
+      \operatorname{Span} \left( \begin{pmatrix}
+          0 \\
+          1 \\
+          0 \\
+          -1 \\
+          \end{pmatrix}, \begin{pmatrix}
+          2 \\
+          0 \\
+          0 \\
+          3 \\
+      \end{pmatrix} \right).\]</span></p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(\mathbb{R}^{4} = U \oplus W\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(P \colon \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> be the projection map onto <span class="math inline">\(U\)</span>. Calculate <span class="math display">\[P \begin{pmatrix}
+            1 \\
+            0 \\
+            0 \\
+            0 \\
+          \end{pmatrix}.\]</span></p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-06-02" label="problem-06-02"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V = U \oplus W\)</span> be a finite-dimensional vector space which is the direct sum of two subspaces <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>. Let <span class="math inline">\(\mathscr{B}_{1}\)</span> and <span class="math inline">\(\mathscr{B}_{2}\)</span> be bases for <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively.</p>
+<p>What is the matrix of the projection map <span class="math inline">\(P \colon V \to V\)</span> onto <span class="math inline">\(U\)</span> with respect to the basis <span class="math inline">\(\mathscr{B}_{1} \cup \mathscr{B}_{2}\)</span> for <span class="math inline">\(V\)</span>?</p>
+</div></li>
+<li><p><span id="problem-06-03" label="problem-06-03"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space with basis <span class="math inline">\(\mathscr{B}\)</span>. If <span class="math inline">\(\mathscr{A}\)</span> is a subset of <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{B}\setminus\mathscr{A}\)</span> denotes the complement of <span class="math inline">\(\mathscr{A}\)</span> in <span class="math inline">\(\mathscr{B}\)</span>, show that <span class="math display">\[V = \operatorname{Span}(\mathscr{A}) \oplus
+          \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).\]</span></p>
+</div></li>
+<li><p><span id="problem-06-04" label="problem-06-04"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(U\)</span> be the following subspace of <span class="math inline">\(\mathbb{R}^{3}\)</span>: <span class="math display">\[U = \left\{ \begin{pmatrix}
+        x \\
+        x \\
+        0 \\
+    \end{pmatrix} \biggm| x \in \mathbb{R} \right\}.\]</span></p>
+<ol type="1">
+<li><p>Find a subspace <span class="math inline">\(W\)</span> of <span class="math inline">\(\mathbb{R}^{3}\)</span> such that <span class="math inline">\(\mathbb{R}^{3} = U  \oplus W\)</span>.</p></li>
+<li><p>Calculate the matrices of the corresponding projection maps <span class="math inline">\(P,Q \colon  \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> onto <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively with respect to the standard basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
+<li><p>Check explicitly that <span class="math inline">\(\ker P = W\)</span> and <span class="math inline">\(\operatorname{im} P = U\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-06-05" label="problem-06-05"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Show that there exists a subspace <span class="math inline">\(W\)</span> such that <span class="math inline">\(V = U \oplus  W\)</span>.</p>
+<p>[Hint: Extend a basis for <span class="math inline">\(U\)</span> to a basis for <span class="math inline">\(V\)</span>.]</p>
+</div></li>
+<li><p><span id="problem-06-06" label="problem-06-06"></span></p>
+<div class="question">
+<p>A linear transformation <span class="math inline">\(T \colon V \to V\)</span> is called <em>idempotent</em> if <span class="math inline">\(T^{2} = T\)</span>; that is, if <span class="math display">\[T(T(v)) = T(v) \qquad \text{for all $v \in V$}.\]</span></p>
+<p>Let <span class="math inline">\(T \colon V \to V\)</span> be an idempotent linear transformation.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(v-T(v)\)</span> lies in the kernel of <span class="math inline">\(T\)</span> for all <span class="math inline">\(v \in V\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(V = \ker T + \operatorname{im} T\)</span>. [Hint: Use (a).]</p></li>
+<li><p>Show that <span class="math inline">\(\ker T \cap \operatorname{im} T = \{\vec{0}\}\)</span>.</p></li>
+<li><p>Parts (b) and (c) tell us that <span class="math inline">\(V = \ker T \oplus \operatorname{im} T\)</span>. Let <span class="math inline">\(P\)</span> be the associated projection onto the direct summand <span class="math inline">\(U =  \operatorname{im} T\)</span>. Show that <span class="math inline">\(P = T\)</span>.</p></li>
+<li><p>Deduce that idempotent linear transformations and projection maps are precisely the same things.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-06-07" label="problem-06-07"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(T \colon V \to V\)</span> be an idempotent linear transformation. Prove directly from the definition that <span class="math inline">\(\operatorname{id} - T\)</span> is also an idempotent transformation.</p>
+<p>[Here <span class="math inline">\(\operatorname{id} \colon V \to V\)</span> is the identity map. By “directly from the definition”, I mean that you should not use the fact that idempotent transformations and projection maps are precisely the same objects.]</p>
+</div></li>
+</ol>
+
 
 
 
@@ -314,6 +406,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     

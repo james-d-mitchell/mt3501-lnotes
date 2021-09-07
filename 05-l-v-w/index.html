@@ -28,6 +28,13 @@
     </li>
     
     <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
+      </a>
+    </li>
+    
+    <li>
       <a href="/mt3501-lnotes/01-intro/">
       
       Section 1 - Intro
@@ -156,7 +163,7 @@
     T(v)\]</span> for all <span class="math inline">\(v\in V\)</span>, and where <span class="math inline">\(S, T\in \mathcal{L}(V, W)\)</span> and <span class="math inline">\(\alpha \in F\)</span>.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> See Problem 4 on Sheet II. ◻</p>
+<p><em>Proof.</em> See Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-04">4</a> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>. ◻</p>
 </div>
 <p>Given that <span class="math inline">\(\mathcal{L}(V, W)\)</span> is a vector space we can ask all of the usual questions about <span class="math inline">\(\mathcal{L}(V, W)\)</span> that we might about any vector space: what is <span class="math inline">\(\dim \mathcal{L}(V, W)\)</span>? What is a basis for <span class="math inline">\(\mathcal{L}(V, W)\)</span>?</p>
 <div class="thm">
@@ -171,9 +178,9 @@
     j\not=\ell.\]</span> Then <span class="math inline">\(\mathscr{E} = \{T_{k \ell} : 1 \leq \ell \leq n, \; 1 \leq k \leq m\}\)</span> is a basis for <span class="math inline">\(\mathcal{L}(V, W)\)</span>, and so <span class="math inline">\(\dim \mathcal{L}(V, W) = \dim V \dim W\)</span>.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> In Problem 7(a) on Sheet II, we showed that every linear transformation <span class="math inline">\(T  : V \to W\)</span> can be expressed as <span class="math display">\[T = \sum_{\substack{1 \leq \ell \leq n,\\1 \leq k \leq
+<p><em>Proof.</em> In Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-07">7</a>(a) in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>, we showed that every linear transformation <span class="math inline">\(T : V \to W\)</span> can be expressed as <span class="math display">\[T = \sum_{\substack{1 \leq \ell \leq n,\\1 \leq k \leq
         m}} \alpha_{k\ell} T_{k\ell}\]</span> for some scalars <span class="math inline">\(\alpha_{k\ell} \in F\)</span>. It follows that <span class="math inline">\(\operatorname{Span}{\mathscr{E}}  = \mathcal{L}(V, W)\)</span>.</p>
-<p>In Problem 7(b) on Sheet II, we showed that <span class="math inline">\(\mathscr{E}\)</span> is linearly independent, and hence <span class="math display">\[\dim \mathcal{L}(V,W) = |\mathscr{E}| = \dim V \cdot \dim W.\]</span> ◻</p>
+<p>In Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-07">7</a>(b) in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>, we showed that <span class="math inline">\(\mathscr{E}\)</span> is linearly independent, and hence <span class="math display">\[\dim \mathcal{L}(V,W) = |\mathscr{E}| = \dim V \cdot \dim W.\]</span> ◻</p>
 </div>
 <div class="examp">
 <p><span id="ex-L-F-V" label="ex-L-F-V"></span> Show that <span class="math inline">\(\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)\)</span> is isomorphic to <span class="math inline">\(\mathbb{R} ^ 3\)</span>.</p>
@@ -216,7 +223,7 @@
       \gamma\alpha_{21}  &amp; \alpha_{22}  &amp; \cdots &amp; \alpha_{2n} \\
       \vdots                   &amp; \vdots                   &amp; \ddots &amp; \vdots        \\
       \gamma\alpha_{m1}  &amp; \alpha_{m2}  &amp; \cdots &amp; \alpha_{mn}     
-    \end{pmatrix}.\]</span> for <span class="math inline">\(\gamma \in F\)</span> and <span class="math inline">\([\alpha_{ij}], [\beta_{ij}] \in M_{m, n}(F)\)</span>. This follows by a similar argument to that given in the solution of Problem 1 on Sheet I.</p>
+    \end{pmatrix}.\]</span> for <span class="math inline">\(\gamma \in F\)</span> and <span class="math inline">\([\alpha_{ij}], [\beta_{ij}] \in M_{m, n}(F)\)</span>. This follows by a similar argument to that given in the solution of Problem <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#problem-02-01">1</a> in <a href="https://jdbm.me/mt3501-lnotes/05-l-v-w/#problems-02-vector-spaces">Section 2.6</a>.</p>
 <div class="examp">
 <p><span id="example-matrix-basis" label="example-matrix-basis"></span> Show that <span class="math display">\[\mathscr{F} = \left\{
     \begin{array}{rrclrclrcl}
@@ -354,6 +361,71 @@
     \end{pmatrix}
     = 2B_{11} + B_{21} + B_{22}.\]</span> By the proof of <a href="https://jdbm.me/mt3501-lnotes/05-l-v-w/#thm-linear-transf-equal-matrices">Theorem 5.1.6</a>, the linear transformation <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}: \mathcal{L}(V,  W) \to M_{m, n}(F)\)</span> is an isomorphism and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T_{kl}) = B_{kl}\)</span>. Hence <span class="math inline">\(T = 2T_{11} + T_{21} + T_{22}\)</span>.</p>
 </div>
+<h2 id="problems-05-L-V-W">Problems</h2>
+<p>Problems marked with a 💻 (if any) can probably be solved more easily using a Jupyter notebook: <a href="https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479" class="uri">https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479</a></p>
+<ol type="1">
+<li><p><span id="problem-05-01" label="problem-05-01"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over the same field <span class="math inline">\(F\)</span> such that <span class="math inline">\(\dim V = \dim W\)</span> and let <span class="math inline">\(T: V \to W\)</span> be a linear transformation. Prove that the following are equivalent:</p>
+<ol type="1">
+<li><p><span class="math inline">\(T\)</span> is invertible;</p></li>
+<li><p><span class="math inline">\(T\)</span> is injective;</p></li>
+<li><p><span class="math inline">\(T\)</span> is surjective.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-05-02" label="problem-05-02"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(\mathbb{R}[x]\)</span> denote the vector space of polynomials with coefficients in <span class="math inline">\(\mathbb{R}\)</span>, and let <span class="math inline">\(\mathbb{R}_n[x]\)</span> denote those polynomials in <span class="math inline">\(\mathbb{R}[x]\)</span> with degree at most <span class="math inline">\(n\)</span>. If <span class="math inline">\(q \in \mathbb{R}[x]\)</span> is any polynomial, then we denote the derivative of <span class="math inline">\(q\)</span> by <span class="math inline">\(q&#39;\)</span>.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(T: \mathbb{R}_m[x] \to \mathbb{R}_m[x]\)</span> defined by <span class="math display">\[T(p) = ((x ^ 2 + 3x + 4)p)&#39;&#39;\]</span> is a linear transformation.</p></li>
+<li><p>Show that <span class="math inline">\(T\)</span> is injective. [<strong>Hint:</strong> Show that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.]</p></li>
+<li><p>If <span class="math inline">\(q\in \mathbb{R}[x]\)</span> show that there exists <span class="math inline">\(p\in \mathbb{R}[x]\)</span> such that <span class="math inline">\(q = ((x ^ 2 + 3x + 4)p)&#39;&#39;\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-05-03" label="problem-05-03"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>, and let <span class="math inline">\(v\in V\)</span> be any fixed vector. We define <span class="math display">\[U = \{T\in \mathcal{L}(V, W): T(v) = \vec{0}_W\}.\]</span></p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(\mathcal{L}(V, W)\)</span>.</p></li>
+<li><p>If <span class="math inline">\(v\not=\vec{0}\)</span>, then what is <span class="math inline">\(\dim U\)</span>?</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-05-04" label="problem-05-04"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T\in  \mathcal{L}(V, V)\)</span>. Prove that there exists <span class="math inline">\(\lambda\in F\)</span> such that <span class="math inline">\(T(v) =  \lambda v\)</span> for all <span class="math inline">\(v\in V\)</span> if and only if <span class="math inline">\(ST = TS\)</span> for all <span class="math inline">\(S\in \mathcal{L}(V,  V)\)</span>.</p>
+</div></li>
+<li><p><span id="problem-05-05" label="problem-05-05"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(\mathcal{L}(V, V)\)</span> such that <span class="math inline">\(ST, TS\in W\)</span> for every <span class="math inline">\(S\in \mathcal{L}(V, V)\)</span> and for every <span class="math inline">\(T\in W\)</span>.</p>
+<ol type="1">
+<li><p>Suppose that there exists <span class="math inline">\(T\in W\)</span> such that <span class="math inline">\(\operatorname{rank} T  \not=0\)</span>. Prove that there exists <span class="math inline">\(T&#39;\in W\)</span> such that <span class="math inline">\(\operatorname{rank} T&#39; = 1\)</span>.</p></li>
+<li><p>Prove that if there exists <span class="math inline">\(T\in W\)</span> such that <span class="math inline">\(\operatorname{rank} T =  1\)</span>, then <span class="math inline">\(W\)</span> contains the basis for <span class="math inline">\(\mathcal{L}(V, V)\)</span> given in <a href="https://jdbm.me/mt3501-lnotes/05-l-v-w/#thm-basis-for-hom">Theorem 5.1.2</a>. Deduce that if there exists <span class="math inline">\(T\in W\)</span> such that <span class="math inline">\(\operatorname{rank} T = 1\)</span>, then <span class="math inline">\(W = V\)</span>.</p></li>
+<li><p>Deduce that <span class="math inline">\(W = \{\vec{0}_{\mathcal{L}(V, V)}\}\)</span> or <span class="math inline">\(W =  \mathcal{L}(V, V)\)</span> where <span class="math inline">\(\vec{0}_{\mathcal{L}(V, V)}: V\to V\)</span> is the zero of <span class="math inline">\(\mathcal{L}(V, V)\)</span> that maps every <span class="math inline">\(v\in V\)</span> to <span class="math inline">\(\vec{0}_{V}\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-05-06" label="problem-05-06"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, and let <span class="math inline">\(\mathscr{B} = \{v_1, v_2,  \ldots, v_n\}\)</span> be a basis for <span class="math inline">\(V\)</span>.</p>
+<ol type="1">
+<li><p>Suppose that, for every <span class="math inline">\(i\)</span>, <span class="math inline">\(T_i : F \to V\)</span> is the unique linear transformation such that <span class="math inline">\(T_i(1) = v_i\)</span>. Show that <span class="math inline">\(\mathscr{A} = \{T_1, T_2, \ldots, T_n\}\)</span> is a basis for <span class="math inline">\(\mathcal{L}(F, V)\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(\iota: V \to \mathcal{L}(F, V)\)</span> to be the unique linear transformation such that <span class="math inline">\(\iota(v_i) = T_i\)</span>. Show that <span class="math inline">\(\iota\)</span> is an isomorphism.</p></li>
+<li><p>If <span class="math inline">\(\mathscr{B}\)</span> is any basis for <span class="math inline">\(V\)</span>, then prove that <span class="math inline">\(\mathrm{Mat}_{\mathscr{B}}: V \to F ^ n\)</span> is an isomorphism using <a href="https://jdbm.me/mt3501-lnotes/05-l-v-w/#thm-linear-transf-equal-matrices">Theorem 5.1.6</a> and the isomorphism <span class="math inline">\(\iota\)</span>.</p></li>
+</ol>
+</div></li>
+<li><p><span id="problem-05-07" label="problem-05-07"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> be a vector space with a unique basis <span class="math inline">\(\mathscr{B}\)</span>. Show that either <span class="math inline">\(V\)</span> is isomorphic to <span class="math inline">\(\mathbb{Z}/2\mathbb{Z} = \{0, 1\}\)</span> or the trivial vector space <span class="math inline">\(\{\vec{0}\}\)</span>.</p>
+</div></li>
+<li><p><span id="problem-05-08" label="problem-05-08"></span></p>
+<div class="question">
+<p>Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite dimensional vector spaces over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(\mathscr{B} = \{v_1, v_2, \ldots, v_n\}\)</span> and <span class="math inline">\(\mathscr{C} = \{w_1,  w_2, \ldots, w_n\}\)</span> be bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively. Suppose that <span class="math inline">\(T  : V \to W\)</span> is a linear transformation such that <span class="math inline">\(T(\mathscr{B}) =  \mathscr{C}\)</span>.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\(T\)</span> is invertible.</p></li>
+<li><p>Suppose that <span class="math inline">\(T ^ {-1}: W \to V\)</span> is the inverse of <span class="math inline">\(T\)</span>. Show that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(T ^ {-1})\)</span> is the inverse of the matrix <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T)\)</span> (where “inverse” means the usual inverse of a matrix).</p></li>
+</ol>
+</div></li>
+</ol>
+
 
 
 
@@ -368,6 +440,13 @@
       <a href="/mt3501-lnotes/">
       
       Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/mt3501-lnotes/problems/">
+      
+      Problems
       </a>
     </li>
     
