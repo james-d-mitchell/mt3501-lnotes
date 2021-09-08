@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <link rel="stylesheet" href="https://jdbm.me/mt3501-lnotes//css/math.css" />
+    <link rel="stylesheet" href="https://jdbm.me/mt3501-lnotes/css/math.css" />
     
     
     <title>MT3501 Lecture Notes | </title>
@@ -187,7 +187,7 @@
 <p>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix over <span class="math inline">\(\mathbb{C}\)</span>. Then there exists an invertible <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(P\)</span> (over <span class="math inline">\(\mathbb{C}\)</span>) such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \to \mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A\)</span>. Then by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)_{\mathbb{C} ^ n}}\)</span> is the change of basis matrix from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P  = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
+<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \to \mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{B}}(T) = A\)</span>. Then by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C},  \mathscr{B}}(\operatorname{id}_{\mathbb{C} ^ n})\)</span> is the change of basis matrix from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P =  \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
 </div>
 <p>We shall not prove <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a>. It is reasonably hard to prove and is most easily addressed by developing more advanced concepts and theory. Instead, we shall use this section to explain how to calculate the Jordan normal form associated to a linear transformation or matrix.</p>
 <p>Why do we care about the Jordan normal form? For more or less the same reason as we cared about diagonal matrices, they are considerably easier to handle than arbitrary matrices.</p>
