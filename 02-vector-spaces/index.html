@@ -189,7 +189,7 @@
 <li><p><span class="math inline">\(\mathbb{Z}/p\mathbb{Z} = \{ 0,1,\dots,p-1 \}\)</span>, where <span class="math inline">\(p\)</span> is a prime number, with addition and multiplication being performed modulo <span class="math inline">\(p\)</span>.</p></li>
 </ol>
 </div>
-<p>The latter example is important in the context of pure mathematics. For the purposes many applications of linear algebra in applied mathematics and the physical sciences, the examples <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\mathbb{C}\)</span> are the most important. For those of a pure mathematical bent, however, it is worth noting that much of what is done in this course will work over an arbitrary field.</p>
+<p>The latter example is important in the context of pure mathematics. For the purposes of many applications of linear algebra in applied mathematics and the physical sciences, the examples <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\mathbb{C}\)</span> are the most important. For those of a pure mathematical bent, however, it is worth noting that much of what is done in this course will work over an arbitrary field.</p>
 <div class="defn">
 <p><span id="def-vspace" label="def-vspace"></span> Let <span class="math inline">\(F\)</span> be a field. A <strong><em>vector space</em></strong> over <span class="math inline">\(F\)</span> is a set <span class="math inline">\(V\)</span> together with the following operations <span class="math display">\[\begin{aligned}
     V \times V &amp; \to V       &amp; F \times V &amp; \to V             \\
@@ -218,9 +218,23 @@
 <div class="example">
 <p><span id="ex-f-to-the-n" label="ex-f-to-the-n"></span></p>
 <ol type="1">
-<li><p>Let <span class="math inline">\(n\)</span> be a positive integer and let <span class="math inline">\(F^{n}\)</span> denote the set of column vectors of length <span class="math inline">\(n\)</span> with entries from the field <span class="math inline">\(F\)</span>: <span class="math display">\[F^{n} = \left\{ \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \,\middle|\, x_{1},x_{2},\dots,x_{n} \in
-            F \right\}.\]</span> This is an example of a vector space over <span class="math inline">\(F\)</span>. Addition in <span class="math inline">\(F^{n}\)</span> is given by <span class="math display">\[\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} + \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = \begin{pmatrix}
-              x_{1}+y_{1} \\ x_{2}+y_{2} \\ \vdots \\ x_{n}+y_{n} \end{pmatrix},\]</span> while scalar multiplication is similarly given by <span class="math display">\[\alpha \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} \alpha x_1 \\ \alpha x_2 \\ \vdots \\ \alpha x_n \end{pmatrix}.\]</span> The zero vector is <span class="math display">\[\vec{0} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}\]</span> and <span class="math display">\[-\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} -x_1 \\ -x_2 \\ \vdots \\ -x_n \end{pmatrix}\]</span> specifies the negative of a vector.</p></li>
+<li><p>Let <span class="math inline">\(n\)</span> be a positive integer and let <span class="math inline">\(F^{n}\)</span> denote the set of column vectors of length <span class="math inline">\(n\)</span> with entries from the field <span class="math inline">\(F\)</span>: <span class="math display">\[F^{n} 
+            = 
+            \left\{ 
+              \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+              \end{pmatrix} 
+              \,\middle|\, \alpha_{1},\alpha_{2},\dots,\alpha_{n} \in
+              F 
+            \right\}.\]</span> This is an example of a vector space over <span class="math inline">\(F\)</span>. Addition in <span class="math inline">\(F^{n}\)</span> is given by <span class="math display">\[\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} 
+            + \begin{pmatrix} \beta_1 \\ \beta_2 \\ \vdots \\ \beta_n \end{pmatrix} 
+            = \begin{pmatrix} 
+              \alpha_{1}+\beta_{1} \\ \alpha_{2}+\beta_{2} \\ \vdots \\
+              \alpha_{n}+\beta_{n} 
+            \end{pmatrix},\]</span> while scalar multiplication is similarly given by <span class="math display">\[\gamma \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+              \end{pmatrix} = \begin{pmatrix} \gamma \alpha_1 \\ \gamma
+            \alpha_2 \\ \vdots \\ \gamma \alpha_n \end{pmatrix}.\]</span> The zero vector is <span class="math display">\[\vec{0} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}\]</span> and <span class="math display">\[-\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+              \end{pmatrix} = \begin{pmatrix} -\alpha_1 \\ -\alpha_2 \\ \vdots
+            \\ -\alpha_n \end{pmatrix}\]</span> specifies the negative of a vector.</p></li>
 <li><p>The complex numbers <span class="math inline">\(\mathbb{C}\)</span> can be viewed as a vector space over <span class="math inline">\(\mathbb{R}\)</span>. Addition is the usual addition of complex numbers: <span class="math display">\[(x_{1}+iy_{1}) + (x_{2}+iy_{2}) = (x_{1}+x_{2}) + i(y_{1}+y_{2});\]</span> while scalar multiplication is given by <span class="math display">\[\alpha(x+iy) = (\alpha x) + i(\alpha y) \quad \text{(for
               $\alpha \in \mathbb{R}$).}\]</span> The zero vector is the element <span class="math inline">\(0 = 0 + i0 \in \mathbb{C}\)</span>.</p>
 <p>Every field can be viewed as a vector space over any subfield, but that is not particularly important for this course.</p></li>
@@ -228,7 +242,8 @@
             + \dots + (a_{m}+b_{m})x^{m}.\]</span> Scalar multiplication is straightforward: <span class="math display">\[\alpha f(x) = (\alpha a_{0}) + (\alpha a_{1})x + (\alpha
             a_{2})x^{2} + \dots + (\alpha a_{m})x^{m}\]</span> for <span class="math inline">\(f(x)\)</span> as above and <span class="math inline">\(\alpha \in F\)</span>. The vector space axioms are pretty much straightforward to verify. The zero vector is the polynomial with all coefficients <span class="math inline">\(0\)</span>: <span class="math display">\[0 = 0 + 0x + 0x^{2} + \dots + 0x^{m}\]</span> (for any choice of <span class="math inline">\(m\)</span>) and <span class="math display">\[-f(x) = (-a_{0}) + (-a_{1})x + (-a_{2})x^{2} + \dots +
             (-a_{m})x^{m}.\]</span></p></li>
-<li><p>Let <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> denote the set of all functions from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>. Define the addition of two such functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> by <span class="math display">\[(f+g)(x) = f(x) + g(x) \quad \text{(for $x \in \mathbb{R}$)}\]</span> and scalar multiplication of <span class="math inline">\(f\)</span> by <span class="math inline">\(\alpha \in \mathbb{R}\)</span> by <span class="math display">\[(\alpha f)(x) = \alpha \cdot f(x) \quad \text{(for $x \in \mathbb{R}$)}.\]</span> Then <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> is a real vector space with <span class="math display">\[(-f)(x) = -f(x)\]</span> and the zero is the function given by <span class="math inline">\(x \mapsto 0\)</span> for all <span class="math inline">\(x \in  \mathbb{R}\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> denote the set of all functions from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>. Define the addition of two such functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> by <span class="math display">\[(f+g)(x) = f(x) + g(x) \quad \text{(for $x \in \mathbb{R}$)}\]</span> and scalar multiplication of <span class="math inline">\(f\)</span> by <span class="math inline">\(\alpha \in \mathbb{R}\)</span> by <span class="math display">\[(\alpha f)(x) = \alpha \cdot f(x) \quad \text{(for $x \in
+            \mathbb{R}$)}.\]</span> Then <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> is a real vector space with <span class="math display">\[(-f)(x) = -f(x)\]</span> and the zero is the function given by <span class="math inline">\(x \mapsto 0\)</span> for all <span class="math inline">\(x \in  \mathbb{R}\)</span>.</p></li>
 </ol>
 </div>
 <p>We end this section by stating some basic properties of vector spaces that you probably remember from MT2501.</p>
