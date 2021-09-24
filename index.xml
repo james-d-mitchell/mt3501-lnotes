@@ -79,7 +79,7 @@
       
       <guid>https://jdbm.me/mt3501-lnotes/02-vector-spaces/</guid>
       <description>Vector spaces body { counter-reset: chapter 1; }  Definition and examples of vector spaces The first step in the definition of a vector space is to define what we mean by “scalars”.
- A field is a set \(F\) together with two binary operations \[\begin{aligned} F \times F &amp;amp; \to F &amp;amp; F \times F &amp;amp; \to F \\ (\alpha, \beta) &amp;amp; \mapsto \alpha + \beta &amp;amp; (\alpha,\beta) &amp;amp; \mapsto \alpha\beta \end{aligned}\] called addition and multiplication, respectively, such that the following hold:</description>
+ A field is a set \(F\) together with two binary operations \[\begin{aligned} F \times F &amp;amp; \longrightarrow F &amp;amp; F \times F &amp;amp; \longrightarrow F \\ (\alpha, \beta) &amp;amp; \mapsto \alpha + \beta &amp;amp; (\alpha,\beta) &amp;amp; \mapsto \alpha\beta \end{aligned}\] called addition and multiplication, respectively, such that the following hold:</description>
     </item>
     
     <item>

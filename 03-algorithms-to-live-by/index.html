@@ -14,6 +14,22 @@
     font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
 </style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </head>
 <body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
@@ -137,6 +153,7 @@
     });
     </script>
     
+
 
 
 
@@ -366,7 +383,7 @@
 </div>
 <h2 id="algorithm-1-show-that-a-set-of-vectors-is-linearly-independent">Algorithm 1: Show that a set of vectors is linearly (in)dependent</h2>
 <div class="algorithm">
-<p><span id="algorithm-lin-independence" label="algorithm-lin-independence"></span> Show that the collection <span class="math display">\[\mathscr{A} = 
+<p><span id="algorithm-lin-independence" label="algorithm-lin-independence">[algorithm-lin-independence]</span> Show that the collection <span class="math display">\[\mathscr{A} = 
     \left\{
       \begin{pmatrix}
       v_{1,1}  \\
@@ -400,11 +417,11 @@
 </ol>
 </div>
 <div class="thm">
-<p><span id="thm-algorithm-1" label="thm-algorithm-1"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a> is valid.</p>
+<p><span id="thm-algorithm-1" label="thm-algorithm-1"></span> <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a> is valid.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> [Omitted from the course.] Suppose that we enter the vectors in <span class="math inline">\(\mathscr{A}\)</span> as columns in a matrix <span class="math inline">\(A\)</span> in part (1), and perform elementary column operations in part (2) to obtain a matrix <span class="math inline">\(E\)</span> in column echelon form. Then, by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#prop-row-equiv">Proposition 3.2.4</a>, <span class="math inline">\(A\)</span> and <span class="math inline">\(E\)</span> are column-equivalent, and so <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Col}(E)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#prop-row-echelon-basis">Proposition 3.2.6</a>, the non-zero columns in <span class="math inline">\(E\)</span> are a basis for <span class="math inline">\(\operatorname{Col}(E)\)</span>. But <span class="math inline">\(\operatorname{Col}(A) = \operatorname{Span}(\mathscr{A})\)</span> by definition and <span class="math inline">\(\mathscr{A}\)</span> is linearly independent if and only if the <span class="math inline">\(\operatorname{dim}\operatorname{Span}(\mathscr{A}) = |\mathscr{A}|\)</span> if and only if the number of non-zero columns in <span class="math inline">\(E\)</span>, which equals <span class="math inline">\(\operatorname{dim}\operatorname{Col}(E) = \operatorname{dim}\operatorname{Span}(\mathscr{A})  = |\mathscr{A}|\)</span>.</p>
-<p>If we perform row operations rather than column operations in <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a>(2) or obtain the row echelon form for <span class="math inline">\(A\)</span>, then we must use the fact that the row and column rank of a matrix (see Theorem 7.5.3) are equal to prove that <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a> is valid. ◻</p>
+<p>If we perform row operations rather than column operations in <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a>(2) or obtain the row echelon form for <span class="math inline">\(A\)</span>, then we must use the fact that the row and column rank of a matrix (see Theorem 7.5.3) are equal to prove that <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a> is valid. ◻</p>
 </div>
 <div class="exampjupyter">
 <p>Is the collection <span class="math display">\[\mathscr{A} =
@@ -520,19 +537,19 @@
 </div>
 <h2 id="algorithm-2-find-the-dimension-of-a-subspace">Algorithm 2: Find the dimension of a subspace</h2>
 <div class="algorithm">
-<p><span id="algorithm-dim-of-subspace" label="algorithm-dim-of-subspace"></span> Find <span class="math inline">\(\operatorname{dim}\operatorname{Span}(\mathscr{A})\)</span> where <span class="math inline">\(\mathscr{A}\)</span> is: <span class="math display">\[\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
+<p><span id="algorithm-dim-of-subspace" label="algorithm-dim-of-subspace">[algorithm-dim-of-subspace]</span> Find <span class="math inline">\(\operatorname{dim}\operatorname{Span}(\mathscr{A})\)</span> where <span class="math inline">\(\mathscr{A}\)</span> is: <span class="math display">\[\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
       \end{pmatrix}, \ldots,
     \begin{pmatrix} v_{1,m} \\ v_{2, m} \\ \vdots \\ v_{n, m}
   \end{pmatrix}\right\}
     \subseteq F ^ n.\]</span></p>
 <ol type="1">
-<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a>(1).</p></li>
-<li><p>Perform elementary row operations or elementary column operations to the matrix from step (1) until it is in row or column echelon form; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a>(2).</p></li>
+<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a>(1).</p></li>
+<li><p>Perform elementary row operations or elementary column operations to the matrix from step (1) until it is in row or column echelon form; this is identical to <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a>(2).</p></li>
 <li><p>The number of non-zero rows in the row echelon form of the matrix from step (1) is the dimension of the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>. The number of non-zero columns in the column echelon form of the matrix from step (1) is the dimension of the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p></li>
 </ol>
 </div>
 <div class="thm">
-<p><span id="thm-algorithm-2" label="thm-algorithm-2"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-dim-of-subspace">Algorithm 3.4.1</a> is valid.</p>
+<p><span id="thm-algorithm-2" label="thm-algorithm-2"></span> <a href="#algorithm-dim-of-subspace" data-reference-type="ref" data-reference="algorithm-dim-of-subspace">[algorithm-dim-of-subspace]</a> is valid.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> In the proof of <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#thm-algorithm-1">Theorem 3.3.2</a> we showed that if <span class="math inline">\(E\)</span> is the column echelon form of the matrix <span class="math inline">\(A\)</span> with columns equal to the vectors in <span class="math inline">\(\mathscr{A}\)</span>, then <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E) = \operatorname{dim} \operatorname{Span}(\mathscr{A})\)</span> and that <span class="math inline">\(\operatorname{dim} \operatorname{Col}(E)\)</span> is the number of non-zero columns in <span class="math inline">\(E\)</span>. ◻</p>
@@ -661,19 +678,19 @@
 </div>
 <h2 id="algorithm-3-find-a-basis-for-a-subspace">Algorithm 3: Find a basis for a subspace</h2>
 <div class="algorithm">
-<p><span id="algorithm-subspace-basis" label="algorithm-subspace-basis"></span> Find a basis for the subspace <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> where <span class="math inline">\(\mathscr{A}\)</span> is: <span class="math display">\[\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
+<p><span id="algorithm-subspace-basis" label="algorithm-subspace-basis">[algorithm-subspace-basis]</span> Find a basis for the subspace <span class="math inline">\(\operatorname{Span}(\mathscr{A})\)</span> where <span class="math inline">\(\mathscr{A}\)</span> is: <span class="math display">\[\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
       \end{pmatrix}, \ldots,
     \begin{pmatrix} v_{1,m} \\  v_{2, m}\\\vdots \\vec{v}_{n, m} \end{pmatrix}  \right\}
     \subseteq F ^ n.\]</span></p>
 <ol type="1">
-<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-lin-independence">Algorithm 3.3.1</a>(1).</p></li>
+<li><p>Make an <span class="math inline">\(n\times m\)</span> matrix whose columns are the vectors in <span class="math inline">\(\mathscr{A}\)</span> or whose rows are the vectors in <span class="math inline">\(\mathscr{A}\)</span>; this is identical to <a href="#algorithm-lin-independence" data-reference-type="ref" data-reference="algorithm-lin-independence">[algorithm-lin-independence]</a>(1).</p></li>
 <li><p>If in step (1) you entered <span class="math inline">\(\mathscr{A}\)</span> as rows, then perform elementary row operations to obtain the matrix in row echelon form. If in step (1) you entered <span class="math inline">\(\mathscr{A}\)</span> as columns, then perform elementary column operations to obtain the matrix in column echelon form.</p></li>
 <li><p>The non-zero rows in the row echelon form of the matrix from step (1) is a basis for the row-space of that matrix, which is also the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p>
 <p>The non-zero columns in the column echelon form of the matrix from step (1) is a basis for the column-space of that matrix, which is also the subspace spanned by <span class="math inline">\(\mathscr{A}\)</span>.</p></li>
 </ol>
 </div>
 <div class="thm">
-<p><span id="thm-algorithm-3" label="thm-algorithm-3"></span> <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-subspace-basis">Algorithm 3.5.1</a> is valid.</p>
+<p><span id="thm-algorithm-3" label="thm-algorithm-3"></span> <a href="#algorithm-subspace-basis" data-reference-type="ref" data-reference="algorithm-subspace-basis">[algorithm-subspace-basis]</a> is valid.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Suppose that the vectors in <span class="math inline">\(\mathscr{A}\)</span> are entered as the rows in a matrix <span class="math inline">\(A\)</span>. Then part (2) of the algorithm says that we must perform elementary row operations to <span class="math inline">\(A\)</span> to obtain a matrix <span class="math inline">\(E\)</span> in row-echelon form for <span class="math inline">\(A\)</span>. It follows by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#prop-row-equiv">Proposition 3.2.4</a> that <span class="math inline">\(\operatorname{Row}(A) =  \operatorname{Row}(E)\)</span> and by <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#prop-row-echelon">Proposition 3.2.2</a> that the non-zero rows of <span class="math inline">\(E\)</span> form a basis for <span class="math inline">\(\operatorname{Row}(E)\)</span>.</p>
@@ -767,7 +784,7 @@
     2\alpha + \beta + \gamma &amp; = &amp; 0 \\
     -\gamma &amp; = &amp; 0 \\
     -\beta  &amp; = &amp; 0
-  \end{aligned}\]</span> and so <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>, and the vectors <span class="math inline">\(\vec{w}_1\)</span>, <span class="math inline">\(\vec{w}_2\)</span>, and <span class="math inline">\(\vec{w}_3\)</span> are linearly independent. It follows from <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-subspace-basis">Algorithm 3.5.1</a> that <span class="math inline">\(\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}\)</span> is a basis for <span class="math inline">\(U\)</span> and that <span class="math inline">\(\operatorname{dim} U = 3\)</span>.</p>
+  \end{aligned}\]</span> and so <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>, and the vectors <span class="math inline">\(\vec{w}_1\)</span>, <span class="math inline">\(\vec{w}_2\)</span>, and <span class="math inline">\(\vec{w}_3\)</span> are linearly independent. It follows from <a href="#algorithm-subspace-basis" data-reference-type="ref" data-reference="algorithm-subspace-basis">[algorithm-subspace-basis]</a> that <span class="math inline">\(\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}\)</span> is a basis for <span class="math inline">\(U\)</span> and that <span class="math inline">\(\operatorname{dim} U = 3\)</span>.</p>
 <p>It is possible to double check that <span class="math inline">\(\operatorname{Span}(\vec{w}_1,  \vec{w}_2, \vec{w}_3) = U\)</span> by showing that <span class="math inline">\(\vec{v}_1, \vec{v}_2, \vec{v}_3,  \vec{v}_4, \vec{v}_5\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)\)</span>. Since <span class="math inline">\(\vec{v}_4 = \vec{w}_2\)</span> and <span class="math inline">\(\vec{v}_5 = \vec{w}_3\)</span>, it suffices to show that <span class="math inline">\(\vec{v}_1, \vec{v}_2, \vec{v}_3\in\operatorname{Span}(\vec{w}_1,  \vec{w}_2, \vec{w}_3)\)</span>. This follows because: <span class="math display">\[\begin{aligned}
     \vec{v}_1 &amp; = &amp; \begin{pmatrix} 1 \\ -1 \\ 0 \\ 3 \end{pmatrix} = \vec{w}_1 - 3 \vec{w}_2 \\
     \vec{v}_2 &amp; = &amp; \begin{pmatrix} 2 \\ 1 \\ 1 \\ 0 \end{pmatrix}  = \vec{w}_1 - \vec{w}_3 \\
@@ -776,7 +793,7 @@
 </div>
 <h2 id="algorithm-4-find-a-linear-combination-of-vectors-equal-a-given-vector">Algorithm 4: Find a linear combination of vectors equal a given vector</h2>
 <div class="algorithm">
-<p><span id="algorithm-linear-combo" label="algorithm-linear-combo"></span> If <span class="math display">\[\mathscr{A} = \left\{\vec{v}_1=\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots
+<p><span id="algorithm-linear-combo" label="algorithm-linear-combo">[algorithm-linear-combo]</span> If <span class="math display">\[\mathscr{A} = \left\{\vec{v}_1=\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots
       \\v_{n, 1} \end{pmatrix}, \ldots,
       \vec{v}_m=\begin{pmatrix} v_{1,m} \\ v_{2, m} \\ \vdots \\v_{n, m}
     \end{pmatrix} \right\}
@@ -808,7 +825,7 @@
             \frac{\alpha_m}{\alpha_{m + 1}}\vec{v}_m.\]</span></p></li>
 </ol>
 </div>
-<p>That <a href="https://jdbm.me/mt3501-lnotes/03-algorithms-to-live-by/#algorithm-dim-of-subspace">Algorithm 3.4.1</a> is valid, was shown in the statement of the algorithm.</p>
+<p>That <a href="#algorithm-dim-of-subspace" data-reference-type="ref" data-reference="algorithm-dim-of-subspace">[algorithm-dim-of-subspace]</a> is valid, was shown in the statement of the algorithm.</p>
 <div class="exampjupyter">
 <p>Suppose that <span class="math display">\[\vec{v}_1 = 
     \begin{pmatrix} 
@@ -953,6 +970,22 @@
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 <p><a href="#">Back to top</a></p>
 <ul>

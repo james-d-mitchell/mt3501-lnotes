@@ -14,6 +14,22 @@
     font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
 </style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </head>
 <body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
@@ -137,6 +153,7 @@
     });
     </script>
     
+
 
 
 
@@ -331,7 +348,7 @@
   \end{aligned}\]</span> for <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(2\)</span>, …. These functions (without the scaling) were studied in MT2501. We have the following facts <span class="math display">\[\begin{aligned}
     \langle e_{m}, e_{n} \rangle &amp; = 0 &amp;  &amp; \text{if $m \neq n$,}   \\
     \langle f_{m}, f_{n} \rangle &amp; = 0 &amp;  &amp; \text{if $m \neq n$,}   \\
-    \langle e_{m}, f_{n} \rangle &amp; = 0 &amp;  &amp; \text{for all $m$,~$n$}
+    \langle e_{m}, f_{n} \rangle &amp; = 0 &amp;  &amp; \text{for all $m$, $n$}
   \end{aligned}\]</span> and <span class="math display">\[\|e_{n}\| = \|f_{n}\| = 1 \qquad
     \text{for all $n$}.\]</span> (The reason for the scaling factors is to achieve unit norm for each function.) The topic of Fourier series relates to expressing functions as linear combinations of the orthonormal set <span class="math display">\[\{e_{0}, e_{n}, f_{n} : n = 1, 2, 3, \dots \}.\]</span></p>
 </div>
@@ -485,7 +502,7 @@
 <h2 id="orthogonal-complements">Orthogonal complements</h2>
 <div class="defn">
 <p>Let <span class="math inline">\(V\)</span> be an inner product space. If <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, the <strong><em>orthogonal complement</em></strong> to <span class="math inline">\(U\)</span> is <span class="math display">\[U^{\perp} = \{ v \in V  : \text{$\langle v,u \rangle = 0$ for
-        all~$u \in U$}\}.\]</span></p>
+        all $u \in U$}\}.\]</span></p>
 </div>
 <p>Thus <span class="math inline">\(U^{\perp}\)</span> consists of those vectors which are orthogonal to every single vector in <span class="math inline">\(U\)</span>.</p>
 <div class="lemma">
@@ -743,6 +760,22 @@
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 <p><a href="#">Back to top</a></p>
 <ul>

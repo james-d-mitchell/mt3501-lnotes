@@ -14,6 +14,22 @@
     font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
 </style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </head>
 <body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
@@ -142,6 +158,7 @@
 
 
 
+
   </p>
 
 
@@ -208,7 +225,7 @@
     = x_i f_i(\vec{e}_i)
     = x_i.\]</span> In other words, <span class="math inline">\(f_i\)</span> maps every vector in <span class="math inline">\(F ^ n\)</span> to its <span class="math inline">\(i\)</span>th coordinate.</p>
 </div>
-<p>You might also remember from <a href="#chapter-vector-space-linear-transf" data-reference-type="ref" data-reference="chapter-vector-space-linear-transf">[chapter-vector-space-linear-transf]</a> that it’s much easier to deal with the basis <span class="math inline">\(\mathscr{B}\)</span> consisting of the matrices: <span class="math display">\[\begin{pmatrix}
+<p>You might also remember from <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#chapter-vector-space-linear-transf">Chapter 5</a> that it’s much easier to deal with the basis <span class="math inline">\(\mathscr{B}\)</span> consisting of the matrices: <span class="math display">\[\begin{pmatrix}
         1 &amp; 0 &amp; 0 \\
         0 &amp; 0 &amp; 0
       \end{pmatrix},
@@ -456,6 +473,22 @@
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 <p><a href="#">Back to top</a></p>
 <ul>

@@ -14,6 +14,22 @@
     font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
 </style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </head>
 <body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
@@ -142,6 +158,7 @@
 
 
 
+
   </p>
 
 
@@ -160,7 +177,7 @@
 <p>The first step in the definition of a vector space is to define what we mean by “scalars”.</p>
 <div class="defn">
 <p><span id="def-field" label="def-field"></span> A <strong><em>field</em></strong> is a set <span class="math inline">\(F\)</span> together with two binary operations <span class="math display">\[\begin{aligned}
-    F \times F      &amp; \to F                  &amp; F \times F     &amp; \to F   \\
+    F \times F      &amp; \longrightarrow F                  &amp; F \times F     &amp; \longrightarrow F   \\
     (\alpha, \beta) &amp; \mapsto \alpha + \beta &amp; (\alpha,\beta) &amp; \mapsto
     \alpha\beta
   \end{aligned}\]</span> called <em>addition</em> and <em>multiplication</em>, respectively, such that the following hold:</p>
@@ -192,7 +209,7 @@
 <p>The latter example is important in the context of pure mathematics. For the purposes of many applications of linear algebra in applied mathematics and the physical sciences, the examples <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\mathbb{C}\)</span> are the most important. For those of a pure mathematical bent, however, it is worth noting that much of what is done in this course will work over an arbitrary field.</p>
 <div class="defn">
 <p><span id="def-vspace" label="def-vspace"></span> Let <span class="math inline">\(F\)</span> be a field. A <strong><em>vector space</em></strong> over <span class="math inline">\(F\)</span> is a set <span class="math inline">\(V\)</span> together with the following operations <span class="math display">\[\begin{aligned}
-    V \times V &amp; \to V       &amp; F \times V &amp; \to V             \\
+    V \times V &amp; \longrightarrow V       &amp; F \times V &amp; \longrightarrow V             \\
     (u,v)      &amp; \mapsto u+v &amp; (\alpha,v) &amp; \mapsto \alpha v,
   \end{aligned}\]</span> called <em>addition</em> and <em>scalar multiplication</em>, respectively, such that</p>
 <ol type="1">
@@ -238,7 +255,7 @@
 <li><p>The complex numbers <span class="math inline">\(\mathbb{C}\)</span> can be viewed as a vector space over <span class="math inline">\(\mathbb{R}\)</span>. Addition is the usual addition of complex numbers: <span class="math display">\[(x_{1}+iy_{1}) + (x_{2}+iy_{2}) = (x_{1}+x_{2}) + i(y_{1}+y_{2});\]</span> while scalar multiplication is given by <span class="math display">\[\alpha(x+iy) = (\alpha x) + i(\alpha y) \quad \text{(for
               $\alpha \in \mathbb{R}$).}\]</span> The zero vector is the element <span class="math inline">\(0 = 0 + i0 \in \mathbb{C}\)</span>.</p>
 <p>Every field can be viewed as a vector space over any subfield, but that is not particularly important for this course.</p></li>
-<li><p>A <strong><em>polynomial</em></strong> over the field <span class="math inline">\(F\)</span> is an expression of the form <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m},\]</span> for some <span class="math inline">\(m \geq 0\)</span>, where <span class="math inline">\(a_{0},a_{1},\dots,a_{m} \in F\)</span>. The set of all polynomials over <span class="math inline">\(F\)</span> is usually denoted by <span class="math inline">\(F[x]\)</span>. If necessary we can “pad” such an expression for a polynomial using <span class="math inline">\(0\)</span> as the coefficient for the extra terms to increase its length. Thus to add <span class="math inline">\(f(x)\)</span> to another polynomial <span class="math inline">\(g(x)\)</span>, we may assume they are represented by expressions of the same length, say <span class="math display">\[g(x) = b_{0} + b_{1}x + b_{2}x^{2} + \dots + b_{m}x^{m}.\]</span> Then <span class="math display">\[f(x) + g(x) = (a_{0}+b_{0}) + (a_{1}+b_{1})x + (a_{2}+b_{2})x^{2}
+<li><p>A <strong><em>polynomial</em></strong> over the field <span class="math inline">\(F\)</span> is an expression of the form <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m},\]</span> for some <span class="math inline">\(m \geqslant 0\)</span>, where <span class="math inline">\(a_{0},a_{1},\dots,a_{m} \in F\)</span>. The set of all polynomials over <span class="math inline">\(F\)</span> is usually denoted by <span class="math inline">\(F[x]\)</span>. If necessary we can “pad” such an expression for a polynomial using <span class="math inline">\(0\)</span> as the coefficient for the extra terms to increase its length. Thus to add <span class="math inline">\(f(x)\)</span> to another polynomial <span class="math inline">\(g(x)\)</span>, we may assume they are represented by expressions of the same length, say <span class="math display">\[g(x) = b_{0} + b_{1}x + b_{2}x^{2} + \dots + b_{m}x^{m}.\]</span> Then <span class="math display">\[f(x) + g(x) = (a_{0}+b_{0}) + (a_{1}+b_{1})x + (a_{2}+b_{2})x^{2}
             + \dots + (a_{m}+b_{m})x^{m}.\]</span> Scalar multiplication is straightforward: <span class="math display">\[\alpha f(x) = (\alpha a_{0}) + (\alpha a_{1})x + (\alpha
             a_{2})x^{2} + \dots + (\alpha a_{m})x^{m}\]</span> for <span class="math inline">\(f(x)\)</span> as above and <span class="math inline">\(\alpha \in F\)</span>. The vector space axioms are pretty much straightforward to verify. The zero vector is the polynomial with all coefficients <span class="math inline">\(0\)</span>: <span class="math display">\[0 = 0 + 0x + 0x^{2} + \dots + 0x^{m}\]</span> (for any choice of <span class="math inline">\(m\)</span>) and <span class="math display">\[-f(x) = (-a_{0}) + (-a_{1})x + (-a_{2})x^{2} + \dots +
             (-a_{m})x^{m}.\]</span></p></li>
@@ -287,7 +304,7 @@
             \subseteq \mathbb{R}^{3};\]</span> so <span class="math inline">\(W\)</span> consists of all vectors with zero in the last entry. We check <span class="math display">\[\begin{pmatrix} x_{1} \\ y_{1} \\ 0 \end{pmatrix} + \begin{pmatrix} x_{2} \\ y_{2} \\ 0 \end{pmatrix} =
             \begin{pmatrix} x_{1}+x_{2} \\ y_{1}+y_{2} \\ 0 \end{pmatrix} \in W\]</span> and <span class="math display">\[\alpha \begin{pmatrix} x \\ y \\ 0 \end{pmatrix} = \begin{pmatrix} \alpha x \\ \alpha y \\ 0 \end{pmatrix}
             \in W \quad \text{(for $\alpha \in \mathbb{R}$)}.\]</span> Thus <span class="math inline">\(W\)</span> is closed under sums and scalar multiplication; that is, <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> be the set of all functions <span class="math inline">\(f  : \mathbb{R} \to \mathbb{R}\)</span>, which forms a real vector space under <span class="math display">\[(f + g)(x) = f(x) + g(x); \quad (\alpha f)(x) = \alpha \cdot f(x).\]</span> Let <span class="math inline">\(\mathcal{P}\)</span> denote the set of polynomial functions; i.e., each <span class="math inline">\(f \in \mathcal{P}\)</span> has the form <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m}\]</span> for some <span class="math inline">\(m \geq 0\)</span> and <span class="math inline">\(a_{0},a_{1},\dots,a_{m} \in \mathbb{R}\)</span>. Then <span class="math inline">\(\mathcal{P} \subseteq \mathcal{F}_{\mathbb{R}}\)</span> and, since the sum of two polynomials is a polynomial and a scalar multiple of a polynomial is a polynomial, <span class="math inline">\(\mathcal{P}\)</span> is a subspace of <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span> be the set of all functions <span class="math inline">\(f  : \mathbb{R} \longrightarrow\mathbb{R}\)</span>, which forms a real vector space under <span class="math display">\[(f + g)(x) = f(x) + g(x); \quad (\alpha f)(x) = \alpha \cdot f(x).\]</span> Let <span class="math inline">\(\mathcal{P}\)</span> denote the set of polynomial functions; i.e., each <span class="math inline">\(f \in \mathcal{P}\)</span> has the form <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m}\]</span> for some <span class="math inline">\(m \geqslant 0\)</span> and <span class="math inline">\(a_{0},a_{1},\dots,a_{m} \in \mathbb{R}\)</span>. Then <span class="math inline">\(\mathcal{P} \subseteq \mathcal{F}_{\mathbb{R}}\)</span> and, since the sum of two polynomials is a polynomial and a scalar multiple of a polynomial is a polynomial, <span class="math inline">\(\mathcal{P}\)</span> is a subspace of <span class="math inline">\(\mathcal{F}_{\mathbb{R}}\)</span>.</p></li>
 </ol>
 </div>
 <div class="defn">
@@ -320,7 +337,7 @@
 <p>In this section we recall the notion of a spanning set, which is the standard means of defining a subspace of a vector space.</p>
 <div class="defn">
 <p><span id="def-span" label="def-span"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and suppose that <span class="math inline">\(\mathscr{A} = \{  v_{1}, v_{2}, \dots\}\)</span> is a set of vectors in <span class="math inline">\(V\)</span>. A <strong><em>linear combination</em></strong> of these vectors is a vector of the form <span class="math display">\[\sum_{i=1}^{k} \alpha_{i}v_{i} = \alpha_{1}v_{1} + \alpha_{2}v_{2} + \dots +
-    \alpha_{k}v_{k}\]</span> for some <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F\)</span>. The set <span class="math display">\[\operatorname{Span}(\mathscr{A}) = \operatorname{Span}(v_{1},~v_{2}, \dots) =
+    \alpha_{k}v_{k}\]</span> for some <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F\)</span>. The set <span class="math display">\[\operatorname{Span}(\mathscr{A}) = \operatorname{Span}(v_{1}, v_{2}, \dots) =
     \biggl\{ \sum_{i=1}^{k} \alpha_{i}v_{i} \biggm|
     v_{1},v_{2},\dots,v_{k} \in \mathscr{A}, \;
     \alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F \biggr\}\]</span> of all linear combinations is called the <strong><em>span</em></strong> of the vectors <span class="math inline">\(v_{1}\)</span>, <span class="math inline">\(v_{2}\)</span>, <span class="math inline">\(\dots\)</span>.</p>
@@ -351,14 +368,14 @@
 <p>See MT2501 for further examples.</p>
 <h2 id="linearly-independent-vectors-and-bases">Linearly independent vectors and bases</h2>
 <div class="defn">
-<p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. A set <span class="math inline">\(\mathscr{A} = \{  v_{1},v_{2},\dots\}\)</span> is called <strong><em>linearly independent</em></strong> if the only solution to the equation <span class="math display">\[\sum_{i=1}^{k} \alpha_{i} v_{i} = \vec{0}\]</span> (with <span class="math inline">\(\alpha_{i} \in F\)</span> and <span class="math inline">\(k\geq 0\)</span>) is <span class="math inline">\(\alpha_{1} = \alpha_{2} = \dots =  \alpha_{k} = 0\)</span>.</p>
+<p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. A set <span class="math inline">\(\mathscr{A} = \{  v_{1},v_{2},\dots\}\)</span> is called <strong><em>linearly independent</em></strong> if the only solution to the equation <span class="math display">\[\sum_{i=1}^{k} \alpha_{i} v_{i} = \vec{0}\]</span> (with <span class="math inline">\(\alpha_{i} \in F\)</span> and <span class="math inline">\(k\geqslant 0\)</span>) is <span class="math inline">\(\alpha_{1} = \alpha_{2} = \dots =  \alpha_{k} = 0\)</span>.</p>
 <p>If <span class="math inline">\(\mathscr{A}\)</span> is not linearly independent, we shall call it <strong><em>linearly dependent</em></strong>.</p>
 </div>
 <div class="lemma">
 <p><span id="cor-dep-lincomb" label="cor-dep-lincomb"></span> Let <span class="math inline">\(\mathscr{A}\)</span> be a set of vectors in a vector space <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\mathscr{A}\)</span> is linearly dependent if and only if there exists <span class="math inline">\(v\in \mathscr{A}\)</span> such that <span class="math inline">\(v\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{A}\setminus \{v\}\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lemma-dim-dim" label="lemma-dim-dim"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space. If <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{m}  \}\)</span> is a linearly independent set of vectors in <span class="math inline">\(V\)</span> and <span class="math inline">\(\{  w_{1},w_{2},\dots,w_{n} \}\)</span> is a spanning set for <span class="math inline">\(V\)</span>, then <span class="math inline">\(m \leq n\)</span>.</p>
+<p><span id="lemma-dim-dim" label="lemma-dim-dim"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space. If <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{m}  \}\)</span> is a linearly independent set of vectors in <span class="math inline">\(V\)</span> and <span class="math inline">\(\{  w_{1},w_{2},\dots,w_{n} \}\)</span> is a spanning set for <span class="math inline">\(V\)</span>, then <span class="math inline">\(m \leqslant n\)</span>.</p>
 </div>
 <div class="defn">
 <p>Let <span class="math inline">\(V\)</span> be a vector space over the field <span class="math inline">\(F\)</span>. A <em>basis</em> for <span class="math inline">\(V\)</span> is a linearly independent spanning set. We say that <span class="math inline">\(V\)</span> is <strong><em>finite-dimensional</em></strong> if it has a finite basis. The <strong><em>dimension</em></strong> of <span class="math inline">\(V\)</span> is the size of any basis for <span class="math inline">\(V\)</span> and is denoted by <span class="math inline">\(\dim V\)</span>.</p>
@@ -477,7 +494,7 @@
 <h2 id="examples-of-infinite-dimensional-vector-spaces">Examples of infinite-dimensional vector spaces</h2>
 <p>Although not the focus of this course, we give some examples of infinite-dimensional vector spaces, in particular for those of you studying physics who have encountered these previously.</p>
 <div class="omittedexamp">
-<p>In <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(3), we encountered the vector space <span class="math inline">\(F[x]\)</span> consisting of all of the polynomials over the field <span class="math inline">\(F\)</span>. Every polynomial in <span class="math inline">\(F[x]\)</span> can be given in the form: <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m},\]</span> for some <span class="math inline">\(m\geq 0\)</span> (this is the very definition of a polynomial). The expression <span class="math display">\[a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m}\]</span> is also the very definition of a linear combination of the monomials: <span class="math display">\[\mathscr{B} = \{1, x, x ^ 2, x ^ 3, \ldots\}.\]</span> Hence the infinite set <span class="math inline">\(\mathscr{B}\)</span> spans <span class="math inline">\(F[x]\)</span>. On the other hand, it is not possible to write any <span class="math inline">\(x ^ i\)</span> as a linear combination of polynomials belonging to <span class="math inline">\(\mathscr{B}\setminus \{x ^ i\} = \{1, x, \ldots, x ^  {i - 1}, x ^ {i + 1}, \ldots\}\)</span>, and so <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Thus <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(F[x]\)</span> and so <span class="math inline">\(\dim F[x] = |\mathscr{B}| = \infty\)</span>. (Even more precisely, the dimension of <span class="math inline">\(F[x]\)</span> equals the cardinality of the natural numbers <span class="math inline">\(\mathbb{N}\)</span>. This is usually denoted <span class="math inline">\(\aleph_0\)</span>, to distinguish it from, say, <span class="math inline">\(|\mathbb{R}| &gt; |\mathbb{N}|\)</span>.)</p>
+<p>In <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#ex-f-to-the-n">Example 2.1.4</a>(3), we encountered the vector space <span class="math inline">\(F[x]\)</span> consisting of all of the polynomials over the field <span class="math inline">\(F\)</span>. Every polynomial in <span class="math inline">\(F[x]\)</span> can be given in the form: <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m},\]</span> for some <span class="math inline">\(m\geqslant 0\)</span> (this is the very definition of a polynomial). The expression <span class="math display">\[a_{0} + a_{1}x + a_{2}x^{2} + \dots + a_{m}x^{m}\]</span> is also the very definition of a linear combination of the monomials: <span class="math display">\[\mathscr{B} = \{1, x, x ^ 2, x ^ 3, \ldots\}.\]</span> Hence the infinite set <span class="math inline">\(\mathscr{B}\)</span> spans <span class="math inline">\(F[x]\)</span>. On the other hand, it is not possible to write any <span class="math inline">\(x ^ i\)</span> as a linear combination of polynomials belonging to <span class="math inline">\(\mathscr{B}\setminus \{x ^ i\} = \{1, x, \ldots, x ^  {i - 1}, x ^ {i + 1}, \ldots\}\)</span>, and so <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Thus <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(F[x]\)</span> and so <span class="math inline">\(\dim F[x] = |\mathscr{B}| = \infty\)</span>. (Even more precisely, the dimension of <span class="math inline">\(F[x]\)</span> equals the cardinality of the natural numbers <span class="math inline">\(\mathbb{N}\)</span>. This is usually denoted <span class="math inline">\(\aleph_0\)</span>, to distinguish it from, say, <span class="math inline">\(|\mathbb{R}| &gt; |\mathbb{N}|\)</span>.)</p>
 </div>
 <div class="omittedexamp">
 <p>We denote by <span class="math inline">\(\mathbb{R} ^ {\infty}\)</span> the vector space of all infinite vectors <span class="math display">\[\begin{pmatrix}
@@ -550,26 +567,149 @@
 <ol type="1">
 <li><p><span id="problem-02-01" label="problem-02-01"></span></p>
 <div class="question">
-<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(M_{n}(F)\)</span> denote the set of all <span class="math inline">\(n \times n\)</span> matrices over <span class="math inline">\(F\)</span>.</p>
+<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(M_{n}(F)\)</span> denote the set of all <span class="math inline">\(n \times  n\)</span> matrices over <span class="math inline">\(F\)</span>.</p>
 <ol type="1">
-<li><p>Show that <span class="math inline">\(M_{n}(F)\)</span> is a vector space over <span class="math inline">\(F\)</span> with respect to the usual addition of matrices and where scalar multiplication is given by <span class="math display">\[\alpha 
-  \begin{pmatrix}
-    x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1n} \\
-    x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n} \\
-    \vdots &amp; \vdots &amp; &amp; \vdots \\
-    x_{{n}1} &amp; x_{{n}2} &amp; \cdots &amp; x_{nn}
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    \alpha x_{11} &amp; \alpha x_{12} &amp; \cdots &amp; \alpha x_{1n} \\
-    \alpha x_{21} &amp; \alpha x_{22} &amp; \cdots &amp; \alpha x_{2n} \\
-    \alpha \vdots &amp; \vdots &amp; &amp; \vdots \\
-    \alpha x_{{n}1} &amp; \alpha x_{{n}2} &amp; \cdots &amp; \alpha x_{nn}
-  \end{pmatrix}\]</span> for <span class="math inline">\(\alpha \in F\)</span> and <span class="math inline">\([x_{ij}] \in M_{n}(F)\)</span>. What is the zero vector in this vector space?</p></li>
-<li><p>Let <span class="math inline">\(W\)</span> consist of the set of <strong><em>symmetric</em></strong> matrices in <span class="math inline">\(M_{n}(F)\)</span>. (A matrix <span class="math inline">\([x_{ij}]\)</span> is symmetric if <span class="math inline">\(x_{ij} =  x_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.) Show that <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(M_{n}(F)\)</span> is a vector space over <span class="math inline">\(F\)</span> with respect to the usual addition of matrices and where scalar multiplication is given by <span class="math display">\[\gamma
+          \begin{pmatrix}
+            \alpha_{11}   &amp; \alpha_{12}   &amp; \cdots &amp; \alpha_{1n} \\
+            \alpha_{21}   &amp; \alpha_{22}   &amp; \cdots &amp; \alpha_{2n} \\
+            \vdots        &amp; \vdots        &amp; \ddots &amp; \vdots \\
+            \alpha_{{n}1} &amp; \alpha_{{n}2} &amp; \cdots &amp; \alpha_{nn}
+          \end{pmatrix}
+          =
+          \begin{pmatrix}
+            \gamma \alpha_{11}   &amp; \gamma \alpha_{12}   &amp; \cdots &amp; \gamma \alpha_{1n} \\
+            \gamma \alpha_{21}   &amp; \gamma \alpha_{22}   &amp; \cdots &amp; \gamma \alpha_{2n} \\
+            \vdots               &amp; \vdots               &amp; \ddots &amp; \vdots \\
+            \gamma \alpha_{{n}1} &amp; \gamma \alpha_{{n}2} &amp; \cdots &amp; \gamma \alpha_{nn}
+          \end{pmatrix}\]</span> for <span class="math inline">\(\gamma \in F\)</span> and <span class="math inline">\([\alpha_{ij}] \in M_{n}(F)\)</span>. What is the zero vector in this vector space?</p></li>
+<li><p>Let <span class="math inline">\(W\)</span> consist of the set of <strong><em>symmetric</em></strong> matrices in <span class="math inline">\(M_{n}(F)\)</span>. (A matrix <span class="math inline">\([\alpha_{ij}]\)</span> is symmetric if <span class="math inline">\(\alpha_{ij} =  \alpha_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.) Show that <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
 <li><p>Fix a matrix <span class="math inline">\(A\)</span> in <span class="math inline">\(M_{n}(F)\)</span> and let <span class="math display">\[V = \{X \in M_{n}(F) : AX = XA\}.\]</span> Show that <span class="math inline">\(V\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
 <li><p>Let <span class="math inline">\(Z\)</span> be the set of matrices in <span class="math inline">\(M_{n}(F)\)</span> of zero determinant. If <span class="math inline">\(n &gt; 1\)</span>, show that <span class="math inline">\(Z\)</span> is not a subspace of <span class="math inline">\(M_{n}(F)\)</span>.</p></li>
 <li><p>Take <span class="math inline">\(F = \mathbb{R}\)</span> and let <span class="math inline">\(I\)</span> be the set of matrices <span class="math inline">\(B\)</span> in <span class="math inline">\(M_{n}(\mathbb{R})\)</span> satisfying <span class="math inline">\(B^{2} = B\)</span>. Show that <span class="math inline">\(I\)</span> is not a subspace of <span class="math inline">\(M_{n}(\mathbb{R})\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>We shall denote the <span class="math inline">\(n \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is <span class="math inline">\(\alpha_{ij}\)</span> (for <span class="math inline">\(1 \leqslant i,j \leqslant n\)</span>) by <span class="math inline">\([\alpha_{ij}]\)</span>.</p>
+<p>Addition of “vectors” is given by <span class="math display">\[[\alpha_{ij}] + [\beta_{ij}] = [\alpha_{ij}+\beta_{ij}]\]</span> for any <span class="math inline">\([\alpha_{ij}], [\beta_{ij}]\in M_n(F)\)</span>. Certainly <span class="math inline">\([\alpha_{ij}] + [\beta_{ij}]\)</span> is an <span class="math inline">\(n \times n\)</span> matrix with entries in <span class="math inline">\(F\)</span>, and so <span class="math inline">\([\alpha_{ij}] + [\beta_{ij}]\in M_n(F)\)</span>.</p>
+<p>Scalar multiplication is defined in the question.</p>
+<p>We verify the vector space axioms from <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#def-vspace">Definition 2.1.3</a>.</p>
+<ol type="1">
+<li><p><strong><span class="math inline">\(u + v = v + u\)</span> for all <span class="math inline">\(u,v \in V\)</span> (addition of vectors is commutative):</strong></p>
+<p>Since addition in <span class="math inline">\(F\)</span> is commutative (<span class="math inline">\(x+y = y+x\)</span> for all <span class="math inline">\(x,y \in F\)</span>), <span class="math display">\[[\alpha_{ij}] + [\beta_{ij}] = [\alpha_{ij}+\beta_{ij}] = [\beta_{ij}+\alpha_{ij}] = [\beta_{ij}] +
+        [\alpha_{ij}]\]</span> and so addition of “vectors” is associative in <span class="math inline">\(M_n(F)\)</span>.</p></li>
+<li><p><strong><span class="math inline">\((u + v) + w = u + (v + w)\)</span> for all <span class="math inline">\(u,v,w \in V\)</span> (addition of vectors is associative):</strong></p>
+<p>Since addition in the field <span class="math inline">\(F\)</span> is associative (<span class="math inline">\((x+y)+z = x+(y+z)\)</span> for all <span class="math inline">\(x,y,z \in F\)</span>), it follows that <span class="math display">\[\begin{aligned}
+        \bigl( [\alpha_{ij}] + [\beta_{ij}] \bigr) + [\gamma_{ij}] 
+        &amp; = [\alpha_{ij}+\beta_{ij}] + [\gamma_{ij}] \\
+        &amp; = [\alpha_{ij}+\beta_{ij}+\gamma_{ij}] \\
+        &amp; = [\alpha_{ij}] + [\beta_{ij}+\gamma_{ij}] \\
+        &amp; = [\alpha_{ij}] + \bigl( [\beta_{ij}] + [\gamma_{ij}] \bigr),
+      \end{aligned}\]</span> for all <span class="math inline">\([\alpha_{ij}], [\beta_{ij}], [\gamma_{ij}] \in M_n(F)\)</span>.</p></li>
+<li><p><strong>there exists a vector <span class="math inline">\(\vec{0}\)</span> in <span class="math inline">\(V\)</span> such that <span class="math inline">\(v + \vec{0} = v\)</span> for all <span class="math inline">\(v \in V\)</span> (additive identity, or zero, vector):</strong><br />
+The zero “vector” is <span class="math display">\[\vec{0} = \begin{pmatrix}
+          0      &amp; 0      &amp; \cdots &amp; 0 \\
+          0      &amp; 0      &amp; \cdots &amp; 0 \\
+          \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+          0      &amp; 0      &amp; \cdots &amp; 0
+        \end{pmatrix},\]</span> that is, the matrix all of whose entries equal <span class="math inline">\(0\in F\)</span>, because <span class="math display">\[[\alpha_{ij}] + \vec{0} = [\alpha_{ij}+0] = [\alpha_{ij}]\]</span> for any <span class="math inline">\([\alpha_{ij}]\in M_{n}(F)\)</span>.</p></li>
+<li><p><strong>for each <span class="math inline">\(v \in V\)</span>, there exists a vector <span class="math inline">\(-v\)</span> in <span class="math inline">\(V\)</span> such that <span class="math inline">\(v + (-v) = \vec{0}\)</span> (additive inverses):</strong><br />
+If <span class="math inline">\([\alpha_{ij}]\in M_{n}(F)\)</span>, then <span class="math display">\[[\alpha_{ij}] + [-\alpha_{ij}] = [\alpha_{ij}-\alpha_{ij}] = [0]_{ij} = \vec{0}.\]</span> and so <span class="math inline">\(-[\alpha_{ij}] = [-\alpha_{ij}]\)</span>.</p></li>
+<li><p><strong><span class="math inline">\(\gamma (u + v) = \gamma u + \gamma v\)</span> for all <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(\gamma \in F\)</span> (scalar multiplication distributes in vector sums):</strong><br />
+If <span class="math inline">\([\alpha_{ij}], [\beta_{ij}]\in M_n(F)\)</span> and <span class="math inline">\(\gamma\in F\)</span>, then <span class="math display">\[\begin{aligned}
+        \gamma \bigl( [\alpha_{ij}] + [\beta_{ij}] \bigr) 
+        &amp; = \gamma [\alpha_{ij} + \beta_{ij}] \\
+        &amp; = [ \gamma(\alpha_{ij} + \beta_{ij}) ] \\
+        &amp; = [ \gamma \alpha_{ij} + \gamma \beta_{ij} ] \\
+        &amp; = [ \gamma \alpha_{ij} ] + [ \gamma \beta_{ij} ] \\
+        &amp; = \gamma [\alpha_{ij}] + \gamma [\beta_{ij}].
+      \end{aligned}\]</span></p></li>
+<li><p><strong><span class="math inline">\((\gamma + \delta) v = \gamma v + \delta v\)</span> for all <span class="math inline">\(v \in V\)</span> and <span class="math inline">\(\gamma,\delta \in F\)</span> (vector multiplication distributes in scalar sums):</strong><br />
+If <span class="math inline">\([\alpha_{ij}]\in M_n(F)\)</span> and <span class="math inline">\(\gamma,\delta\in F\)</span>, then <span class="math display">\[(\gamma + \delta) [\alpha_{ij}] = [ (\gamma+\delta)\alpha_{ij} ] = [\gamma \alpha_{ij}
+        + \delta \alpha_{ij}] = [\gamma \alpha_{ij}] + [\delta \alpha_{ij}] = \gamma[\alpha_{ij}] +
+        \delta[\alpha_{ij}].\]</span></p></li>
+<li><p><strong><span class="math inline">\((\alpha \beta)v = \alpha (\beta v)\)</span> for all <span class="math inline">\(v \in V\)</span> and <span class="math inline">\(\alpha,\beta \in F\)</span> (scalar multiplication is associative):</strong><br />
+If <span class="math inline">\([\alpha_{ij}]\in M_n(F)\)</span> and <span class="math inline">\(\beta, \gamma\in F\)</span>, then <span class="math display">\[(\beta \gamma) [\alpha_{ij}] = [ (\beta\gamma)\alpha_{ij} ] = [ \beta(\gamma
+        \alpha_{ij}) ] = \beta [\gamma \alpha_{ij}] = \beta \bigl( \gamma[\alpha_{ij}] \bigr)\]</span> using the distributivity (<span class="math inline">\(\beta(\gamma + \delta) = \beta \gamma +  \beta \delta\)</span> for <span class="math inline">\(\beta,\gamma,\delta \in F\)</span>) and associativity of multiplication (<span class="math inline">\(\beta(\gamma \delta) = (\beta\gamma)\delta\)</span> for <span class="math inline">\(\beta,\gamma,\delta \in F\)</span>) in the field <span class="math inline">\(F\)</span></p></li>
+<li><p><strong><span class="math inline">\(1 v = v\)</span> for all <span class="math inline">\(v \in V\)</span> (multiplicative identity of the field is a scalar identity):</strong><br />
+If <span class="math inline">\([\alpha_{ij}]\in M_n(F)\)</span>, then <span class="math inline">\(1[\alpha_{ij}] = [1\alpha_{ij}] = [\alpha_{ij}]\)</span>.</p></li>
+</ol>
+<p>Hence <span class="math inline">\(M_{n}(F)\)</span> forms a vector space over <span class="math inline">\(F\)</span>. In the course of this verification, we checked the zero vector in <span class="math inline">\(M_{n}(F)\)</span> is the zero matrix <span class="math display">\[\vec{0} = \begin{pmatrix}
+      0      &amp; 0      &amp; \cdots &amp; 0 \\
+      0      &amp; 0      &amp; \cdots &amp; 0 \\
+      \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+      0      &amp; \cdots &amp; \cdots &amp; 0
+    \end{pmatrix}.\square\]</span></p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We verify the Subspace Criteria given in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-subspace-criteria">Theorem 2.2.3</a>:</p>
+<ol type="1">
+<li><p>Certainly the zero matrix is symmetric (all its entries are equal), and so it belongs to <span class="math inline">\(W\)</span> and <span class="math inline">\(W\)</span> is non-empty.</p></li>
+<li><p><strong>if <span class="math inline">\(u,v \in W\)</span>, then <span class="math inline">\(u+v \in W\)</span>:</strong> If <span class="math inline">\([\alpha_{ij}],[\beta_{ij}] \in W\)</span> and <span class="math inline">\(\gamma\)</span> is a scalar, then <span class="math display">\[[\alpha_{ij}] + [\beta_{ij}] = [\alpha_{ij}+\beta_{ij}].\]</span> Since <span class="math inline">\(\alpha_{ij}=\alpha_{ji}\)</span> and <span class="math inline">\(\beta_{ij}=\beta_{ji}\)</span>, it follows that <span class="math inline">\(\alpha_{ij}+\beta_{ij}  = \alpha_{ji}+\beta_{ji}\)</span> and so <span class="math inline">\([\alpha_{ij}+\beta_{ij}]\)</span> is symmetric. Thus <span class="math inline">\([\alpha_{ij}] +  [\beta_{ij}] \in W\)</span>.</p></li>
+<li><p><strong>if <span class="math inline">\(v \in W\)</span> and <span class="math inline">\(\gamma \in F\)</span>, then <span class="math inline">\(\gamma v \in W\)</span>:</strong> Similarly <span class="math display">\[\gamma[\alpha_{ij}] = [\gamma \alpha_{ij}]\]</span> and, as <span class="math inline">\(\gamma \alpha_{ij} = \gamma \alpha_{ji}\)</span>, we see <span class="math inline">\(\gamma[\alpha_{ij}] \in  W\)</span>.</p></li>
+</ol>
+<p>Hence <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We verify that <span class="math inline">\(V\)</span> is non-empty and the Subspace Criteria given in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-subspace-criteria">Theorem 2.2.3</a>.</p>
+<ol type="1">
+<li><p>By definition of matrix multiplication, <span class="math display">\[A\vec{0} = \vec{0} = \vec{0} A,\]</span> so that certainly <span class="math inline">\(\vec{0} \in V\)</span> and <span class="math inline">\(V\not=\varnothing\)</span>.</p></li>
+<li><p><strong>if <span class="math inline">\(X,Y \in V\)</span>, then <span class="math inline">\(X+Y \in V\)</span>:</strong> Let <span class="math inline">\(X,Y \in V\)</span>. Then <span class="math display">\[(X+Y)A = XA + YA = AX + AY = A(X+Y),\]</span> so <span class="math inline">\(X+Y \in V\)</span>.</p></li>
+<li><p><strong>if <span class="math inline">\(X \in V\)</span> and <span class="math inline">\(\alpha \in F\)</span>, then <span class="math inline">\(\alpha X \in V\)</span>:</strong> If <span class="math inline">\(x\in V\)</span> and <span class="math inline">\(\alpha\in F\)</span>, then <span class="math display">\[(\alpha X)A = \alpha XA = \alpha AX = A(\alpha X)\]</span> so <span class="math inline">\(\alpha X \in V\)</span>.</p></li>
+</ol>
+<p>Thus <span class="math inline">\(V\)</span> is a subspace of <span class="math inline">\(M_{n}(F)\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We must show that one of the subspace criteria fails.</p>
+<p>There are clearly matrices with determinant equal to <span class="math inline">\(0\)</span>, such as <span class="math inline">\(\vec{0}\)</span> for example. Hence <span class="math inline">\(Z\not= \varnothing\)</span>.</p>
+<p>Let <span class="math display">\[X = \begin{pmatrix}
+  1      &amp; 0      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+Y = \begin{pmatrix}
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 1      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; 1      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 1
+\end{pmatrix}.\]</span> Then <span class="math inline">\(X, Y\in Z\)</span> but <span class="math display">\[X+Y = 
+Y = \begin{pmatrix}
+  1      &amp; 0      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 1      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; 1      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; 0      &amp; \cdots &amp; 1
+\end{pmatrix}\]</span> the <span class="math inline">\(n \times n\)</span> identity matrix and <span class="math inline">\(\det(X+Y) = 1 \neq 0\)</span>. Hence the set <span class="math inline">\(Z\)</span> of matrices with zero determinant is not closed under vector addition, so <span class="math inline">\(Z\)</span> is not a subspace of <span class="math inline">\(M_{n}(F)\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Let <span class="math display">\[B = \begin{pmatrix}
+  1      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; \cdots &amp; 0
+\end{pmatrix} \in M_{n}(\mathbb{R}).\]</span> Then a straightforward matrix calculation shows <span class="math inline">\(B^{2} = B\)</span>, so <span class="math inline">\(B \in I\)</span>. Now <span class="math display">\[2B = \begin{pmatrix}
+  2      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; \cdots &amp; 0
+\end{pmatrix}\]</span> and <span class="math display">\[(2B)^{2} = \begin{pmatrix}
+  4      &amp; 0      &amp; \cdots &amp; 0 \\
+  0      &amp; 0      &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0      &amp; 0      &amp; \cdots &amp; 0
+\end{pmatrix} \neq 2B.\]</span> Hence <span class="math inline">\(2B \not\in I\)</span>, so <span class="math inline">\(I\)</span> is not closed under scalar multiplication. (Neither is it closed under addition, since <span class="math inline">\(B+B = 2B \not\in I\)</span>.) Hence <span class="math inline">\(I\)</span> is not a subspace of <span class="math inline">\(M_{n}(F)\)</span>.◻</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-02" label="problem-02-02"></span></p>
@@ -577,12 +717,48 @@
 <p>Consider the vector space <span class="math inline">\(\mathbb{R}[x]\)</span> of polynomials over the real numbers. Determine whether the following subsets are subspaces of <span class="math inline">\(\mathbb{R}[x]\)</span>:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\{f(x) : f(1) = 0\}\)</span>,</p></li>
-<li><p><span class="math inline">\(\{f(x):\text{the constant term of~$f(x)$ is~$0$}\}\)</span>,</p></li>
-<li><p><span class="math inline">\(\{f(x) : \text{$f(x)$~is a polynomial of degree
-      precisely~$3$}\}\)</span>,</p></li>
-<li><p><span class="math inline">\(\{f(x) :\text{$f(x)$~is a polynomial of degree at
-      most~$3$}\}\)</span>,</p></li>
-<li><p><span class="math inline">\(\{f(x): \text{$f(x)$~is a polynomial of even degree}\}\)</span>.</p></li>
+<li><p><span class="math inline">\(\{f(x):\text{the constant term of $f(x)$ is $0$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x) : \text{$f(x)$ is a polynomial of degree
+      precisely $3$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x) :\text{$f(x)$ is a polynomial of degree at
+      most $3$}\}\)</span>,</p></li>
+<li><p><span class="math inline">\(\{f(x): \text{$f(x)$ is a polynomial of even degree}\}\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p><strong>Subspace!</strong> Let <span class="math inline">\(W = \{\,f(x)\mid f(1) = 0\,\} \subseteq \mathbb{R}[x]\)</span>. Note that the zero polynomial <span class="math inline">\(z(x) = 0\)</span> satisfies <span class="math inline">\(z(1) = 0\)</span>, so <span class="math inline">\(W \neq \varnothing\)</span>. Suppose <span class="math inline">\(f(x),g(x) \in W\)</span>. Then <span class="math display">\[(f+g)(1) = f(1) + g(1) = 0 + 0 = 0,\]</span> so <span class="math inline">\(f(x)+g(x) \in W\)</span>. Similarly <span class="math display">\[(\alpha f)(1) = \alpha \cdot f(1) = \alpha \cdot 0 = 0,\]</span> so <span class="math inline">\(\alpha f(x) \in W\)</span> for any <span class="math inline">\(\alpha \in \mathbb{R}\)</span>. Hence <span class="math inline">\(W\)</span> is closed under addition and scalar multiplication, so is a subspace of <span class="math inline">\(\mathbb{R}[x]\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>Subspace!</strong> This could be completed by the same method as part (a), since a polynomial <span class="math inline">\(f(x)\)</span> has zero constant term if and only if <span class="math inline">\(f(0) = 0\)</span>. An alternative is presented below.</p>
+<p>Let <span class="math display">\[W = \{f(x) | f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \dots
+      + a_{1}x, a_{1},\dots,a_{n} \in \mathbb{R}\}
+\subseteq \mathbb{R}[x].\]</span> Note that <span class="math inline">\(0 = 0x\)</span> has this form, so <span class="math inline">\(W \neq \varnothing\)</span>. Now let <span class="math inline">\(f(x),g(x) \in W\)</span>, say <span class="math display">\[f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \dots + a_{1}x\quad
+\text{and} \quad g(x) = b_{n}x^{n} + b_{n-1}x^{n-1} + \dots + b_{1}x\]</span> (where by padding with <span class="math inline">\(0\)</span> as the coefficient we can assume <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> have the same length). Then <span class="math display">\[f(x) + g(x) = (a_{n}+b_{n})x^{n} + (a_{n-1}+b_{n-1})x^{n-1} + \dots +
+(a_{1}+b_{1})x,\]</span> which has zero constant term, so <span class="math inline">\(f(x) + g(x) \in W\)</span>. Similarly, if <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, then <span class="math display">\[\alpha f(x) = (\alpha a_{n}) x^{n} + (\alpha a_{n-1}) x^{n-1} + \dots
++ (\alpha a_{1}) x\]</span> has zero constant term, so <span class="math inline">\(\alpha f(x) \in W\)</span>. Hence <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(\mathbb{R}[x]\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>Not a subspace!</strong> Let <span class="math display">\[W = \{ \, f(x) \mid \text{$f(x) = a_{3}x^{3} + a_{2}x^{2} + a_{1}x +
+      a_{0}$}\  \text{for some $a_{0},a_{1},a_{2},a_{3} \in \mathbb{R}$ with $a_{3} \neq 0$}
+  \, \},\]</span> the set of polynomials of degree precisely <span class="math inline">\(3\)</span>. Then the zero polynomial does not belong to <span class="math inline">\(W\)</span>, so <span class="math inline">\(W\)</span> is not a subspace. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>Subspace!</strong> Let <span class="math display">\[W = \{\,f(x)\mid\text{$f(x) = a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}$
+    for some $a_{0},a_{1},a_{2},a_{3} \in \mathbb{R}$}\,\},\]</span> the set of polynomials of degree at most <span class="math inline">\(3\)</span>. Then <span class="math inline">\(W\)</span> is non-empty, e.g., <span class="math inline">\(x^{3} + 5x \in W\)</span>. If <span class="math inline">\(f(x),g(x) \in W\)</span>, say <span class="math display">\[f(x) = a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0} \qquad \text{and}
+    \qquad g(x) = b_{3}x^{3} + b_{2}x^{2} + b_{1}x + b_{0},\]</span> then <span class="math display">\[f(x) + g(x) = (a_{3}+b_{3})x^{3} + (a_{2}+b_{2})x^{2} + (a_{1}+b_{1})x
+    + (a_{0}+b_{0}) \in W\]</span> and <span class="math display">\[\alpha f(x) = (\alpha a_{3})x^{3} + (\alpha a_{2})x^{2} + (\alpha
+    a_{1})x + (\alpha a_{0}) \in W\]</span> for any <span class="math inline">\(\alpha \in \mathbb{R}\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>Not a subspace!</strong> Let <span class="math inline">\(W = \{\,f(x)\mid\text{$f(x)$ has even degree}\,\}\)</span>. Then <span class="math display">\[f(x) = x^{2} + x + 1 \qquad \text{and} \qquad g(x) = -x^{2}\]</span> both belong to <span class="math inline">\(W\)</span>. However, <span class="math display">\[f(x) + g(x) = x+1 \not\in W\]</span> since <span class="math inline">\(f(x)+g(x)\)</span> has degree <span class="math inline">\(1\)</span>. Thus <span class="math inline">\(W\)</span> is not closed under addition, so is not a subspace.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-03" label="problem-02-03"></span></p>
@@ -593,6 +769,19 @@
 <li><p>Give a simple description of <span class="math inline">\(W_{1} \cap W_{2}\)</span>.</p></li>
 <li><p>Show that every element of <span class="math inline">\(\mathbb{R}[x]\)</span> can be written in the form <span class="math display">\[f(x) =
   g_{1}(x) + g_{2}(x)\]</span> where <span class="math inline">\(g_{1}(x) \in W_{1}\)</span> and <span class="math inline">\(g_{2}(x) \in  W_{2}\)</span>. Is this decomposition unique?</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>A simple description of <span class="math inline">\(W_1\cap W_2\)</span> is <span class="math inline">\(W_{1} \cap W_{2} = \{\,f(x) \in \mathbb{R}[x]\mid f(1) = f(2) = 0\,\},\)</span> the set of polynomials vanishing at <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Note <span class="math display">\[(x-1) - (x-2) = 1.\]</span> Hence, if <span class="math inline">\(f(x)\)</span> is any polynomial over <span class="math inline">\(\mathbb{R}\)</span>, then <span class="math display">\[f(x) = (x-1)f(x) - (x-2)f(x).\]</span> Put <span class="math inline">\(g_{1}(x) = (x-1)f(x)\)</span> and <span class="math inline">\(g_{2}(x) = -(x-2)f(x)\)</span>. Then <span class="math display">\[g_{1}(1) = (1-1)f(1) = 0\]</span> and similarly <span class="math inline">\(g_{2}(2) = 0\)</span>. Hence <span class="math inline">\(g_{1}(x) \in W_{1}\)</span> and <span class="math inline">\(g_{2}(x) \in W_{2}\)</span>, and we have indeed written <span class="math inline">\(f(x) = g_{1}(x) +  g_{2}(x)\)</span> in the required form.</p>
+<p>This decomposition is not unique, for example <span class="math display">\[h(x) = (x-1)(x-2) = x^{2}-3x+2\]</span> lies in both <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span>, so we can produce <span class="math display">\[0 = 0 + 0 = h(x) + (-h(x))\]</span> to give two different decompositions for <span class="math inline">\(0\)</span>. Equally, similar decompositions can be produced from a general one <span class="math inline">\(f(x) = g_{1}(x) +  g_{2}(x)\)</span> by adding a multiple of <span class="math inline">\(h(x)\)</span> to <span class="math inline">\(g_{1}(x)\)</span> and subtracting the same multiple from <span class="math inline">\(g_{2}(x)\)</span>.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-04" label="problem-02-04"></span></p>
@@ -623,6 +812,70 @@
         \end{pmatrix} \right\}\]</span> is a spanning set for <span class="math inline">\(W\)</span>. Is <span class="math inline">\(\mathcal{A}\)</span> linearly independent?</p></li>
 <li><p>Determine the dimension of <span class="math inline">\(W\)</span> and hence whether or not <span class="math inline">\(W =  \mathbb{R}^{3}\)</span>.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>We verify the Subspace Criteria given in <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-subspace-criteria">Theorem 2.2.3</a>.</p>
+<ol type="1">
+<li><p>Certainly <span class="math inline">\(W\)</span> is non-empty.</p></li>
+<li><p><strong>if <span class="math inline">\(\vec{v}_{1},\vec{v}_{2} \in W\)</span>, then <span class="math inline">\(\vec{v}_1 +  \vec{v}_2\in W\)</span>:</strong> If <span class="math inline">\(\vec{v}_{1},\vec{v}_{2} \in W\)</span>, then <span class="math display">\[\vec{v}_{1} =
+          \begin{pmatrix}x_{1}+y_{1}-z_{1}\\y_{1}-x_{1}+z_{1}\\2x_{1}\end{pmatrix}
+          \qquad \text{and} \qquad
+          \vec{v}_{2} =
+          \begin{pmatrix}x_{2}+y_{2}-z_{2}\\y_{2}-x_{2}+z_{2}\\2x_{2}\end{pmatrix}\]</span> for some <span class="math inline">\(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2} \in \mathbb{R}\)</span>. Hence <span class="math display">\[\vec{v}_{1} + \vec{v}_{2} = \begin{pmatrix}(x_{1}+x_{2}) + (y_{1}+y_{2})
+          -
+          (z_{1}+z_{2}) \\ (y_{1}+y_{2}) - (x_{1}+x_{2}) + (z_{1}+z_{2}) \\
+          2(x_{1}+x_{2}) \end{pmatrix} = \begin{pmatrix}x&#39;+y&#39;-z&#39;\\y&#39;-x&#39;+z&#39;\\2x&#39;\end{pmatrix}\]</span> where <span class="math inline">\(x&#39; = x_{1}+x_{2}\)</span>,  <span class="math inline">\(y&#39; = y_{1}+y_{2}\)</span> and <span class="math inline">\(z&#39; =  z_{1}+z_{2}\)</span>. Thus, since <span class="math inline">\(\vec{v}_{1}+\vec{v}_{2}\)</span> has the correct form, <span class="math inline">\(\vec{v}_{1}+\vec{v}_{2} \in W\)</span>.</p></li>
+<li><p><strong>if <span class="math inline">\(\vec{v}_1 \in W\)</span> and <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, then <span class="math inline">\(\alpha  \vec{v_1} \in W\)</span>:</strong> Similarly if <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, then <span class="math display">\[\alpha \vec{v}_{1} = \begin{pmatrix}(\alpha x_{1}) + (\alpha y_{1}) -
+          (\alpha
+          z_{1})\\ (\alpha y_{1}) - (\alpha x_{1}) + (\alpha z_{1})\\ 2(\alpha
+          x_{1}) \end{pmatrix} = \begin{pmatrix}x&#39;&#39;+y&#39;&#39;-z&#39;&#39;\\y&#39;&#39;-x&#39;&#39;+z&#39;&#39;\\2x&#39;&#39;\end{pmatrix}\]</span></p></li>
+</ol>
+<p>Hence <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^{3}\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</p>
+<p>If <span class="math inline">\(\vec{v} \in W\)</span>, say <span class="math display">\[\vec{v} = \begin{pmatrix}x+y-z\\y-x+z\\2x\end{pmatrix},\]</span> then <span class="math display">\[\vec{v} = x\begin{pmatrix}1\\-1\\2\end{pmatrix} + y\begin{pmatrix}1\\1\\0\end{pmatrix} + z\begin{pmatrix}-1\\1\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+W &amp;= \left\{ x\begin{pmatrix}1\\-1\\2\end{pmatrix} + y\begin{pmatrix}1\\1\\0\end{pmatrix} +
+  z\begin{pmatrix}-1\\1\\0\end{pmatrix} \biggm| x,y,z \in \mathbb{R}\right\} \\
+&amp;= \operatorname{Span} \left( \begin{pmatrix}1\\-1\\2\end{pmatrix},
+  \begin{pmatrix}1\\1\\0\end{pmatrix}, \begin{pmatrix}-1\\1\\0\end{pmatrix} \right) = \operatorname{Span}(\mathscr{A}).\end{aligned}\]</span> Hence <span class="math inline">\(\mathscr{A}\)</span> is a spanning set for <span class="math inline">\(W\)</span>.</p>
+<p>Suppose <span class="math display">\[\alpha \begin{pmatrix}1\\-1\\2\end{pmatrix} + \beta \begin{pmatrix}1\\1\\0\end{pmatrix} + \gamma
+\begin{pmatrix}-1\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix},\]</span> that is,</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\alpha\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({}+\beta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}-\gamma\)</span></td>
+<td style="text-align: left;"><span class="math inline">\({}=0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(-\alpha\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({}+\beta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}+\gamma\)</span></td>
+<td style="text-align: left;"><span class="math inline">\({} = 0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(2\alpha\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><span class="math inline">\({} = 0\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Hence <span class="math inline">\(\alpha = 0\)</span> and adding the first two equations gives <span class="math inline">\(2\beta = 0\)</span>, so <span class="math inline">\(\beta = 0\)</span>. Finally this yields <span class="math inline">\(\gamma = 0\)</span>. This shows that <span class="math inline">\(\mathscr{A}\)</span> is an linearly independent set. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Since <span class="math inline">\(\mathscr{A}\)</span> is a linearly independent set and <span class="math inline">\(\dim W \leqslant\dim \mathbb{R}^ 3 =  3\)</span>, it follows that <span class="math display">\[\dim W = |\mathscr{A}| = 3.\]</span> Since <span class="math inline">\(W\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^{3}\)</span> with <span class="math inline">\(\dim W = \dim \mathbb{R}^{3} = 3\)</span>, we deduce <span class="math inline">\(W = \mathbb{R}^{3}\)</span>.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-02-05" label="problem-02-05"></span></p>
 <div class="question">
@@ -630,6 +883,26 @@
 <ol type="1">
 <li><p>If <span class="math inline">\(\mathscr{A}_{1}\)</span> and <span class="math inline">\(\mathscr{A}_{2}\)</span> span <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span>, respectively, show that <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> is a spanning set for <span class="math inline">\(W_{1} + W_{2}\)</span>.</p></li>
 <li><p>If <span class="math inline">\(\mathscr{A}_{1}\)</span> and <span class="math inline">\(\mathscr{A}_2\)</span> are bases for <span class="math inline">\(W_1\)</span> and <span class="math inline">\(W_2\)</span>, respectively, is <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> necesssarily a basis for <span class="math inline">\(W_{1}+W_{2}\)</span>? Provide a counterexample if not.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>Let <span class="math inline">\(\mathscr{A}_{1} = \{ v_{1},v_{2},\dots,v_{m} \}\)</span> and <span class="math inline">\(\mathscr{A}_{2} = \{  w_{1},w_{2},\dots,w_{n} \}\)</span>. If <span class="math inline">\(v \in W_{1}+W_{2}\)</span>, then <span class="math inline">\(v = x+y\)</span> where <span class="math inline">\(x \in W_{1}\)</span> and <span class="math inline">\(y \in W_{2}\)</span>. As <span class="math inline">\(\mathscr{A}_{1}\)</span> spans <span class="math inline">\(W_{1}\)</span>, there exist scalars <span class="math inline">\(\alpha_{1}\)</span>, <span class="math inline">\(\alpha_{2}\)</span>, …, <span class="math inline">\(\alpha_{m}\)</span> such that <span class="math display">\[x = \sum_{i=1}^{m} \alpha_{i} v_{i}.\]</span> Similarly there exist scalars <span class="math inline">\(\beta_{1}\)</span>, <span class="math inline">\(\beta_{2}\)</span>, …, <span class="math inline">\(\beta_{n}\)</span> such that <span class="math display">\[y = \sum_{j=1}^{n} \beta_{j} w_{j}.\]</span> Consequently, <span class="math display">\[v = x+y = \alpha_{1} v_{1} + \dots + \alpha_{m} v_{m} + \beta_{1}
+  w_{1} + \dots + \beta_{n} w_{n}.\]</span> We conclude that every vector in <span class="math inline">\(W_{1}+W_{2}\)</span> can be expressed as a linear combination of the vectors <span class="math inline">\(v_{1}\)</span>, <span class="math inline">\(v_{2}\)</span>, …, <span class="math inline">\(v_{m}\)</span>, <span class="math inline">\(w_{1}\)</span>, <span class="math inline">\(w_{2}\)</span>, …, <span class="math inline">\(w_{n}\)</span>, each of which lies in the sum <span class="math inline">\(W_{1}+W_{2}\)</span> (since <span class="math inline">\(v_{i} = v_{i} + \vec{0}\)</span> and <span class="math inline">\(w_{j} = \vec{0} +  w_{j}\)</span>). Consequently, <span class="math display">\[\mathscr{A}_{1} \cup \mathscr{A}_{2} \subseteq W_{1} + W_{2} \subseteq \operatorname{Span}(\mathscr{A}_{1} \cup \mathscr{A}_{2})\]</span> (where, of course, <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2} = \{  v_{1},v_{2},\dots,v_{m},w_{1},w_{2},\dots,w_{n} \}\)</span>). Hence <span class="math display">\[W_{1} + W_{2} = \operatorname{Span}(\mathscr{A}_{1} \cup \mathscr{A}_{2})\]</span> so the union <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> is a spanning set for <span class="math inline">\(W_{1}+W_{2}\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>In general, <span class="math inline">\(\mathscr{A}_{1} \cup \mathscr{A}_{2}\)</span> is not a basis for <span class="math inline">\(W_{1}+W_{2}\)</span> as the following example shows. Take <span class="math inline">\(V = \mathbb{R}^{3}\)</span>, <span class="math display">\[W_{1} = \operatorname{Span} \left( \begin{pmatrix}1\\0\\0\end{pmatrix},
+  \begin{pmatrix}0\\1\\0\end{pmatrix} \right) = \left\{ \begin{pmatrix}x\\y\\0\end{pmatrix} \biggm|
+  x,y \in \mathbb{R}\right\}\]</span> and <span class="math display">\[W_{2} = \operatorname{Span} \left( \begin{pmatrix}1\\1\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\end{pmatrix} \right) = \left\{ \begin{pmatrix}x\\x\\z\end{pmatrix} \biggm|
+  x,z \in \mathbb{R}\right\}.\]</span> Then <span class="math inline">\(W_{1}\)</span> and <span class="math inline">\(W_{2}\)</span> are <span class="math inline">\(2\)</span>-dimensional subspaces with bases <span class="math display">\[\mathscr{A}_{1} = \left\{ \begin{pmatrix}1\\0\\0\end{pmatrix} , \begin{pmatrix}0\\1\\0\end{pmatrix} \right\}
+  \qquad \text{and} \qquad \mathscr{A}_{2} = \left\{ \begin{pmatrix}1\\1\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\end{pmatrix} \right\} ,\]</span> respectively. We have shown <span class="math display">\[\mathscr{A}_{1} \cup \mathscr{A}_{2} = \left\{ \begin{pmatrix}1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\end{pmatrix}, \begin{pmatrix}1\\1\\0\end{pmatrix} \right\}\]</span> is a spanning set for <span class="math inline">\(W_{1}+W_{2}\)</span>. It is not a basis for <span class="math inline">\(W_{1}+W_{2}\)</span> since it is not linearly independent. As <span class="math inline">\(\dim V =  3\)</span>, the largest possible size for a linearly independent set is <span class="math inline">\(3\)</span> and, of course, <span class="math inline">\(|\mathscr{A}_{1} \cup \mathscr{A}_{2}| = 4\)</span>.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-06" label="problem-02-06"></span></p>
@@ -668,6 +941,405 @@
 <li><p><span class="math inline">\(\dim U + W\)</span></p></li>
 </ol>
 <p>[Hint: Determine whether <span class="math inline">\(\{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \}\)</span> is linearly independent. If not, pass to a subset which also spans <span class="math inline">\(U\)</span>. Similarly, for <span class="math inline">\(W\)</span> and <span class="math inline">\(U+W\)</span>, making use of the previous question to provide spanning set for the sum.]</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<p>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</p>
+<ol type="1">
+<li><p>Let <span class="math display">\[\mathscr{A}= \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \} = \left\{ \begin{pmatrix}2\\1\\0\\-1\end{pmatrix},
+  \begin{pmatrix}4\\8\\-4\\-3\end{pmatrix}, \begin{pmatrix}1\\-3\\2\\0\end{pmatrix},
+  \begin{pmatrix}1\\10\\-6\\-2\end{pmatrix} \right\}.\]</span> We first determine whether <span class="math inline">\(\mathscr{A}\)</span> is linearly independent. Solve <span class="math display">\[\alpha \begin{pmatrix}2\\1\\0\\-1\end{pmatrix} + \beta \begin{pmatrix}4\\8\\-4\\-3\end{pmatrix} + \gamma
+\begin{pmatrix}1\\-3\\2\\0\end{pmatrix} + \delta \begin{pmatrix}1\\10\\-6\\-2\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\\0\end{pmatrix};\]</span> i.e., <span class="math display">\[\begin{pmatrix}
+2 &amp; 4 &amp; 1 &amp; 1 \\
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+-1 &amp; -3 &amp; 0 &amp; -2
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\\\delta\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\\0\end{pmatrix}.\]</span> This is a sufficiently complicated collection of simultaneous equations that we are best employing Gaussian elimination to solve them. We successively apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c} \begin{matrix}
+2 &amp; 4 &amp; 1 &amp; 1 \\
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+-1 &amp; -3 &amp; 0 &amp; -2
+\end{matrix} &amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix} 
+\end{array} \right)
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+2 &amp; 4 &amp; 1 &amp; 1 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+-1 &amp; -3 &amp; 0 &amp; -2 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\text{(swap $r_{1} \leftrightarrow r_{2}$)} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; -12 &amp; 7 &amp; -19 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+0 &amp; 5 &amp; -3 &amp; 8 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{}\mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{}\mapsto r_{4} + r_{1})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; -12 &amp; 7 &amp; -19 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+0 &amp; 1 &amp; -1 &amp; 2 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp; (r_{4} \mapsto r_{4} + r_{3}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; -4 &amp; 2 &amp; -6 \\
+0 &amp; -12 &amp; 7 &amp; -19 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp; (r_{2} \leftrightarrow r_{4}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; 0 &amp; 2 &amp; -2 \\
+0 &amp; 0 &amp; 5 &amp; -5 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3} + 4r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} + 12r_{2})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 5 &amp; -5 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp; {\textstyle(r_{3} \mapsto -\frac{1}{2}r_{3})} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow
+\left( \begin{array}{c|c} \begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 10 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 0 &amp; 0 \end{matrix}
+&amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp; (r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}\]</span> Hence, the original equation is equivalent to the following system of equations: <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp;{} +8\beta &amp;{} - 3\gamma &amp; {}+10\delta &amp;{} = 0 \\
+&amp;\beta &amp;{} - \gamma &amp;{} + 2\delta &amp;{} = 0 \\
+&amp; &amp; \gamma &amp; {} - \delta &amp; {} = 0
+\end{array}\]</span> This has non-zero solutions. In particular, taking <span class="math inline">\(\delta = 1\)</span> gives successively <span class="math inline">\(\gamma = 1\)</span>,  <span class="math inline">\(\beta = -1\)</span> and <span class="math inline">\(\alpha = 1\)</span>. Thus <span class="math display">\[\vec{v}_{1} - \vec{v}_{2} + \vec{v}_{3} + \vec{v}_{4} = \vec{0}\]</span> so we deduce that <span class="math inline">\(\mathscr{A}= \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \}\)</span> is linearly dependent and, moreover, <span class="math inline">\(\vec{v}_{4} = -\vec{v}_{1} + \vec{v}_{2} - \vec{v}_{3} \in \operatorname{Span}(\vec{v}_{1},\vec{v}_{2},\vec{v}_{3})\)</span>. It follow that <span class="math inline">\(\mathscr{A}&#39; = \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3} \}\)</span> also spans <span class="math inline">\(U\)</span>.</p>
+<p>Let us now determine if <span class="math inline">\(\mathscr{A}&#39;\)</span> is linearly independent. We solve <span class="math display">\[\alpha \begin{pmatrix}2\\1\\0\\-1\end{pmatrix} + \beta \begin{pmatrix}4\\8\\-4\\-3\end{pmatrix} + \gamma
+\begin{pmatrix}1\\-3\\2\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix};
+\label{eq:I.Q6b}\]</span> that is, <span class="math display">\[\begin{pmatrix}
+2 &amp; 4 &amp; 1 \\
+1 &amp; 8 &amp; -3 \\
+0 &amp; -4 &amp; 2 \\
+-1 &amp; -3 &amp; 0
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.\]</span> Consequently we apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+2 &amp; 4 &amp; 1 \\
+1 &amp; 8 &amp; -3 \\
+0 &amp; -4 &amp; 2 \\
+-1 &amp; -3 &amp; 0
+\end{matrix} &amp; \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+2 &amp; 4 &amp; 1 \\
+0 &amp; -4 &amp; 2 \\
+-1 &amp; -3 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{1} \leftrightarrow r_{2}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; -12 &amp; 7 \\
+0 &amp; -4 &amp; 2 \\
+0 &amp; 5 &amp; -3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{}\mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{}\mapsto r_{4} + r_{1}) \end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; -12 &amp; 7 \\
+0 &amp; -4 &amp; 2 \\
+0 &amp; 1 &amp; -1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{4} \mapsto r_{4}+r_{3}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; 1 &amp; -1 \\
+0 &amp; -4 &amp; 2 \\
+0 &amp; -12 &amp; 7
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{2} \leftrightarrow r_{4}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; -2 \\
+0 &amp; 0 &amp; -5
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3} + 4r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} + 12r_{2})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; -5
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{3} \mapsto \textstyle -\frac{1}{2}r_{3}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 \\
+0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}\]</span> Hence, the original equation is equivalent to the system of equations <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+\alpha &amp;{} + 8\beta &amp;{} - 3\gamma &amp;{} = 0 \\
+&amp;\beta &amp;{} -\gamma &amp;{} = 0 \\
+&amp; &amp; \gamma &amp;{} = 0
+\end{array}\]</span> and we successively deduce <span class="math inline">\(\gamma = 0\)</span>,  <span class="math inline">\(\beta = 0\)</span> and <span class="math inline">\(\alpha = 0\)</span>. Therefore <span class="math inline">\(\mathscr{A}&#39;\)</span> is linearly independent, so that <span class="math inline">\(\dim U = 3\)</span> as <span class="math inline">\(\mathscr{A}&#39;\)</span> is a basis for <span class="math inline">\(U\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>For <span class="math inline">\(W\)</span>, we apply the same process to <span class="math display">\[\mathscr{B}= \{ \vec{v}_{4},\vec{v}_{5},\vec{v}_{6} \} = \left\{
+  \begin{pmatrix}1\\10\\-6\\-2\end{pmatrix}, \begin{pmatrix}-2\\0\\6\\1\end{pmatrix},
+  \begin{pmatrix}3\\-1\\2\\4\end{pmatrix} \right\}.\]</span> We solve <span class="math display">\[\alpha \begin{pmatrix}1\\10\\-6\\-2\end{pmatrix} + \beta \begin{pmatrix}-2\\0\\6\\1\end{pmatrix} + \gamma
+\begin{pmatrix}3\\-1\\2\\4\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}
+\label{eq:I.Q6c}\]</span> to determine whether <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; -2 &amp; 3 \\
+10 &amp; 0 &amp; -1 \\
+-6 &amp; 6 &amp; 2 \\
+-2 &amp; 1 &amp; 4
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; -2 &amp; 3 \\
+0 &amp; 20 &amp; -31 \\
+0 &amp; -6 &amp; 20 \\
+0 &amp; -3 &amp; 10
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{} \mapsto r_{2} - 10r_{1}, \\
+r_{3} &amp;{} \mapsto r_{3} + 6r_{1}, \\
+r_{4} &amp;{} \mapsto r_{4} + 2r_{1})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; -2 &amp; 3 \\
+0 &amp; 1 &amp; -\frac{31}{20} \\
+0 &amp; -6 &amp; 20 \\
+0 &amp; -3 &amp; 10
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{2} \mapsto \textstyle\frac{1}{20}r_{2}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; -2 &amp; 3 \\
+0 &amp; 1 &amp; -\frac{31}{20} \\
+0 &amp; 0 &amp; \frac{107}{10} \\
+0 &amp; 0 &amp; \frac{107}{20}
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3}+6r_{2}, \\
+r_{4} &amp;{} \mapsto r_{4} + 3r_{2})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; -2 &amp; 3 \\
+0 &amp; 1 &amp; -\frac{31}{20} \\
+0 &amp; 0 &amp; \frac{107}{10} \\
+0 &amp; 0 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{4} \mapsto r_{4} - \textstyle \frac{1}{2} r_{3})\end{aligned}\]</span> Hence the original equation is equivalent to <span class="math display">\[\begin{array}{r@{.}r@{}r@{}l}
+\alpha &amp;{} - 2\beta &amp;{} + 3\gamma &amp;{}=0 \\[3pt]
+&amp;\beta &amp;{} - \frac{31}{20}\gamma &amp;{} = 0 \\[5pt]
+&amp; &amp; \frac{107}{10}\gamma &amp;{} = 0,
+\end{array}\]</span> and we deduce <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>. Hence <span class="math inline">\(\mathscr{B}\)</span> is linearly independent and so is a basis for <span class="math inline">\(W = \operatorname{Span}(\mathscr{B})\)</span>. We conclude that <span class="math inline">\(\dim W = 3\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We know <span class="math inline">\(\mathscr{A}&#39;\)</span> and <span class="math inline">\(\mathscr{B}\)</span> are spanning sets for <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively, so by the previous question, <span class="math display">\[\mathscr{A}&#39; \cup \mathscr{B}= \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4},\vec{v}_{5},\vec{v}_{6} \}\]</span> is a spanning set for <span class="math inline">\(U+W\)</span>. However, it is clearly not a basis since the maximum size for a linearly independent subset of <span class="math inline">\(\mathbb{R}^{4}\)</span> is <span class="math inline">\(4\)</span>. So to determine a basis for <span class="math inline">\(U+W\)</span> we shall attempt to add the vectors of <span class="math inline">\(\mathscr{B}\)</span>, one-by-one, to <span class="math inline">\(\mathscr{A}&#39;\)</span> and check for linear independence.</p>
+<p>As a first step, we have already proved that <span class="math inline">\(\mathscr{A}&#39; \cup \{ \vec{v}_{4} \}\)</span> is linearly dependent and that <span class="math inline">\(\vec{v}_{4}\)</span> is a linear combination of the vectors in <span class="math inline">\(\mathscr{A}&#39;\)</span>. Therefore <span class="math display">\[\operatorname{Span}(\vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4}) = \operatorname{Span}(\vec{v}_{1},\vec{v}_{2},\vec{v}_{3}) = \operatorname{Span}(\mathscr{A}&#39;).\]</span></p>
+<p>Let us move on to <span class="math inline">\(\mathscr{A}&#39; \cup \{ \vec{v}_{5} \} = \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{5} \}\)</span>. We solve <span class="math display">\[\alpha \begin{pmatrix}2\\1\\0\\-1\end{pmatrix} + \beta \begin{pmatrix}4\\8\\-4\\-3\end{pmatrix} + \gamma
+\begin{pmatrix}1\\-3\\2\\0\end{pmatrix} + \delta \begin{pmatrix}-2\\0\\6\\1\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\\0\end{pmatrix}
+\label{eq:I.Q6d}\]</span> and so we perform the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+2 &amp; 4 &amp; 1 &amp; -2 \\
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; -4 &amp; 2 &amp; 6 \\
+-1 &amp; -3 &amp; 0 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+2 &amp; 4 &amp; 1 &amp; -2 \\
+0 &amp; -4 &amp; 2 &amp; 6 \\
+-1 &amp; -3 &amp; 0 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{1} \leftrightarrow r_{2}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; -12 &amp; 7 &amp; -2 \\
+0 &amp; -4 &amp; 2 &amp; 6 \\
+0 &amp; 5 &amp; -3 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{} \mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} + r_{1})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; -12 &amp; 7 &amp; -2 \\
+0 &amp; -4 &amp; 2 &amp; 6 \\
+0 &amp; 1 &amp; -1 &amp; 7
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{4} \mapsto r_{4} + r_{3}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; 1 &amp; -1 &amp; 7 \\
+0 &amp; -4 &amp; 2 &amp; 6 \\
+0 &amp; -12 &amp; 7 &amp; -2
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{2} \leftrightarrow r_{4}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; 1 &amp; -1 &amp; 7 \\
+0 &amp; 0 &amp; -2 &amp; 34 \\
+0 &amp; 0 &amp; -5 &amp; 82
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3} + 4r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} + 12r_{2})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; 1 &amp; -1 &amp; 7 \\
+0 &amp; 0 &amp; 1 &amp; -17 \\
+0 &amp; 0 &amp; -5 &amp; 82
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{3} \mapsto \textstyle -\frac{1}{2}r_{3}) \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 8 &amp; -3 &amp; 0 \\
+0 &amp; 1 &amp; -1 &amp; 7 \\
+0 &amp; 0 &amp; 1 &amp; -17 \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;(r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}\]</span> Consequently the original system of equations is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp;{} + 8\beta &amp;{} - 3\gamma &amp; &amp;{} = 0 \\
+&amp; \beta &amp;{} - \gamma &amp;{} + 7\delta &amp;{} = 0 \\
+&amp; &amp; \gamma &amp;{} - 17\delta &amp;{} = 0 \\
+&amp; &amp; &amp;-3\delta &amp;{} = 0.
+\end{array}\]</span> We conclude <span class="math inline">\(\alpha = \beta = \gamma = \delta = 0\)</span> and that <span class="math inline">\(\{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{5} \}\)</span> is linearly independent. The maximum size of a linearly independent set is <span class="math inline">\(4\)</span>, so we cannot add any more vectors to <span class="math inline">\(\{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{5} \}\)</span>. Specifically, <span class="math inline">\(\vec{v}_{6}\)</span> must be a linear combination of these four vectors. Hence <span class="math inline">\(\{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{5} \}\)</span> is a basis for <span class="math inline">\(U+W\)</span> and therefore <span class="math inline">\(\dim(U+W) = 4\)</span>. (Moreover, then <span class="math inline">\(U+W = \mathbb{R}^{4}\)</span>.)</p></li>
+</ol>
+<p><strong>Alternative solution:</strong> The first part of this alternative solution is the same as that of the solution above. We perform Gaussian elimination (as above) using elementary row operations to convert the matrix <span class="math inline">\(A\)</span> to the matrix <span class="math inline">\(B\)</span>: <span class="math display">\[A = 
+  \begin{pmatrix}
+    2 &amp; 4 &amp; 1 &amp; 1 \\
+    1 &amp; 8 &amp; -3 &amp; 10 \\
+    0 &amp; -4 &amp; 2 &amp; -6 \\
+    -1 &amp; -3 &amp; 0 &amp; -2
+  \end{pmatrix}, \qquad 
+  B =  
+  \begin{pmatrix}
+    1 &amp; 8 &amp; -3 &amp; 10 \\
+    0 &amp; 1 &amp; -1 &amp; 2 \\
+    0 &amp; 0 &amp; 1 &amp; -1 \\
+    0 &amp; 0 &amp; 0 &amp; 0 
+  \end{pmatrix}.\]</span> From this we deduce that <span class="math inline">\(\mathcal{A} = \{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\}\)</span> is not linearly independent, as in the solution above. Here our solution departs from the one above. The matrix <span class="math inline">\(B\)</span> is in row echelon form, and so it follows (MT2501) that the rows of <span class="math inline">\(B\)</span> are a basis for the row space of the matrix <span class="math inline">\(B\)</span>. Hence the dimension of the row space of <span class="math inline">\(B\)</span> is <span class="math inline">\(3\)</span>. Since elementary row operations preserve the row space of a matrix, it follows that the row space of <span class="math inline">\(A\)</span> also has dimension <span class="math inline">\(3\)</span>. Since the row and column rank of a matrix are equal (MT2501), it follows that the dimension of the column space of <span class="math inline">\(A\)</span> is <span class="math inline">\(3\)</span>. The column space of <span class="math inline">\(A\)</span> is just the space spanned by <span class="math inline">\(\mathcal{A} = \{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\}\)</span>, which is <span class="math inline">\(U\)</span>. Hence <span class="math inline">\(\dim U = 3\)</span>. [<strong>Aside:</strong> we could have entered the vectors in <span class="math inline">\(\mathcal{A}\)</span> as the rows of <span class="math inline">\(A\)</span>, or performed elementary column operations on <span class="math inline">\(A\)</span>, to obtain an actual basis for <span class="math inline">\(U\)</span> rather than just the dimension.]</p>
+<p>We show that <span class="math inline">\(\dim W = 3\)</span> by doing Gaussian elimination in the same way as in the solution above.</p>
+<p>We know that <span class="math inline">\(\dim U = \dim W = 3\)</span>, and <span class="math inline">\(\dim \mathbb{R} ^ 4 = 4\)</span>. Since <span class="math inline">\(U\)</span> (and <span class="math inline">\(W\)</span>) is a subspace of <span class="math inline">\(U + W\)</span>, which is a subspace of <span class="math inline">\(\mathbb{R} ^ 4\)</span>, it follows that <span class="math inline">\(\dim U + W = 3\)</span> or <span class="math inline">\(4\)</span>. Since <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> are subspaces of <span class="math inline">\(U + W\)</span>, <span class="math inline">\(\dim U + W = 3\)</span> if <span class="math inline">\(U = W\)</span> and <span class="math inline">\(\dim U + W = 4\)</span> if <span class="math inline">\(U\not = W\)</span>.</p>
+<p>To show that <span class="math inline">\(U \not = W\)</span> it suffices to that the there exists a vector in <span class="math inline">\(U\)</span> that is not in <span class="math inline">\(W\)</span>, or vice versa. It can be shown that <span class="math inline">\(\vec{v}_5\not\in U\)</span> by showing that <span class="math inline">\(\{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_5\}\)</span> is linearly independent as we did above. ◻</p>
 </div></li>
 <li><p><span id="problem-02-07" label="problem-02-07"></span></p>
 <div class="questionjupyter">
@@ -675,6 +1347,284 @@
 <ol type="1">
 <li><p><span class="math inline">\(\displaystyle \mathscr{A} = \left\{ \begin{pmatrix} 2 \\  -1 \\  2 \\  \end{pmatrix},  \begin{pmatrix} 1 \\  1 \\  3 \\  \end{pmatrix}, \begin{pmatrix} 0 \\  1 \\  1 \\  \end{pmatrix}, \begin{pmatrix} 4 \\  -1 \\  3 \\  \end{pmatrix}  \right\}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \mathscr{A} = \left\{ \begin{pmatrix} 0 \\  2 \\  -3 \\  -3 \\  \end{pmatrix},  \begin{pmatrix} 1 \\  1 \\  -2 \\  0 \\  \end{pmatrix}, \begin{pmatrix} 2 \\  0 \\  -1 \\  3 \\  \end{pmatrix},  \begin{pmatrix} -7 \\  3 \\  -1 \\  -15 \\  \end{pmatrix} \right\}\)</span></p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<p>In both cases we need to establish whether or not <span class="math inline">\(\mathscr{A}\)</span> is linearly independent and, if not, remove any vector in <span class="math inline">\(\mathscr{A}\)</span> that can be expressed as a linear combination of the others.</p>
+<ol type="1">
+<li><p>It is clear that <span class="math inline">\(\mathscr{A}\)</span> is not linearly independent: <span class="math inline">\(\dim \mathbb{R}^{3} = 3\)</span>, so the largest possible size of a linearly independent set in <span class="math inline">\(\mathbb{R}^{3}\)</span> is <span class="math inline">\(3\)</span>. We solve <span class="math display">\[\alpha \begin{pmatrix}2\\-1\\2\end{pmatrix} + \beta \begin{pmatrix}1\\1\\3\end{pmatrix} + \gamma
+\begin{pmatrix}0\\1\\1\end{pmatrix} + \delta \begin{pmatrix}4\\-1\\3\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\end{pmatrix};
+\label{eq:I-Q7a1}\]</span> that is, <span class="math display">\[\begin{pmatrix}
+  2 &amp; 1 &amp; 0 &amp; 4 \\
+  -1 &amp; 1 &amp; 1 &amp; -1 \\
+  2 &amp; 3 &amp; 1 &amp; 3
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\\\delta\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.\]</span> We apply row operations to the following augmented matrix: <span class="math display">\[\begin{aligned}
+\left( \begin{matrix}
+2 &amp; 1 &amp; 0 &amp; 4 \\
+-1 &amp; 1 &amp; 1 &amp; -1 \\
+2 &amp; 3 &amp; 1 &amp; 3
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;\longrightarrow
+\left( \begin{matrix}
+0 &amp; 3 &amp; 2 &amp; 2 \\
+-1 &amp; 1 &amp; 1 &amp; -1 \\
+0 &amp; 5 &amp; 3 &amp; 1
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \mapsto r_{1} + 2r_{2} \\
+r_{3} \mapsto r_{3} + 2r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+-1 &amp; 1 &amp; 1 &amp; -1 \\
+0 &amp; 3 &amp; 2 &amp; 2 \\
+0 &amp; 5 &amp; 3 &amp; 1
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \leftrightarrow r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 &amp; 1 \\
+0 &amp; 1 &amp; \frac{2}{3} &amp; \frac{2}{3} \\
+0 &amp; 5 &amp; 3 &amp; 1
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \mapsto -r_{1} \\
+r_{2} \mapsto \frac{1}{3} r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 &amp; 1 \\
+0 &amp; 1 &amp; \frac{2}{3} &amp; \frac{2}{3} \\
+0 &amp; 0 &amp; -\frac{1}{3} &amp; -\frac{7}{3}
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto r_{3} - 5r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 &amp; 1 \\
+0 &amp; 1 &amp; \frac{2}{3} &amp; \frac{2}{3} \\
+0 &amp; 0 &amp; 1 &amp; 7
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto -3r_{3}
+\end{array}\end{aligned}\]</span> So the original equation is equivalent to <span class="math display">\[\begin{aligned}
+\alpha - \beta - \;\; \gamma + \;\; \delta &amp;= 0 \\
+\textstyle \beta + \frac{2}{3}\gamma + \frac{2}{3}\delta &amp;= 0 \\
+\gamma + 7\delta &amp;= 0\end{aligned}\]</span> Given any <span class="math inline">\(\delta\)</span>, we can now read off solutions. In particular, take <span class="math inline">\(\delta = 1\)</span>. Then <span class="math display">\[\begin{aligned}
+\gamma &amp;= -7\delta = -7 \\
+\beta &amp;= \textstyle -\frac{2}{3}\gamma - \frac{2}{3}\delta = 4 \\
+\alpha &amp;= \beta + \gamma - \delta = -4.\end{aligned}\]</span> So <span class="math display">\[-4 \begin{pmatrix}2\\-1\\2\end{pmatrix} + 4 \begin{pmatrix}1\\1\\3\end{pmatrix} - 7
+\begin{pmatrix}0\\1\\1\end{pmatrix} + \begin{pmatrix}4\\-1\\3\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}\]</span> and hence <span class="math display">\[\begin{pmatrix}4\\-1\\3\end{pmatrix} = 4 \begin{pmatrix}2\\-1\\2\end{pmatrix} - 4 \begin{pmatrix}1\\1\\3\end{pmatrix}
++ 7 \begin{pmatrix}0\\1\\1\end{pmatrix}.\]</span> Hence the fourth vector in <span class="math inline">\(\mathscr{A}\)</span> is a linear combination of the other three, so <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}2\\-1\\2\end{pmatrix}, \begin{pmatrix}1\\1\\3\end{pmatrix},
+  \begin{pmatrix}0\\1\\1\end{pmatrix} \right\}\]</span> spans the same subspace as <span class="math inline">\(\mathscr{A}\)</span>. We finish by checking whether <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Solve <span class="math display">\[\alpha \begin{pmatrix}2\\-1\\2\end{pmatrix} + \beta \begin{pmatrix}1\\1\\3\end{pmatrix} + \gamma
+\begin{pmatrix}0\\1\\1\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix};
+\label{eq:I-Q7a2}\]</span> that is, <span class="math display">\[\begin{pmatrix}
+2 &amp; 1 &amp; 0 \\
+-1 &amp; 1 &amp; 1 \\
+2 &amp; 3 &amp; 1
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\end{pmatrix}
+= \begin{pmatrix}0\\0\\0\end{pmatrix}.\]</span> Again we apply row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{matrix}
+2 &amp; 1 &amp; 0 \\
+-1 &amp; 1 &amp; 1 \\
+2 &amp; 3 &amp; 1
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;\longrightarrow
+\left( \begin{matrix}
+0 &amp; 3 &amp; 2 \\
+-1 &amp; 1 &amp; 1 \\
+0 &amp; 5 &amp; 3
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \mapsto r_{1} + 2r_{2} \\
+r_{3} \mapsto r_{3} + 2r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+-1 &amp; 1 &amp; 1 \\
+0 &amp; 3 &amp; 2 \\
+0 &amp; 5 &amp; 3
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \leftrightarrow r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 \\
+0 &amp; 1 &amp; \frac{2}{3} \\
+0 &amp; 5 &amp; 3
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \mapsto -r_{1} \\
+r_{2} \mapsto \frac{1}{3} r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 \\
+0 &amp; 1 &amp; \frac{2}{3} \\
+0 &amp; 0 &amp; -\frac{1}{3}
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto r_{3} - 5r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; -1 &amp; -1 \\
+0 &amp; 1 &amp; \frac{2}{3} \\
+0 &amp; 0 &amp; 1
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto -3r_{3}
+\end{array}\end{aligned}\]</span> Hence the original equation is equivalent to <span class="math display">\[\begin{aligned}
+\alpha - \beta - \;\; \gamma &amp;= 0 \\
+\textstyle\beta + \frac{2}{3}\gamma &amp;= 0 \\
+\gamma &amp;= 0\end{aligned}\]</span> and we conclude <span class="math inline">\(\gamma = 0\)</span>,  <span class="math inline">\(\beta = -\frac{2}{3}\gamma = 0\)</span> and <span class="math inline">\(\alpha = \beta+\gamma = 0\)</span>. Hence we deduce <span class="math inline">\(\mathscr{B}\)</span> is linearly independent.</p>
+<p>We conclude that <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}2\\-1\\2\end{pmatrix}, \begin{pmatrix}1\\1\\3\end{pmatrix},
+  \begin{pmatrix}0\\1\\1\end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(U = \operatorname{Span}(\mathscr{A})\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We solve <span class="math display">\[\alpha \begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} + \beta \begin{pmatrix}1\\1\\-2\\0\end{pmatrix} + \gamma
+\begin{pmatrix}2\\0\\-1\\3\end{pmatrix} + \delta \begin{pmatrix}-7\\3\\-1\\-15\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\\0\end{pmatrix};
+\label{eq:I-Q7b1}\]</span> that is, <span class="math display">\[\begin{pmatrix}
+0 &amp; 1 &amp; 2 &amp; -7 \\
+2 &amp; 1 &amp; 0 &amp; 3 \\
+-3 &amp; -2 &amp; -1 &amp; -1 \\
+-3 &amp; 0 &amp; 3 &amp; -15
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\\\delta\end{pmatrix}
+= \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.\]</span> Apply row operations as follows: <span class="math display">\[\begin{aligned}
+\left( \begin{matrix}
+0 &amp; 1 &amp; 2 &amp; -7 \\
+2 &amp; 1 &amp; 0 &amp; 3 \\
+-3 &amp; -2 &amp; -1 &amp; -1 \\
+-3 &amp; 0 &amp; 3 &amp; -15
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;\longrightarrow
+\left( \begin{matrix}
+2 &amp; 1 &amp; 0 &amp; 3 \\
+0 &amp; 1 &amp; 2 &amp; -7 \\
+-3 &amp; -2 &amp; -1 &amp; -1 \\
+-3 &amp; 0 &amp; 3 &amp; -15
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \leftrightarrow r_{2}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; \frac{1}{2} &amp; 0 &amp; \frac{3}{2} \\
+0 &amp; 1 &amp; 2 &amp; -7 \\
+-3 &amp; -2 &amp; -1 &amp; -1 \\
+-3 &amp; 0 &amp; 3 &amp; -15
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{1} \mapsto \frac{1}{2}r_{1}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; \frac{1}{2} &amp; 0 &amp; \frac{3}{2} \\
+0 &amp; 1 &amp; 2 &amp; -7 \\
+0 &amp; -\frac{1}{2} &amp; -1 &amp; \frac{7}{2} \\
+0 &amp; \frac{3}{2} &amp; 3 &amp; -\frac{21}{2}
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto r_{3} + 3r_{1} \\
+r_{4} \mapsto r_{4} + 3r_{1}
+\end{array} \\
+&amp;\longrightarrow
+\left( \begin{matrix}
+1 &amp; \frac{1}{2} &amp; 0 &amp; \frac{3}{2} \\
+0 &amp; 1 &amp; 2 &amp; -7 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{matrix}
+\;\middle|\;
+\begin{matrix}
+0 \\ 0 \\ 0 \\ 0
+\end{matrix} \right)
+&amp;&amp;\begin{array}{l}
+r_{3} \mapsto r_{3} + \frac{1}{2}r_{2} \\
+r_{4} \mapsto r_{4} - \frac{3}{2}r_{2}
+\end{array}\end{aligned}\]</span> So the original equation is equivalent to <span class="math display">\[\begin{aligned}
+\textstyle \alpha + \frac{1}{2}\beta \qquad\, + \frac{3}{2}\delta &amp;= 0 \\
+\beta + 2\gamma - 7\delta &amp;= 0.\end{aligned}\]</span> Given arbitrary <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\delta\)</span>, we can read off solutions. In particular, taking <span class="math inline">\(\gamma = 1\)</span>, <span class="math inline">\(\delta = 0\)</span> gives <span class="math display">\[\textstyle
+\beta = -2\gamma + 7\delta = -2, \qquad \alpha = -\textstyle\frac{1}{2}\beta -
+\frac{3}{2}\delta = 1.\]</span> So <span class="math display">\[\begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} - 2 \begin{pmatrix}1\\1\\-2\\0\end{pmatrix} +
+\begin{pmatrix}2\\0\\-1\\3\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}\]</span> and hence <span class="math display">\[\begin{pmatrix}2\\0\\-1\\3\end{pmatrix} = -\begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} + 2\begin{pmatrix}1\\1\\-2\\0\end{pmatrix}.\]</span> While taking <span class="math inline">\(\gamma = 0\)</span>, <span class="math inline">\(\delta = 1\)</span> gives <span class="math display">\[\textstyle
+\beta = - 2\gamma + 7\delta = 7, \qquad \alpha = -\textstyle\frac{1}{2}\beta -
+\frac{3}{2}\delta = -5.\]</span> So <span class="math display">\[-5\begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} + 7\begin{pmatrix}1\\1\\-2\\0\end{pmatrix} +
+\begin{pmatrix}-7\\3\\-1\\-15\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}\]</span> and hence <span class="math display">\[\begin{pmatrix}-7\\3\\-1\\-15\end{pmatrix} = 5\begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} - 7\begin{pmatrix}1\\1\\-2\\0\end{pmatrix}.\]</span> We have now shown that the third and fourth vectors in <span class="math inline">\(\mathscr{A}\)</span> are both linear combinations of the first two, so <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}0\\2\\-3\\-3\end{pmatrix}, \begin{pmatrix}1\\1\\-2\\0\end{pmatrix} \right\}\]</span> spans the same subspace as <span class="math inline">\(\mathscr{A}\)</span>. Since neither of these two vectors is a scalar multiple of the other, <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Hence this <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(U = \operatorname{Span}(\mathscr{A})\)</span>.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-08" label="problem-02-08"></span></p>
@@ -685,13 +1635,179 @@
 <li><p>Find a subset <span class="math inline">\(\mathscr{A}\)</span> of <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x) \}\)</span> which is a basis for <span class="math inline">\(V\)</span> and hence determine the dimension of <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Find a basis <span class="math inline">\(\mathscr{B}\)</span> for the subspace <span class="math inline">\(\mathbb{R}[x]\)</span> consisting of polynomials of degree at most <span class="math inline">\(4\)</span> such that <span class="math inline">\(\mathscr{A} \subseteq \mathscr{B}\)</span>. [That is, extend <span class="math inline">\(\mathscr{A}\)</span> to a basis <span class="math inline">\(\mathscr{B}\)</span> for the space of polynomials of degree at most <span class="math inline">\(4\)</span>.]</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>Let <span class="math inline">\(\mathscr{C} = \{ f_{1}(x), f_{2}(x), f_{3}(x) \}\)</span>. We first determine if <span class="math inline">\(\mathscr{C}\)</span> is linearly independent. We solve <span class="math display">\[\alpha f_{1}(x) + \beta f_{2}(x) + \gamma f_{3}(x) = 0.\]</span> Equating coefficients we obtain <span class="math display">\[\begin{array}{r@{}r@{}r@{}lcl}
+\alpha &amp; &amp;{}+2\gamma &amp;{} = 0 &amp;\qquad &amp;\text{($x^{3}$ coefficient)} \\
+2\alpha &amp;{}+\beta &amp; &amp;{} = 0 &amp;&amp;\text{($x^{2}$ coefficient)} \\
+&amp;3\beta &amp;{}-12\gamma &amp;{} = 0 &amp;&amp;\text{($x$ coefficient)} \\
+\alpha &amp;{}+4\beta &amp;{}-2\gamma &amp;{} = 0 &amp;&amp;\text{(constant coeff.).}
+\end{array}
+\label{eq:I.Q7a}\]</span> We apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 \\
+2 &amp; 1 &amp; 0 \\
+0 &amp; 3 &amp; -12 \\
+1 &amp; 4 &amp; -2
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; -4 \\
+0 &amp; 3 &amp; -12 \\
+0 &amp; 4 &amp; -4
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\begin{array}{r@{}l}
+(r_{2} &amp;{} \mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} - r_{1})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; -4 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 12
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3}-3r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} - 4r_{2})
+\end{array}\end{aligned}\]</span> So the original system of equations is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+\alpha &amp; &amp;{} + 2\gamma &amp;{} = 0 \\
+&amp; \beta &amp;{} - 4\gamma &amp;{} = 0 \\
+&amp; &amp; 12\gamma &amp;{} = 0
+\end{array}\]</span> and we deduce <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>. Hence <span class="math inline">\(\mathscr{C}\)</span> is itself linearly independent, so we take <span class="math inline">\(\mathscr{A}= \mathscr{C}\)</span>.</p>
+<p>As a consequence, <span class="math inline">\(\mathscr{A}\)</span> is a basis for <span class="math inline">\(V\)</span>, so <span class="math inline">\(\dim V = 3\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>When extending to a basis for the space <span class="math inline">\(\mathcal{P}_{4}\)</span> (as I shall choose to call it here) of polynomials of degree at most <span class="math inline">\(4\)</span>, we note for a start that this space is of dimension <span class="math inline">\(5\)</span> having <span class="math inline">\(\{ 1, x, x^{2}, x^{3}, x^{4} \}\)</span> as a basis. Hence we will need to add <span class="math inline">\(2\)</span> vectors to <span class="math inline">\(\mathscr{A}\)</span>. We first put <span class="math inline">\(g_{0}(x) = 1\)</span> and consider <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x), g_{0}(x) \}\)</span>. We solve <span class="math display">\[\alpha f_{1}(x) + \beta f_{2}(x) + \gamma f_{3}(x) + \delta g_{0}(x) =
+0.\]</span> Equating coefficients we obtain <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; &amp;{} + 2\gamma &amp; &amp;{} = 0 \\
+2\alpha &amp;{} + \beta &amp; &amp; &amp;{} = 0 \\
+&amp; 3\beta &amp;{} - 12\gamma &amp; &amp;{} = 0 \\
+\alpha &amp;{} + 4\beta &amp;{} - 2\gamma &amp;{} + \delta &amp;{} = 0.
+\end{array}
+\label{eq:I.Q7b}\]</span> We apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; -12 &amp; 0 \\
+1 &amp; 4 &amp; -2 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; -4 &amp; 0 \\
+0 &amp; 3 &amp; -12 &amp; 0 \\
+0 &amp; 4 &amp; -4 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{} \mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} - r_{1})
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; -4 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 12 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3} - 3r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} - 4r_{2})
+\end{array}\end{aligned}\]</span> So the original system of equations is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; \quad &amp;{} + 2\gamma &amp; &amp;{} = 0 \\
+&amp; \beta &amp;{} - 4\gamma &amp; &amp;{} = 0 \\
+&amp; &amp; 12\gamma &amp; {} + \delta &amp;{} = 0
+\end{array}\]</span> and we see this has a non-zero solution (e.g., take <span class="math inline">\(\gamma = 1\)</span>, then <span class="math inline">\(\alpha = -2\)</span>,  <span class="math inline">\(\beta = 4\)</span> and <span class="math inline">\(\delta = -12\)</span>). Hence <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x), g_{0}(x) \}\)</span> is linearly <em>dependent</em> and consequently <span class="math display">\[g_{0}(x) \in \operatorname{Span}(f_{1}(x),f_{2}(x),f_{3}(x))\]</span> and we do not adjoin <span class="math inline">\(g_{0}(x)\)</span> to our set <span class="math inline">\(\mathscr{A}\)</span>. Now consider <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x), g_{1}(x) \}\)</span>. We solve <span class="math display">\[\alpha f_{1}(x) + \beta f_{2}(x) + \gamma f_{3}(x) + \delta g_{1}(x) = 0.\]</span> Equating coefficients we obtain <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; &amp;{} + 2\gamma &amp; &amp;{} = 0 \\
+2\alpha &amp;{} + \beta &amp; &amp; &amp;{} = 0 \\
+&amp; 3\beta &amp;{} - 12\gamma &amp;{} + \delta &amp;{} = 0 \\
+\alpha &amp;{} + 4\beta &amp;{} - 2\gamma &amp; &amp;{} = 0.
+\end{array}
+\label{eq:I.Q7c}\]</span> We apply the following row operations <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; -12 &amp; 1 \\
+1 &amp; 4 &amp; -2 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; -4 &amp; 0 \\
+0 &amp; 3 &amp; -12 &amp; 1 \\
+0 &amp; 4 &amp; -4 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{2} &amp;{} \mapsto r_{2} - 2r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} - r_{1})
+\end{array} \\
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; -4 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 12 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+(r_{3} &amp;{} \mapsto r_{3} - 3r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} - 4r_{2})
+\end{array}\end{aligned}\]</span> So the original system of equations is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; \quad &amp;{} + 2\gamma &amp; \quad &amp;{} = 0 \\
+&amp; \beta &amp;{} - 4\gamma &amp; &amp;{} = 0 \\
+&amp; &amp; \;\;\;\; 12\gamma &amp; &amp;{} = 0 \\
+&amp; &amp; &amp; \delta &amp;{} = 0
+\end{array}\]</span> and we deduce <span class="math inline">\(\alpha = \beta = \gamma = \delta = 0\)</span>. Hence <span class="math inline">\(\{ f_{1}(x), f_{2}(x), f_{3}(x), g_{1}(x) \}\)</span> is a linearly independent set. Since it consists entirely of polynomials of degree at most <span class="math inline">\(3\)</span>, it must be a basis for the <em><span class="math inline">\(4\)</span>-dimensional</em> space <span class="math inline">\(\mathcal{P}_{3}\)</span> (say) of polynomials of degree at most <span class="math inline">\(3\)</span>. Hence to produce a basis for <span class="math inline">\(\mathcal{P}_{4}\)</span>, we need to now adjoin <span class="math inline">\(g_{4}(x) = x^{4}\)</span>, since clearly <span class="math inline">\(x^{4}\)</span> cannot be a linear combination of <span class="math inline">\(f_{1}(x)\)</span>, <span class="math inline">\(f_{2}(x)\)</span>, <span class="math inline">\(f_{3}(x)\)</span> and <span class="math inline">\(g_{1}(x) = x\)</span>.</p>
+<p>Hence <span class="math inline">\(\mathscr{B}= \{ f_{1}(x), f_{2}(x), f_{3}(x), x, x^{4} \}\)</span> is a suitable basis for <span class="math inline">\(\mathcal{P}_{4}\)</span>.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-02-09" label="problem-02-09"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and <span class="math inline">\(W\)</span> be a subspace of <span class="math inline">\(V\)</span>.</p>
 <ol type="1">
-<li><p>Show that <span class="math inline">\(W\)</span> is finite-dimensional and that <span class="math inline">\(\dim W \leq \dim V\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(W\)</span> is finite-dimensional and that <span class="math inline">\(\dim W \leqslant\dim V\)</span>.</p></li>
 <li><p>Show that <span class="math inline">\(V = W\)</span> if and only if <span class="math inline">\(\dim V = \dim W\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<ol type="1">
+<li><p>Let <span class="math inline">\(\mathscr{B}\)</span> be any basis for <span class="math inline">\(W\)</span>. Then <span class="math inline">\(\mathscr{B}\)</span> is a linearly independent set of vectors in <span class="math inline">\(W\)</span> and <span class="math inline">\(\operatorname{Span}(\mathscr{B}) = W\)</span>. If <span class="math inline">\(\mathscr{C}\)</span> is a basis for <span class="math inline">\(V\)</span>, then <span class="math inline">\(\operatorname{Span}(\mathscr{C}) = V\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#lemma-dim-dim">Lemma 2.4.3</a>, <span class="math inline">\(\dim W = |\mathscr{B}| \leqslant|\mathscr{C}| = \dim V\)</span>, as required.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Since dimension is uniquely determined, if <span class="math inline">\(V = W\)</span> then certainly <span class="math inline">\(\dim V = \dim W\)</span>.</p>
+<p>Conversely, let <span class="math inline">\(W\)</span> be a subspace of the finite-dimensional vector space <span class="math inline">\(V\)</span> and suppose <span class="math inline">\(\dim V = \dim W\)</span>. Let <span class="math inline">\(\mathscr{B}= \{  w_{1},w_{2},\dots,w_{n} \}\)</span> be a basis for <span class="math inline">\(W\)</span>, so in particular <span class="math inline">\(W =  \operatorname{Span}(\mathscr{B})\)</span>. Moreover, <span class="math inline">\(\mathscr{B}\)</span> is a linearly independent subset of <span class="math inline">\(V\)</span>, so can be extended to a basis for <span class="math inline">\(V\)</span>. But <span class="math inline">\(n = \dim W = \dim V\)</span>, so whatever basis we produce must necessarily contain <span class="math inline">\(n\)</span> elements. Hence this basis is <span class="math inline">\(\mathscr{B}\)</span> itself and we deduce <span class="math inline">\(V = \operatorname{Span}(\mathscr{B}) = W\)</span>.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-02-10" label="problem-02-10"></span></p>
@@ -700,6 +1816,27 @@
 <p>Show that the set <span class="math display">\[\mathscr{B}_{1} \cup \mathscr{B}_{2} = \{
       v_{1},v_{2},\dots,v_{k},u_{k+1},\dots,u_{m},w_{k+1},\dots,w_{n} \}\]</span> is a basis for <span class="math inline">\(U + W\)</span>.</p>
 <p>Deduce that <span class="math inline">\(\dim(U+W) = \dim U + \dim W - \dim(U \cap W)\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution02">
+<p>Let <span class="math inline">\(v \in U + W\)</span>, say <span class="math inline">\(v = u+w\)</span> where <span class="math inline">\(u \in U\)</span> and <span class="math inline">\(w \in W\)</span>. As <span class="math inline">\(\mathscr{B}_{1}\)</span> spans <span class="math inline">\(U\)</span>, there exists scalars <span class="math inline">\(\alpha_{i}\)</span> such that <span class="math display">\[u = \sum_{i=1}^{k} \alpha_{i} v_{i} + \sum_{i=k+1}^{m} \alpha_{i} u_{i}\]</span> and similarly there exist scalars <span class="math inline">\(\beta_{i}\)</span> such that <span class="math display">\[w = \sum_{i=1}^{k} \beta_{i} v_{i} + \sum_{i=k+1}^{n} \beta_{i} w_{i}.\]</span> Therefore <span class="math display">\[v = u+w
+= \sum_{i=1}^{k} (\alpha_{i} + \beta_{i}) v_{i} + \sum_{i=k+1}^{m}
+\alpha_{i} u_{i} + \sum_{i=k+1}^{n} \beta_{i} w_{i}\]</span> and we deduce that <span class="math display">\[\mathscr{C} = \{ v_{1}, \dots, v_{k}, u_{k+1}, \dots, u_{m}, w_{k+1},
+\dots, w_{n} \}\]</span> spans <span class="math inline">\(U+W\)</span>. (Alternatively, use Problem <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#problem-02-05">5</a> to see <span class="math inline">\(\mathscr{C} = \mathscr{B}_{1} \cup \mathscr{B}_{2}\)</span> spans <span class="math inline">\(U+W\)</span>.)</p>
+<p>To show that <span class="math inline">\(\mathscr{C}\)</span> is linearly independent, consider the equation <span class="math display">\[\alpha_{1} v_{1} + \dots + \alpha_{k} v_{k} + \alpha_{k+1} u_{k+1} +
+\dots + \alpha_{m} u_{m} + \alpha_{m+1} w_{k+1} + \dots + \alpha_{m+n-k} w_{n} = \vec{0}.\]</span> Rearranging gives <span class="math display">\[x = \sum_{i=1}^{k} \alpha_{i} v_{i} + \sum_{i=k+1}^{m} \alpha_{i}
+u_{i} = - \sum_{j=1}^{n-k} \alpha_{m+j} w_{k+j}.\]</span> The left-hand side is a linear combination of elements from the basis <span class="math inline">\(\mathscr{B}_{1}\)</span> for <span class="math inline">\(U\)</span> and so lies in <span class="math inline">\(U\)</span>. On the other hand, the right-hand side is a linear combination of vectors in <span class="math inline">\(W\)</span> so lies in <span class="math inline">\(W\)</span>. Hence <span class="math inline">\(x \in U \cap W\)</span>.</p>
+<p>Therefore <span class="math inline">\(x \in \operatorname{Span}(\mathscr{A})\)</span> and hence there exist scalars <span class="math inline">\(\beta_{i}\)</span> such that <span class="math display">\[x = \sum_{i=1}^{k} \beta_{i} v_{i} = \sum_{i=1}^{k} \alpha_{i} v_{i} +
+\sum_{i=k+1}^{m} \alpha_{i}u_i.\]</span> But since <span class="math inline">\(\mathscr{B}_1\)</span> is a basis for <span class="math inline">\(U\)</span>, <span class="math inline">\(x\)</span> can be expressed uniquely as a linear combination of vectors in <span class="math inline">\(\mathscr{B}_1\)</span>, and so <span class="math inline">\(\alpha_i = \beta_i\)</span> for all <span class="math inline">\(i \in \{1, \ldots, k\}\)</span> and <span class="math inline">\(\alpha_{k + 1} = \alpha_{k + 2} = \cdots \alpha_m = 0\)</span>. Thus, in particular, <span class="math display">\[x = \sum_{i=1}^{k} \alpha_{i} v_{i} = - \sum_{j=1}^{n-k} \alpha_{m+j} w_{k+j}\]</span> and rearranging gives <span class="math display">\[\alpha_{1} v_{1} + \dots + \alpha_{k} v_{k} + \alpha_{m+1} w_{k+1} +
+\dots + \alpha_{m+n-k} w_{n} = \vec{0}.\]</span> The left-hand side is a linear combination of the vectors in the basis <span class="math inline">\(\mathscr{B}_{2}\)</span> for <span class="math inline">\(W\)</span>, so linear independence of <span class="math inline">\(\mathscr{B}_2\)</span> implies <span class="math display">\[\alpha_{1} = \dots = \alpha_{k} = \alpha_{m+1} = \dots = \alpha_{m+n-k}
+= 0.\]</span> We have now shown that all <span class="math inline">\(\alpha_{i}\)</span> equal <span class="math inline">\(0\)</span>, and we conclude that <span class="math inline">\(\mathscr{C}\)</span> is linearly independent. Hence <span class="math inline">\(\mathscr{C}\)</span> is a basis for <span class="math inline">\(U+W\)</span>.</p>
+<p>Consequently <span class="math display">\[\begin{aligned}
+\dim(U+W) = |\mathscr{C}| &amp;= k + (m-k) + (n-k) \\
+&amp;= m+n-k \\
+&amp;= |\mathscr{B}_{1}| + |\mathscr{B}_{2}| - |\mathscr{A}| \\
+&amp;= \dim U + \dim W - \dim(U \cap W). \square\end{aligned}\]</span></p>
 </div></li>
 </ol>
 
@@ -709,6 +1846,22 @@
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 <p><a href="#">Back to top</a></p>
 <ul>

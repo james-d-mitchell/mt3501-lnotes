@@ -14,6 +14,22 @@
     font-family: muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
 </style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </head>
 <body><p><a name="nav-menu" id="nav-menu"><strong>Contents</strong></a></p>
@@ -142,6 +158,7 @@
 
 
 
+
   </p>
 
 
@@ -191,7 +208,7 @@
     \dots + \beta_{n} v_{n}.\]</span> If <span class="math inline">\(x = \alpha_{1} u_{1} + \dots + \alpha_{m} u_{m}\in \operatorname{Span}(\mathscr{B}_1) = U_1\)</span> and <span class="math inline">\(y = \beta_{1} v_{1} + \dots + \beta_{n} v_{n} \in \operatorname{Span}(\mathscr{B}_2) = U_2\)</span>, then certainly <span class="math inline">\(v = x + y\)</span>. The linear combination of vectors in <span class="math inline">\(\mathscr{B}_1\cup \mathscr{B}_2\)</span> that equals <span class="math inline">\(v\)</span> is unique, and so, since <span class="math inline">\(\mathscr{B}_1\cap \mathscr{B}_2=  \varnothing\)</span>, it follows that <span class="math inline">\(x\in U_1\)</span> and <span class="math inline">\(y\in U_2\)</span> are unique also. ◻</p>
 </div>
 <div class="cor">
-<p>If <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> is a finite-dimensional vector space expressed as a direct sum of two subspaces, then <span class="math display">\[\dim V = \dim U_{1} + \dim U_{2}.\]</span> 0◻</p>
+<p>If <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> is a finite-dimensional vector space expressed as a direct sum of two subspaces, then <span class="math display">\[\dim V = \dim U_{1} + \dim U_{2}.\]</span> ◻</p>
 </div>
 <div class="exampjupyter">
 <p><span id="ex:dirsum1" label="ex:dirsum1"></span> Let <span class="math inline">\(V = \mathbb{R}^{3}\)</span> and let <span class="math display">\[U_{1} = \operatorname{Span} \left( \vec{v}_1 = \begin{pmatrix} 1 \\ 1 \\ 1 \\ \end{pmatrix},
@@ -398,6 +415,22 @@
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 <p><a href="#">Back to top</a></p>
 <ul>
