@@ -99,7 +99,7 @@ Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is lin
       
       <guid>https://jdbm.me/mt3501-lnotes/04-linear-transf/</guid>
       <description>Linear transformations body { counter-reset: chapter 3; }  Definition and basic properties Linear transformations are functions between vector spaces that interact well with the vector space structure and probably the most important thing we study in linear algebra.
- Let \(V\) and \(W\) be vector spaces over the same field \(F\). A linear transformation from \(V\) to \(W\) is a function \(T : V \to W\) such that
+ Let \(V\) and \(W\) be vector spaces over the same field \(F\). A linear transformation from \(V\) to \(W\) is a function \(T : V \longrightarrow W\) such that
 \(T(u+v) = T(u) + T(v)\) for all \(u,v \in V\), and</description>
     </item>
     
