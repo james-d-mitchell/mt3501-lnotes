@@ -186,14 +186,14 @@ for (i = 0; i < coll.length; i++) {
 <div class="lemma">
 <p><span id="lem:lintrans" label="lem:lintrans"></span> Let <span class="math inline">\(T : V \longrightarrow W\)</span> be a linear transformation between two vector spaces over the field <span class="math inline">\(F\)</span>. Then</p>
 <ol type="1">
-<li><p>if <span class="math inline">\(v_{1},v_{2},\dots,v_{k} \in V\)</span> and <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{k} \in F\)</span>, then <span class="math display">\[T\biggl( \sum_{i=1}^{k} \alpha_{i}v_{i} \biggr) = \sum_{i=1}^{k}
+<li><p>if <span class="math inline">\(v_{1},v_{2},\ldots,v_{k} \in V\)</span> and <span class="math inline">\(\alpha_{1},\alpha_{2},\ldots,\alpha_{k} \in F\)</span>, then <span class="math display">\[T\biggl( \sum_{i=1}^{k} \alpha_{i}v_{i} \biggr) = \sum_{i=1}^{k}
             \alpha_{i} T(v_{i}) .\]</span></p></li>
 <li><p><span class="math inline">\(T(\vec{0}) = \vec{0}\)</span>;</p></li>
 <li><p><span class="math inline">\(T(-v) = -T(v)\)</span> for all <span class="math inline">\(v \in V\)</span>;</p></li>
 </ol>
 </div>
 <div class="prop">
-<p><span id="prop:mapconstruct" label="prop:mapconstruct"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space over the field <span class="math inline">\(F\)</span> with basis <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},\dots,v_{n} \}\)</span> and let <span class="math inline">\(W\)</span> be any vector space over <span class="math inline">\(F\)</span>. If <span class="math inline">\(y_{1}\)</span>, <span class="math inline">\(y_{2}\)</span>, …, <span class="math inline">\(y_{n}\in W\)</span> are arbitrary, then the <em>unique</em> linear transformation <span class="math inline">\(T : V \longrightarrow W\)</span> such that <span class="math inline">\(T(v_{i}) = y_{i}\)</span> for all <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span> is defined by <span class="math display">\[T\left(\sum_{i = 1} ^ {n} \alpha_i v_i\right) =\sum_{i = 1} ^ {n} \alpha_i
+<p><span id="prop:mapconstruct" label="prop:mapconstruct"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space over the field <span class="math inline">\(F\)</span> with basis <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},\ldots,v_{n} \}\)</span> and let <span class="math inline">\(W\)</span> be any vector space over <span class="math inline">\(F\)</span>. If <span class="math inline">\(y_{1}\)</span>, <span class="math inline">\(y_{2}\)</span>, …, <span class="math inline">\(y_{n}\in W\)</span> are arbitrary, then the <em>unique</em> linear transformation <span class="math inline">\(T : V \longrightarrow W\)</span> such that <span class="math inline">\(T(v_{i}) = y_{i}\)</span> for all <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span> is defined by <span class="math display">\[T\left(\sum_{i = 1} ^ {n} \alpha_i v_i\right) =\sum_{i = 1} ^ {n} \alpha_i
     T(v_i).\]</span></p>
 </div>
 <div class="defn">
@@ -314,18 +314,18 @@ for (i = 0; i < coll.length; i++) {
 </div>
 <p>We have described the basic facts about linear transformations. It is possible to describe various examples of linear transformations, some of which can seem natural, some more esoteric.</p>
 <div class="prop">
-<p><span id="prop-surj-inj" label="prop-surj-inj"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space over the field <span class="math inline">\(F\)</span> with basis <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> and let <span class="math inline">\(W\)</span> be a vector space over <span class="math inline">\(F\)</span>. Fix vectors <span class="math inline">\(y_{1}\)</span>, <span class="math inline">\(y_{2}\)</span>, …, <span class="math inline">\(y_{n}\)</span> in <span class="math inline">\(W\)</span> and let <span class="math inline">\(T : V \longrightarrow W\)</span> be the unique linear transformation given by <span class="math inline">\(T(v_{i}) = y_{i}\)</span> for <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>. Then</p>
+<p><span id="prop-surj-inj" label="prop-surj-inj"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space over the field <span class="math inline">\(F\)</span> with basis <span class="math inline">\(\{ v_{1},v_{2},\ldots,v_{n} \}\)</span> and let <span class="math inline">\(W\)</span> be a vector space over <span class="math inline">\(F\)</span>. Fix vectors <span class="math inline">\(y_{1}\)</span>, <span class="math inline">\(y_{2}\)</span>, …, <span class="math inline">\(y_{n}\)</span> in <span class="math inline">\(W\)</span> and let <span class="math inline">\(T : V \longrightarrow W\)</span> be the unique linear transformation given by <span class="math inline">\(T(v_{i}) = y_{i}\)</span> for <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>. Then</p>
 <ol type="1">
-<li><p><span class="math inline">\(\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\dots,y_{n})\)</span>.</p></li>
-<li><p><span class="math inline">\(\ker T = \{\vec{0}\}\)</span> if and only if <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is a linearly independent set.</p></li>
+<li><p><span class="math inline">\(\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\ldots,y_{n})\)</span>.</p></li>
+<li><p><span class="math inline">\(\ker T = \{\vec{0}\}\)</span> if and only if <span class="math inline">\(\{y_{1},y_{2},\ldots,y_{n}\}\)</span> is a linearly independent set.</p></li>
 </ol>
 </div>
 <div class="proof">
 <p><em>Proof.</em> <strong>(1)</strong> If <span class="math inline">\(x \in \operatorname{im} T\)</span>, then <span class="math inline">\(x = T(v)\)</span> for some <span class="math inline">\(v \in V\)</span>. We can write <span class="math inline">\(v = \sum_{i=1}^{n} \alpha_{i}v_{i}\)</span> for some <span class="math inline">\(\alpha_{i} \in  F\)</span>. Then <span class="math display">\[x = T(v) = T\biggl( \sum_{i=1}^{n} \alpha_{i}v_{i} \biggr) =
     \sum_{i=1}^{n} \alpha_{i} T(v_{i}) = \sum_{i=1}^{n} \alpha_{i}y_{i} \in
     \operatorname{Span}(y_1, y_2, \ldots, y_n).\]</span> Hence <span class="math inline">\(\operatorname{im} T \subseteq \operatorname{Span}(y_1, y_2, \ldots,  y_n)\)</span>. On the other hand, since <span class="math inline">\(y_i = T(v_i)\in \operatorname{im} T\)</span> for all <span class="math inline">\(i\)</span>, and <span class="math inline">\(\operatorname{im} T\)</span> is a subspace of <span class="math inline">\(W\)</span> (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>), it follows that <span class="math inline">\(\operatorname{Span}(y_1, y_2, \ldots, y_n) \subseteq \operatorname{im} T\)</span>. Thus <span class="math inline">\(\operatorname{im} T = \operatorname{Span}(y_1, y_2, \ldots, y_n)\)</span>.</p>
-<p><strong>(2)</strong> (<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. By part (1), <span class="math inline">\(\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\dots,y_{n})\)</span> and so by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-basis-subset">Corollary 2.4.10</a>, <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> contains a linearly independent subset <span class="math inline">\(\mathscr{B}\)</span> such that <span class="math inline">\(\operatorname{Span}(\mathscr{B})  = \operatorname{Span}(y_1, y_2, \ldots, y_n) = \operatorname{im} T\)</span>. It follows that <span class="math inline">\(|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank}  T\)</span>. By the Rank-Nullity Theorem, <span class="math inline">\(\dim V = n = \operatorname{rank} T +  \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T\)</span>, since <span class="math inline">\(\operatorname{null} T = \dim \ker T = 0\)</span>. Therefore <span class="math inline">\(\mathscr{B} =  \{y_1, y_2, \ldots, y_n\}\)</span> and so <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> and, in particular, it is linearly independent.</p>
-<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is linearly independent, then since <span class="math inline">\(\operatorname{Span}(y_{1},y_{2},\dots,y_{n}) = \operatorname{im} T\)</span>, it follows that <span class="math inline">\(\{y_{1},y_{2},\dots,y_{n}\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> (<a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-3-conditions">Theorem 2.4.8</a>) and so <span class="math inline">\(\operatorname{rank} T = n\)</span>. Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim \ker T = \operatorname{null} T = \dim V - \operatorname{rank} V = n - n = 0\)</span>, and so <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p>
+<p><strong>(2)</strong> (<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. By part (1), <span class="math inline">\(\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\ldots,y_{n})\)</span> and so by <a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-basis-subset">Corollary 2.4.10</a>, <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> contains a linearly independent subset <span class="math inline">\(\mathscr{B}\)</span> such that <span class="math inline">\(\operatorname{Span}(\mathscr{B})  = \operatorname{Span}(y_1, y_2, \ldots, y_n) = \operatorname{im} T\)</span>. It follows that <span class="math inline">\(|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank}  T\)</span>. By the Rank-Nullity Theorem, <span class="math inline">\(\dim V = n = \operatorname{rank} T +  \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T\)</span>, since <span class="math inline">\(\operatorname{null} T = \dim \ker T = 0\)</span>. Therefore <span class="math inline">\(\mathscr{B} =  \{y_1, y_2, \ldots, y_n\}\)</span> and so <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> and, in particular, it is linearly independent.</p>
+<p>(<span class="math inline">\(\Leftarrow\)</span>) If <span class="math inline">\(\{y_{1},y_{2},\ldots,y_{n}\}\)</span> is linearly independent, then since <span class="math inline">\(\operatorname{Span}(y_{1},y_{2},\ldots,y_{n}) = \operatorname{im} T\)</span>, it follows that <span class="math inline">\(\{y_{1},y_{2},\ldots,y_{n}\}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span> (<a href="https://jdbm.me/mt3501-lnotes/02-vector-spaces/#thm-3-conditions">Theorem 2.4.8</a>) and so <span class="math inline">\(\operatorname{rank} T = n\)</span>. Hence, by the Rank-Nullity Theorem, <span class="math inline">\(\dim \ker T = \operatorname{null} T = \dim V - \operatorname{rank} V = n - n = 0\)</span>, and so <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p>
 <p><strong>Alternative direct proof of (2).</strong> (<span class="math inline">\(\Leftarrow\)</span>) Suppose that <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is linearly independent. If <span class="math inline">\(v\in  \ker T\)</span> is arbitrary, then <span class="math inline">\(v = \sum_{i=1}^{n} \alpha_{i}v_{i}\)</span> for some <span class="math inline">\(\alpha_i\in F\)</span> and <span class="math display">\[\vec{0} = T(v) = \sum_{i=1}^{n} \alpha_{i}T(v_{i}) =
     \sum_{i=1}^{n} \alpha_{i}y_{i}.\]</span> Since <span class="math inline">\(\{y_1, y_2, \ldots, y_n\}\)</span> is linearly independent, it follows that <span class="math inline">\(\alpha_i = 0\)</span> for all <span class="math inline">\(i\)</span> and so <span class="math inline">\(v = \vec{0}\)</span>.</p>
 <p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose that <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>. If <span class="math inline">\(\sum_{i=1}^{n} \alpha_{i}y_{i} = \vec{0}\in W\)</span> for some <span class="math inline">\(\alpha_i\in F\)</span>, then <span class="math display">\[T\left(\sum_{i=1}^{n} \alpha_{i}v_{i}\right) = \sum_{i=1}^{n}
@@ -361,9 +361,9 @@ for (i = 0; i < coll.length; i++) {
     \begin{pmatrix} -1 \\ 0 \\ 1 \\ \end{pmatrix} \right\}\]</span> is linearly independent. Indeed if <span class="math display">\[\alpha \begin{pmatrix} 2 \\ 1 \\ 3 \\ \end{pmatrix} + \beta \begin{pmatrix} -1 \\ 0 \\ 1 \\ \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ \end{pmatrix}\]</span> then we deduce straight away <span class="math inline">\(\alpha = 0\)</span> and then <span class="math inline">\(\beta = 0\)</span>. We now have a linearly independent subset of <span class="math inline">\(\operatorname{im} T\)</span> of the right size to be a basis. Hence <span class="math inline">\(\mathscr{C} = \{ \vec{y}_{1}, \vec{y}_{2}  \}\)</span> is a basis for <span class="math inline">\(\operatorname{im} T\)</span>.</p>
 </div>
 <h2 id="the-matrix-of-a-linear-transformation">The matrix of a linear transformation</h2>
-<p>We have attempted to describe an arbitrary linear transformation <span class="math inline">\(T: V \longrightarrow W\)</span>. Given a basis <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> for <span class="math inline">\(V\)</span>, we have observed that <span class="math inline">\(T\)</span> is uniquely determined by specifying the images <span class="math inline">\(T(v_{1})\)</span>, <span class="math inline">\(T(v_{2})\)</span>, …, <span class="math inline">\(T(v_{n})\)</span> of the basis vectors. If we are also given a basis for <span class="math inline">\(W\)</span>, we can then express these image vectors as a linear combination of the basis vectors of <span class="math inline">\(W\)</span> and hence completely specify them.</p>
+<p>We have attempted to describe an arbitrary linear transformation <span class="math inline">\(T: V \longrightarrow W\)</span>. Given a basis <span class="math inline">\(\{ v_{1},v_{2},\ldots,v_{n} \}\)</span> for <span class="math inline">\(V\)</span>, we have observed that <span class="math inline">\(T\)</span> is uniquely determined by specifying the images <span class="math inline">\(T(v_{1})\)</span>, <span class="math inline">\(T(v_{2})\)</span>, …, <span class="math inline">\(T(v_{n})\)</span> of the basis vectors. If we are also given a basis for <span class="math inline">\(W\)</span>, we can then express these image vectors as a linear combination of the basis vectors of <span class="math inline">\(W\)</span> and hence completely specify them.</p>
 <div class="defn">
-<p>Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over the field <span class="math inline">\(F\)</span> and let <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},\dots,v_{n} \}\)</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\dots,w_{m} \}\)</span> be bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively. If <span class="math inline">\(T : V \longrightarrow W\)</span> is a linear transformation and <span class="math inline">\(v_j \in \mathscr{B}\)</span>, then <span class="math inline">\(T(v_j)\in W\)</span> and so <span class="math inline">\(T(v_j)\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{C}\)</span>: <span class="math display">\[T(v_{j}) = \sum_{i=1}^{m} \alpha_{ij} w_{i}\]</span> for <span class="math inline">\(j = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>. The <span class="math inline">\(m \times n\)</span> matrix <span class="math display">\[=
+<p>Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over the field <span class="math inline">\(F\)</span> and let <span class="math inline">\(\mathscr{B} = \{ v_{1},v_{2},\ldots,v_{n} \}\)</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\ldots,w_{m} \}\)</span> be bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively. If <span class="math inline">\(T : V \longrightarrow W\)</span> is a linear transformation and <span class="math inline">\(v_j \in \mathscr{B}\)</span>, then <span class="math inline">\(T(v_j)\in W\)</span> and so <span class="math inline">\(T(v_j)\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{C}\)</span>: <span class="math display">\[T(v_{j}) = \sum_{i=1}^{m} \alpha_{ij} w_{i}\]</span> for <span class="math inline">\(j = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>. The <span class="math inline">\(m \times n\)</span> matrix <span class="math display">\[=
     \begin{pmatrix}
       \alpha_{11} &amp; \alpha_{12} &amp; \cdots &amp; \alpha_{1n} \\
       \alpha_{21} &amp; \alpha_{22} &amp; \cdots &amp; \alpha_{2n} \\
@@ -484,7 +484,7 @@ for (i = 0; i < coll.length; i++) {
 <h2 id="change-of-basis">Change of basis</h2>
 <p>Suppose we are given two bases <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> for the same vector space <span class="math inline">\(V\)</span>. We shall now describe how <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> and <span class="math inline">\(\operatorname{Mat}_{\mathscr{C},\mathscr{C}}(T)\)</span> are related for some linear transformation <span class="math inline">\(T : V \longrightarrow V\)</span>. (A similar description can be given for a linear transformation <span class="math inline">\(V \longrightarrow W\)</span> with two bases <span class="math inline">\(\mathscr{B},\mathscr{B}&#39;\)</span> for <span class="math inline">\(V\)</span> and two bases <span class="math inline">\(\mathscr{C},\mathscr{C}&#39;\)</span> for <span class="math inline">\(W\)</span>. This would be more complicated, but essentially the same ideas apply.)</p>
 <div class="thm">
-<p><span id="thm-change-basis" label="thm-change-basis"></span> Let <span class="math inline">\(V\)</span> be a vector space of dimension <span class="math inline">\(n\)</span> over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation, let <span class="math inline">\(\mathscr{B} = \{  v_{1},v_{2},\dots,v_{n} \}\)</span> and <span class="math inline">\(\mathscr{C} = \{  w_{1},w_{2},\dots,w_{n} \}\)</span> be bases for <span class="math inline">\(V\)</span>, and let <span class="math inline">\(A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> and <span class="math inline">\(B = \operatorname{Mat}_{\mathscr{C},\mathscr{C}}(T)\)</span>. Then there is an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math display">\[B = P^{-1} A P = \operatorname{Mat}_{\mathscr{B},
+<p><span id="thm-change-basis" label="thm-change-basis"></span> Let <span class="math inline">\(V\)</span> be a vector space of dimension <span class="math inline">\(n\)</span> over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation, let <span class="math inline">\(\mathscr{B} = \{  v_{1},v_{2},\ldots,v_{n} \}\)</span> and <span class="math inline">\(\mathscr{C} = \{  w_{1},w_{2},\ldots,w_{n} \}\)</span> be bases for <span class="math inline">\(V\)</span>, and let <span class="math inline">\(A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> and <span class="math inline">\(B = \operatorname{Mat}_{\mathscr{C},\mathscr{C}}(T)\)</span>. Then there is an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math display">\[B = P^{-1} A P = \operatorname{Mat}_{\mathscr{B},
     \mathscr{C}}(\operatorname{id})\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)
   \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id})\]</span> where <span class="math inline">\(\operatorname{id}: V \longrightarrow V\)</span> is the linear transformation defined by <span class="math inline">\(\operatorname{id}(v) = v\)</span> for all <span class="math inline">\(v\in V\)</span>. Specifically, if <span class="math inline">\(w_j\in  \mathscr{C}\)</span>, then <span class="math inline">\(w_j\in V = \operatorname{Span}(\mathscr{B})\)</span> and so <span class="math inline">\(w_j\)</span> is a linear combination of vectors in <span class="math inline">\(\mathscr{B}\)</span>: <span class="math display">\[w_{j} = \operatorname{id}(w_j) = \sum_{i=1}^{n} \alpha_{ij}v_{i}\]</span> for some <span class="math inline">\(\alpha_{ij} \in F\)</span>, and <span class="math display">\[P = [\alpha_{kj}] =
     \begin{pmatrix}
@@ -723,6 +723,9 @@ for (i = 0; i < coll.length; i++) {
 <li><p>Verify the Rank-Nullity Theorem holds for this specific example.</p></li>
 </ol>
 </div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
 <div class="solution04">
 <ol type="1">
 <li><p><span class="math display">\[\begin{aligned}
@@ -912,6 +915,9 @@ x\begin{pmatrix}
 <li><p>Hence determine the rank and nullity of <span class="math inline">\(T\)</span>.</p></li>
 </ol>
 </div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
 <div class="solution04">
 <ol type="1">
 <li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
@@ -1013,10 +1019,13 @@ x - 3y - 2z + t &amp;= 0 \\
 <ol type="1">
 <li><p>Show that a linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> is injective (that is, <span class="math inline">\(T(u) = T(v)\)</span> implies <span class="math inline">\(u = v\)</span>) if and only if <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p></li>
 <li><p>Show that a linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> is an isomorphism if and only if it is bijective (that is, both injective and surjective (which means <span class="math inline">\(\operatorname{im} T = W\)</span>)).</p></li>
-<li><p>If <span class="math inline">\(\mathscr{B} = \{ v_{1}, v_{2}, \dots, v_{n} \}\)</span> is a basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\dots,w_{n} \}\)</span> is a basis for <span class="math inline">\(W\)</span>, show that the unique linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> given by <span class="math inline">\(T(v_{i}) = w_{i}\)</span>, for <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>, is an isomorphism.</p>
+<li><p>If <span class="math inline">\(\mathscr{B} = \{ v_{1}, v_{2}, \ldots, v_{n} \}\)</span> is a basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\ldots,w_{n} \}\)</span> is a basis for <span class="math inline">\(W\)</span>, show that the unique linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> given by <span class="math inline">\(T(v_{i}) = w_{i}\)</span>, for <span class="math inline">\(i = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>, is an isomorphism.</p>
 <p>Deduce that <span class="math inline">\(V \cong W\)</span> if and only if <span class="math inline">\(\dim V = \dim W\)</span>.</p></li>
 </ol>
 </div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
 <div class="solution04">
 <ol type="1">
 <li><p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(T\)</span> is injective. If <span class="math inline">\(v \in \ker T\)</span>, then <span class="math inline">\(T(v) = \vec{0} = T(\vec{0})\)</span> and so <span class="math inline">\(v = \vec{0}\)</span>, because <span class="math inline">\(T\)</span> is injective. This shows <span class="math inline">\(\ker T = \{\vec{0}\}\)</span>.</p>
@@ -1033,9 +1042,9 @@ x - 3y - 2z + t &amp;= 0 \\
 <div class="center">
 <hr />
 </div></li>
-<li><p>Consider the unique linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> given by <span class="math display">\[T(v_{i}) = w_{i} \qquad \text{for $i = 1$, $2$, \dots, $n$}.\]</span> By <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>, <span class="math display">\[\operatorname{im}T = \operatorname{Span}(w_{1},w_{2},\dots,w_{n}) = W\]</span> and <span class="math display">\[\ker T = \{\vec{0}\},\]</span> since <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\dots,w_{n} \}\)</span> is linearly independent. Hence <span class="math inline">\(T\)</span> is bijective and therefore an isomorphism (by (a) and (b)).</p>
+<li><p>Consider the unique linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> given by <span class="math display">\[T(v_{i}) = w_{i} \qquad \text{for $i = 1$, $2$, \ldots, $n$}.\]</span> By <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a>, <span class="math display">\[\operatorname{im}T = \operatorname{Span}(w_{1},w_{2},\ldots,w_{n}) = W\]</span> and <span class="math display">\[\ker T = \{\vec{0}\},\]</span> since <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\ldots,w_{n} \}\)</span> is linearly independent. Hence <span class="math inline">\(T\)</span> is bijective and therefore an isomorphism (by (a) and (b)).</p>
 <p>(<span class="math inline">\(\Leftarrow\)</span>) Suppose <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are vector spaces with <span class="math inline">\(\dim V = \dim W\)</span>. Then there exist bases <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively, of the same size. We may therefore define an isomorphism <span class="math inline">\(T \colon V \longrightarrow W\)</span> as above and deduce <span class="math inline">\(V \cong W\)</span>.</p>
-<p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(V \cong W\)</span>. Then there exists an isomorphism <span class="math inline">\(T \colon V \longrightarrow W\)</span>. Let <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}\)</span> be a basis for <span class="math inline">\(V\)</span>. Put <span class="math display">\[w_{i} = T(v_{i}) \qquad \text{for $i = 1$, $2$, \dots, $n$}.\]</span> Now as <span class="math inline">\(\ker T = \{\vec{0}\}\)</span> and <span class="math inline">\(\operatorname{im}T = W\)</span> (as <span class="math inline">\(T\)</span> is bijective), we may apply <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a> to see that <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\dots,w_{n} \}\)</span> is a linearly independent spanning set; that is, a basis for <span class="math inline">\(W\)</span>. Hence <span class="math display">\[\dim W = n = \dim V,\]</span> as required.</p></li>
+<p>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(V \cong W\)</span>. Then there exists an isomorphism <span class="math inline">\(T \colon V \longrightarrow W\)</span>. Let <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\ldots,v_{n} \}\)</span> be a basis for <span class="math inline">\(V\)</span>. Put <span class="math display">\[w_{i} = T(v_{i}) \qquad \text{for $i = 1$, $2$, \ldots, $n$}.\]</span> Now as <span class="math inline">\(\ker T = \{\vec{0}\}\)</span> and <span class="math inline">\(\operatorname{im}T = W\)</span> (as <span class="math inline">\(T\)</span> is bijective), we may apply <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-surj-inj">Proposition 4.1.8</a> to see that <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\ldots,w_{n} \}\)</span> is a linearly independent spanning set; that is, a basis for <span class="math inline">\(W\)</span>. Hence <span class="math display">\[\dim W = n = \dim V,\]</span> as required.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-04-04" label="problem-04-04"></span></p>
@@ -1047,6 +1056,9 @@ x - 3y - 2z + t &amp;= 0 \\
 </ol>
 <p>Write <span class="math inline">\(\mathcal{L}(V,W)\)</span> for the set of all linear transformations <span class="math inline">\(V \longrightarrow W\)</span>. Show that <span class="math inline">\(\mathcal{L}(V,W)\)</span> is itself a vector space over <span class="math inline">\(F\)</span> with the above addition and scalar multiplication.</p>
 </div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
 <div class="solution04">
 <ol type="1">
 <li><p>Let <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(\alpha \in F\)</span>. Then <span class="math display">\[\begin{gathered}
@@ -1086,6 +1098,22 @@ T(v) = (\alpha S + \alpha T)(v)\]</span> for all <span class="math inline">\(v \
 ST \colon U &amp;\longrightarrow W \\
 u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
 <p>If we fix bases <span class="math inline">\(\mathscr{A}\)</span>, <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively, show that <span class="math display">\[\operatorname{Mat}_{\mathscr{A},\mathscr{C}}(ST) = \operatorname{Mat}_{\mathscr{B},\mathscr{C}}(S) \cdot \operatorname{Mat}_{\mathscr{A},\mathscr{B}}(T).\]</span></p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Let <span class="math inline">\(u,v \in U\)</span>. Then <span class="math display">\[ST(u+v) = S(T(u+v)) = S(T(u) + T(v)) = S(T(u)) + S(T(v)) = ST(u) + ST(v)\]</span> and if also <span class="math inline">\(\alpha \in F\)</span> <span class="math display">\[ST(\alpha v) = S(T(\alpha v)) = S(\alpha\, T(v)) = \alpha \, S(T(v)) =
+\alpha \, ST(v).\]</span> Hence the composition <span class="math inline">\(ST\)</span> of two linear transformations is linear.</p>
+<p>Let <span class="math inline">\(\mathscr{A}= \{ u_{1},u_{2},\ldots,u_{\ell} \}\)</span>,  <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\ldots,v_{m} \}\)</span> and <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\ldots,w_{n} \}\)</span> be bases for the vector spaces <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively. Let <span class="math inline">\(A = [\alpha_{ij}] = \operatorname{Mat}_{\mathscr{B},\mathscr{C}}(S)\)</span> and <span class="math inline">\(B = [\beta_{ij}] = \operatorname{Mat}_{\mathscr{A},\mathscr{B}}(T)\)</span>. This means <span class="math display">\[T(u_{j}) = \sum_{i=1}^{m} \beta_{ij} v_{i} \qquad \text{for $j=1$,
+  $2$, \ldots, $\ell$}\]</span> and <span class="math display">\[S(v_{j}) = \sum_{i=1}^{n} \alpha_{ij} w_{i} \qquad \text{for $j=1$,
+  $2$, \ldots, $m$}.\]</span> Thus <span class="math display">\[\begin{aligned}
+  ST(u_{j}) &amp;= S \biggl( \sum_{k=1}^{m} \beta_{kj} v_{k} \biggr) 
+  = \sum_{k=1}^{m} \beta_{kj} S(v_{k}) 
+  = \sum_{k=1}^{n} \beta_{kj} \sum_{i=1}^{n} \alpha_{ik}w_{i} 
+  = \sum_{i=1}^{n} \biggl( \sum_{k=1}^{m} \alpha_{ik}\beta_{kj}
+  \biggr) w_{i}.\end{aligned}\]</span> Hence the <span class="math inline">\((i,j)\)</span>th entry of <span class="math inline">\(\operatorname{Mat}_{\mathscr{A},\mathscr{C}}(ST)\)</span> is <span class="math display">\[\sum_{k=1}^{m} \alpha_{ik} \beta_{kj}.\]</span> Thus <span class="math display">\[\operatorname{Mat}_{\mathscr{A},\mathscr{C}}(ST) = AB = \operatorname{Mat}_{\mathscr{B},\mathscr{C}}(S) \cdot
+\operatorname{Mat}_{\mathscr{A},\mathscr{B}}(T).\square\]</span></p>
 </div></li>
 <li><p><span id="problem-04-06" label="problem-04-06"></span></p>
 <div class="question">
@@ -1093,6 +1121,39 @@ u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
 <li><p>Let <span class="math inline">\(F\)</span> be a field and <span class="math inline">\(A\)</span> be an <span class="math inline">\(m \times n\)</span> matrix. Show that <span class="math inline">\(A\)</span> defines a linear transformation <span class="math inline">\(F^{n} \longrightarrow F^{m}\)</span> by <span class="math display">\[\vec{v} \mapsto A\vec{v} \qquad \text{for $\vec{v} \in F^{n}$.}\]</span></p>
 <p>Show that the matrix of this linear transformation with respect to the standard bases of <span class="math inline">\(F^{n}\)</span> and <span class="math inline">\(F^{m}\)</span> is given by <span class="math inline">\(\operatorname{Mat}{A} = A\)</span>.</p></li>
 <li><p>Now consider any linear transformation <span class="math inline">\(T \colon F^{n} \longrightarrow F^{m}\)</span>. Show that <span class="math display">\[T(\vec{v}) = A\vec{v} \qquad \text{for all $\vec{v} \in F^{n}$,}\]</span> where <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span> with respect to the standard bases for <span class="math inline">\(F^{n}\)</span> and <span class="math inline">\(F^{m}\)</span>. [Thus, every linear transformation from <span class="math inline">\(F^{n}\)</span> to <span class="math inline">\(F^{m}\)</span> is given by matrix multiplication.]</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p> Let <span class="math inline">\(\vec{v} = \begin{pmatrix} x_{1} \\ \vdots \\  x_{n} \end{pmatrix}\)</span> and <span class="math inline">\(\vec{w} = \begin{pmatrix} y_{1} \\ \vdots  \\ y_{n} \end{pmatrix}\)</span>. If <span class="math inline">\(A = [a_{ij}]\)</span>, the <span class="math inline">\(i\)</span>th entry of <span class="math inline">\(A\vec{v}\)</span> is <span class="math inline">\(\sum_{j=1}^{n} a_{ij}x_{j}\)</span>. Similarly the <span class="math inline">\(i\)</span>th entry of <span class="math inline">\(A(\vec{v}+\vec{w})\)</span> is <span class="math display">\[\sum_{j=1}^{n} a_{ij} (x_{j} + y_{j}) = \sum_{j=1}^{n} a_{ij}x_{j} +
+\sum_{j=1}^{n} a_{ij}y_{j}\]</span> and hence <span class="math inline">\(A(\vec{v} + \vec{w}) = A\vec{v} + A\vec{w}\)</span>. Equally if <span class="math inline">\(\alpha \in F\)</span>, the <span class="math inline">\(i\)</span>th entry of <span class="math inline">\(A(\alpha\vec{v})\)</span> is <span class="math display">\[\sum_{j=1}^{n} a_{ij}(\alpha x_{j}) = \alpha \sum_{j=1}^{n} a_{ij}x_{j},\]</span> so <span class="math inline">\(A(\alpha \vec{v}) = \alpha \, A\vec{v}\)</span>. Hence <span class="math inline">\(\vec{v} \mapsto A\vec{v}\)</span> is a linear transformation.</p>
+<p>[Alternatively, this could all be done extremely quickly by simply quoting standard facts about matrix multiplication.]◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p> Let <span class="math inline">\(T \colon F^{n} \longrightarrow F^{m}\)</span> and let <span class="math inline">\(A = \operatorname{Mat}_{\mathscr{E},\mathscr{F}}(T)\)</span> where <span class="math inline">\(\mathscr{E} = \{ \vec{e}_{1},\vec{e}_{2},\ldots,\vec{e}_{n} \}\)</span> and <span class="math inline">\(\mathscr{F} = \{ \vec{e}&#39;_{1},\vec{e}&#39;_{2},\ldots,\vec{e}&#39;_{m} \}\)</span> are the standard bases for <span class="math inline">\(F^{n}\)</span> and <span class="math inline">\(F^{m}\)</span>, respectively. Write <span class="math inline">\(A = [\alpha_{ij}]\)</span>, so <span class="math display">\[T(\vec{e}_{j}) = \sum_{i=1}^{m} \alpha_{ij} \vec{e}&#39;_{i}\]</span> by definition. Now if <span class="math inline">\(\vec{v} = \begin{pmatrix} x_{1} \\ \vdots  \\ x_{n} \end{pmatrix} \in F^{n}\)</span>, then we see <span class="math display">\[\begin{aligned}
+T(\vec{v}) &amp;= T( x_{1}\vec{e}_{1} + x_{2}\vec{e}_{2} + \cdots + x_{n}\vec{e}_{n} )
+= \sum_{j=1}^{n} x_{j} \, T(\vec{e}_{j}) 
+= \sum_{j=1}^{n} x_{j} \sum_{i=1}^{m} \alpha_{ij} \vec{e}&#39;_{i}
+= \sum_{i=1}^{m} \biggl( \sum_{j=1}^{n} \alpha_{ij} x_{j} \biggr)
+\vec{e}&#39;_{i} \\
+&amp;= \begin{pmatrix}
+\alpha_{11}x_{1} + \alpha_{12}x_{2} + \cdots + \alpha_{1n}x_{n} \\
+\alpha_{21}x_{1} + \alpha_{22}x_{2} + \cdots + \alpha_{2n}x_{n} \\
+\vdots \\
+\alpha_{m1}x_{1} + \alpha_{m2}x_{2} + \cdots + \alpha_{mn}x_{n} \\
+\end{pmatrix} 
+= \begin{pmatrix}
+\alpha_{11} &amp; \alpha_{12} &amp; \cdots &amp; \alpha_{1n} \\
+\alpha_{12} &amp; \alpha_{22} &amp; \cdots &amp; \alpha_{2n} \\
+\vdots      &amp; \vdots      &amp; \ddots &amp; \vdots \\
+\alpha_{m1} &amp; \alpha_{m2} &amp; \cdots &amp; \alpha_{mn}
+\end{pmatrix}
+\begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{pmatrix} 
+= A\vec{v}.\square\end{aligned}\]</span></p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-04-07" label="problem-04-07"></span></p>
@@ -1106,6 +1167,27 @@ u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
 <li><p>Show that every linear transformation <span class="math inline">\(T \colon V \longrightarrow W\)</span> can be expressed as <span class="math display">\[T = \sum_{\substack{1 \leqslant k \leqslant m\\1 \leqslant\ell \leqslant
           n}} \alpha_{k\ell} T_{k\ell}\]</span> for some scalars <span class="math inline">\(\alpha_{k\ell} \in F\)</span>. [See Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-04">4</a> for the definition of sums and scalar multiples of linear transformation.]</p></li>
 <li><p>Let <span class="math inline">\(\mathscr{A} = \{T_{k\ell} : 1 \leqslant k \leqslant m, \; 1 \leqslant\ell \leqslant  n\}\)</span>. Prove that <span class="math inline">\(\mathscr{A}\)</span> is a linearly independent subset of <span class="math inline">\(\mathcal{L}(V,W)\)</span> and deduce that <span class="math display">\[\dim \mathcal{L}(V,W) = \dim V \cdot \dim W.\]</span></p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p> Let <span class="math inline">\(T \colon V \longrightarrow W\)</span> be any linear transformation and let <span class="math inline">\(B\)</span> be the matrix of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span>, say <span class="math inline">\(B = [\beta_{ij}]\)</span>. This means, of course, <span class="math display">\[T(v_{j}) = \sum_{i=1}^{m} \beta_{ij} w_{i}\]</span> for each <span class="math inline">\(j\)</span>.</p>
+<p>Consider the transformation <span class="math inline">\(S = \sum \alpha_{k\ell} T_{k\ell}\)</span>, where the summation is taken over the range <span class="math inline">\(1 \leqslant k \leqslant n\)</span>,  <span class="math inline">\(1 \leqslant \ell \leqslant m\)</span>. Since <span class="math inline">\(T_{k\ell}(v_{j}) = \vec{0}\)</span> when <span class="math inline">\(k \neq j\)</span> while <span class="math inline">\(T_{j\ell}(v_{j}) = w_{\ell}\)</span>, we conclude <span class="math display">\[S(v_{j}) = \sum_{\substack{1 \leqslant k \leqslant n \\ 1 \leqslant\ell \leqslant m}}
+\alpha_{k \ell} T_{k \ell}(v_{j}) = \sum_{1 \leqslant\ell \leqslant m}
+\alpha_{j\ell} w_{\ell}.\]</span> So let us take <span class="math inline">\(\alpha_{k \ell} = \beta_{\ell k}\)</span> for each <span class="math inline">\(k\)</span> and <span class="math inline">\(\ell\)</span>. We then conclude that <span class="math inline">\(S\)</span> is the unique transformation satisfying <span class="math display">\[S(v_{j}) = \sum_{\ell = 1}^{m} \beta_{\ell j} w_{\ell} = T(v_{j})
+\qquad \text{for $j = 1$, $2$, \ldots, $n$};\]</span> that is, <span class="math inline">\(S = T\)</span>. We conclude <span class="math display">\[T = \sum_{\substack{1 \leqslant k \leqslant n \\ 1 \leqslant\ell \leqslant m}}
+\beta_{\ell k} T_{k \ell}\]</span> where <span class="math inline">\(B = \operatorname{Mat}_{\mathscr{B},\mathscr{C}}(T) = [\beta_{ij}]\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p> Let <span class="math inline">\(\mathscr{A}= \{\,T_{k\ell}\mid 1 \leqslant k \leqslant n, \; 1 \leqslant\ell \leqslant  m\,\}\)</span>. We have just shown that <span class="math inline">\(\mathscr{A}\)</span> is a spanning set for <span class="math inline">\(\mathcal{L}(V,W)\)</span>. Now consider an expression of linear dependence involving <span class="math inline">\(\mathscr{A}\)</span>, say <span class="math display">\[S = \sum_{\substack{1 \leqslant k \leqslant n \\ 1 \leqslant\ell \leqslant m}}
+\alpha_{k\ell} T_{k\ell} = 0.\]</span> This asserts that <span class="math inline">\(S\)</span> is the zero transformation. In particular, <span class="math inline">\(S(v_{j}) = \vec{0}\)</span> for any <span class="math inline">\(j\)</span>. But, by definition, <span class="math display">\[S(v_{j}) = \sum_{\substack{1 \leqslant k \leqslant n \\ 1 \leqslant\ell \leqslant m}}
+\alpha_{k\ell} T_{k\ell}(v_{j}) = \sum_{1 \leqslant\ell \leqslant m}
+\alpha_{j\ell} w_{\ell}.\]</span> Thus <span class="math display">\[\sum_{\ell = 1}^{m} \alpha_{j\ell} w_{\ell} = \vec{0}\]</span> for <span class="math inline">\(j = 1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(n\)</span>. Now <span class="math inline">\(\mathscr{C} = \{ w_{1},w_{2},\dots,w_{m} \}\)</span> is linearly independent, so we conclude <span class="math inline">\(\alpha_{j\ell} = 0\)</span> for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(\ell\)</span>. Hence <span class="math inline">\(\mathscr{A}\)</span> is linearly independent.</p>
+<p>We conclude that <span class="math inline">\(\mathscr{A}\)</span> is a basis for <span class="math inline">\(\mathcal{L}(V,W)\)</span>, so <span class="math display">\[\dim \mathcal{L}(V,W) = |\mathscr{A}| = nm = \dim V \cdot \dim W.\square\]</span></p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-04-08" label="problem-04-08"></span></p>
@@ -1123,6 +1205,57 @@ u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
  2 
  \end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(\mathbb{R}^{2}\)</span>.</p></li>
 <li><p>Calculate the matrix <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> of <span class="math inline">\(T\)</span> with respect to the basis <span class="math inline">\(\mathscr{B}\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<ol type="1">
+<li><p>We attempt to solve <span class="math display">\[\alpha \begin{pmatrix}3\\-1\end{pmatrix} + \beta \begin{pmatrix}-5\\2\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{pmatrix}
+3 &amp; -5 \\
+-1 &amp; 2
+\end{pmatrix}
+\begin{pmatrix}\alpha\\\beta\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}.\]</span> Now <span class="math display">\[\det \begin{pmatrix}
+3 &amp; -5 \\
+-1 &amp; 2
+\end{pmatrix}
+= 6 - 5 = 1,\]</span> so <span class="math inline">\(A = \begin{pmatrix} 3 &amp; -5 \\ -1 &amp; 2 \end{pmatrix}\)</span> is invertible and now multiplying by its inverse yields <span class="math display">\[\begin{pmatrix}\alpha\\\beta\end{pmatrix} = A^{-1} \begin{pmatrix}0\\0\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}.\]</span> Hence <span class="math inline">\(\mathscr{B}= \left\{ \begin{pmatrix}3\\-1\end{pmatrix}, \begin{pmatrix}-5\\2\end{pmatrix} \right\}\)</span> is linearly independent and, since a basis for <span class="math inline">\(\mathbb{R}^{2}\)</span> is a linearly independent set of size <span class="math inline">\(2\)</span>, we conclude <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{R}^{2}\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Let <span class="math inline">\(\mathscr{E} = \left\{ \begin{pmatrix}1\\0\end{pmatrix}, \begin{pmatrix}0\\1\end{pmatrix} \right\}\)</span> and let <span class="math inline">\(P\)</span> be the change of basis matrix corresponding to writing each vector in <span class="math inline">\(\mathscr{B}\)</span> as a linear combination of those in <span class="math inline">\(\mathscr{E}\)</span>. We have <span class="math display">\[\begin{aligned}
+  \begin{pmatrix}3\\-1\end{pmatrix} = 3\begin{pmatrix}1\\0\end{pmatrix} - \begin{pmatrix}0\\1\end{pmatrix} \quad\text{and}\quad
+\begin{pmatrix}-5\\2\end{pmatrix} = -5\begin{pmatrix}1\\0\end{pmatrix} + 2\begin{pmatrix}0\\1\end{pmatrix},\end{aligned}\]</span> so <span class="math display">\[P = \begin{pmatrix}
+3 &amp; -5 \\
+-1 &amp; 2
+\end{pmatrix}.\]</span> Then <span class="math inline">\(\det P = 1\)</span>, so <span class="math display">\[P^{-1} = \begin{pmatrix}
+2 &amp; 5 \\
+1 &amp; 3
+\end{pmatrix}\]</span> and therefore <span class="math display">\[\begin{aligned}
+\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = P^{-1} \cdot \operatorname{Mat}_{\mathscr{E},\mathscr{E}}(T) \cdot
+P 
+&amp;= \begin{pmatrix} 2 &amp; 5 \\ 1 &amp; 3 \end{pmatrix}
+\begin{pmatrix} 4 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}
+\begin{pmatrix} 3 &amp; -5 \\ -1 &amp; 2 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 13 &amp; 16 \\ 7 &amp; 9 \end{pmatrix}
+\begin{pmatrix} 3 &amp; -5 \\ -1 &amp; 2 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 23 &amp; -33 \\ 12 &amp; -17 \end{pmatrix},\end{aligned}\]</span> which is the required answer.</p>
+<p>Alternatively, one could just attempt to do this directly (and this will provide a check of the above calculation). We see <span class="math display">\[T\begin{pmatrix}3\\-1\end{pmatrix} = \begin{pmatrix} 4 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}
+\begin{pmatrix}3\\-1\end{pmatrix} = \begin{pmatrix}9\\1\end{pmatrix}\]</span> and now we must write <span class="math inline">\(\begin{pmatrix}9\\1\end{pmatrix}\)</span> as a linear combination of <span class="math inline">\(\begin{pmatrix}3\\-1\end{pmatrix}\)</span> and <span class="math inline">\(\begin{pmatrix}-5\\2\end{pmatrix}\)</span>. We solve <span class="math display">\[\alpha\begin{pmatrix}3\\-1\end{pmatrix} + \beta\begin{pmatrix}-5\\2\end{pmatrix} = \begin{pmatrix}9\\1\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}l}
+3\alpha &amp;{} - 5\beta &amp;{} = 9 \\
+-\alpha &amp;{} + 2\beta &amp;{} = 1.
+\end{array}\]</span> Multiplying the second equation by <span class="math inline">\(3\)</span> and adding gives <span class="math inline">\(\beta = 12\)</span>. Hence <span class="math inline">\(3\alpha = 9+5\beta = 69\)</span>, so <span class="math inline">\(\alpha = 23\)</span>. Thus <span class="math display">\[T\begin{pmatrix}3\\-1\end{pmatrix} = 23\begin{pmatrix}3\\-1\end{pmatrix} + 12\begin{pmatrix}-5\\2\end{pmatrix}\]</span> and the first column of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> is therefore <span class="math display">\[\begin{matrix}
+23 \\ 12
+\end{matrix} \; .\]</span> Similarly <span class="math display">\[T\begin{pmatrix}-5\\2\end{pmatrix} = \begin{pmatrix} 4 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}
+\begin{pmatrix}-5\\2\end{pmatrix} = \begin{pmatrix}-14\\-1\end{pmatrix}\]</span> and we solve <span class="math display">\[\gamma \begin{pmatrix}3\\-1\end{pmatrix} + \delta \begin{pmatrix}-5\\2\end{pmatrix} = \begin{pmatrix}-14\\-1\end{pmatrix};\]</span> i.e., <span class="math display">\[\begin{array}{r@{}r@{}l}
+3\gamma &amp;{} -5\delta &amp;{} = -14 \\
+-\gamma &amp;{} + 2\delta &amp;{} = -1.
+\end{array}\]</span> We deduce <span class="math inline">\(\delta = -17\)</span> and <span class="math inline">\(\gamma = -33\)</span>. Hence <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = \begin{pmatrix}
+23 &amp; -33 \\
+12 &amp; -17
+\end{pmatrix}\]</span> (which, of course, is the same answer as was obtained by use of the change of basis theorem).</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-04-09" label="problem-04-09"></span></p>
@@ -1154,6 +1287,203 @@ u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
  \end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
 <li><p>Find the matrix of <span class="math inline">\(T\)</span> with respect to the basis <span class="math inline">\(\mathscr{B}\)</span>.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<ol type="1">
+<li><p>Let <span class="math inline">\(\mathscr{E} = \{ \vec{e}_{1},\vec{e}_{2},\vec{e}_{3} \}\)</span> denote the standard basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>. Then <span class="math display">\[\begin{aligned}
+T(\vec{e}_{1}) &amp;= T\begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}1\\-3\\0\end{pmatrix} = \vec{e}_{1} -
+3\vec{e}_{2} \\
+T(\vec{e}_{2}) &amp;= T\begin{pmatrix}0\\1\\0\end{pmatrix} = \begin{pmatrix}2\\4\\-2\end{pmatrix} = 2\vec{e}_{1} +
+4\vec{e}_{2} - 2\vec{e}_{3} \\
+T(\vec{e}_{3}) &amp;= T\begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}2\\-2\\0\end{pmatrix} = 2\vec{e}_{1} -
+2\vec{e}_{2}.\end{aligned}\]</span> Hence the matrix of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathscr{E}\)</span> is <span class="math display">\[\operatorname{Mat}_{\mathscr{E},\mathscr{E}}(T) = \begin{pmatrix}
+1 &amp; 2 &amp; 2 \\
+-3 &amp; 4 &amp; -2 \\
+0 &amp; -2 &amp; 0
+\end{pmatrix}.\square\]</span></p>
+<div class="center">
+<hr />
+</div></li>
+<li><p> We first show that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. Solve <span class="math display">\[\alpha\begin{pmatrix}1\\1\\1\end{pmatrix} + \beta\begin{pmatrix}1\\2\\2\end{pmatrix} +
+\gamma\begin{pmatrix}1\\2\\1\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix};\]</span> that is, <span class="math display">\[\begin{pmatrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{pmatrix} \begin{pmatrix}\alpha\\\beta\\\gamma\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.\]</span> Apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{2} &amp;{} \mapsto r_{2}-r_{1} \\
+r_{3} &amp;{} \mapsto r_{3}-r_{1}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{2} \leftrightarrow r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{3} \mapsto r_{3}-r_{2}\end{aligned}\]</span> Hence the original equation is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+\alpha &amp;{} + \beta &amp;{} + \gamma &amp;{} = 0 \\
+&amp;\beta &amp; &amp;{} = 0 \\
+&amp; &amp; \gamma &amp;{} = 0.
+\end{array}\]</span> So <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span> and we deduce <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. As <span class="math inline">\(\dim \mathbb{R}^{3} = 3\)</span>, we conclude <span class="math inline">\(\mathscr{B}\)</span> is indeed a basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>. ◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p> Let <span class="math inline">\(P\)</span> denote the change of basis matrix corresponding to writing each vector in <span class="math inline">\(\mathscr{B}\)</span> in terms of those in <span class="math inline">\(\mathscr{E}\)</span>. Since <span class="math display">\[\begin{aligned}
+\begin{pmatrix}1\\1\\1\end{pmatrix} &amp;= \vec{e}_{1} + \vec{e}_{2} + \vec{e}_{3} \\
+\begin{pmatrix}1\\2\\2\end{pmatrix} &amp;= \vec{e}_{1} + 2\vec{e}_{2} + 2\vec{e}_{3} \\
+\begin{pmatrix}1\\2\\1\end{pmatrix} &amp;= \vec{e}_{1} + 2\vec{e}_{2} + \vec{e}_{3},\end{aligned}\]</span> we have <span class="math display">\[P = \begin{pmatrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{pmatrix}.\]</span> To calculate the inverse, we again perform row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{matrix} &amp;
+\begin{matrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix} \end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0
+\end{matrix} &amp;
+\begin{matrix}
+1 &amp; 0 &amp; 0 \\
+-1 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 1
+\end{matrix} \end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{2} &amp;{} \mapsto r_{2}-r_{1} \\
+r_{3} &amp;{} \mapsto r_{3}-r_{1}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{matrix} &amp;
+\begin{matrix}
+1 &amp; 0 &amp; 0 \\
+-1 &amp; 0 &amp; 1 \\
+-1 &amp; 1 &amp; 0
+\end{matrix}
+\end{array} \right)
+&amp;&amp;r_{2} \leftrightarrow r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix} &amp;
+\begin{matrix}
+2 &amp; 0 &amp; -1 \\
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; -1
+\end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{l@{}r}
+r_{1} &amp;{} \mapsto r_{1}-r_{2} \\
+r_{3} &amp;{} \mapsto r_{3}-r_{2}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix} &amp;
+\begin{matrix}
+2 &amp; -1 &amp; 0 \\
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; -1
+\end{matrix}
+\end{array} \right)
+&amp;&amp;r_{1} \mapsto r_{1}-r_{3}\end{aligned}\]</span> Hence <span class="math display">\[P^{-1} = \begin{pmatrix}
+2 &amp; -1 &amp; 0 \\
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; -1
+\end{pmatrix}.\]</span> Therefore the matrix of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathscr{B}\)</span> is <span class="math display">\[\begin{aligned}
+\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) &amp;= P^{-1} \cdot \operatorname{Mat}_{\mathscr{E},\mathscr{E}}(T) \cdot
+P \\
+&amp;= \begin{pmatrix}
+2 &amp; -1 &amp; 0 \\
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; -1
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 2 &amp; 2 \\
+-3 &amp; 4 &amp; -2 \\
+0 &amp; -2 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+5 &amp; 0 &amp; 6 \\
+-1 &amp; -4 &amp; -2 \\
+-3 &amp; 6 &amp; -2
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 1 &amp; 1 \\
+1 &amp; 2 &amp; 2 \\
+1 &amp; 2 &amp; 1
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+11 &amp; 17 &amp; 11 \\
+-7 &amp; -13 &amp; -11 \\
+1 &amp; 5 &amp; 7
+\end{pmatrix}.\end{aligned}\]</span></p>
+<p>We can check this answer is correct as follows: <span class="math display">\[\begin{aligned}
+T\begin{pmatrix}1\\1\\1\end{pmatrix} &amp;= \begin{pmatrix}5\\-1\\-2\end{pmatrix} = 11\begin{pmatrix}1\\1\\1\end{pmatrix}
+- 7\begin{pmatrix}1\\2\\2\end{pmatrix} + \begin{pmatrix}1\\2\\1\end{pmatrix} \\
+T\begin{pmatrix}1\\2\\2\end{pmatrix} &amp;= \begin{pmatrix}9\\1\\-4\end{pmatrix} = 17\begin{pmatrix}1\\1\\1\end{pmatrix} -
+13\begin{pmatrix}1\\2\\2\end{pmatrix} + 5\begin{pmatrix}1\\2\\1\end{pmatrix} \\
+T\begin{pmatrix}1\\2\\1\end{pmatrix} &amp;= \begin{pmatrix}7\\3\\-4\end{pmatrix} = 11\begin{pmatrix}1\\1\\1\end{pmatrix} -
+11\begin{pmatrix}1\\2\\2\end{pmatrix} + 7\begin{pmatrix}1\\2\\1\end{pmatrix}\end{aligned}\]</span> This confirms our calculation above is correct.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-04-10" label="problem-04-10"></span></p>
 <div class="questionjupyter">
@@ -1170,6 +1500,88 @@ u &amp;\mapsto S(Tu)\end{aligned}\]</span> is also a linear transformation.</p>
           1 &amp; 0 &amp; 0 \\
           0 &amp; 1 &amp; 0
         \end{pmatrix}.\]</span></p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p>Let <span class="math inline">\(T \colon V \longrightarrow V\)</span> be nilpotent of index <span class="math inline">\(n\)</span>. Suppose that <span class="math display">\[\mathscr{B}= \{ v, T(v), T^{2}(v), \dots, T^{n-1}(v) \}\]</span> is linearly dependent. Then the equation <span class="math display">\[\sum_{i=1}^{n} \alpha_{i} T^{i-1}(v) = \vec{0}\]</span> has a non-zero solution. Suppose that <span class="math inline">\(\alpha_{j}\)</span> is the first non-zero coefficient (i.e., <span class="math inline">\(\alpha_{1} = \dots = \alpha_{j-1} = 0\)</span> and <span class="math inline">\(\alpha_{j} \neq 0\)</span>). Then <span class="math display">\[\sum_{i=j}^{n} \alpha_{i} T^{i-1}(v) = \vec{0}.\]</span> Apply <span class="math inline">\(T^{n-j}\)</span>: <span class="math display">\[T^{n-j} \biggl( \sum_{i=j}^{n} \alpha_{i} T^{i-1}(v) \biggr) =
+T^{n-j}(\vec{0}) =  \vec{0}.\]</span> Linearity then gives <span class="math display">\[\alpha_{j} T^{n-1}(v) + \alpha_{j+1} T^{n}(v) + \dots + \alpha_{n}
+T^{2n-j-1}(v) = \vec{0}.\]</span> Since <span class="math inline">\(T^{n} = 0\)</span>, we conclude <span class="math display">\[T^{n}(v) = T^{n+1}(v) = \dots = T^{2n-j-1}(v) = \vec{0}\]</span> (note <span class="math inline">\(T^{n+r}(v) = T^{r}(T^{n}(v)) = T^{r}(\vec{0}) = \vec{0}\)</span> for all <span class="math inline">\(r \geqslant 0\)</span>). Hence <span class="math display">\[\alpha_{j} \, T^{n-1}(v) = \vec{0}\]</span> but we assumed <span class="math inline">\(\alpha_{j} \neq 0\)</span> and <span class="math inline">\(T^{n-1}(v) \neq \vec{0}\)</span>, which is a contradiction. Hence <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. As <span class="math inline">\(\dim V = n\)</span>, our set <span class="math inline">\(\mathscr{B}\)</span> is indeed a basis for <span class="math inline">\(V\)</span>.◻</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Let <span class="math inline">\(v_{1} = v\)</span>,  <span class="math inline">\(v_{2} = T(v)\)</span>, …, <span class="math inline">\(v_{n} = T^{n-1}(v)\)</span>. Then <span class="math display">\[T(v_{1}) = v_{2}, \qquad T(v_{2}) = v_{3}, \qquad \dots, \qquad
+T(v_{n-1}) = v_{n}\]</span> (by definition) and <span class="math display">\[T(v_{n}) = T^{n}(v) = \vec{0}.\]</span></p>
+<p>This specifies for us the coefficients of the matrix of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathscr{B}\)</span>: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = \begin{pmatrix}
+  0 &amp; 0 &amp; 0 &amp; \cdots &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+  1 &amp; 0 &amp; 0 &amp; \cdots &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+  0 &amp; 1 &amp; 0 &amp; \cdots &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\ 
+  0 &amp; 0 &amp; 1 &amp; \cdots &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\ 
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\
+  0 &amp; 0 &amp; 0 &amp;\cdots &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+  0 &amp; 0 &amp; 0 &amp;\cdots &amp; \cdots &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp;\cdots &amp; \cdots &amp; 0 &amp; 1 &amp; 0
+\end{pmatrix}. \square\]</span></p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> Now consider the linear transformation <span class="math inline">\(T \colon \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}\)</span> whose matrix with respect to the standard basis is <span class="math display">\[A = \begin{pmatrix}
+0 &amp; 0 &amp; 2 \\
+1 &amp; -1 &amp; 1 \\
+-1 &amp; 1 &amp; 1
+\end{pmatrix},\]</span> so <span class="math display">\[T(\vec{v}) = A\vec{v} \qquad \text{for $\vec{v} \in \mathbb{R}^{3}$}.\]</span> We calculate <span class="math display">\[\begin{aligned}
+A^{2} = \begin{pmatrix}
+0 &amp; 0 &amp; 2 \\
+1 &amp; -1 &amp; 1 \\
+-1 &amp; 1 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+0 &amp; 0 &amp; 2 \\
+1 &amp; -1 &amp; 1 \\
+-1 &amp; 1 &amp; 1
+\end{pmatrix} 
+= \begin{pmatrix}
+-2 &amp; 2 &amp; 2 \\
+-2 &amp; 2 &amp; 2 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0\end{aligned}\]</span> and <span class="math display">\[\begin{aligned}
+A^{3} = \begin{pmatrix}
+0 &amp; 0 &amp; 2 \\
+1 &amp; -1 &amp; 1 \\
+-1 &amp; 1 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+-2 &amp; 2 &amp; 2 \\
+-2 &amp; 2 &amp; 2 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} 
+= \begin{pmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} = 0.\end{aligned}\]</span> Hence <span class="math display">\[T^{2}(\vec{v}) = A^{2}\vec{v} \quad \text{is not the zero map}\]</span> but <span class="math display">\[T^{3}(\vec{v}) = A^{3}\vec{v} = 0\vec{v} = \vec{0}.\]</span> So <span class="math inline">\(T\)</span> is nilpotent of index <span class="math inline">\(3\)</span>.</p>
+<p>Take <span class="math inline">\(\vec{v} = \begin{pmatrix}1\\0\\0\end{pmatrix}\)</span>. Then <span class="math display">\[T^{2}(\vec{v}) = A^{2}\vec{v} =
+\begin{pmatrix}
+-2 &amp; 2 &amp; 2 \\
+-2 &amp; 2 &amp; 2 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}1\\0\\0\end{pmatrix}
+= \begin{pmatrix}-2\\-2\\0\end{pmatrix} \neq \vec{0}.\]</span> Hence <span class="math inline">\(\vec{v}\)</span> is a suitable vector to apply the first part of the question. Then <span class="math inline">\(\mathscr{B}= \{ \vec{v}, T(\vec{v}), T^{2}(\vec{v}) \}\)</span> is a basis for <span class="math inline">\(\mathbb{R}^{3}\)</span> and the matrix of <span class="math inline">\(T\)</span> is <span class="math display">\[\begin{pmatrix}
+0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0
+\end{pmatrix}\]</span> with respect to this basis. We have already calculated <span class="math inline">\(T^{2}(\vec{v})\)</span> and finally <span class="math display">\[T(\vec{v}) = A\vec{v} =
+\begin{pmatrix}
+0 &amp; 0 &amp; 2 \\
+1 &amp; -1 &amp; 1 \\
+-1 &amp; 1 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}0\\1\\-1\end{pmatrix}.\]</span> Hence with respect to <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\-1\end{pmatrix},
+  \begin{pmatrix}-2\\-2\\0\end{pmatrix} \right\}\]</span> the matrix of <span class="math inline">\(T\)</span> has the required form. ◻</p></li>
 </ol>
 </div></li>
 </ol>
