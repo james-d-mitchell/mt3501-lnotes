@@ -226,10 +226,10 @@ for (i = 0; i < coll.length; i++) {
 </figure>
 <h2 id="section-projection-maps">Projection maps</h2>
 <div class="defn">
-<p>Let <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> be a vector space expressed as a direct sum of two subspaces. Then the <strong><em>projection maps</em></strong> <span class="math inline">\(P_{1} :  V \to U_1\)</span> and <span class="math inline">\(P_{2} : V \to U_2\)</span> of the direct sum <span class="math inline">\(U_{1} \oplus U_{2}\)</span> are defined by <span class="math display">\[P_{1}(v) = u_{1} \qquad \text{and} \qquad P_{2}(v) = u_{2}.\]</span> where <span class="math inline">\(v\in V\)</span>, <span class="math inline">\(u_1\in U_1\)</span>, <span class="math inline">\(u_2\in U_2\)</span> and <span class="math inline">\(v = u_1 + u_2\)</span> is the unique expression of <span class="math inline">\(v\)</span>.</p>
+<p>Let <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> be a vector space expressed as a direct sum of two subspaces. Then the <strong><em>projection maps</em></strong> <span class="math inline">\(P_{1} :  V \longrightarrow U_1\)</span> and <span class="math inline">\(P_{2} : V \longrightarrow U_2\)</span> of the direct sum <span class="math inline">\(U_{1} \oplus U_{2}\)</span> are defined by <span class="math display">\[P_{1}(v) = u_{1} \qquad \text{and} \qquad P_{2}(v) = u_{2}.\]</span> where <span class="math inline">\(v\in V\)</span>, <span class="math inline">\(u_1\in U_1\)</span>, <span class="math inline">\(u_2\in U_2\)</span> and <span class="math inline">\(v = u_1 + u_2\)</span> is the unique expression of <span class="math inline">\(v\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:proj" label="lem:proj"></span> Let <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> be a direct sum of subspaces with projection map <span class="math inline">\(P_{i} : V \to U_i\)</span> where <span class="math inline">\(i = 1\)</span> or <span class="math inline">\(2\)</span>. Then:</p>
+<p><span id="lem:proj" label="lem:proj"></span> Let <span class="math inline">\(V = U_{1} \oplus U_{2}\)</span> be a direct sum of subspaces with projection map <span class="math inline">\(P_{i} : V \longrightarrow U_i\)</span> where <span class="math inline">\(i = 1\)</span> or <span class="math inline">\(2\)</span>. Then:</p>
 <ol type="1">
 <li><p><span class="math inline">\(P_{i}\)</span> is a linear transformation;</p></li>
 <li><p><span class="math inline">\(P_{1}(u) = u\)</span> for all <span class="math inline">\(u \in U_{1}\)</span> and <span class="math inline">\(P_{1}(w) = \vec{0}\)</span> for all <span class="math inline">\(w \in U_{2}\)</span>;</p></li>
@@ -244,20 +244,20 @@ for (i = 0; i < coll.length; i++) {
 </div>
 <p>The major facts about projections are the following:</p>
 <div class="prop">
-<p><span id="prop:proj" label="prop:proj"></span> Let <span class="math inline">\(P : V \to V\)</span> be a projection corresponding to some direct sum decomposition of the vector space <span class="math inline">\(V\)</span>. Then</p>
+<p><span id="prop:proj" label="prop:proj"></span> Let <span class="math inline">\(P : V \longrightarrow V\)</span> be a projection corresponding to some direct sum decomposition of the vector space <span class="math inline">\(V\)</span>. Then</p>
 <ol type="1">
 <li><p><span class="math inline">\(P^{2} = P\)</span>;</p></li>
 <li><p><span class="math inline">\(V = \ker P \oplus \operatorname{im} P\)</span>;</p></li>
 <li><p><span class="math inline">\(\operatorname{id}-P\)</span> is also a projection;</p></li>
 <li><p><span class="math inline">\(V = \ker P \oplus \ker(\operatorname{id}-P)\)</span>;</p></li>
 </ol>
-<p>where <span class="math inline">\(\operatorname{id} : V \to V\)</span> denotes the identity transformation defined by <span class="math inline">\(\operatorname{id}(v) = v\)</span> for all <span class="math inline">\(v\in V\)</span>.</p>
+<p>where <span class="math inline">\(\operatorname{id} : V \longrightarrow V\)</span> denotes the identity transformation defined by <span class="math inline">\(\operatorname{id}(v) = v\)</span> for all <span class="math inline">\(v\in V\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Suppose that <span class="math inline">\(V = U_1 \oplus U_2\)</span>, and that <span class="math inline">\(P = P_1\)</span>.</p>
 <p><strong>(1).</strong> If <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(P_1(v) \in U_{1}\)</span>, so by <a href="https://jdbm.me/mt3501-lnotes/06-direct-sums/#lem:proj">Lemma 6.2.2</a>(2), <span class="math display">\[P_1^{2}(v) = P_1(P_1(v)) = P_1(v)\]</span> and so <span class="math inline">\(P_1^{2} = P_1\)</span>.</p>
 <p><strong>(2).</strong> Again, by <a href="https://jdbm.me/mt3501-lnotes/06-direct-sums/#lem:proj">Lemma 6.2.2</a>(3), <span class="math inline">\(\ker P_1 = U_{2}\)</span> and <span class="math inline">\(\operatorname{im} P_1 = U_{1}\)</span>, so <span class="math display">\[V = U_{1} \oplus U_{2} = \operatorname{im} P_1 \oplus \ker P_1.\]</span></p>
-<p><strong>(3).</strong> Let <span class="math inline">\(P_2 : V \to U_2\)</span> be the projection onto <span class="math inline">\(U_{2}\)</span>. If <span class="math inline">\(v \in V\)</span>, say <span class="math inline">\(v = u_{1}+u_{2}\)</span> where <span class="math inline">\(u_{1} \in  U_{1}\)</span> and <span class="math inline">\(u_{2} \in U_{2}\)</span>, then <span class="math display">\[P_2(v) = u_{2} = v-u_{1} = v - P_1(v) = (\operatorname{id}-P_1)(v).\]</span> Hence <span class="math inline">\(\operatorname{id} - P_1\)</span> is the projection <span class="math inline">\(P_2\)</span>.</p>
+<p><strong>(3).</strong> Let <span class="math inline">\(P_2 : V \longrightarrow U_2\)</span> be the projection onto <span class="math inline">\(U_{2}\)</span>. If <span class="math inline">\(v \in V\)</span>, say <span class="math inline">\(v = u_{1}+u_{2}\)</span> where <span class="math inline">\(u_{1} \in  U_{1}\)</span> and <span class="math inline">\(u_{2} \in U_{2}\)</span>, then <span class="math display">\[P_2(v) = u_{2} = v-u_{1} = v - P_1(v) = (\operatorname{id}-P_1)(v).\]</span> Hence <span class="math inline">\(\operatorname{id} - P_1\)</span> is the projection <span class="math inline">\(P_2\)</span>.</p>
 <p><strong>(4).</strong> Again by <a href="https://jdbm.me/mt3501-lnotes/06-direct-sums/#lem:proj">Lemma 6.2.2</a>(3), <span class="math inline">\(\ker P_1 = U_{2}\)</span> and, since <span class="math inline">\(\operatorname{id} - P_1 = P_2\)</span>, <span class="math inline">\(\ker \operatorname{id} - P_1 = \ker P_2 =  U_{1}\)</span>. Hence <span class="math display">\[V = U_{1} \oplus U_{2} = \ker(\operatorname{id}-P_1) \oplus \ker P_1.
     \square\]</span> ◻</p>
 </div>
@@ -269,7 +269,7 @@ for (i = 0; i < coll.length; i++) {
 <ol type="1">
 <li><p>Show that <span class="math display">\[\mathbb{R}^{2} = U_{1} \oplus U_{2} \qquad \text{and} \qquad \mathbb{R}^{2} = U_{1}
     \oplus U_{3}.\]</span></p></li>
-<li><p>If <span class="math inline">\(P : \mathbb{R}^{2} \to \mathbb{R}^{2}\)</span> is the projection onto <span class="math inline">\(U_{1}\)</span> corresponding to the first decomposition and <span class="math inline">\(Q : \mathbb{R}^{2} \to  \mathbb{R}^{2}\)</span> is the projection onto <span class="math inline">\(U_{1}\)</span> corresponding to the second decomposition, that <span class="math inline">\(P \neq Q\)</span>.</p></li>
+<li><p>If <span class="math inline">\(P : \mathbb{R}^{2} \longrightarrow\mathbb{R}^{2}\)</span> is the projection onto <span class="math inline">\(U_{1}\)</span> corresponding to the first decomposition and <span class="math inline">\(Q : \mathbb{R}^{2} \longrightarrow  \mathbb{R}^{2}\)</span> is the projection onto <span class="math inline">\(U_{1}\)</span> corresponding to the second decomposition, that <span class="math inline">\(P \neq Q\)</span>.</p></li>
 </ol>
 </div>
 <div class="solution">
@@ -288,7 +288,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span></p>
 <ol type="1">
 <li><p>Find a subspace <span class="math inline">\(W\)</span> such that <span class="math inline">\(V = U \oplus W\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(P : V \to V\)</span> be the associated projection onto <span class="math inline">\(W\)</span>. Calculate <span class="math inline">\(P(\vec{u})\)</span> where <span class="math display">\[\vec{u} = 
+<li><p>Let <span class="math inline">\(P : V \longrightarrow V\)</span> be the associated projection onto <span class="math inline">\(W\)</span>. Calculate <span class="math inline">\(P(\vec{u})\)</span> where <span class="math display">\[\vec{u} = 
         \begin{pmatrix}
           4 \\
           4 \\
@@ -354,23 +354,359 @@ for (i = 0; i < coll.length; i++) {
       \end{pmatrix} \right).\]</span></p>
 <ol type="1">
 <li><p>Show that <span class="math inline">\(\mathbb{R}^{4} = U \oplus W\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(P \colon \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> be the projection map onto <span class="math inline">\(U\)</span>. Calculate <span class="math display">\[P \begin{pmatrix}
+<li><p>Let <span class="math inline">\(P \colon \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}\)</span> be the projection map onto <span class="math inline">\(U\)</span>. Calculate <span class="math display">\[P \begin{pmatrix}
             1 \\
             0 \\
             0 \\
             0 \\
           \end{pmatrix}.\]</span></p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<p>If <span class="math inline">\(\mathscr{B}_1\)</span> and <span class="math inline">\(\mathscr{B}_2\)</span> are bases for <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively, then by <a href="https://jdbm.me/mt3501-lnotes/06-direct-sums/#prop-dirsum-basis">Proposition 6.1.3</a>, <span class="math inline">\(\mathbb{R}^{4} =  U \oplus W\)</span> if and only if <span class="math inline">\(\mathscr{B}_1 \cup \mathscr{B}_2\)</span> is a basis for <span class="math inline">\(\mathbb{R}^{4}\)</span> and <span class="math inline">\(\mathscr{B}_1 \cap \mathscr{B}_2 = \varnothing\)</span>.</p>
+<p>Hence to show that <span class="math inline">\(\mathbb{R} ^ 4 = U \oplus W\)</span>, it suffices to show that <span class="math display">\[\mathscr{B} = \left\{ \begin{pmatrix}
+    3 \\
+    1 \\
+    0 \\
+    4 \\
+  \end{pmatrix}, \begin{pmatrix}
+    1 \\
+    0 \\
+    -2 \\
+    1 \\
+  \end{pmatrix},
+  \begin{pmatrix}
+    0 \\
+    1 \\
+    0 \\
+    -1 \\
+  \end{pmatrix}, \begin{pmatrix}
+    2 \\
+    0 \\
+    0 \\
+    3 \\
+  \end{pmatrix} \right\}\]</span> is a basis for <span class="math inline">\(\mathbb{R} ^ 4\)</span>. Since <span class="math inline">\(|\mathscr{B}| = 4 = \dim \mathbb{R} ^  4\)</span>, it suffices to show that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent.</p>
+<p>We first show that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent. We solve <span class="math display">\[\alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} + \gamma
+\begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} =
+\begin{pmatrix}0\\0\\0\\0\end{pmatrix}\]</span> that is, <span class="math display">\[\begin{pmatrix}
+3 &amp; 1 &amp; 0 &amp; 2 \\
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{pmatrix}
+\begin{pmatrix}\alpha\\\beta\\\gamma\\\delta\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.\]</span> We apply the following row operations: <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+3 &amp; 1 &amp; 0 &amp; 2 \\
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+3 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array}\right)
+&amp;&amp;r_{1} \leftrightarrow r_{2} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{2} &amp;{} \mapsto r_{2} - 3r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} - 4r_{1}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{3} \mapsto -{\textstyle\frac{1}{2}}r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{2} \leftrightarrow r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{3} &amp;{} \mapsto r_{3} - r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} - r_{2}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; -1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{4} \mapsto r_{4} - 2r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; -3 &amp; 2
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{3} \leftrightarrow r_{4} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 0 &amp; -1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{4} \mapsto r_{4} + 3r_{3}\end{aligned}\]</span> Hence the equation above is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; &amp;{} + \gamma &amp; &amp;{} = 0 \\
+&amp; \;\;\beta &amp; &amp; &amp;{} = 0 \\
+&amp; &amp; \gamma &amp;{} - \delta &amp;{} = 0 \\
+&amp; &amp; &amp; -\delta &amp;{} = 0
+\end{array}\]</span> and we deduce <span class="math inline">\(\alpha = \beta = \gamma = \delta = 0\)</span>. We conclude that <span class="math inline">\(\mathscr{B}\)</span> is linearly independent and, since <span class="math inline">\(\dim \mathbb{R}^{4} = 4\)</span>, it is therefore a basis for <span class="math inline">\(\mathbb{R}^{4}\)</span>.</p>
+<p>Let <span class="math inline">\(\vec{v} \in \mathbb{R}^{4}\)</span>. Since <span class="math inline">\(\mathscr{B}\)</span> spans <span class="math inline">\(\mathbb{R}^{4}\)</span>, there exist scalars <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> such that <span class="math display">\[\vec{v} = \left[ \alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta
+  \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} \right] + \left[ \gamma \begin{pmatrix}0\\1\\0\\-1\end{pmatrix}
+  + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} \right] \in U + W.\]</span> Hence <span class="math inline">\(\mathbb{R}^{4} = U+W\)</span>.</p>
+<p>Now let <span class="math inline">\(\vec{v} \in U \cap W\)</span>. Then <span class="math display">\[\vec{v} = \alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} =
+\gamma \begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix}\]</span> for some <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\delta\)</span>, and rearranging gives <span class="math display">\[\alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} - \gamma
+\begin{pmatrix}0\\1\\0\\-1\end{pmatrix} - \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.\]</span> As <span class="math inline">\(\mathscr{B}\)</span> is linearly independent, we conclude <span class="math inline">\(\alpha = \beta = -\gamma = -\delta = 0\)</span> and hence <span class="math inline">\(\vec{v} = \vec{0}\)</span>. Thus <span class="math inline">\(U \cap W = \{ \vec{0} \}\)</span>.</p>
+<p>This shows <span class="math inline">\(\mathbb{R}^{4} = U \oplus W\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<p>To calculate <span class="math inline">\(P\begin{pmatrix}  1 \\  0 \\  0 \\  0 \\  \end{pmatrix}\)</span>, we need to write <span class="math display">\[\begin{pmatrix}
+ 1 \\
+ 0 \\
+ 0 \\
+ 0 \\
+ \end{pmatrix} = \vec{u} + \vec{w}\]</span> where <span class="math inline">\(\vec{u} \in U\)</span> and <span class="math inline">\(\vec{w} \in W\)</span>. We solve <span class="math display">\[\alpha \begin{pmatrix}
+ 3 \\
+ 1 \\
+ 0 \\
+ 4 \\
+ \end{pmatrix} + \beta \begin{pmatrix}
+ 1 \\
+ 0 \\
+ -2 \\
+ 1 \\
+ \end{pmatrix} + \gamma
+\begin{pmatrix}
+ 0 \\
+ 1 \\
+ 0 \\
+ -1 \\
+ \end{pmatrix} + \delta \begin{pmatrix}
+ 2 \\
+ 0 \\
+ 0 \\
+ 3 \\
+ \end{pmatrix} =
+\begin{pmatrix}
+ 1 \\
+ 0 \\
+ 0 \\
+ 0 \\
+ \end{pmatrix};\]</span> i.e., <span class="math display">\[\begin{pmatrix}
+3 &amp; 1 &amp; 0 &amp; 2 \\
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{pmatrix}
+\begin{pmatrix}
+ \alpha \\
+ \beta \\
+ \gamma \\
+ \delta \\
+ \end{pmatrix} = \begin{pmatrix}
+ 1 \\
+ 0 \\
+ 0 \\
+ 0 \\
+ \end{pmatrix}.\]</span> Again we need to apply row operations (though we could have avoided it by going far enough to calculate the inverse of the above matrix when we performed them the last time): <span class="math display">\[\begin{aligned}
+\left( \begin{array}{c|c}
+\begin{matrix}
+3 &amp; 1 &amp; 0 &amp; 2 \\
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 1 \\ 0 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+3 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+4 &amp; 1 &amp; -1 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{1} \leftrightarrow r_{2} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{2} &amp;{} \mapsto r_{2} - 3r_{1} \\
+r_{4} &amp;{} \mapsto r_{4} - 4r_{1}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{3} \mapsto -{\textstyle\frac{1}{2}}r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 1 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 1 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{2} \leftrightarrow r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; -5 &amp; 3
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 1 \\ 0 \end{matrix}
+\end{array} \right)
+&amp;&amp;\!\!\!\begin{array}{r@{}l}
+r_{3} &amp;{} \mapsto r_{3} - r_{2} \\
+r_{4} &amp;{} \mapsto r_{4} - r_{2}
+\end{array} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; -1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ 1 \\ -2 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{4} \mapsto r_{4} - 2r_{3} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; -3 &amp; 2
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ -2 \\ 1 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{3} \leftrightarrow r_{4} \\
+%%%%%%%%%%%%%%%%%%%%
+&amp;\longrightarrow \left( \begin{array}{c|c}
+\begin{matrix}
+1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1 \\
+0 &amp; 0 &amp; 0 &amp; -1
+\end{matrix} &amp;
+\begin{matrix} 0 \\ 0 \\ -2 \\ -5 \end{matrix}
+\end{array} \right)
+&amp;&amp;r_{4} \mapsto r_{4} + 3r_{3}\end{aligned}\]</span> Hence the equation above is equivalent to <span class="math display">\[\begin{array}{r@{}r@{}r@{}r@{}l}
+\alpha &amp; &amp;{} + \gamma &amp; &amp;{} = 0 \\
+&amp;\;\; \beta &amp; &amp; &amp;{} = 0 \\
+&amp; &amp; \gamma &amp;{} - \delta &amp;{} = -2 \\
+&amp; &amp; &amp; -\delta &amp;{} = -5
+\end{array}\]</span> and we deduce <span class="math inline">\(\delta = 5\)</span>,  <span class="math inline">\(\gamma = -2 + \delta = 3\)</span>,  <span class="math inline">\(\beta = 0\)</span> and <span class="math inline">\(\alpha = -\gamma = -3\)</span>. Hence <span class="math display">\[\begin{aligned}
+\begin{pmatrix}1\\0\\0\\0\end{pmatrix} &amp;= \left[ -3 \begin{pmatrix}3\\1\\0\\4\end{pmatrix} \right] +
+\left[ 3\begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + 5 \begin{pmatrix}2\\0\\0\\3\end{pmatrix} \right] \\
+&amp;= \begin{pmatrix}-9\\-3\\0\\-12\end{pmatrix} + \begin{pmatrix}10\\3\\0\\12\end{pmatrix}.\end{aligned}\]</span> The first of these is the <span class="math inline">\(U\)</span>-component, the second the <span class="math inline">\(W\)</span>-component, so <span class="math display">\[P\begin{pmatrix}1\\0\\0\\0\end{pmatrix} = \begin{pmatrix}-9\\-3\\0\\-12\end{pmatrix}.\square\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-06-02" label="problem-06-02"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V = U \oplus W\)</span> be a finite-dimensional vector space which is the direct sum of two subspaces <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>. Let <span class="math inline">\(\mathscr{B}_{1}\)</span> and <span class="math inline">\(\mathscr{B}_{2}\)</span> be bases for <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively.</p>
-<p>What is the matrix of the projection map <span class="math inline">\(P \colon V \to V\)</span> onto <span class="math inline">\(U\)</span> with respect to the basis <span class="math inline">\(\mathscr{B}_{1} \cup \mathscr{B}_{2}\)</span> for <span class="math inline">\(V\)</span>?</p>
+<p>What is the matrix of the projection map <span class="math inline">\(P \colon V \longrightarrow V\)</span> onto <span class="math inline">\(U\)</span> with respect to the basis <span class="math inline">\(\mathscr{B}_{1} \cup \mathscr{B}_{2}\)</span> for <span class="math inline">\(V\)</span>?</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Let us suppose <span class="math inline">\(\mathscr{B}_{1} = \{ u_{1},u_{2},\dots,u_{m} \}\)</span> is our basis for <span class="math inline">\(U\)</span> and <span class="math inline">\(\mathscr{B}_{2} = \{ w_{1},w_{2},\dots,w_{n} \}\)</span> is our basis for <span class="math inline">\(W\)</span>. Then <span class="math display">\[\mathscr{B}_{1} \cup \mathscr{B}_{2} = \{
+u_{1},u_{2},\dots,u_{m},w_{1},w_{2},\dots,w_{n} \}\]</span> is a basis for <span class="math inline">\(V = U \oplus W\)</span>. Let <span class="math inline">\(P \colon V \longrightarrow V\)</span> be the projection onto <span class="math inline">\(U\)</span>.</p>
+<p>Since <span class="math inline">\(u_{i} \in U\)</span>, the decomposition <span class="math inline">\(u_{i} = u_{i} + \vec{0}\)</span> yields <span class="math display">\[P(u_{i}) = u_{i},\]</span> while for <span class="math inline">\(w_{j} \in W\)</span>, the decomposition <span class="math inline">\(w_{j} = \vec{0} + w_{j}\)</span> yields <span class="math display">\[P(w_{j}) = \vec{0}.\]</span> The coefficients occurring in these two equations determine the entries of the matrix <span class="math inline">\(\operatorname{Mat}_{}(P)\)</span> with respect to our basis.</p>
 </div></li>
 <li><p><span id="problem-06-03" label="problem-06-03"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space with basis <span class="math inline">\(\mathscr{B}\)</span>. If <span class="math inline">\(\mathscr{A}\)</span> is a subset of <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{B}\setminus\mathscr{A}\)</span> denotes the complement of <span class="math inline">\(\mathscr{A}\)</span> in <span class="math inline">\(\mathscr{B}\)</span>, show that <span class="math display">\[V = \operatorname{Span}(\mathscr{A}) \oplus
           \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).\]</span></p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Let <span class="math inline">\(\mathscr{A}\)</span> be a subset of the basis <span class="math inline">\(\mathscr{B}\)</span>. Let <span class="math inline">\(\mathscr{A}= \{ v_{1},v_{2},\dots,v_{m} \}\)</span> and <span class="math inline">\(\mathscr{B}\setminus\mathscr{A}= \{ v_{m+1},\dots,v_{n} \}\)</span>. Let <span class="math display">\[U = \operatorname{Span}(\mathscr{A}) \qquad \text{and} \qquad W = \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).\]</span></p>
+<p>Let <span class="math inline">\(v \in V\)</span>. Since <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}\)</span> is a basis, there exist scalars <span class="math inline">\(\alpha_{1}\)</span>, <span class="math inline">\(\alpha_{2}\)</span>, …, <span class="math inline">\(\alpha_{n}\)</span> such that <span class="math display">\[v = \sum_{i=1}^{n} \alpha_{i} v_{i}.\]</span> Then <span class="math display">\[u = \sum_{i=1}^{m} \alpha_{i} v_{i} \in U \qquad \text{and} \qquad w =
+\sum_{i=m+1}^{n} \alpha_{i} v_{i} \in W\]</span> with <span class="math display">\[v = u+w.\]</span> We conclude that <span class="math inline">\(V = U+W\)</span> (that is, every vector in <span class="math inline">\(V\)</span> is expressible as the sum of a vector in <span class="math inline">\(U\)</span> and a vector in <span class="math inline">\(W\)</span>).</p>
+<p>Now let <span class="math inline">\(v \in U \cap W\)</span>. Then as <span class="math inline">\(v \in \operatorname{Span}(\mathscr{A})\)</span>, there exist scalars <span class="math inline">\(\beta_{1}\)</span>, <span class="math inline">\(\beta_{2}\)</span>, …, <span class="math inline">\(\beta_{m}\)</span> such that <span class="math display">\[v = \sum_{i=1}^{m} \beta_{i} v_{i}.\]</span> Similarly, as <span class="math inline">\(v \in \operatorname{Span}(\mathscr{B}\setminus\mathscr{A})\)</span>, there exist scalars <span class="math inline">\(\gamma_{m+1}\)</span>, …, <span class="math inline">\(\gamma_{n}\)</span> such that <span class="math display">\[v = \sum_{i=m+1}^{n} \gamma_{i} v_{i}.\]</span> Rearranging the equation <span class="math display">\[v = \sum_{i=1}^{m} \beta_{i} v_{i} = \sum_{i=m+1}^{n} \gamma_{i} v_{i}\]</span> gives <span class="math display">\[\sum_{i=1}^{m} \beta_{i} v_{i} + \sum_{i=m+1}^{n} (-\gamma_{i})v_{i} = \vec{0}.\]</span> Since <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}\)</span> is linearly independent, we conclude <span class="math display">\[\beta_{1} = \beta_{2} = \dots = \beta_{m} = \gamma_{m+1} = \dots =
+\gamma_{n} = 0.\]</span> Hence <span class="math display">\[v = \sum_{i=1}^{m} \beta_{i} v_{i} = \vec{0}.\]</span> This shows <span class="math inline">\(U \cap W = \{\vec{0}\}\)</span>. We conclude <span class="math inline">\(V = U \oplus W\)</span>.</p>
 </div></li>
 <li><p><span id="problem-06-04" label="problem-06-04"></span></p>
 <div class="question">
@@ -381,19 +717,73 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix} \biggm| x \in \mathbb{R} \right\}.\]</span></p>
 <ol type="1">
 <li><p>Find a subspace <span class="math inline">\(W\)</span> of <span class="math inline">\(\mathbb{R}^{3}\)</span> such that <span class="math inline">\(\mathbb{R}^{3} = U  \oplus W\)</span>.</p></li>
-<li><p>Calculate the matrices of the corresponding projection maps <span class="math inline">\(P,Q \colon  \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> onto <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively with respect to the standard basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
+<li><p>Calculate the matrices of the corresponding projection maps <span class="math inline">\(P,Q \colon  \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}\)</span> onto <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span>, respectively with respect to the standard basis for <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p></li>
 <li><p>Check explicitly that <span class="math inline">\(\ker P = W\)</span> and <span class="math inline">\(\operatorname{im} P = U\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p>Let <span class="math display">\[W = \operatorname{Span} \left( \begin{pmatrix}0\\1\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\end{pmatrix} \right) = \left\{ \begin{pmatrix}0\\y\\z\end{pmatrix} \biggm|
+  y,z \in \mathbb{R}\right\}.\]</span> Then clearly <span class="math inline">\(U \cap W = \{\vec{0}\}\)</span> (for if <span class="math display">\[\begin{pmatrix}x\\x\\0\end{pmatrix} = \begin{pmatrix}0\\y\\z\end{pmatrix}\]</span> for some <span class="math inline">\(x,y,z \in \mathbb{R}\)</span>, then we must have <span class="math inline">\(x = y = z = 0\)</span>). An arbitrary vector in <span class="math inline">\(\mathbb{R}^{3}\)</span> can be written <span class="math display">\[\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}x\\x\\0\end{pmatrix} + \begin{pmatrix}0\\y-x\\z\end{pmatrix} \in
+U + W,\]</span> so we deduce <span class="math inline">\(U+W = \mathbb{R}^{3}\)</span>. Hence <span class="math inline">\(\mathbb{R}^{3} = U \oplus W\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Consider the standard basis <span class="math inline">\(\mathscr{E} = \{ \vec{e}_{1},\vec{e}_{2},\vec{e}_{3} \}\)</span> for <span class="math inline">\(\mathbb{R}^{3}\)</span>: <span class="math display">\[\begin{aligned}
+\vec{e}_{1} &amp;= \begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}1\\1\\0\end{pmatrix} +
+\begin{pmatrix}0\\-1\\0\end{pmatrix} \\
+\vec{e}_{2} &amp;= \begin{pmatrix}0\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} +
+\begin{pmatrix}0\\1\\0\end{pmatrix} \\
+\vec{e}_{3} &amp;= \begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} + \begin{pmatrix}0\\0\\1\end{pmatrix}\end{aligned}\]</span> are the decompositions corresponding to <span class="math inline">\(\mathbb{R}^{3} = U \oplus W\)</span>. Hence <span class="math display">\[\begin{aligned}
+P(\vec{e}_{1}) &amp;= \begin{pmatrix}1\\1\\0\end{pmatrix} = \vec{e}_{1} + \vec{e}_{2} &amp; Q(\vec{e}_{1}) &amp;=
+\begin{pmatrix}0\\-1\\0\end{pmatrix} = -\vec{e}_{2} \\
+P(\vec{e}_{2}) &amp;= \begin{pmatrix}0\\0\\0\end{pmatrix} = \vec{0} &amp; Q(\vec{e}_{2}) &amp;=
+\begin{pmatrix}0\\1\\0\end{pmatrix} = \vec{e}_{2} \\
+P(\vec{e}_{3}) &amp;= \begin{pmatrix}0\\0\\0\end{pmatrix} = \vec{0} &amp; Q(\vec{e}_{3}) &amp;=
+\begin{pmatrix}0\\0\\1\end{pmatrix} = \vec{e}_{3}.\end{aligned}\]</span> Hence <span class="math display">\[\operatorname{Mat}_{\mathscr{E},\mathscr{E}}(P) = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+\operatorname{Mat}_{\mathscr{E},\mathscr{E}}(Q) = \begin{pmatrix}
+0 &amp; 0 &amp; 0 \\
+-1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}.\square\]</span></p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Note <span class="math display">\[P\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+= \begin{pmatrix}x\\x\\0\end{pmatrix},\]</span> so <span class="math display">\[P\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} \qquad \text{if and only
+  if} \qquad x = 0.\]</span> Hence <span class="math display">\[\ker P = \left\{ \begin{pmatrix}0\\y\\z\end{pmatrix} \biggm| y,z \in \mathbb{R}\right\} = W.\]</span> Also <span class="math display">\[\operatorname{im}P = \left\{ P\begin{pmatrix}x\\y\\z\end{pmatrix} \biggm| \begin{pmatrix}x\\y\\z\end{pmatrix} \in
+  \mathbb{R}^{3} \right\} = \left\{ \begin{pmatrix}x\\x\\0\end{pmatrix} \biggm| x \in \mathbb{R}\right\}
+= U.\square\]</span></p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-06-05" label="problem-06-05"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Show that there exists a subspace <span class="math inline">\(W\)</span> such that <span class="math inline">\(V = U \oplus  W\)</span>.</p>
 <p>[Hint: Extend a basis for <span class="math inline">\(U\)</span> to a basis for <span class="math inline">\(V\)</span>.]</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Let <span class="math inline">\(\mathscr{A}= \{ u_{1},u_{2},\dots,u_{m} \}\)</span> be a basis for <span class="math inline">\(U\)</span>. Since <span class="math inline">\(\mathscr{A}\)</span> is linearly independent, we can extend it to a basis <span class="math inline">\(\mathscr{B}= \{ u_{1},u_{2},\dots,u_{m},v_{m+1},\dots,v_{n} \}\)</span> for <span class="math inline">\(V\)</span>. Let <span class="math display">\[W = \operatorname{Span}(v_{m+1},\dots,v_{n}) = \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).\]</span> Then by Question 3, <span class="math display">\[V = \operatorname{Span}(A) \oplus \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}) = U \oplus W. \square\]</span></p>
 </div></li>
 <li><p><span id="problem-06-06" label="problem-06-06"></span></p>
 <div class="question">
-<p>A linear transformation <span class="math inline">\(T \colon V \to V\)</span> is called <em>idempotent</em> if <span class="math inline">\(T^{2} = T\)</span>; that is, if <span class="math display">\[T(T(v)) = T(v) \qquad \text{for all $v \in V$}.\]</span></p>
-<p>Let <span class="math inline">\(T \colon V \to V\)</span> be an idempotent linear transformation.</p>
+<p>A linear transformation <span class="math inline">\(T \colon V \longrightarrow V\)</span> is called <em>idempotent</em> if <span class="math inline">\(T^{2} = T\)</span>; that is, if <span class="math display">\[T(T(v)) = T(v) \qquad \text{for all $v \in V$}.\]</span></p>
+<p>Let <span class="math inline">\(T \colon V \longrightarrow V\)</span> be an idempotent linear transformation.</p>
 <ol type="1">
 <li><p>Show that <span class="math inline">\(v-T(v)\)</span> lies in the kernel of <span class="math inline">\(T\)</span> for all <span class="math inline">\(v \in V\)</span>.</p></li>
 <li><p>Show that <span class="math inline">\(V = \ker T + \operatorname{im} T\)</span>. [Hint: Use (a).]</p></li>
@@ -401,11 +791,55 @@ for (i = 0; i < coll.length; i++) {
 <li><p>Parts (b) and (c) tell us that <span class="math inline">\(V = \ker T \oplus \operatorname{im} T\)</span>. Let <span class="math inline">\(P\)</span> be the associated projection onto the direct summand <span class="math inline">\(U =  \operatorname{im} T\)</span>. Show that <span class="math inline">\(P = T\)</span>.</p></li>
 <li><p>Deduce that idempotent linear transformations and projection maps are precisely the same things.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p><span class="math display">\[\begin{aligned}
+      T\bigl(v-T(v)\bigr) &amp;= T(v) - T(T(v)) &amp;&amp;\text{(by linearity)} \\
+                          &amp;= T(v) - T^{2}(v) &amp;&amp; \\
+                          &amp;= T(v) - T(v) &amp;&amp;\text{(by assumption)} \\
+                          &amp;= \vec{0} \\
+    \end{aligned}\]</span> Therefore <span class="math inline">\(v-T(v) \in \ker T\)</span> for all <span class="math inline">\(v \in V\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>If <span class="math inline">\(v \in V\)</span>, then <span class="math display">\[v = \bigl( v-T(v) \bigr) + T(v)\]</span> and here <span class="math inline">\(v-T(v) \in \ker T\)</span> and <span class="math inline">\(T(v) \in \operatorname{im}T\)</span>. Hence <span class="math inline">\(v \in \ker  T + \operatorname{im}T\)</span> for all <span class="math inline">\(v \in V\)</span> and we conclude <span class="math inline">\(V = \ker T + \operatorname{im}T\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Let <span class="math inline">\(v \in \ker T \cap \operatorname{im}T\)</span>. Then <span class="math inline">\(v = T(u)\)</span> for some <span class="math inline">\(u \in V\)</span> because <span class="math inline">\(v \in \operatorname{im}T\)</span>. Now, as <span class="math inline">\(v \in \ker T\)</span>, <span class="math display">\[\vec{0} = T(v) = T(T(u)) = T^{2}(u) = T(u) = v.\]</span> Hence <span class="math inline">\(\ker T \cap \operatorname{im}T = \{\vec{0}\}\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Let <span class="math inline">\(v \in V = \ker T \oplus \operatorname{im}T\)</span>. The associated decomposition of <span class="math inline">\(v\)</span> is given by the equation in the solution to Problem <a href="https://jdbm.me/mt3501-lnotes/06-direct-sums/#problem-06-06">6</a>(b) above: <span class="math display">\[v = \bigl( v - T(v) \bigr) + T(v).\]</span> Hence <span class="math inline">\(P(v) = T(v)\)</span> for all <span class="math inline">\(v \in V\)</span> and therefore <span class="math inline">\(P = T\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>We have observed in lectures that if <span class="math inline">\(P\)</span> is a projection map, then <span class="math inline">\(P^{2} =  P\)</span>, that is, <span class="math inline">\(P\)</span> is idempotent. On the other hand, if <span class="math inline">\(T\)</span> is an idempotent linear transformation then part (d) tells us that <span class="math inline">\(T\)</span> is one of the projection maps associated with the direct sum decomposition <span class="math inline">\(V = \ker T  \oplus \operatorname{im}T\)</span>.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-06-07" label="problem-06-07"></span></p>
 <div class="question">
-<p>Let <span class="math inline">\(T \colon V \to V\)</span> be an idempotent linear transformation. Prove directly from the definition that <span class="math inline">\(\operatorname{id} - T\)</span> is also an idempotent transformation.</p>
-<p>[Here <span class="math inline">\(\operatorname{id} \colon V \to V\)</span> is the identity map. By “directly from the definition”, I mean that you should not use the fact that idempotent transformations and projection maps are precisely the same objects.]</p>
+<p>Let <span class="math inline">\(T \colon V \longrightarrow V\)</span> be an idempotent linear transformation. Prove directly from the definition that <span class="math inline">\(\operatorname{id} - T\)</span> is also an idempotent transformation.</p>
+<p>[Here <span class="math inline">\(\operatorname{id} \colon V \longrightarrow V\)</span> is the identity map. By “directly from the definition”, I mean that you should not use the fact that idempotent transformations and projection maps are precisely the same objects.]</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>If <span class="math inline">\(v \in V\)</span>, then <span class="math display">\[\begin{aligned}
+    (\operatorname{id}-T)^{2}(v) &amp;= (\operatorname{id}-T)(\operatorname{id}-T)(v) \\
+    &amp;= (\operatorname{id}-T)(v - T(v)) \\
+    &amp;= v-T(v) - T(v-T(v)) \\
+    &amp;= v - T(v) - T(v) + T^{2}(v) \\
+    &amp;= v - 2T(v) + T^{2}(v) \\
+    &amp;= v - 2T(v) + T(v) &amp;&amp;\text{(as $T^{2} = T$)} \\
+    &amp;= v - T(v) \\
+    &amp;= (\operatorname{id}-T)(v).
+  \end{aligned}\]</span> Hence <span class="math inline">\((\operatorname{id}-T)^{2} = \operatorname{id}-T\)</span>, so <span class="math inline">\(\operatorname{id}-T\)</span> is indeed idempotent.</p>
 </div></li>
 </ol>
 
