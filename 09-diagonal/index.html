@@ -278,16 +278,16 @@ for (i = 0; i < coll.length; i++) {
       0           &amp; \lambda_{2} &amp; \cdots &amp; 0 \\
       \vdots      &amp; \vdots      &amp; \ddots &amp; \vdots \\
       0           &amp; 0           &amp; \cdots &amp; \lambda_{n}
-    \end{pmatrix}\]</span> for some <span class="math inline">\(\lambda_{1},\lambda_{2},\dots,\lambda_{n} \in F\)</span> (possibly including repeats). The characteristic polynomial of <span class="math inline">\(T\)</span> does not depend on the choice of basis (<a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-char-poly-indep">Proposition 8.2.4</a>), so <span class="math display">\[\begin{aligned}
-    c_{T}(x) = \det(xI-A) &amp; = \det 
+    \end{pmatrix}\]</span> for some <span class="math inline">\(\lambda_{1},\lambda_{2},\dots,\lambda_{n} \in F\)</span> (possibly including repeats). The characteristic polynomial of <span class="math inline">\(T\)</span> does not depend on the choice of basis (<a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-char-poly-indep">Proposition 8.2.4</a>), so <span class="math display">\[c_{T}(x) 
+    = \det(xI-A) 
+    = \det 
     \begin{pmatrix}
       x - \lambda_{1} &amp; 0              &amp; \cdots &amp; 0\\
       0               &amp; x- \lambda_{2} &amp; \cdots &amp; 0 \\
       \vdots          &amp; \vdots         &amp; \ddots &amp; \vdots \\
       0               &amp; 0              &amp; \cdots &amp; x- \lambda_{n}
     \end{pmatrix}
-                          &amp; = (x-\lambda_{1})(x-\lambda_{2}) \cdots (x-\lambda_{n}).
-  \end{aligned}\]</span> ◻</p>
+    = (x-\lambda_{1})(x-\lambda_{2}) \cdots (x-\lambda_{n}). \square\]</span> ◻</p>
 </div>
 <p>If <span class="math inline">\(T: V\to V\)</span> is diagonalisable, then its characteristic polynomial is a product of linear factors. So, if <span class="math inline">\(T: V \to V\)</span> has characteristic polynomial that is not a product of linear factors, then <span class="math inline">\(T\)</span> is not diagonalisable. However, if the characteristic polynomial of a linear transformation <span class="math inline">\(T : V \to V\)</span> happens to be a product of linear factors, then this does not tell us anything about whether or not <span class="math inline">\(T\)</span> is diagonalisable. (Every polynomial over <span class="math inline">\(\mathbb{C}\)</span> can be factorised as a product of linear factors, but not every linear transformation of complex vector spaces is diagonalisable!)</p>
 <div class="prop">
@@ -355,7 +355,7 @@ for (i = 0; i < coll.length; i++) {
     \beta_{0}\]</span> such that <span class="math inline">\(f(T) = 0\)</span> (and note that the degree of <span class="math inline">\(f\)</span> is at most <span class="math inline">\(n ^  2\)</span>).</p>
 <p><strong>Uniqueness.</strong> Suppose that <span class="math display">\[f(x) = x^{k} + \alpha_{k-1} x^{k-1} + \dots + \alpha_{1} x +
     \alpha_{0} \qquad \text{and} \qquad
-    g(x) = x^{k} + \beta_{k-1} x^{k-1} + \dots + \beta_{1} x + \beta_{0}\]</span> are polynomials of the least degree such that <span class="math inline">\(f(T) =  g(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>. If <span class="math inline">\(f \not=g\)</span>, then <span class="math display">\[h(x) = f(x) - g(x) = (\alpha_{k-1} - \beta_{k-1})x^{k-1} + \dots +
+    g(x) = x^{k} + \beta_{k-1} x^{k-1} + \dots + \beta_{1} x + \beta_{0}\]</span> are monic polynomials of the least degree such that <span class="math inline">\(f(T) =  g(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>. If <span class="math inline">\(f \not=g\)</span>, then <span class="math display">\[h(x) = f(x) - g(x) = (\alpha_{k-1} - \beta_{k-1})x^{k-1} + \dots +
     (\alpha_{1} - \beta_{1}) x + (\alpha_{0} - \beta_{0})\]</span> is a non-zero polynomial of degree at most <span class="math inline">\(k - 1\)</span> satisfying <span class="math inline">\(h(T) =  \vec{0}_{\mathcal{L}(V, V)}\)</span>, and so some scalar multiple of <span class="math inline">\(h(x)\)</span> is monic. But, by definition, <span class="math inline">\(m_{T}\)</span> is the monic polynomial of least degree such that <span class="math inline">\(m_T(T)  = \vec{0}_{\mathcal{L}(V, V)}\)</span> and <span class="math inline">\(\deg m_T(x) = k &gt; k - 1 = \deg h\)</span>, which is a contradiction. It follows that <span class="math inline">\(f = g\)</span>, and so there is a <em>unique</em> monic polynomial <span class="math inline">\(f(x)\)</span> of smallest degree such that <span class="math inline">\(f(T) = 0\)</span>. ◻</p>
 </div>
 <div class="prop">

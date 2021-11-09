@@ -177,27 +177,27 @@ for (i = 0; i < coll.length; i++) {
 <h2 id="linear-functionals">Linear functionals</h2>
 <div class="defn">
 <p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>. Then the <strong><em>dual space</em></strong> of <span class="math inline">\(V\)</span> is <span class="math inline">\(\mathcal{L}(V, F)\)</span> and it is denoted <span class="math inline">\(V ^ *\)</span>.</p>
-<p>If <span class="math inline">\(f \in \mathcal{L}(V, F)\)</span>, then <span class="math inline">\(f: V \to F\)</span> is a linear transformations called a <strong><em>linear functional</em></strong>.</p>
+<p>If <span class="math inline">\(f \in \mathcal{L}(V, F)\)</span>, then <span class="math inline">\(f: V \longrightarrow F\)</span> is a linear transformations called a <strong><em>linear functional</em></strong>.</p>
 </div>
 <p>From Wikipedia:</p>
 <blockquote>
 <p>“<em>Linear functionals are particularly important in quantum mechanics. Quantum mechanical systems are represented by Hilbert spaces, which are anti–isomorphic to their own dual spaces. A state of a quantum mechanical system can be identified with a linear functional.</em>”</p>
 </blockquote>
 <div class="example">
-<p><span id="example-linear-functionals" label="example-linear-functionals"></span> If <span class="math inline">\(f: \mathbb{R} ^ 3\to \mathbb{R}\)</span> is defined by <span class="math display">\[f\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} =
+<p><span id="example-linear-functionals" label="example-linear-functionals"></span> If <span class="math inline">\(f: \mathbb{R} ^ 3\longrightarrow\mathbb{R}\)</span> is defined by <span class="math display">\[f\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} =
     5x + y - 3z,\]</span> then <span class="math inline">\(f\)</span> is a linear functional on <span class="math inline">\(\mathbb{R} ^ 3\)</span>.</p>
 </div>
-<p>If <span class="math inline">\(f : F ^n \to F\)</span> is a linear functional, then the matrix for <span class="math inline">\(f\)</span> with respect to the standard bases for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F = F ^ 1\)</span> is just the <span class="math inline">\(1 \times n\)</span> matrix: <span class="math display">\[(\alpha_1\ \alpha_2\ \cdots\ \alpha_n)\]</span> where <span class="math display">\[f(\vec{e}_1) = \alpha_1,\quad f(\vec{e}_2) = \alpha_2, \ldots, \quad f(\vec{e}_n) =
+<p>If <span class="math inline">\(f : F ^n \longrightarrow F\)</span> is a linear functional, then the matrix for <span class="math inline">\(f\)</span> with respect to the standard bases for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F = F ^ 1\)</span> is just the <span class="math inline">\(1 \times n\)</span> matrix: <span class="math display">\[(\alpha_1\ \alpha_2\ \cdots\ \alpha_n)\]</span> where <span class="math display">\[f(\vec{e}_1) = \alpha_1,\quad f(\vec{e}_2) = \alpha_2, \ldots, \quad f(\vec{e}_n) =
   \alpha_n.\]</span> Linear functionals are sometimes referred to as <em>covectors</em> because of this correspondence. In precisely the same way that matrices are often more convenient to deal with than linear transformations, you may prefer to think about covectors rather than linear functionals in the following sections.</p>
-<p>We saw earlier in the course that if <span class="math inline">\(T : F ^ n \to F ^ m\)</span> is a linear transformation, and <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span> with respect to the standard basis for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F ^ m\)</span>, then <span class="math display">\[T(\vec{v}) = A \vec{v}.\]</span></p>
-<p>Applying the discussion of the previous two paragraphs to a linear functional <span class="math inline">\(f: F ^ n \to F\)</span> we obtain <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
+<p>We saw earlier in the course that if <span class="math inline">\(T : F ^ n \longrightarrow F ^ m\)</span> is a linear transformation, and <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span> with respect to the standard basis for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F ^ m\)</span>, then <span class="math display">\[T(\vec{v}) = A \vec{v}.\]</span></p>
+<p>Applying the discussion of the previous two paragraphs to a linear functional <span class="math inline">\(f: F ^ n \longrightarrow F\)</span> we obtain <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
   = 
   (\alpha_1\ \alpha_2\ \cdots\ \alpha_n) 
   \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
   = 
-  \alpha_1x_1 + \alpha_2 x_2 + \cdots + \alpha_nx_n.\]</span> Conversely, if <span class="math inline">\(f : F ^ n \to F\)</span> is defined by <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
+  \alpha_1x_1 + \alpha_2 x_2 + \cdots + \alpha_nx_n.\]</span> Conversely, if <span class="math inline">\(f : F ^ n \longrightarrow F\)</span> is defined by <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
   = 
-  \alpha_1x_1 + \alpha_2 x_2 + \cdots + \alpha_nx_n\]</span> for some <span class="math inline">\(\alpha_1, \alpha_2, \ldots, \alpha_n\in F\)</span>, then it is routine to verify that <span class="math inline">\(f\)</span> is a linear transformation. We have show that a function <span class="math inline">\(f: F ^ n \to F\)</span> is a linear functional if and only if there exist <span class="math inline">\(\alpha_1, \alpha_2,\ldots, \alpha_n\in F\)</span> such that <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
+  \alpha_1x_1 + \alpha_2 x_2 + \cdots + \alpha_nx_n\]</span> for some <span class="math inline">\(\alpha_1, \alpha_2, \ldots, \alpha_n\in F\)</span>, then it is routine to verify that <span class="math inline">\(f\)</span> is a linear transformation. We have show that a function <span class="math inline">\(f: F ^ n \longrightarrow F\)</span> is a linear functional if and only if there exist <span class="math inline">\(\alpha_1, \alpha_2,\ldots, \alpha_n\in F\)</span> such that <span class="math display">\[f\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} 
   = 
   \alpha_1x_1 + \alpha_2 x_2 + \cdots + \alpha_nx_n.\]</span></p>
 <div class="prop">
@@ -263,31 +263,31 @@ for (i = 0; i < coll.length; i++) {
     f_n\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = x_n\]</span> which comprise the dual basis of the standard basis for <span class="math inline">\(F ^ n\)</span> (by <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#examp-dual-basis-1">Example 7.2.2</a>).</p>
 <h2 id="the-dual-transformation">The dual transformation</h2>
 <div class="defn">
-<p><span id="defn-dual-transf" label="defn-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T: V \to W\)</span> is a linear transformation, then the <strong><em>dual transformation</em></strong> of <span class="math inline">\(T\)</span> is the linear transformation <span class="math inline">\(T ^ * : W ^ * \to V ^ *\)</span> defined by <span class="math display">\[T ^ *(f) = f \circ T : V\stackrel{T}{\longrightarrow} W
+<p><span id="defn-dual-transf" label="defn-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T: V \longrightarrow W\)</span> is a linear transformation, then the <strong><em>dual transformation</em></strong> of <span class="math inline">\(T\)</span> is the linear transformation <span class="math inline">\(T ^ * : W ^ * \longrightarrow V ^ *\)</span> defined by <span class="math display">\[T ^ *(f) = f \circ T : V\stackrel{T}{\longrightarrow} W
     \stackrel{f}{\longrightarrow} F\in \mathcal{L}(V, F) = V ^ *\]</span> for all <span class="math inline">\(f\in W ^ * = \mathcal{L}(W, F)\)</span>.</p>
 </div>
 <p>It can be shown directly from the definition that the dual transformation <span class="math inline">\(T ^  *\)</span> of a linear transformation <span class="math inline">\(T\)</span> is itself a linear transformation, or by the observation that the composition of linear transformations (with compatible image and domain) is again a linear transformation.</p>
-<p>Suppose that <span class="math inline">\(T: V\to W\)</span> is a linear transformation. If <span class="math inline">\(V\)</span> is an <span class="math inline">\(n\)</span>-dimensional vector space over <span class="math inline">\(F\)</span>, and <span class="math inline">\(W\)</span> is an <span class="math inline">\(m\)</span>-dimensional vector space over <span class="math inline">\(F\)</span>, then <span class="math inline">\(V\)</span> is isomorphic to <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(W\)</span> is isomorphic to <span class="math inline">\(F ^ m\)</span>. Hence we may, without loss of generality, assume that <span class="math inline">\(T: F ^ n \to F ^ m\)</span>, and so <span class="math inline">\(T\)</span> eats column vectors of length <span class="math inline">\(n\)</span> and poops out column vectors of length <span class="math inline">\(m\)</span>. What does the corresponding dual transformation <span class="math inline">\(T ^ *\)</span> do?</p>
+<p>Suppose that <span class="math inline">\(T: V\longrightarrow W\)</span> is a linear transformation. If <span class="math inline">\(V\)</span> is an <span class="math inline">\(n\)</span>-dimensional vector space over <span class="math inline">\(F\)</span>, and <span class="math inline">\(W\)</span> is an <span class="math inline">\(m\)</span>-dimensional vector space over <span class="math inline">\(F\)</span>, then <span class="math inline">\(V\)</span> is isomorphic to <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(W\)</span> is isomorphic to <span class="math inline">\(F ^ m\)</span>. Hence we may, without loss of generality, assume that <span class="math inline">\(T: F ^ n \longrightarrow F ^ m\)</span>, and so <span class="math inline">\(T\)</span> eats column vectors of length <span class="math inline">\(n\)</span> and poops out column vectors of length <span class="math inline">\(m\)</span>. What does the corresponding dual transformation <span class="math inline">\(T ^ *\)</span> do?</p>
 <p>As described above, linear functionals in <span class="math inline">\((F ^ n) ^ *\)</span> correspond to row vectors of length <span class="math inline">\(n\)</span> and linear functionals in <span class="math inline">\((F ^ m) ^ *\)</span> correspond to row vectors of length <span class="math inline">\(m\)</span>. So, in some sense, <span class="math inline">\(T ^ *\)</span> eats row vectors of length <span class="math inline">\(m\)</span> and poops out row vectors of length <span class="math inline">\(n\)</span>.</p>
-<p>Well, sometimes dreams come true: if <span class="math inline">\(\cev{f}\)</span> is the matrix of a linear functional <span class="math inline">\(f\)</span> with respect to the standard bases for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F\)</span>, then <span class="math display">\[T ^ *(f) = f \circ T = \cev{f} A,\]</span> where <span class="math inline">\(\cev{f} A\)</span> is a product of a <span class="math inline">\(1 \times m\)</span> matrix with an <span class="math inline">\(m\times n\)</span> matrix, AKA a row vector of length <span class="math inline">\(n\)</span>. Sweet.</p>
+<p>Well, sometimes dreams come true: if <span class="math inline">\(\reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{f}}}}}\)</span> is the matrix of a linear functional <span class="math inline">\(f\)</span> with respect to the standard bases for <span class="math inline">\(F ^ n\)</span> and <span class="math inline">\(F\)</span>, then <span class="math display">\[T ^ *(f) = f \circ T = \reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{f}}}}} A,\]</span> where <span class="math inline">\(\reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{f}}}}} A\)</span> is a product of a <span class="math inline">\(1 \times m\)</span> matrix with an <span class="math inline">\(m\times n\)</span> matrix, AKA a row vector of length <span class="math inline">\(n\)</span>. Sweet.</p>
 <div class="examp">
-<p><span id="example-dual-transf" label="example-dual-transf"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 3\to \mathbb{R} ^ 2\)</span> is the linear transformation defined by <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
+<p><span id="example-dual-transf" label="example-dual-transf"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 3\longrightarrow\mathbb{R} ^ 2\)</span> is the linear transformation defined by <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
     =
-    \begin{pmatrix} x - y \\ y - z \end{pmatrix}.\]</span> Describe the dual transformation <span class="math inline">\(T ^ * : (\mathbb{R} ^ 2) ^ * \to  (\mathbb{R} ^ 3) ^ *\)</span> of <span class="math inline">\(T\)</span>.</p>
+    \begin{pmatrix} x - y \\ y - z \end{pmatrix}.\]</span> Describe the dual transformation <span class="math inline">\(T ^ * : (\mathbb{R} ^ 2) ^ * \longrightarrow  (\mathbb{R} ^ 3) ^ *\)</span> of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="solution">
-<p>Suppose that <span class="math inline">\(f \in (\mathbb{R} ^ 2) ^ *\)</span> is arbitrary. Then there exist <span class="math inline">\(\alpha, \beta \in F\)</span> such that <span class="math display">\[f \begin{pmatrix} x \\ y \end{pmatrix} = \alpha x + \beta y.\]</span> We will denote <span class="math inline">\(T ^ *(f) \in (\mathbb{R} ^ 3) ^ *\)</span> by <span class="math inline">\(S: \R ^ 3 \to \R\)</span>. It follows directly from the definition that <span class="math display">\[S \begin{pmatrix} x \\ y \\ z \end{pmatrix}  
+<p>Suppose that <span class="math inline">\(f \in (\mathbb{R} ^ 2) ^ *\)</span> is arbitrary. Then there exist <span class="math inline">\(\alpha, \beta \in F\)</span> such that <span class="math display">\[f \begin{pmatrix} x \\ y \end{pmatrix} = \alpha x + \beta y.\]</span> We will denote <span class="math inline">\(T ^ *(f) \in (\mathbb{R} ^ 3) ^ *\)</span> by <span class="math inline">\(S: \mathbb{R}^ 3 \longrightarrow\mathbb{R}\)</span>. It follows directly from the definition that <span class="math display">\[S \begin{pmatrix} x \\ y \\ z \end{pmatrix}  
     = f \circ T \begin{pmatrix} x \\ y \\ z \end{pmatrix}  
     = f \begin{pmatrix} x - y \\ y - z \end{pmatrix}
     = \alpha (x - y) + \beta (y - z). \square\]</span></p>
 </div>
 <div class="example">
-<p><span id="example-dual-transf-2" label="example-dual-transf-2"></span> Let <span class="math inline">\(T: \mathbb{R} ^ 4\to \mathbb{R} ^ 4\)</span> be defined by <span class="math display">\[T \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
-    = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}.\]</span> Describe the dual transformation <span class="math inline">\(T ^ *: (\mathbb{R} ^ 4) ^ * \to (\mathbb{R}  ^ 4) ^ *\)</span>. [In <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#ex:lintrans-matrix">Example 4.2.2</a> we found the matrix of this linear transformation with respect to several bases for <span class="math inline">\(\mathbb{R} ^ 4\)</span>.]</p>
+<p><span id="example-dual-transf-2" label="example-dual-transf-2"></span> Let <span class="math inline">\(T: \mathbb{R} ^ 4\longrightarrow\mathbb{R} ^ 4\)</span> be defined by <span class="math display">\[T \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
+    = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}.\]</span> Describe the dual transformation <span class="math inline">\(T ^ *: (\mathbb{R} ^ 4) ^ * \longrightarrow(\mathbb{R}  ^ 4) ^ *\)</span>. [In <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#ex:lintrans-matrix">Example 4.2.2</a> we found the matrix of this linear transformation with respect to several bases for <span class="math inline">\(\mathbb{R} ^ 4\)</span>.]</p>
 </div>
 <div class="solution">
 <p>Suppose that <span class="math inline">\(f\in (\mathbb{R} ^ 4) ^ *\)</span> is arbitrary. Then there exist <span class="math inline">\(\alpha, \beta, \gamma, \delta\in F\)</span> such that <span class="math display">\[f \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
-    = \alpha x + \beta y + \gamma z + \delta t.\]</span> Hence if we write <span class="math inline">\(S = T ^ *(f) : \R ^ 4 \to \R\)</span>, then <span class="math display">\[S \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
+    = \alpha x + \beta y + \gamma z + \delta t.\]</span> Hence if we write <span class="math inline">\(S = T ^ *(f) : \mathbb{R}^ 4 \longrightarrow\mathbb{R}\)</span>, then <span class="math display">\[S \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
     = f \circ T  \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}
     = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}
     = \alpha(x + 4y) + \beta y + \gamma (2z + t) + \delta (z + 2t).\square\]</span></p>
@@ -339,7 +339,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span></p>
 </div>
 <div class="example">
-<p><span id="example-matrix-dual-map" label="example-matrix-dual-map"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 3 \to \mathbb{R} ^ 2\)</span> is the linear transformation defined by <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
+<p><span id="example-matrix-dual-map" label="example-matrix-dual-map"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 3 \longrightarrow\mathbb{R} ^ 2\)</span> is the linear transformation defined by <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
     =
     \begin{pmatrix} x - y \\ y - z \end{pmatrix}.\]</span> If <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are the standard bases for <span class="math inline">\(\mathbb{R} ^  3\)</span> and <span class="math inline">\(\mathbb{R} ^ 2\)</span>, respectively, then find <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^*}(T ^ *)\)</span> where <span class="math inline">\(\mathscr{B} ^ *\)</span> and <span class="math inline">\(\mathscr{C} ^ *\)</span> are the dual bases of <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span>, respectively.</p>
 </div>
@@ -375,8 +375,8 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\square\]</span></p>
 </div>
 <div class="thm">
-<p><span id="thm-transpose" label="thm-transpose"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \to W\)</span> be a linear transformation. If <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively, and <span class="math inline">\(\mathscr{B} ^ *\)</span> and <span class="math inline">\(\mathscr{C} ^ *\)</span> are the respective dual bases, then <span class="math display">\[\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *) =
-    \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) ^ *\]</span> where <span class="math inline">\(T ^ * : W ^ * \to V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>. In other words, the matrix of a dual transformation is the transpose of the matrix of the original linear transformation.</p>
+<p><span id="thm-transpose" label="thm-transpose"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \longrightarrow W\)</span> be a linear transformation. If <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are bases for <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>, respectively, and <span class="math inline">\(\mathscr{B} ^ *\)</span> and <span class="math inline">\(\mathscr{C} ^ *\)</span> are the respective dual bases, then <span class="math display">\[\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *) =
+    \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) ^ *\]</span> where <span class="math inline">\(T ^ * : W ^ * \longrightarrow V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>. In other words, the matrix of a dual transformation is the transpose of the matrix of the original linear transformation.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Suppose that <span class="math inline">\(\mathscr{B} = \{v_1, \ldots, v_n\}\)</span> and that <span class="math inline">\(\mathscr{C} =  \{w_1, \ldots, w_m\}\)</span>. If <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) =  [\alpha_{ij}]\)</span> and <span class="math inline">\(v_j\in \mathscr{B}\)</span>, then, by the definition of the matrix of a linear transformation, <span class="math display">\[T(v_j) = \sum_{i = 1} ^ m \alpha_{ij}w_i.\]</span> for all <span class="math inline">\(j\)</span>. Similarly, if <span class="math inline">\(\mathscr{B} ^ * = \{f_1, \ldots, f_n\}\)</span> and <span class="math inline">\(\mathscr{C} ^ *= \{g_1, \ldots, g_m\}\)</span>, then, by the definition of the dual transformation, <span class="math display">\[\label{t-star-basis}
@@ -412,7 +412,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span> is <span class="math inline">\(2\)</span>, and the column rank is also <span class="math inline">\(2\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lemma-rank-im-dual-transf" label="lemma-rank-im-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T  : V \to W\)</span> is a linear transformation, then <span class="math inline">\(\dim \operatorname{im} T = \dim \operatorname{im} T ^ *\)</span> where <span class="math inline">\(T ^ *: W ^ * \to V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>.</p>
+<p><span id="lemma-rank-im-dual-transf" label="lemma-rank-im-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T  : V \longrightarrow W\)</span> is a linear transformation, then <span class="math inline">\(\dim \operatorname{im} T = \dim \operatorname{im} T ^ *\)</span> where <span class="math inline">\(T ^ *: W ^ * \longrightarrow V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> In Problem <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problem-07-02">2</a>(d) in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problems-07-dual-space">Section 7.6</a>, it is shown that <span class="math inline">\(\dim \ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>. Also <span class="math inline">\(\dim  \operatorname{im} T ^ * = \dim W ^* - \dim \ker T ^ *\)</span> by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>). Since <span class="math inline">\(\dim W ^ * = \dim W\)</span>, (<a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#prop-dim-dual-space">Proposition 7.1.3</a>), it follows that <span class="math display">\[\begin{aligned}
@@ -427,7 +427,7 @@ for (i = 0; i < coll.length; i++) {
 <p><span id="thm-row-rank-is-col-rank" label="thm-row-rank-is-col-rank"></span> If <span class="math inline">\(A\)</span> is a matrix with entries in a field <span class="math inline">\(F\)</span>, then the row rank of <span class="math inline">\(A\)</span> equals the column rank.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Recall from Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-06">6</a> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>, that if <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are the standard bases for <span class="math inline">\(F ^ m\)</span> and <span class="math inline">\(F ^ n\)</span>, respectively, then <span class="math inline">\(T : F ^ m \to F ^ n\)</span> defined by <span class="math inline">\(T(\vec{v})  = A\vec{v}\)</span> is a linear transformation, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T) = A\)</span>. It follows that the column rank of <span class="math inline">\(A\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), the column rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(\dim  \operatorname{im} T\)</span>. <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#lemma-rank-im-dual-transf">Lemma 7.5.2</a> states that <span class="math display">\[\dim
+<p><em>Proof.</em> Recall from Problem <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problem-04-06">6</a> in <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#problems-04-linear-transf">Section 4.5</a>, that if <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span> are the standard bases for <span class="math inline">\(F ^ m\)</span> and <span class="math inline">\(F ^ n\)</span>, respectively, then <span class="math inline">\(T : F ^ m \longrightarrow F ^ n\)</span> defined by <span class="math inline">\(T(\vec{v})  = A\vec{v}\)</span> is a linear transformation, and <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T) = A\)</span>. It follows that the column rank of <span class="math inline">\(A\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>. Hence, by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1), the column rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(\dim  \operatorname{im} T\)</span>. <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#lemma-rank-im-dual-transf">Lemma 7.5.2</a> states that <span class="math display">\[\dim
   \operatorname{im} T = \dim \operatorname{im} T ^ *\]</span> and <span class="math inline">\(\dim  \operatorname{im} T ^ *\)</span> equals the column rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *)\)</span> (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-column-space-is-image">Theorem 4.2.3</a>(1)). But we showed in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a> that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^  *, \mathscr{B}  ^ *}(T ^ *)\)</span> equals the transpose of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{C}}(T)\)</span>. Hence <span class="math inline">\(\dim \operatorname{im} T ^ *\)</span> is the column rank of the transpose of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span>, which is the row rank of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) = A\)</span>. ◻</p>
 </div>
 <h2 id="problems-07-dual-space">Problems</h2>
@@ -441,6 +441,40 @@ for (i = 0; i < coll.length; i++) {
 <li><p>if <span class="math inline">\(\alpha \in F\)</span> and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then <span class="math inline">\((\alpha T) ^ * = \alpha T ^ *\)</span>;</p></li>
 <li><p>if <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span> and <span class="math inline">\(S\in \mathcal{L}(W, U)\)</span>, then <span class="math inline">\((S\circ T) ^ * = T ^ * \circ S ^ *\)</span>.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p>By definition, <span class="math inline">\((S + T) ^ *(f) = f \circ (S + T)\)</span> for all <span class="math inline">\(f \in W ^ *\)</span>. If <span class="math inline">\(v\in V\)</span> is arbitrary, then <span class="math display">\[\begin{aligned}
+      (S + T) ^ * (f)(v) &amp; = &amp; f((S + T)(v)) \\
+                         &amp; = &amp; f(S(v) + T(v))\\
+                         &amp; = &amp; f(S(v)) + f(T(v))\\
+                         &amp; = &amp; (f \circ S)(v) + (f\circ T)(v)\\
+                         &amp; = &amp; S ^ *(f)(v) + T ^ *(f)(v).
+    \end{aligned}\]</span> Hence since <span class="math inline">\(v\in V\)</span> was arbitrary, it follows that <span class="math inline">\((S + T) ^ * = S ^ * +  T ^ *\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>If <span class="math inline">\(\alpha\in F\)</span> is arbitrary, <span class="math inline">\(f\in W ^ *\)</span>, and <span class="math inline">\(v\in V\)</span>, then <span class="math display">\[\begin{aligned}
+      (\alpha T) ^ * (f)(v)  =  f\circ (\alpha T)(v) 
+                             =  f\circ  T(\alpha v) 
+                             =  f(T(\alpha v)) 
+                             =  \alpha f(T(v)) 
+                             =  \alpha T ^ *(f)(v).\square
+    \end{aligned}\]</span></p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Suppose that <span class="math inline">\(f\in U ^ *\)</span> and <span class="math inline">\(v\in V\)</span> are arbitrary. Then <span class="math display">\[\begin{aligned}
+      (S\circ T) ^ * (f)  =  f\circ (S\circ T)        
+                          =  (f \circ S) \circ T      
+                          =  T ^ * (f \circ S)        
+                          =  T ^ * (S ^ * (f))        
+                          =  (T ^ * \circ S ^ *) (f). \square
+    \end{aligned}\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-07-02" label="problem-07-02"></span></p>
 <div class="question">
@@ -451,19 +485,93 @@ for (i = 0; i < coll.length; i++) {
 <li><p>If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then show that <span class="math inline">\(\ker T ^ * = (\operatorname{im} T) ^ 0\)</span>, that is, that the kernel of the dual transformation of <span class="math inline">\(T\)</span> equals the annihilator of the image of <span class="math inline">\(T\)</span>.</p></li>
 <li><p>If <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional and <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span>, then show that <span class="math inline">\(\dim\ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p>We verify the subspace criteria. Firstly, note that <span class="math inline">\(\vec{0}_{V ^ *}\)</span> (the linear transformation mapping every vector in <span class="math inline">\(V\)</span> to <span class="math inline">\(0\in F\)</span>) belongs to <span class="math inline">\(U ^ 0\)</span> and so <span class="math inline">\(U ^ 0 \not = \varnothing\)</span>.</p>
+<p>If <span class="math inline">\(f, g\in U ^ 0\)</span> and <span class="math inline">\(u\in U\)</span>, then <span class="math inline">\((f + g)(u) = f(u) + g(u) = 0 + 0 =  0\)</span>, and so <span class="math inline">\(f + g\in U ^ 0\)</span>.</p>
+<p>If <span class="math inline">\(\alpha\in F\)</span> and <span class="math inline">\(u\in U\)</span>, then <span class="math inline">\((\alpha f)(u) = \alpha f(u) = \alpha 0  = 0\)</span>, and so <span class="math inline">\(\alpha f \in U ^ 0\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Since <span class="math inline">\(U\)</span> is a vector space in its own right, let <span class="math inline">\(\iota:U \longrightarrow V\)</span> be defined by <span class="math inline">\(\iota(u) = u\)</span> for all <span class="math inline">\(u\in U\)</span>. Clearly, <span class="math inline">\(\iota\)</span> is a linear transformation (it’s just the identity on <span class="math inline">\(U\)</span>). If <span class="math inline">\(\iota ^ * : V ^ * \longrightarrow U  ^ *\)</span> is the dual transformation of <span class="math inline">\(\iota\)</span>, then it follows, by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), that <span class="math display">\[\label{eq-sheet-v-problem-2-b}
+      \dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ *.\]</span> If <span class="math inline">\(f\in \ker \iota ^ *\)</span>, then <span class="math inline">\(\iota ^ *(f) = f\circ \iota = \vec{0}_{U ^*}  \in U ^ *\)</span> (the linear transformation mapping every element of <span class="math inline">\(U\)</span> to <span class="math inline">\(0  \in F\)</span>). It follows that if <span class="math inline">\(f\in \ker \iota ^ *\)</span>, then <span class="math inline">\(f\in V ^ *\)</span> and if <span class="math inline">\(u\in  U\)</span>, then <span class="math inline">\(f(u) = f(\iota(u)) = \iota ^ *(f)(u) = 0\)</span> and so <span class="math inline">\(f \in U ^ 0\)</span>. Conversely, if <span class="math inline">\(f \in U ^ 0\)</span> and <span class="math inline">\(u\in U\)</span>, then <span class="math inline">\(\iota ^*(f)(u) = (f \circ \iota)(u) = f(\iota(u)) = f(u) = 0\)</span>, and so <span class="math inline">\(f\in \ker \iota ^ *\)</span>. We have shown that <span class="math inline">\(\ker \iota ^ * = U ^ 0\)</span> and so <span class="math inline">\(\dim \ker \iota ^ * = \dim U ^ 0\)</span>.</p>
+<p>If <span class="math inline">\(f\in U ^ *\)</span>, then <span class="math inline">\(f\)</span> can be extended to a linear functional <span class="math inline">\(\hat f: V  \longrightarrow F\)</span> (by extending any basis for <span class="math inline">\(U\)</span> to a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span>, defining <span class="math inline">\(\hat f\)</span> to equal <span class="math inline">\(f\)</span> on the basis for <span class="math inline">\(U\)</span>, and to be arbitrary on the remaining vectors in <span class="math inline">\(\mathscr{B}\)</span>). It follows that <span class="math inline">\(\iota ^ * (\hat f) = \hat f  \circ \iota = f \circ \iota = f\)</span> and so <span class="math inline">\(f\in \operatorname{im}\iota ^ *\)</span>. Since <span class="math inline">\(f\in  U ^*\)</span> was arbitrary, it follows that <span class="math inline">\(\operatorname{im}\iota ^ * = U\)</span>, and so <span class="math inline">\(\dim \operatorname{im}  \iota ^ * = \dim U\)</span>.</p>
+<p>Thus by the equation above, it follows that <span class="math display">\[\dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ * 
+                 = \dim U ^ 0 + \dim U.\]</span> This was probably an unreasonably hard problem.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Suppose that <span class="math inline">\(f\in \ker T ^ *\)</span>. Then <span class="math inline">\(T ^ * (f) = \vec{0}_{V ^ *}\)</span> and so <span class="math inline">\(T ^ *(f)(v) = 0\in F\)</span> for all <span class="math inline">\(v\in V\)</span>. If <span class="math inline">\(w\in \operatorname{im}T\)</span>, then there exists <span class="math inline">\(v\in V\)</span> such that <span class="math inline">\(T(v) = w\)</span>, and so <span class="math display">\[f(w) = f(T(v)) = T ^ * (f)(v) = 0.\]</span> Since <span class="math inline">\(w\in W\)</span> was arbitrary, we have shown that <span class="math inline">\(f\in (\operatorname{im}T) ^ 0\)</span>.</p>
+<p>Conversely, if <span class="math inline">\(f\in (\operatorname{im}T) ^ 0\)</span>, then for all <span class="math inline">\(v\in V\)</span>, <span class="math inline">\(f(T(v)) = 0\)</span>. In particular, <span class="math inline">\(T ^ * (f) (v) = f(T(v)) = 0\)</span> for all <span class="math inline">\(v\in V\)</span>, and so <span class="math inline">\(T  ^ *(f) = 0_{V ^ *}\)</span> and so <span class="math inline">\(f\in \ker T ^ *\)</span>.</p>
+<p>It follows that <span class="math inline">\(\ker T ^ * = (\operatorname{im}T) ^ 0\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>In part (c), we showed that <span class="math inline">\(\ker T ^* = (\operatorname{im}T) ^ 0\)</span> and so <span class="math inline">\(\dim \ker T ^ * = \dim (\operatorname{im}T) ^ 0\)</span>. By part (b), <span class="math inline">\(\dim (\operatorname{im}T) ^ 0 =  \dim W - \dim \operatorname{im}T\)</span> and, by the Rank-Nullity Theorem, <span class="math inline">\(\dim \operatorname{im}T = \dim V - \dim \ker T\)</span>. Putting the equalities of the previous sentences together, we obtain <span class="math display">\[\begin{aligned}
+        \dim \ker T ^ * &amp; = &amp; \dim (\operatorname{im}T) ^ 0  \\
+                        &amp; = &amp; \dim W - \dim \operatorname{im}T  \\
+                        &amp; = &amp; \dim W - (\dim V - \dim \ker T) \\
+                        &amp; = &amp; \dim\ker T + \dim W - \dim V.\square
+      \end{aligned}\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-07-03" label="problem-07-03"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V = \mathcal{P}\)</span> be the vector space of polynomials with coefficients in <span class="math inline">\(\mathbb{R}\)</span> and indeterminant <span class="math inline">\(x\)</span>, and let <span class="math display">\[U = \{x ^ 4 p : p \in V\}.\]</span> In other words, <span class="math inline">\(U\)</span> is the set of all polynomials that are a multiple of <span class="math inline">\(x ^ 4\)</span> in <span class="math inline">\(V\)</span>.</p>
 <ol type="1">
 <li><p>Show that <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>.</p></li>
-<li><p>Prove that <span class="math inline">\(f:V \to \mathbb{R}\)</span> defined by <span class="math inline">\(f(p) = p&#39;(0)\)</span> is a linear functional.</p></li>
+<li><p>Prove that <span class="math inline">\(f:V \longrightarrow\mathbb{R}\)</span> defined by <span class="math inline">\(f(p) = p&#39;(0)\)</span> is a linear functional.</p></li>
 <li><p>Show that <span class="math inline">\(f \in V ^ *\)</span> from part (b) belongs to the annihilator <span class="math inline">\(U ^  0\)</span> of <span class="math inline">\(U\)</span>.</p></li>
+</ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p>We verify the Subspace Criteria:</p>
+<ul>
+<li><p>Since <span class="math inline">\(x ^ 4\in U\)</span>, it follows that <span class="math inline">\(U\)</span> is not empty.</p></li>
+<li><p>Suppose that <span class="math inline">\(x ^ 4p, x ^ 4q\in U\)</span>. Then <span class="math inline">\(x ^ 4 p + x ^ 4q = x ^ 4 (p + q)\in U\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\alpha\in \mathbb{R}\)</span> and <span class="math inline">\(x ^ 4 p \in U\)</span> are arbitrary, then <span class="math inline">\(\alpha (x ^ 4 p) = x ^ 4 (\alpha p)\in U\)</span>.</p></li>
+</ul>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Since <span class="math inline">\(p&#39;(0) \in \mathbb{R}\)</span> for all <span class="math inline">\(p \in V\)</span>, it suffices to show that <span class="math inline">\(f\)</span> is a linear transformation.</p>
+<p>If <span class="math inline">\(p, q\in V\)</span> and <span class="math inline">\(\alpha\in \mathbb{R}\)</span> are arbitrary, then <span class="math display">\[f(p + q) = (p + q)&#39;(0) = p&#39;(0) + q&#39;(0) = f(p) + f(q)\]</span> and <span class="math display">\[f(\alpha p) = (\alpha p)&#39;(0) = \alpha p&#39;(0) = \alpha f(p),\]</span> and so <span class="math inline">\(f\)</span> is a linear transformation.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>By definition (Problem 2 on this sheet), <span class="math display">\[U ^ 0 = \{\,f\in V ^ *\mid f(u) = 0\ \text{for all }u\in U\,\}.\]</span> If <span class="math inline">\(x ^ 4 p\in U\)</span> is arbitrary, then <span class="math display">\[f(x ^ 4 p) = (x ^ 4 p)&#39;(0) 
+                 = (4 x ^ 3 p + x ^ 4 p&#39;)(0) 
+                 = 0 + 0
+                 = 0\]</span> and so <span class="math inline">\(f\in U ^ 0\)</span>.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-07-04" label="problem-07-04"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(\mathscr{B} =\{ \vec{e}_1, \vec{e}_2, \vec{e}_3, \vec{e}_4\}\)</span> be the standard basis for <span class="math inline">\(\mathbb{R} ^ 4\)</span>, and let <span class="math inline">\(\mathscr{B} ^ * = \{f_1,  f_2, f_3, f_4\}\subseteq (\mathbb{R} ^ 4) ^ *\)</span> be the dual basis for <span class="math inline">\(\mathscr{B}\)</span>. Show that the annihilator <span class="math inline">\(U ^ 0\)</span> of <span class="math inline">\(U =  \operatorname{Span}(\vec{e}_1, \vec{e}_3)\)</span> is <span class="math inline">\(\operatorname{Span}(f_2,  f_4)\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Suppose that <span class="math inline">\(f\in U ^ 0\)</span>. Then, by definition (in Problem 2 on this sheet), <span class="math inline">\(f(u) = 0\)</span> for all <span class="math inline">\(u\in U = \operatorname{Span}(\vec{e}_1, \vec{e}_3)\)</span>. If <span class="math inline">\(u\in U\)</span> is arbitrary, then <span class="math inline">\(u\)</span> is a linear combination of <span class="math inline">\(\vec{e}_1\)</span> and <span class="math inline">\(\vec{e}_3\)</span>, and so there exist <span class="math inline">\(x_1, x_3\in \mathbb{R}\)</span> such that <span class="math display">\[u = x_1\vec{e}_1 + x_3\vec{e}_3 
+      = \begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix}.\]</span> Hence <span class="math display">\[f\begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix} = 0\]</span> for all <span class="math inline">\(x_1, x_3\in \mathbb{R}\)</span>.</p>
+<p>If <span class="math inline">\(f\in \operatorname{Span}(f_2, f_4)\)</span>, then <span class="math inline">\(f = \alpha_2 f_2 + \alpha_4f_4\)</span> for some <span class="math inline">\(\alpha_2, \alpha_4\in \mathbb{R}\)</span>. Hence if <span class="math display">\[v = \begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix} \in U\]</span> is arbitrary, then <span class="math display">\[f(v) = (\alpha_2 f_2 + \alpha_4f_4)\begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix}
+       = \alpha_2f_2\begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix} + 
+         \alpha_4f_4 \begin{pmatrix}x_1\\0\\x_3\\0\end{pmatrix}
+       = \alpha_2 0 + \alpha_4 0
+       = 0\]</span> and so <span class="math inline">\(f\in U ^ 0\)</span>.</p>
+<p>On the other hand, if <span class="math inline">\(f\in U^ 0 \subseteq V ^ *\)</span>, then since <span class="math inline">\(\mathscr{B}^ *\)</span> is a basis for <span class="math inline">\(V ^ *\)</span>, it follows that <span class="math display">\[f = \beta_1f_1 + \beta_2f_2 + \beta_3f_3 + \beta_4f_4\]</span> for some <span class="math inline">\(\beta_1, \beta_2, \beta_3, \beta_4\in \mathbb{R}\)</span>. Recall that <span class="math display">\[f_i\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix}
+  = x_i\]</span> for <span class="math inline">\(i = 1, \ldots, 4\)</span>. Since <span class="math inline">\(\vec{e}_1\in U\)</span> and <span class="math inline">\(f \in U ^0\)</span>, it follows that <span class="math display">\[0 = f(\vec{e}_1) 
+    = (\beta_1f_1 + \beta_2f_2 + \beta_3f_3 + \beta_4f_4)(\vec{e}_1) 
+    = \beta_1.\]</span> Similarly, <span class="math inline">\(\beta_3 = 0\)</span>, and so <span class="math inline">\(f = \beta_2f_2 + \beta_4f_4\in \operatorname{Span}(f_2,  f_4)\)</span>.</p>
 </div></li>
 <li><p><span id="problem-07-05" label="problem-07-05"></span></p>
 <div class="question">
@@ -473,26 +581,104 @@ for (i = 0; i < coll.length; i++) {
 <li><p><span class="math inline">\((\gamma A) ^ * = \gamma A ^ *\)</span> for all <span class="math inline">\(\gamma\in F\)</span>;</p></li>
 <li><p>if <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\times n\)</span> matrix and <span class="math inline">\(B\)</span> is a <span class="math inline">\(n\times k\)</span> matrix, then <span class="math inline">\((AB) ^ * = B ^ * A ^ *\)</span>.</p></li>
 </ol>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Suppose that <span class="math inline">\(A = [\alpha_{ij}]\)</span> and <span class="math inline">\(B = [\beta_{jk}]\)</span>.</p>
+<ol type="1">
+<li><p>By definition, <span class="math inline">\(A + B = [\alpha_{ij} + \beta_{ij}]\)</span> and so <span class="math inline">\((A + B) ^ T = [\alpha_{ji} + \beta_{ji}] = [\alpha_{ji}] + [\beta_{ji}]  = A ^ T + B ^ T\)</span>, as required.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Again, <span class="math inline">\(\gamma A = [\gamma \alpha_{ij}]\)</span> and so <span class="math inline">\((\gamma A) ^ T = [\gamma  \alpha_{ji}] = \gamma [\alpha_{ji}] = \gamma A ^ T\)</span>.</p>
+<div class="center">
+<hr />
+</div></li>
+<li><p>Suppose that <span class="math inline">\(T: F ^ n\longrightarrow F ^ m\)</span> and <span class="math inline">\(S : F ^ k\longrightarrow F ^ n\)</span> are linear transformations such that their matrices with respect to the standard bases for <span class="math inline">\(F ^ m\)</span>, <span class="math inline">\(F ^ n\)</span>, and <span class="math inline">\(F ^ k\)</span> are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively. Then <span class="math inline">\(T\circ S : F ^ k \longrightarrow F ^ m\)</span> is a linear transformation, whose matrix, with respect to the standard bases for <span class="math inline">\(F ^ k\)</span> and <span class="math inline">\(F ^ m\)</span> is <span class="math inline">\(AB\)</span>. If <span class="math inline">\(T ^ *: (F ^ m) ^ * \longrightarrow(F ^ n) ^ *\)</span> and <span class="math inline">\(S ^ *:  (F ^ n) ^ * \longrightarrow(F ^ k) ^ *\)</span> are the dual transformations of <span class="math inline">\(T\)</span> and <span class="math inline">\(S\)</span> respectively, then <span class="math inline">\(S ^ * \circ T ^ *: (F ^ m) ^ * \longrightarrow(F ^ k) ^ *\)</span> and <span class="math inline">\(S ^ * \circ T ^ * = (T\circ S) ^ *\)</span> (by Problem 1(c) on this sheet). It follows by <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a> that the matrix of <span class="math inline">\((T\circ S)  ^ *\)</span> is <span class="math inline">\((AB) ^ T\)</span>, while the matrix of <span class="math inline">\(S ^ * \circ T ^ *\)</span> is <span class="math inline">\(B ^ T A ^  T\)</span>, as required.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-07-06" label="problem-07-06"></span></p>
 <div class="question">
 <p>If <span class="math inline">\(V\)</span> is a vector space, show that every linear functional <span class="math inline">\(f\)</span> over <span class="math inline">\(V\)</span> is either surjective or <span class="math inline">\(f(v) = 0\)</span> for all <span class="math inline">\(v\in V\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Suppose that <span class="math inline">\(f: V\longrightarrow F\)</span> is such that there exists <span class="math inline">\(v\in V\)</span> where <span class="math inline">\(f(v) \not  = 0\)</span>. Then <span class="math inline">\(f(v) = \alpha\)</span> for some <span class="math inline">\(\alpha\in F\)</span>. If <span class="math inline">\(\beta\in F\)</span> is arbitrary, then <span class="math inline">\(\beta = \beta \alpha ^ {-1}\alpha = \beta\alpha ^ {-1} f(v)  = f(\beta\alpha ^ {-1} v)\)</span> and so <span class="math inline">\(\beta \in \operatorname{im}f\)</span> for all <span class="math inline">\(\beta \in F\)</span>. Hence <span class="math inline">\(f\)</span> is surjective.</p>
 </div></li>
 <li><p><span id="problem-07-07" label="problem-07-07"></span></p>
 <div class="question">
 <p>Let <span class="math inline">\(V\)</span> be any vector space. Show that the dual transformation of the identity linear transformation on <span class="math inline">\(V\)</span> is the identity transformation on the dual space <span class="math inline">\(V ^ *\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Let <span class="math inline">\(\operatorname{id}_{V}: V \longrightarrow V\)</span> be the identity transformation defined so that <span class="math inline">\(\operatorname{id}_V(v) = v\)</span> for all <span class="math inline">\(v\in V\)</span>. Then the dual transformation is defined to be <span class="math inline">\({\operatorname{id}_V} ^ * (f) = f \circ \operatorname{id}_V\)</span> where <span class="math inline">\(f\in V ^ * = \mathcal{L}(V, F)\)</span> is arbitrary.</p>
+<p>It follows that if <span class="math inline">\(v\in V\)</span> is arbitrary, then <span class="math inline">\(f\circ \operatorname{id}_V (v) =  f(\operatorname{id}_V(v)) = f(v)\)</span> and since <span class="math inline">\(v\)</span> was arbitrary, it follows that <span class="math inline">\({\operatorname{id}_V  } ^ * (f) = f\)</span>. But <span class="math inline">\(f\in V ^ *\)</span> was arbitrary too, and so <span class="math inline">\({\operatorname{id}_V} ^ *  (f) = f\)</span> for all <span class="math inline">\(f\in V ^*\)</span>. Therefore <span class="math inline">\({\operatorname{id}_V} ^ *\)</span> is the identity transformation <span class="math inline">\(\operatorname{id}_{V ^ *} : V ^ * \longrightarrow V ^ *\)</span>.</p>
 </div></li>
 <li><p><span id="problem-07-08" label="problem-07-08"></span></p>
 <div class="question">
-<p>Let <span class="math inline">\(T :\mathbb{R} ^ 4\to \mathbb{R} ^ 4\)</span> be defined by the following formula: <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} =
+<p>Let <span class="math inline">\(T :\mathbb{R} ^ 4\longrightarrow\mathbb{R} ^ 4\)</span> be defined by the following formula: <span class="math display">\[T\begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} =
       \begin{pmatrix} x + 4y \\ y \\ 2z + t \\ z + 2t \end{pmatrix}.\]</span> Let <span class="math inline">\(\mathscr{B} = \{ \vec{e}_{1},\vec{e}_{2},\vec{e}_{3},\vec{e}_{4} \}\)</span> denote the standard basis for <span class="math inline">\(\mathbb{R}^{4}\)</span> and let <span class="math inline">\(\mathscr{C}\)</span> be the basis <span class="math display">\[\mathscr{C} = \{ \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{4} \} =
         \left\{ \begin{pmatrix} 2 \\ 0 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix}
         0 \\ 1 \\ -1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0
         \end{pmatrix}, \begin{pmatrix} 3 \\ 0 \\ 0 \\ 1 \end{pmatrix} \right\}.\]</span> Find <span class="math inline">\(\operatorname{Mat}_{\mathscr{B} ^ *, \mathscr{C} ^ *}(T ^ *)\)</span> where <span class="math inline">\(T^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span> and <span class="math inline">\(\mathscr{B} ^ *\)</span> and <span class="math inline">\(\mathscr{C} ^ *\)</span> are the dual bases of <span class="math inline">\(\mathscr{B}\)</span> and <span class="math inline">\(\mathscr{C}\)</span>, respectively.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>By <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a>, it suffices to find <span class="math inline">\(\operatorname{Mat}_{\mathscr{C},  \mathscr{B}}(T)\)</span> and then transpose it. Since <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(T) = [\alpha_{ij}]\)</span> where <span class="math inline">\(T(\vec{v}_{j}) = \sum_{i =  1} ^ 4 \alpha_{ij} \vec{e}_i\)</span>, it suffices to express each <span class="math inline">\(T(\vec{v}_{j})\)</span> as a linear combination of the basis vectors in <span class="math inline">\(\mathscr{B}\)</span>: <span class="math display">\[\begin{aligned}
+    T(\vec{v}_1)  =  T \begin{pmatrix}2\\0\\2\\0\end{pmatrix}  = \begin{pmatrix}2\\0\\4\\2\end{pmatrix},\quad
+    T(\vec{v}_2)  =  T \begin{pmatrix}0\\1\\-1\\0\end{pmatrix} = \begin{pmatrix}4\\1\\-2\\-1\end{pmatrix},\quad \\
+    T(\vec{v}_3)  =  T \begin{pmatrix}0\\0\\1\\0\end{pmatrix}  = \begin{pmatrix}0\\0\\2\\1\end{pmatrix}, \quad
+    T(\vec{v}_4)  =  T \begin{pmatrix}3\\0\\0\\1\end{pmatrix}  = \begin{pmatrix}3\\0\\1\\2\end{pmatrix}.
+  \end{aligned}\]</span> It follows that <span class="math display">\[\operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(T) =
+  \begin{pmatrix}
+    2 &amp; 4 &amp; 0 &amp; 3 \\
+    0 &amp; 1 &amp; 0 &amp; 0 \\
+    4 &amp; -2 &amp; 2 &amp; 1 \\
+    2 &amp; -1 &amp; 1 &amp; 2 
+  \end{pmatrix}\]</span> and so <span class="math display">\[\operatorname{Mat}_{\mathscr{B}^ *, \mathscr{C} ^ *}(T ^ *) =
+  \begin{pmatrix}
+    2 &amp; 0 &amp; 4 &amp; 2 \\
+    4 &amp; 1 &amp; -2 &amp; -1\\
+    0 &amp; 0 &amp; 2 &amp; 1 \\
+    3 &amp; 0 &amp; 1 &amp; 2 
+  \end{pmatrix}.\square\]</span></p>
 </div></li>
 <li><p><span id="problem-07-09" label="problem-07-09"></span></p>
 <div class="question">
-<p>Suppose that <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional, and suppose that <span class="math inline">\(\phi:  \mathcal{L}(V, W) \to \mathcal{L}(W ^ *, V ^ *)\)</span> is defined by <span class="math inline">\(\phi(T) =  T ^ *\)</span>. In other words, <span class="math inline">\(\phi\)</span> maps every linear transformation from <span class="math inline">\(V\)</span> to <span class="math inline">\(W\)</span> to its dual transformation. Show that <span class="math inline">\(\phi\)</span> is an isomorphism of vector spaces.</p>
+<p>Suppose that <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional, and suppose that <span class="math inline">\(\phi:  \mathcal{L}(V, W) \longrightarrow\mathcal{L}(W ^ *, V ^ *)\)</span> is defined by <span class="math inline">\(\phi(T) =  T ^ *\)</span>. In other words, <span class="math inline">\(\phi\)</span> maps every linear transformation from <span class="math inline">\(V\)</span> to <span class="math inline">\(W\)</span> to its dual transformation. Show that <span class="math inline">\(\phi\)</span> is an isomorphism of vector spaces.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>We present two different looking solutions to this problem.</p>
+<p><strong>Solution 1:</strong> We prove that <span class="math inline">\(\phi\)</span> is linear, and a bijection, and hence an isomorphism.</p>
+<p><strong>Linear.</strong> If <span class="math inline">\(S, T\in \mathcal{L}(V, W)\)</span>, then <span class="math display">\[\phi(S + T) = (S + T) ^ * = S ^ * + T ^ * = \phi(S) + \phi(T)\]</span> by Problem 1(a). If <span class="math inline">\(\alpha\in F\)</span>, then <span class="math inline">\(\phi(\alpha T) = (\alpha T) ^ * = \alpha T ^ * =  \alpha \phi(T)\)</span>, by Problem 1(b). Hence <span class="math inline">\(\phi\)</span> is a linear transformation.</p>
+<p><strong>Injective.</strong> Since <span class="math inline">\(\dim \mathcal{L}(V, W) = \dim V \dim W = \dim V ^ * \dim W ^ * = \dim \mathcal{L}(W  ^ *, V ^ *)\)</span>, by Problem 1 on the Problem Sheet for Section 5, <span class="math inline">\(\phi\)</span> is a bijection if and only if it is injective.</p>
+<p>Suppose that <span class="math inline">\(S, T\in \mathcal{L}(V, W)\)</span> are such that <span class="math inline">\(\phi(S) = \phi(T)\)</span>. Then <span class="math inline">\(S ^ * = T ^ *\)</span>, and so <span class="math inline">\(f\circ S = S ^ *(f) = T ^ *(f) = f \circ T\)</span> for all <span class="math inline">\(f\in W ^*\)</span>. Thus <span class="math inline">\(f\circ (S - T) = f\circ S - f\circ T = \vec{0}_{V ^ *}\)</span> for all <span class="math inline">\(f\in W ^ *\)</span></p>
+<p>We assume without loss of generality that <span class="math inline">\(W\)</span> is <span class="math inline">\(F ^ n\)</span> where <span class="math inline">\(n = \dim  W\)</span>. Seeking a contradiction, suppose that <span class="math inline">\(S\not= T\)</span>. Then there exists <span class="math inline">\(v\in V\setminus \{\vec{0}\}\)</span> such that <span class="math inline">\(S(v) \not=T(v)\)</span> and so <span class="math inline">\(S(v) - T(v)  \not= \vec{0}\)</span>. In other words, if <span class="math display">\[S(v) - T(v) = \begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} \in W\]</span> then at least one <span class="math inline">\(x_i\not=0\)</span>. Hence if <span class="math inline">\(f_i\in W ^ *\)</span> is the element of the dual basis for <span class="math inline">\(W ^ *\)</span> of the standard basis for <span class="math inline">\(W\)</span>, then <span class="math display">\[(f_i(S - T)(v)) = f_i\circ (S(v) - T(v)) 
+                      = f_i\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}
+                      = x_i \not= 0,\]</span> and so <span class="math inline">\(f_i\circ(S - T) \not= \vec{0}_{V ^ *}\)</span>, which is a contradiction. Therefore <span class="math inline">\(S = T\)</span>, and so <span class="math inline">\(\phi\)</span> is injective.</p>
+<p><strong>Solution 2:</strong> Let <span class="math inline">\(\mathscr{B}\)</span> be any basis for <span class="math inline">\(V\)</span> and let <span class="math inline">\(\mathscr{C}\)</span> be any basis for <span class="math inline">\(W\)</span>, and suppose that <span class="math inline">\(\dim V = n\)</span> and <span class="math inline">\(\dim W= m\)</span>. We showed in <a href="https://jdbm.me/mt3501-lnotes/05-l-v-w/#thm-linear-transf-equal-matrices">Theorem 5.1.7</a> that the function mapping <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span> to <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\)</span> is an isomorphism from <span class="math inline">\(\mathcal{L}(V, W)\)</span> to <span class="math inline">\(M_{m, n}(F)\)</span> (the set of all <span class="math inline">\(m \times n\)</span> matrices with entries in <span class="math inline">\(F\)</span>). We denote this isomorphism by <span class="math inline">\(\text{Mat}_{\mathscr{B}, \mathscr{C}}\)</span>.</p>
+<p>The same theorem applied to <span class="math inline">\(W ^ *\)</span> and <span class="math inline">\(V ^ *\)</span> with the dual bases <span class="math inline">\(\mathscr{C} ^ *\)</span> and <span class="math inline">\(\mathscr{B}^ *\)</span>, respectively states that the function mapping <span class="math inline">\(T ^ * \in \mathcal{L}(W ^ *, V ^ *)\)</span> to <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *}(T  ^ *)\)</span> is an isomorphism from <span class="math inline">\(\mathcal{L}(W ^ *, V ^ *)\)</span> to <span class="math inline">\(M_{n, m}(F)\)</span>. The inverse of an isomorphism is also an isomorphism, and we denote the isomorphism mapping <span class="math inline">\(\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *}(T ^ *)\)</span> to <span class="math inline">\(T ^ *\)</span> by <span class="math inline">\(\text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}\)</span>.</p>
+<p>The function <span class="math inline">\(F: M_{m, n}(F) \longrightarrow M_{n, m}(F)\)</span> that maps every matrix to its transpose is also an isomorphism (it is easy to check that it is linear, and <span class="math inline">\(F\)</span> is its own inverse, and is hence a bijection).</p>
+<p>Finally, if <span class="math inline">\(T\in \mathcal{L}(V, W)\)</span> is arbitrary, then <span class="math display">\[\text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1} \circ F \circ \text{Mat}_{\mathscr{B},
+      \mathscr{C}}(T) 
+      =  
+      \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
+      (\text{Mat}_{\mathscr{B}, \mathscr{C}}(T)) ^ t
+      = 
+      \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
+      (\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *}(T ^ *))
+      = T ^ *\]</span> by <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a>. Since <span class="math inline">\(\text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^  *} ^ {-1} \circ F \circ \text{Mat}_{\mathscr{B}, \mathscr{C}}\)</span> is a composition of isomorphism, it too is an isomorphism, and the solution is complete.</p>
 </div></li>
 </ol>
 
