@@ -261,24 +261,23 @@ for (i = 0; i < coll.length; i++) {
 <div class="lemma">
 <p><span id="lemma-norm-elementary" label="lemma-norm-elementary"></span> Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle \cdot,  \cdot \rangle\)</span>, let <span class="math inline">\(v\in V\)</span>, and <span class="math inline">\(\alpha\in F\)</span>. Then</p>
 <ol type="1">
-<li><p><span class="math inline">\(\|\alpha v\| = \|\alpha\| \cdot \|v\|\)</span>;</p></li>
+<li><p><span class="math inline">\(\|\alpha v\| = |\alpha| \cdot \|v\|\)</span>;</p></li>
 <li><p><span class="math inline">\(\|v\| &gt; 0\)</span> if and only if <span class="math inline">\(v \neq \vec{0}\)</span>;</p></li>
 <li><p><span class="math inline">\(\|v\| = 0\)</span> if and only if <span class="math inline">\(v = \vec{0}\)</span>.</p></li>
 </ol>
 </div>
 <div class="proof">
-<p><em>Proof.</em> <strong>(1).</strong> <span class="math inline">\(\|\alpha v\|^{2} = \langle \alpha v,\alpha v \rangle = \alpha  \langle v,\alpha v \rangle = \alpha \bar{\alpha} \langle v,v \rangle  = \|\alpha\|^{2} \|v\|^{2}\)</span> and taking square roots gives the result.</p>
+<p><em>Proof.</em> <strong>(1).</strong> <span class="math inline">\(\|\alpha v\|^{2} = \langle \alpha v,\alpha v \rangle = \alpha  \langle v,\alpha v \rangle = \alpha \bar{\alpha} \langle v,v \rangle  = |\alpha|^{2} \|v\|^{2}\)</span> and taking square roots gives the result.</p>
 <p><strong>(2).</strong> If <span class="math inline">\(\|v\| = \langle v,v \rangle &gt; 0\)</span>, then <span class="math inline">\(v \neq  \vec{0}\)</span> by positivity (part (4) of the definition of inner products). Conversely, if <span class="math inline">\(v\neq \vec{0}\)</span>, then <span class="math inline">\(\|v\| = \langle  v,v \rangle &gt; 0\)</span>, by definiteness (part (5) of the definition of inner products).</p>
 <p><strong>(3).</strong> This follows immediately from part (2). ◻</p>
 </div>
 <p>By <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#lemma-norm-elementary">Lemma 11.3.2</a>(3), if <span class="math inline">\(u, v\in V\)</span> are arbitrary, then <span class="math inline">\(\|u - v\| = 0\)</span> if and only if <span class="math inline">\(u - v = \vec{0}\)</span> if and only if <span class="math inline">\(u = v\)</span>. Hence we’ve established identity of indiscernibles for norms.</p>
 <div class="thm">
-<p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle  \cdot,\cdot \rangle\)</span>. Then <span class="math display">\[\|\langle u,v \rangle\| \leq
-    \|u\| \cdot \|v\|\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
+<p>Let <span class="math inline">\(V\)</span> be an inner product space with inner product <span class="math inline">\(\langle  \cdot,\cdot \rangle\)</span>. Then <span class="math display">\[|\langle u,v \rangle| \leq \|u\| \cdot \|v\|\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> If <span class="math inline">\(v = \vec{0}\)</span>, then <span class="math display">\[\langle u,v \rangle = \langle u,\vec{0} \rangle = \langle
-    u,0\cdot\vec{0}\rangle = 0 \langle u,\vec{0} \rangle = 0.\]</span> Hence <span class="math inline">\(\|\langle u,v \rangle\| =  \|0\| = 0\)</span> and, since <span class="math inline">\(\|v\|  = 0\)</span>, it follows that <span class="math display">\[\|\langle u,v \rangle\| = 0 = \|u\| \cdot \|v\|.\]</span></p>
+    u,0\cdot\vec{0}\rangle = 0 \langle u,\vec{0} \rangle = 0.\]</span> Hence <span class="math inline">\(|\langle u,v \rangle| =  |0| = 0\)</span> and, since <span class="math inline">\(\|v\|  = 0\)</span>, it follows that <span class="math display">\[|\langle u,v \rangle| = 0 = \|u\| \cdot \|v\|.\]</span></p>
 <p>In the remainder of the proof we assume <span class="math inline">\(v \neq \vec{0}\)</span>. If <span class="math inline">\(\alpha\)</span> is a scalar and <span class="math inline">\(w = u + \alpha v\)</span>, then <span class="math display">\[\begin{aligned}
     0 \leq \langle w,w \rangle &amp; = \langle u+\alpha v, u+\alpha v \rangle \\
                                &amp; = \langle u, u + \alpha v \rangle + \langle
@@ -286,20 +285,19 @@ for (i = 0; i < coll.length; i++) {
                                &amp; = \langle u,u \rangle + \alpha \langle v,u \rangle + \bar{\alpha}
     \langle u,v \rangle + \alpha \bar{\alpha} \langle v,v \rangle                                  \\
                                &amp; = \|u\|^{2} + \alpha \overline{\langle u,v \rangle} +
-    \bar{\alpha} \langle u,v \rangle + \|\alpha\|^{2} \|v\|^{2}.
+    \bar{\alpha} \langle u,v \rangle + |\alpha|^{2} \|v\|^{2}.
   \end{aligned}\]</span> Setting <span class="math inline">\(\alpha = -\langle u,v \rangle / \|v\|^{2}\)</span>, we deduce that <span class="math display">\[\begin{aligned}
     0 &amp; \leq &amp; \|u\|^{2} - \frac{ \langle u,v \rangle
       \overline{\langle u,v \rangle} }{ \|v\|^{2} } - \frac{
       \overline{\langle u,v \rangle} \langle u,v \rangle
-      }{\|v\|^{2}} + \frac{\| \langle u,v \rangle
-  \|^{2}}{\|v\|^{4}} \|v\|^{2}                                \\
+      }{\|v\|^{2}} + \frac{| \langle u,v \rangle|^{2}}{\|v\|^{4}} \|v\|^{2}                                \\
        &amp; = &amp;
       \|u\|^{2} - \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} } 
                    - \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} }
                    + \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} }\\
-      &amp; = &amp; \|u\|^{2} - \frac{ \|\langle u,v \rangle\|^{2} }{
+      &amp; = &amp; \|u\|^{2} - \frac{ |\langle u,v \rangle|^{2} }{
       \|v\|^{2} },
-  \end{aligned}\]</span> so <span class="math display">\[\| \langle u,v \rangle \|^{2} \leq \|u\|^{2} \|v\|^{2}\]</span> and taking square roots gives the result. ◻</p>
+  \end{aligned}\]</span> so <span class="math display">\[| \langle u,v \rangle |^{2} \leq \|u\|^{2} \|v\|^{2}\]</span> and taking square roots gives the result. ◻</p>
 </div>
 <div class="cor">
 <p><span id="cor-triangle" label="cor-triangle"></span> Let <span class="math inline">\(V\)</span> be an inner product space. Then <span class="math display">\[\|u+v\| \leq \|u\| + \|v\|\]</span> for all <span class="math inline">\(u,v \in V\)</span>.</p>
@@ -312,7 +310,7 @@ for (i = 0; i < coll.length; i++) {
                    &amp; = \|u\|^{2} + \langle u,v \rangle + \overline{\langle u,v
     \rangle} + \|v\|^{2}                                                                                             \\
                    &amp; = \|u\|^{2} + 2 \Re \langle u,v \rangle + \|v\|^{2}                                          \\
-                   &amp; \leq \|u\|^{2} + 2 \| \langle u,v \rangle \| + \|v\|^{2}
+                   &amp; \leq \|u\|^{2} + 2 | \langle u,v \rangle | + \|v\|^{2}
     \\
                    &amp; \leq \|u\|^{2} + 2 \|u\| \cdot \|v\| + \|v\|^{2}
                    &amp;                                                                      &amp; \text{(by Cauchy-Schwarz)} \\
@@ -320,7 +318,7 @@ for (i = 0; i < coll.length; i++) {
   \end{aligned}\]</span> and taking square roots gives the result. ◻</p>
 </div>
 <p>If <span class="math inline">\(u, v, w\in V\)</span>, then <span class="math display">\[\|u - v\| = \|(u - w) + (w - v)\| \leq \|u - w\| + \|w - v\|\]</span> and so <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#cor-triangle">Corollary 11.3.4</a> implies that norms satisfy the triangle inequality from the start of this section.</p>
-<p>The triangle inequality is a fundamental observation that tells us we can use the norm to measure distance on an inner product space in the same way that modulus <span class="math inline">\(\|x\|\)</span> is used to measure distance on <span class="math inline">\(\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>. We can then perform analysis and speak of continuity and convergence. This topic is addressed in greater detail in the study of Functional Analysis.</p>
+<p>The triangle inequality is a fundamental observation that tells us we can use the norm to measure distance on an inner product space in the same way that modulus <span class="math inline">\(|x|\)</span> is used to measure distance in <span class="math inline">\(\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>. We can then perform analysis and speak of continuity and convergence. This topic is addressed in greater detail in the study of Functional Analysis.</p>
 <h2 id="orthogonality-and-orthonormal-bases">Orthogonality and orthonormal bases</h2>
 <div class="defn">
 <p>Let <span class="math inline">\(V\)</span> be an inner product space and let <span class="math inline">\(v, w \in V\)</span>. Then <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> are said to be <strong><em>orthogonal</em></strong> if <span class="math inline">\(\langle v,w \rangle = 0\)</span>. A set <span class="math inline">\(\mathscr{A}\)</span> of vectors is <strong><em>orthogonal</em></strong> if every pair of vectors in <span class="math inline">\(\mathscr{A}\)</span> are orthogonal.</p>

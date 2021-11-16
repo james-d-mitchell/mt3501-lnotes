@@ -175,30 +175,30 @@ for (i = 0; i < coll.length; i++) {
 
 <h2 id="eigenvectors-and-eigenvalues">Eigenvectors and eigenvalues</h2>
 <div class="defn">
-<p><span id="defn-eigen" label="defn-eigen"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \to V\)</span> be a linear transformation. A <em>non-zero</em> vector <span class="math inline">\(v\)</span> is an <strong><em>eigenvector</em></strong> for <span class="math inline">\(T\)</span> with <em>eigenvalue</em> <span class="math inline">\(\lambda \in  F\)</span> if <span class="math display">\[T(v) = \lambda v.\]</span></p>
+<p><span id="defn-eigen" label="defn-eigen"></span> Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation. A <em>non-zero</em> vector <span class="math inline">\(v\)</span> is an <strong><em>eigenvector</em></strong> for <span class="math inline">\(T\)</span> with <em>eigenvalue</em> <span class="math inline">\(\lambda \in  F\)</span> if <span class="math display">\[T(v) = \lambda v.\]</span></p>
 </div>
 <p>Note that <span class="math inline">\(T(\vec{0}) = \vec{0} = \lambda\vec{0}\)</span> for every <span class="math inline">\(\lambda \in F\)</span>, which is why <span class="math inline">\(v\)</span> is non-zero in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#defn-eigen">Definition 8.1.1</a>.</p>
 <div class="defn">
-<p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, let <span class="math inline">\(T : V \to V\)</span> be a linear transformation, and <span class="math inline">\(\lambda \in F\)</span>. The <strong><em>eigenspace</em></strong> corresponding to the eigenvalue <span class="math inline">\(\lambda\)</span> is the subspace <span class="math display">\[\begin{aligned}
-    E_{\lambda} = \ker(T-\lambda \operatorname{id}) 
-    &amp; = \{v \in V : T(v) - \lambda v = \vec{0}\}                                                                \\
+<p>Let <span class="math inline">\(V\)</span> be a vector space over a field <span class="math inline">\(F\)</span>, let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation, and <span class="math inline">\(\lambda \in F\)</span>. The <strong><em>eigenspace</em></strong> corresponding to the eigenvalue <span class="math inline">\(\lambda\)</span> is the subspace <span class="math display">\[\begin{aligned}
+    E_{\lambda} = \ker(T-\lambda \operatorname{id})
+    &amp; = \{v \in V : T(v) - \lambda v = \vec{0}\}  \\
                                     &amp; = \{v \in V : T(v) = \lambda v\},
-  \end{aligned}\]</span> where <span class="math inline">\(\operatorname{id}: V \to V\)</span> is the identity transformation. In other words, the eigenspace of an eigenvalue <span class="math inline">\(\lambda\)</span> is the subspace of <span class="math inline">\(V\)</span> consisting of all of the eigenvectors for <span class="math inline">\(\lambda\)</span> and the zero vector <span class="math inline">\(\vec{0}_V\)</span>.</p>
+  \end{aligned}\]</span> where <span class="math inline">\(\operatorname{id}: V \longrightarrow V\)</span> is the identity transformation. In other words, the eigenspace of an eigenvalue <span class="math inline">\(\lambda\)</span> is the subspace of <span class="math inline">\(V\)</span> consisting of all of the eigenvectors for <span class="math inline">\(\lambda\)</span> and the zero vector <span class="math inline">\(\vec{0}_V\)</span>.</p>
 </div>
 <p>Note that <span class="math inline">\(T-\lambda I\)</span> is a linear transformation and so <span class="math inline">\(E_{\lambda}=\ker(T-\lambda I)\)</span> is a subspace of <span class="math inline">\(V\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>.</p>
 <h2 id="characteristic-polynomial">Characteristic polynomial</h2>
 <div class="defn">
-<p>Let <span class="math inline">\(T : V \to V\)</span> be a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> (over <span class="math inline">\(F\)</span>) and let <span class="math inline">\(A\)</span> be the matrix of <span class="math inline">\(T\)</span> with respect to some basis. The <strong><em>characteristic polynomial</em></strong> of <span class="math inline">\(T\)</span> is <span class="math display">\[c_{T}(x) = \det(xI-A)\]</span> where <span class="math inline">\(x\)</span> is an indeterminate variable.</p>
+<p>Let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> (over <span class="math inline">\(F\)</span>) and let <span class="math inline">\(A\)</span> be the matrix of <span class="math inline">\(T\)</span> with respect to some basis. The <strong><em>characteristic polynomial</em></strong> of <span class="math inline">\(T\)</span> is <span class="math display">\[c_{T}(x) = \det(xI-A)\]</span> where <span class="math inline">\(x\)</span> is an indeterminate variable.</p>
 </div>
 <div class="prop">
-<p><span id="prop-eigenvalue-root" label="prop-eigenvalue-root"></span> Suppose that <span class="math inline">\(T : V \to V\)</span> is a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(F\)</span>. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(T\)</span> if and only if <span class="math inline">\(\lambda\)</span> is a root of the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
+<p><span id="prop-eigenvalue-root" label="prop-eigenvalue-root"></span> Suppose that <span class="math inline">\(T : V \longrightarrow V\)</span> is a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(F\)</span>. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(T\)</span> if and only if <span class="math inline">\(\lambda\)</span> is a root of the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="cor">
-<p>Suppose that <span class="math inline">\(T : V \to V\)</span> is a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(\mathbb{C}\)</span>. Then <span class="math inline">\(T\)</span> has at least one eigenvalue <span class="math inline">\(\lambda \in \mathbb{C}\)</span>.</p>
+<p>Suppose that <span class="math inline">\(T : V \longrightarrow V\)</span> is a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(\mathbb{C}\)</span>. Then <span class="math inline">\(T\)</span> has at least one eigenvalue <span class="math inline">\(\lambda \in \mathbb{C}\)</span>.</p>
 </div>
-<p>The characteristic polynomial of a linear transformation <span class="math inline">\(T:V \to V\)</span> is defined in terms of a matrix <span class="math inline">\(A\)</span> for <span class="math inline">\(T\)</span>, and the matrix depends on a particular choice of bases for <span class="math inline">\(V\)</span>. Hence it appears that the characteristic polynomial of <span class="math inline">\(T\)</span> depends on the choice of bases for <span class="math inline">\(V\)</span>.</p>
+<p>The characteristic polynomial of a linear transformation <span class="math inline">\(T:V \longrightarrow V\)</span> is defined in terms of a matrix <span class="math inline">\(A\)</span> for <span class="math inline">\(T\)</span>, and the matrix depends on a particular choice of bases for <span class="math inline">\(V\)</span>. Hence it appears that the characteristic polynomial of <span class="math inline">\(T\)</span> depends on the choice of bases for <span class="math inline">\(V\)</span>.</p>
 <div class="prop">
-<p><span id="prop-char-poly-indep" label="prop-char-poly-indep"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(F\)</span> and <span class="math inline">\(T : V \to V\)</span> be a linear transformation. The characteristic polynomial <span class="math inline">\(c_{T}(x)\)</span> is independent of the choice of basis for <span class="math inline">\(V\)</span>.</p>
+<p><span id="prop-char-poly-indep" label="prop-char-poly-indep"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space <span class="math inline">\(V\)</span> over <span class="math inline">\(F\)</span> and <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation. The characteristic polynomial <span class="math inline">\(c_{T}(x)\)</span> is independent of the choice of basis for <span class="math inline">\(V\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be matrices for <span class="math inline">\(T\)</span> with respect to some bases for <span class="math inline">\(V\)</span>. <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a> tells us that <span class="math inline">\(B = P^{-1}AP\)</span> for some invertible matrix <span class="math inline">\(P\)</span>. Then <span class="math display">\[P^{-1} (xI-A) P = xP^{-1}IP - P^{-1}AP = xI - B ,\]</span> so <span class="math display">\[\begin{aligned}
@@ -210,7 +210,7 @@ for (i = 0; i < coll.length; i++) {
 </div>
 <h2 class="unnumbered" id="eigenvalue-magic-tricks">Eigenvalue magic tricks</h2>
 <p>In this section, we present some tricks for very rapidly computing the eigenvalues of a linear transformation, or matrix. These tricks are primarily intended for when you might want to find the eigenvalues of a linear transformation by hand.</p>
-<p>Throughout this section we suppose that <span class="math inline">\(T : V\to V\)</span> is a linear transformation from an <span class="math inline">\(n\)</span>-dimensional vector space <span class="math inline">\(V\)</span> to itself, and that <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span> with respect to some bases for <span class="math inline">\(V\)</span>.</p>
+<p>Throughout this section we suppose that <span class="math inline">\(T : V\longrightarrow V\)</span> is a linear transformation from an <span class="math inline">\(n\)</span>-dimensional vector space <span class="math inline">\(V\)</span> to itself, and that <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span> with respect to some bases for <span class="math inline">\(V\)</span>.</p>
 <p>Here are some definitions.</p>
 <div class="defn">
 <p>If <span class="math inline">\(A = [\alpha_{ij}]\)</span> is an <span class="math inline">\(n\times n\)</span> matrix over a field, then the <strong><em>trace</em></strong> of <span class="math inline">\(A\)</span> is the sum of the diagonal entries and it is denoted <span class="math inline">\(\operatorname{tr}(A)\)</span>. In other words, <span class="math inline">\(\operatorname{tr}(A) =  \sum_{i = 1} ^ n \alpha_{ii}\)</span>.</p>
@@ -229,7 +229,7 @@ for (i = 0; i < coll.length; i++) {
 <li><p>If <span class="math inline">\(\lambda_1\)</span>, <span class="math inline">\(\lambda_2\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(\lambda_n\)</span> are the eigenvalues of <span class="math inline">\(T\)</span>, then <span class="math inline">\(\lambda_1 + 2\)</span>, <span class="math inline">\(\lambda_2 + 2\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(\lambda_n + 2\)</span> are the eigenvalues of <span class="math inline">\(T + 2I\)</span>.</p></li>
 </ol>
 <div class="example">
-<p><span id="ex-no-eigenvalues" label="ex-no-eigenvalues"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 2 \to \mathbb{R} ^ 2\)</span> is a linear transformation with matrix <span class="math display">\[A =
+<p><span id="ex-no-eigenvalues" label="ex-no-eigenvalues"></span> Suppose that <span class="math inline">\(T: \mathbb{R} ^ 2 \longrightarrow\mathbb{R} ^ 2\)</span> is a linear transformation with matrix <span class="math display">\[A =
     \begin{pmatrix}
       1 &amp; -2 \\
       2 &amp; 0
@@ -317,7 +317,7 @@ for (i = 0; i < coll.length; i++) {
 <p>Recall that an <em>algebraically closed field</em> is field in which <em>every</em> polynomial is a product of linear factors. For example, <span class="math inline">\(\mathbb{C}\)</span> is an algebraically closed field, by the Fundamental Theorem of Algebra.</p>
 <p>Here’s why upper triangular matrices are a good thing.</p>
 <div class="prop">
-<p><span id="prop-upper-triangular-good" label="prop-upper-triangular-good"></span> Let <span class="math inline">\(V\)</span> be an <span class="math inline">\(n\)</span>-dimensional vector space over an algebraically closed field <span class="math inline">\(F\)</span>, let <span class="math inline">\(T : V\to V\)</span> be a linear transformation, and let <span class="math inline">\(A = [\alpha_{ij}]\)</span> be an upper triangular matrix for <span class="math inline">\(T\)</span> with respect to some basis for <span class="math inline">\(V\)</span>. Then the following hold:</p>
+<p><span id="prop-upper-triangular-good" label="prop-upper-triangular-good"></span> Let <span class="math inline">\(V\)</span> be an <span class="math inline">\(n\)</span>-dimensional vector space over an algebraically closed field <span class="math inline">\(F\)</span>, let <span class="math inline">\(T : V\longrightarrow V\)</span> be a linear transformation, and let <span class="math inline">\(A = [\alpha_{ij}]\)</span> be an upper triangular matrix for <span class="math inline">\(T\)</span> with respect to some basis for <span class="math inline">\(V\)</span>. Then the following hold:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\det(A) = \alpha_{11}\alpha_{22} \cdots \alpha_{nn}\)</span>;</p></li>
 <li><p><span class="math inline">\(A\)</span> is invertible if and only if none of <span class="math inline">\(\alpha_{11}, \alpha_{22},  \ldots, \alpha_{nn}\)</span> is <span class="math inline">\(0\)</span>;</p></li>
@@ -327,20 +327,25 @@ for (i = 0; i < coll.length; i++) {
 <p>In other words, upper triangular matrices are <span class="sans-serif">nice</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lemma-upper-triangular" label="lemma-upper-triangular"></span> Let <span class="math inline">\(T: V \to V\)</span> be a linear transformation and let <span class="math inline">\(\mathscr{B} = \{v_1,  v_2, \ldots, v_n\}\)</span> be a basis for <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\)</span> is upper triangular if and only if <span class="math inline">\(T(v_i) \in \operatorname{Span}(v_1, \ldots, v_i)\)</span> for all <span class="math inline">\(i \in  \{1, 2, \ldots, n\}\)</span>.</p>
+<p><span id="lemma-upper-triangular" label="lemma-upper-triangular"></span> Let <span class="math inline">\(T: V \longrightarrow V\)</span> be a linear transformation and let <span class="math inline">\(\mathscr{B} = \{v_1,  v_2, \ldots, v_n\}\)</span> be a basis for <span class="math inline">\(V\)</span>. Then <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\)</span> is upper triangular if and only if <span class="math inline">\(T(v_i) \in \operatorname{Span}(v_1, \ldots, v_i)\)</span> for all <span class="math inline">\(i \in  \{1, 2, \ldots, n\}\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> It is straightforward to verify this directly from the definitions of upper triangular matrices and the definition of <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\)</span>. ◻</p>
 </div>
 <div class="thm">
-<p><span id="cor:quotient:triangular" label="cor:quotient:triangular"></span> Let <span class="math inline">\(V\)</span> be an <span class="math inline">\(n\)</span>-dimensional vector space over an algebraically closed field <span class="math inline">\(F\)</span>, and let <span class="math inline">\(T : V\to V\)</span> be a linear transformation. Then there is a basis <span class="math inline">\(\mathscr{B}\)</span> of <span class="math inline">\(V\)</span> so that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> is upper triangular.</p>
+<p><span id="cor:quotient:triangular" label="cor:quotient:triangular"></span> Let <span class="math inline">\(V\)</span> be an <span class="math inline">\(n\)</span>-dimensional vector space over an algebraically closed field <span class="math inline">\(F\)</span>, and let <span class="math inline">\(T : V\longrightarrow V\)</span> be a linear transformation. Then there is a basis <span class="math inline">\(\mathscr{B}\)</span> of <span class="math inline">\(V\)</span> so that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span> is upper triangular.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> We proceed by induction on the dimension <span class="math inline">\(n\)</span> of <span class="math inline">\(V\)</span>. Every <span class="math inline">\(1 \times 1\)</span> matrix is upper triangular, and so the result holds for <span class="math inline">\(n = 1\)</span>.</p>
-<p>Suppose that <span class="math inline">\(n &gt; 1\)</span> and that the conclusion of the theorem holds for all vector spaces over <span class="math inline">\(F\)</span> with dimension strictly less than <span class="math inline">\(n\)</span>. Since <span class="math inline">\(F\)</span> is algebraically closed, it follows from <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a> that <span class="math inline">\(T\)</span> has an eigenvalue <span class="math inline">\(\lambda \in F\)</span>. We define <span class="math display">\[W = \operatorname{im} (T - \lambda \operatorname{id}),\]</span> where <span class="math inline">\(\operatorname{id}: V\to V\)</span> is the identity linear transformation. If <span class="math inline">\(v\in V\setminus \{\vec{0}\}\)</span> is an eigenvector with eigenvalue <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(v\in\ker(T - \lambda \operatorname{id})\)</span> (the eigenspace of <span class="math inline">\(\lambda\)</span>). Hence <span class="math inline">\(\dim\ker(T - \lambda \operatorname{id}) &gt; 0\)</span> and so, by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), <span class="math display">\[\dim W = \dim \operatorname{im} (T - \lambda \operatorname{id}) = \dim V -
-    \dim \ker(T - \lambda \operatorname{id})  &lt; \dim V.\]</span> To apply the inductive hypothesis, we require a linear transformation from <span class="math inline">\(W\)</span> to <span class="math inline">\(W\)</span>. If <span class="math inline">\(w\in W\)</span>, then <span class="math inline">\(T(w) = (T- \lambda \operatorname{id})(w) +  \lambda w\)</span> and since <span class="math inline">\((T- \lambda \operatorname{id})(w) \in  \operatorname{im} (T- \lambda \operatorname{id}) = W\)</span> and <span class="math inline">\(\lambda w \in W\)</span>, it follows that <span class="math inline">\(T(w) \in W\)</span>. If we define <span class="math inline">\(S : W \to W\)</span> by <span class="math inline">\(S(w) = T(w)\)</span> for all <span class="math inline">\(w\in W\)</span>, then <span class="math inline">\(S\)</span> is a linear transformation.</p>
-<p>Hence, by the inductive hypothesis, there exists a basis <span class="math inline">\(\mathscr{C} =  \{w_1, w_2, \ldots, w_m\}\)</span> for <span class="math inline">\(W\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(S)\)</span> is upper triangular. In particular, by <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#lemma-upper-triangular">Lemma 8.3.3</a>, <span class="math inline">\(T(w_i) = S(w_i) \in  \operatorname{Span}(w_1, \ldots, w_i)\)</span> for all <span class="math inline">\(w_i\in \mathscr{C}\)</span>. If we extend <span class="math inline">\(\mathscr{C}\)</span> to a basis <span class="math inline">\(\mathscr{B} = \{v_1 = w_1, v_2 = w_2,  \ldots, v_m = w_m, v_{m + 1}, \ldots, v_n\}\)</span> for <span class="math inline">\(V\)</span>, then, for every <span class="math inline">\(i\in  \{1, \ldots, n\}\)</span>, <span class="math display">\[T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i.\]</span> Hence if <span class="math inline">\(i\in \{1, \ldots, n\}\)</span> is arbitrary, then <span class="math display">\[(T - \lambda \operatorname{id})(v_i) \in \operatorname{im} (T - \lambda\operatorname{id}) = W = \operatorname{Span}(w_1,
-    \ldots, w_m) = \operatorname{Span}(v_1, \ldots, v_m)\]</span> and so <span class="math display">\[T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i 
+<p>Suppose that <span class="math inline">\(n &gt; 1\)</span> and that the conclusion of the theorem holds for all vector spaces over <span class="math inline">\(F\)</span> with dimension strictly less than <span class="math inline">\(n\)</span>. Since <span class="math inline">\(F\)</span> is algebraically closed, it follows from <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#prop-eigenvalue-root">Proposition 8.2.2</a> that <span class="math inline">\(T\)</span> has an eigenvalue <span class="math inline">\(\lambda \in F\)</span>. We define <span class="math display">\[W = \operatorname{im} (T - \lambda \operatorname{id}),\]</span> where <span class="math inline">\(\operatorname{id}: V\longrightarrow V\)</span> is the identity linear transformation. If <span class="math inline">\(v\in V\setminus \{\vec{0}\}\)</span> is an eigenvector with eigenvalue <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(v\in\ker(T - \lambda \operatorname{id})\)</span> (the eigenspace of <span class="math inline">\(\lambda\)</span>). Hence <span class="math inline">\(\dim\ker(T - \lambda \operatorname{id}) &gt; 0\)</span> and so, by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), <span class="math display">\[\dim W = \dim \operatorname{im} (T - \lambda \operatorname{id}) = \dim V -
+    \dim \ker(T - \lambda \operatorname{id})  &lt; \dim V.\]</span> To apply the inductive hypothesis, we require a linear transformation from <span class="math inline">\(W\)</span> to <span class="math inline">\(W\)</span>. If <span class="math inline">\(w\in W\)</span>, then <span class="math inline">\(T(w) = (T- \lambda \operatorname{id})(w) +  \lambda w\)</span> and since <span class="math inline">\((T- \lambda \operatorname{id})(w) \in  \operatorname{im} (T- \lambda \operatorname{id}) = W\)</span> and <span class="math inline">\(\lambda w \in W\)</span>, it follows that <span class="math inline">\(T(w) \in W\)</span>. If we define <span class="math inline">\(S : W \longrightarrow W\)</span> by <span class="math inline">\(S(w) = T(w)\)</span> for all <span class="math inline">\(w\in W\)</span>, then <span class="math inline">\(S\)</span> is a linear transformation.</p>
+<p>Hence, by the inductive hypothesis, there exists a basis <span class="math inline">\(\mathscr{C} =  \{w_1, w_2, \ldots, w_m\}\)</span> for <span class="math inline">\(W\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(S)\)</span> is upper triangular. Since <span class="math inline">\(\mathscr{C}\)</span> is a linearly independent subset of <span class="math inline">\(V\)</span>, we can extend <span class="math inline">\(\mathscr{C}\)</span> to a basis <span class="math inline">\(\mathscr{B} = \{v_1 = w_1, v_2 = w_2,  \ldots, v_m = w_m, v_{m + 1}, \ldots, v_n\}\)</span> for <span class="math inline">\(V\)</span>. We will show that <span class="math inline">\(T(v_i) \in \operatorname{Span}(v_1, v_2, \ldots, v_i)\)</span> for every <span class="math inline">\(i\in \{1, \ldots, n\}\)</span>.</p>
+<p>If <span class="math inline">\(1\leqslant i \leqslant m\)</span>, then, by applying <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#lemma-upper-triangular">Lemma 8.3.3</a> to <span class="math inline">\(S:W \longrightarrow W\)</span> and <span class="math inline">\(\mathscr{C}\)</span>, it follows that <span class="math display">\[T(v_i) = T(w_i) = S(w_i) \in
+      \operatorname{Span}(w_1, \ldots, w_i) = \operatorname{Span}(v_1, \ldots,
+    v_i).\]</span></p>
+<p>For the case when <span class="math inline">\(m &lt; i \leqslant n\)</span>, note that <span class="math display">\[T(v) = (T - \lambda \operatorname{id})(v) + \lambda v\]</span> and <span class="math display">\[(T - \lambda \operatorname{id})(v) \in \operatorname{im} (T -
+      \lambda\operatorname{id}) = W = \operatorname{Span}(w_1,
+      \ldots, w_m) = \operatorname{Span}(v_1, \ldots, v_m)\]</span> holds for every <span class="math inline">\(v\in V\)</span>. If <span class="math inline">\(i\in \{m + 1, \ldots, n\}\)</span> is arbitrary, then <span class="math display">\[T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i 
     \in  
     \operatorname{Span}(v_1, \ldots, v_m, v_i)
     \subseteq 
@@ -350,11 +355,11 @@ for (i = 0; i < coll.length; i++) {
 <h2 id="the-cayley-hamilton-theorem">The Cayley-Hamilton Theorem</h2>
 <p>The subject of this section is the following theorem.</p>
 <div class="thm">
-<p><span id="thm-cayley-hamilton" label="thm-cayley-hamilton"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T : V \to V\)</span> be a linear transformation. If <span class="math inline">\(c_{T}(x)\)</span> is the characteristic polynomial of <span class="math inline">\(T\)</span>, then <span class="math inline">\(c_{T}(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>, where <span class="math inline">\(\vec{0}_{\mathcal{L}(V, V)}\)</span> is the linear transformation of <span class="math inline">\(V\)</span> mapping every vector <span class="math inline">\(v\in V\)</span> to <span class="math inline">\(\vec{0}_V\)</span>.</p>
+<p><span id="thm-cayley-hamilton" label="thm-cayley-hamilton"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation. If <span class="math inline">\(c_{T}(x)\)</span> is the characteristic polynomial of <span class="math inline">\(T\)</span>, then <span class="math inline">\(c_{T}(T) = \vec{0}_{\mathcal{L}(V, V)}\)</span>, where <span class="math inline">\(\vec{0}_{\mathcal{L}(V, V)}\)</span> is the linear transformation of <span class="math inline">\(V\)</span> mapping every vector <span class="math inline">\(v\in V\)</span> to <span class="math inline">\(\vec{0}_V\)</span>.</p>
 </div>
 <p>We showed in Problem <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#problem-08-05">5</a> in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#problems-08-eigen-stuff">Section 8.5</a> that the matrix of the linear transformation <span class="math inline">\(c_T(T)\)</span> equals <span class="math inline">\(c_T(A)\)</span> where <span class="math inline">\(A\)</span> is the matrix of <span class="math inline">\(T\)</span>. It follows that <span class="math inline">\(c_T(A)\)</span> is the zero matrix.</p>
 <div class="exampjupyter">
-<p>We showed in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#ex-no-eigenvalues">Example 8.2.6</a> that the characteristic polynomial of <span class="math inline">\(T: \mathbb{R} ^ 2 \to \mathbb{R} ^ 2\)</span> with matrix <span class="math display">\[A =
+<p>We showed in <a href="https://jdbm.me/mt3501-lnotes/08-eigen-stuff/#ex-no-eigenvalues">Example 8.2.6</a> that the characteristic polynomial of <span class="math inline">\(T: \mathbb{R} ^ 2 \longrightarrow\mathbb{R} ^ 2\)</span> with matrix <span class="math display">\[A =
     \begin{pmatrix}
       1 &amp; -2 \\
       2 &amp; 0
@@ -404,15 +409,28 @@ for (i = 0; i < coll.length; i++) {
 <ol type="1">
 <li><p><span id="problem-08-01" label="problem-08-01"></span></p>
 <div class="questionjupyter">
-<p>Let <span class="math inline">\(T \colon \mathbb{R}^{2} \to \mathbb{R}^{2}\)</span> be the linear transformation having matrix <span class="math display">\[A = \begin{pmatrix}
+<p>Let <span class="math inline">\(T \colon \mathbb{R}^{2} \longrightarrow\mathbb{R}^{2}\)</span> be the linear transformation having matrix <span class="math display">\[A = \begin{pmatrix}
       -13 &amp; -5 \\
       34 &amp; 13
     \end{pmatrix}\]</span> with respect to the standard basis. Calculate the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp; = \det \begin{pmatrix}
+      x+13 &amp; 5 \\ -34 &amp; x-13
+    \end{pmatrix} \\
+    &amp; = (x+13)(x-13) + 170 \\
+    &amp; = x^{2} - 169 + 170 \\
+    &amp; = x^{2} + 1.
+  \end{aligned}\]</span></p>
 </div></li>
 <li><p><span id="problem-08-02" label="problem-08-02"></span></p>
 <div class="questionjupyter">
-<p>For each matrix <span class="math inline">\(A\)</span> below, let <span class="math inline">\(T \colon \mathbb{R}^{3} \to \mathbb{R}^{3}\)</span> be the linear transformation having matrix <span class="math inline">\(A\)</span> with respect to the standard basis, that is, <span class="math display">\[\begin{aligned}
-  T \colon \mathbb{R}^{3} &amp;\to \mathbb{R}^{3} \\
+<p>For each matrix <span class="math inline">\(A\)</span> below, let <span class="math inline">\(T \colon \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}\)</span> be the linear transformation having matrix <span class="math inline">\(A\)</span> with respect to the standard basis, that is, <span class="math display">\[\begin{aligned}
+  T \colon \mathbb{R}^{3} &amp;\longrightarrow\mathbb{R}^{3} \\
   \vec{v} &amp;\mapsto A\vec{v}.
   \end{aligned}\]</span> Calculate the characteristic polynomial of <span class="math inline">\(T\)</span> and find the eigenvalues of <span class="math inline">\(T\)</span>. <span class="math display">\[\begin{array}{rlrlrl}
       \mbox{(a)} &amp; \begin{pmatrix}
@@ -457,6 +475,163 @@ for (i = 0; i < coll.length; i++) {
         6 &amp; 6 &amp; 1
       \end{pmatrix}.
     \end{array}\]</span></p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<ol type="1">
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    3 &amp; -4 &amp; 0 \\
+    0 &amp; -1 &amp; 0 \\
+    0 &amp; 6 &amp; 2
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x-3 &amp; 4 &amp; 0 \\
+      0 &amp; x+1 &amp; 0 \\
+      0 &amp; -6 &amp; x-2
+    \end{pmatrix} \\
+    &amp;= (x-3) \det \begin{pmatrix}
+      x+1 &amp; 0 \\ -6 &amp; x-2
+    \end{pmatrix} \\
+    &amp;= (x-3)(x+1)(x-2).
+  \end{aligned}\]</span> Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    1 &amp; 1 &amp; -1 \\
+    -2 &amp; 4 &amp; -2 \\
+    0 &amp; 1 &amp; 0
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x-1 &amp; -1 &amp; 1 \\
+      2 &amp; x-4 &amp; 2 \\
+      0 &amp; -1 &amp; x
+    \end{pmatrix} \\
+    &amp;= (x-1) \det \begin{pmatrix}
+      x-4 &amp; 2 \\
+      -1 &amp; x
+    \end{pmatrix}
+    -2 \det \begin{pmatrix}
+      -1 &amp; 1 \\
+      -1 &amp; x
+    \end{pmatrix} \\
+    &amp;= (x-1) (x^{2}-4x+2) -2 (-x+1) \\
+    &amp;= (x-1) (x^{2}-4x+2+2) \\
+    &amp;= (x-1)(x^{2}-4x+4) \\
+    &amp;= (x-1)(x-2)^{2}.
+  \end{aligned}\]</span> Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    5 &amp; 2 &amp; 2 \\
+    2 &amp; 2 &amp; -4 \\
+    2 &amp; -4 &amp; 2
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x-5 &amp; -2 &amp; -2 \\
+      -2 &amp; x-2 &amp; 4 \\
+      -2 &amp; 4 &amp; x-2
+    \end{pmatrix} \\
+    &amp;= (x-5) \bigl( (x-2)^{2} - 16 \bigr) + 2 \bigl( -2(x-2) + 8 \bigr) -2
+    \bigl( -8 + 2(x-2) \bigr) \\
+    &amp;= (x-5) (x^{2}-4x-12) -4(x-6) - 4(x-6) \\
+    &amp;= (x-5)(x+2)(x-6) - 8(x-6) \\
+    &amp;= (x-6) \bigl( (x-5)(x+2) - 8 \bigr) \\
+    &amp;= (x-6) (x^{2} - 3x -10 - 8) \\
+    &amp;= (x-6) (x^{2} - 3x -18) \\
+    &amp;= (x-6)(x-6)(x+3) \\
+    &amp;= (x-6)^{2}(x+3).
+  \end{aligned}\]</span> Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(-3\)</span> and <span class="math inline">\(6\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    3 &amp; 4 &amp; 4 \\
+    1 &amp; 3 &amp; 0 \\
+    -2 &amp; -4 &amp; -1
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det\begin{pmatrix}
+      x-3 &amp; -4 &amp; -4 \\
+      -1 &amp;x-3 &amp; 0 \\
+      2 &amp; 4 &amp;x+1
+    \end{pmatrix} \\
+    &amp;= -4 \det \begin{pmatrix}
+      -1 &amp; x-3 \\
+      2 &amp; 4
+    \end{pmatrix} + (x+1) \det \begin{pmatrix}
+      x-3 &amp; -4 \\
+      -1 &amp; x-3
+    \end{pmatrix} \\
+    % &amp;\hspace*{120pt} \text{[expanding over last column]} \\
+    &amp;= -4 \bigl( -4 - 2(x-3) \bigr) + (x+1) \bigl( (x-3)^{3} - 4 \bigr) \\
+    &amp;= 8(x-3+2) + (x+1)(x^{2}-6x+9-4) \\
+    &amp;= 8(x-1) + (x+1)(x^{2}-6x+5) \\
+    &amp;= 8(x-1) + (x+1)(x-1)(x-5) \\
+    &amp;= (x-1) \bigl( 8 + (x+1)(x-5) \bigr) \\
+    &amp;= (x-1) (8 + x^{2} - 4x - 5) \\
+    &amp;= (x-1)(x^{2} - 4x + 3) \\
+    &amp;= (x-1)(x-1)(x-3) \\
+    &amp;= (x-1)^{2} (x-3).
+  \end{aligned}\]</span> Hence the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(1\)</span> and <span class="math inline">\(3\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    1 &amp; 0 &amp; 1 \\
+    0 &amp; 2 &amp; 1 \\
+    -1 &amp; 0 &amp; 3
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x-1 &amp; 0 &amp; -1 \\
+      0 &amp; x-2 &amp; -1 \\
+      1 &amp; 0 &amp; x-3
+    \end{pmatrix} \\
+    &amp;= (x-1) \det \begin{pmatrix}
+      x-2 &amp; -1 \\
+      0 &amp; x-3
+    \end{pmatrix} - \det \begin{pmatrix}
+      0 &amp; x-2 \\
+      1 &amp; 0
+    \end{pmatrix} \\
+    &amp;= (x-1)(x-2)(x-3) + (x-2) \\
+    &amp;= (x-2) \bigl( (x-1)(x-3) + 1 \bigr) \\
+    &amp;= (x-2) (x^{2} - 4x + 4) \\
+    &amp;= (x-2) (x-2)^{2} \\
+    &amp;= (x-2)^{3}.
+  \end{aligned}\]</span> Hence the only eigenvalue of <span class="math inline">\(T\)</span> is <span class="math inline">\(2\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    2 &amp; -1 &amp; 0 \\
+    0 &amp; 2 &amp; 0 \\
+    -1 &amp; 1 &amp; 2
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x-2 &amp; 1 &amp; 0 \\
+      0 &amp; x-2 &amp; 0 \\
+      1 &amp; -1 &amp; x-2
+    \end{pmatrix} \\
+    &amp;= (x-2) \det \begin{pmatrix}
+      x-2 &amp; 0 \\
+      -1 &amp; x-2
+    \end{pmatrix} - \det \begin{pmatrix}
+      0 &amp; 0 \\
+      1 &amp; x-2
+    \end{pmatrix} \\
+    &amp;= (x-2)(x-2)^{2} - 0 \\
+    &amp;= (x-2)^{3}.
+  \end{aligned}\]</span> Hence the only eigenvalue of <span class="math inline">\(T\)</span> is <span class="math inline">\(2\)</span>.</p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+    -2 &amp; -3 &amp; 0 \\
+    3 &amp; 4 &amp; 0 \\
+    6 &amp; 6 &amp; 1
+  \end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+    c_{T}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+      x+2 &amp; 3 &amp; 0 \\
+      -3 &amp; x-4 &amp; 0 \\
+      -6 &amp; -6 &amp; x-1
+    \end{pmatrix} \\
+    &amp;= (x-1) \det \begin{pmatrix}
+      x+2 &amp; 3 \\
+      -3 &amp; x-4
+    \end{pmatrix} \\
+    &amp;= (x-1) \bigl( (x+2)(x-4) + 9 \bigr) \\
+    &amp;= (x-1) (x^{2} - 2x - 8 + 9) \\
+    &amp;= (x-1)(x^{2} - 2x + 1) \\
+    &amp;= (x-1) (x-1)^{2} \\
+    &amp;= (x-1)^{3}.
+  \end{aligned}\]</span> Hence the only eigenvalue of <span class="math inline">\(T\)</span> is <span class="math inline">\(1\)</span>.</p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-08-03" label="problem-08-03"></span></p>
 <div class="questionjupyter">
@@ -471,19 +646,154 @@ for (i = 0; i < coll.length; i++) {
           0 &amp; 2 &amp; 2 \\
           0 &amp; 0 &amp; 1
         \end{pmatrix}.\]</span> Show that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have different characteristic polynomials.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[\begin{aligned}
+c_{A}(x) = \det(xI-A) &amp;= \det \begin{pmatrix}
+x-1 &amp; -1 &amp; 0 \\
+0 &amp; x-2 &amp; 0 \\
+0 &amp; 0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1) \det \begin{pmatrix}
+x-2 &amp; 0 \\
+0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1)^{2} (x-2)\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+c_{B}(x) = \det(xI-B) &amp;= \det \begin{pmatrix}
+x-2 &amp; 0 &amp; 0 \\
+0 &amp; x-2 &amp; -2 \\
+0 &amp; 0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-2) \det \begin{pmatrix}
+x-2 &amp; -2 \\
+0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-2)^{2}(x-1).\end{aligned}\]</span> Hence <span class="math inline">\(c_{A}(x) \neq c_{B}(x)\)</span>.</p>
 </div></li>
 <li><p><span id="problem-08-04" label="problem-08-04"></span></p>
 <div class="questionjupyter">
-<p>Let <span class="math inline">\(T \colon \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> be the linear transformation given by the matrix <span class="math display">\[A = \begin{pmatrix}
+<p>Let <span class="math inline">\(T \colon \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}\)</span> be the linear transformation given by the matrix <span class="math display">\[A = \begin{pmatrix}
           2 &amp; 1 &amp; 0 &amp; -1 \\
           -2 &amp; 5 &amp; -1 &amp; -7 \\
           -12 &amp; 16 &amp; -4 &amp; -15 \\
           -2 &amp; 3 &amp; -1 &amp; -5
         \end{pmatrix}.\]</span> Calculate the characteristic polynomial of <span class="math inline">\(T\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[\begin{aligned}
+c_{T}(x) &amp;= \det(xI-A) \\
+&amp;= \det \begin{pmatrix}
+x-2 &amp; -1 &amp; 0 &amp; 1 \\
+2 &amp; x-5 &amp; 1 &amp; 7 \\
+12 &amp; -16 &amp; x+4 &amp; 15 \\
+2 &amp; -3 &amp; 1 &amp; x+5
+\end{pmatrix} \\
+&amp;= (x-2) \det \begin{pmatrix}
+x-5 &amp; 1 &amp; 7 \\
+-16 &amp; x+4 &amp; 15 \\
+-3 &amp; 1 &amp; x+5
+\end{pmatrix} +
+\det \begin{pmatrix}
+2 &amp; 1 &amp; 7 \\
+12 &amp; x+4 &amp; 15 \\
+2 &amp; 1 &amp; x+5
+\end{pmatrix} \\
+&amp; - \det \begin{pmatrix}
+2 &amp; x-5 &amp; 1 \\
+12 &amp; -16 &amp; x+4 \\
+2 &amp; -3 &amp; 1
+\end{pmatrix} \\
+&amp;= (x-2) \left( (x-5) \det \begin{pmatrix}
+x+4 &amp; 15 \\
+1 &amp; x+5
+\end{pmatrix} - \det \begin{pmatrix}
+-16 &amp; 15 \\
+-3 &amp; x+5
+\end{pmatrix} \right. \\
+&amp;\qquad \left. \mbox{} + 7 \det \begin{pmatrix}
+-16 &amp; x+4 \\
+-3 &amp; 1
+\end{pmatrix} \right) + 2 \det \begin{pmatrix}
+x+4 &amp; 15 \\
+1 &amp; x+5
+\end{pmatrix} - \det \begin{pmatrix}
+12 &amp; 15 \\
+2 &amp; x+5
+\end{pmatrix} \\
+&amp;\qquad \mbox{} + 7 \det \begin{pmatrix}
+12 &amp; x+4 \\
+2 &amp; 1
+\end{pmatrix} - \left( 2 \det \begin{pmatrix}
+-16 &amp; x+4 \\
+-3 &amp; 1
+\end{pmatrix} - (x-5) \det \begin{pmatrix}
+12 &amp; x+4 \\
+2 &amp; 1
+\end{pmatrix} \right. \\
+&amp;\left. \qquad \mbox{} + \det \begin{pmatrix}
+12 &amp; -16 \\
+2 &amp; -3
+\end{pmatrix} \right) \\
+&amp;= (x-2) \biggl( (x-5) \bigl( (x+4)(x+5) - 15 \bigr) - \bigl( -16(x+5)
++ 45 \bigr) \biggr. \\
+&amp;\qquad \biggl. {} + 7 \bigl( -16 + 3(x+4) \bigr) \biggr) + 2 \bigl(
+(x+4)(x+5) - 15 \bigr) - \bigl( 12 (x+5) - 30 \bigr) \\
+&amp;\qquad {} + 7 \bigl( 12 -
+2(x+4) \bigr) - \biggl( 2 \bigl( - 16 + 3(x+4) \bigr) \biggr. \\
+&amp;\qquad\qquad\qquad\qquad \biggl. {}- (x-5) \bigl(
+12 - 2(x+4) \bigr) - 36 + 32 \biggr) \\
+&amp;= (x-2) \bigl( (x-5)(x^{2} + 9x + 20 - 15) - (-16x - 80 + 45) + 7
+(-16 + 3x + 12) \bigr) \\
+&amp;\qquad {} + 2(x^{2} + 9x + 20 -15) - (12x + 60 - 30) +
+7(12 - 2x - 8) \\
+&amp;\qquad {} - \bigl( 2(-16 + 3x + 12) - (x-5) (12 - 2x - 8) - 4 \bigr) \\
+&amp;= (x-2) \bigl( (x-5)(x^{2}+9x+5) - (-16x - 35) + 7(3x-4) \bigr) +
+2(x^{2}+9x+5) \\
+&amp;\qquad {} - (12x + 30) + 7(4-2x) - \bigl( 2(3x-4) - (x-5)(4-2x) -
+4 \bigr) \\
+&amp;= (x-2) (x^{3} + 4x^{2} - 40x - 25 + 16x + 35 + 21x - 28) + 2x^{2} +
+18 x + 10 \\
+&amp;\qquad {} - 12x - 30 + 28 - 14x - \bigl( 6x-8 - (-2x^{2} + 14x - 20 )
+- 4 \bigr) \\
+&amp;= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - (6x - 12 +
+2x^{2} - 14x + 20) \\
+&amp;= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - 2x^{2} + 8x -
+8 \\
+&amp;= (x-2) (x^{3} + 4x^{2} - 3x - 18) \\
+&amp;= (x-2)(x-2) (x^{2} + 6x + 9) \\
+&amp;= (x-2)^{2} (x+3)^{2}.\square\end{aligned}\]</span></p>
 </div></li>
 <li><p><span id="problem-08-05" label="problem-08-05"></span></p>
 <div class="question">
-<p>Let <span class="math inline">\(T \colon V \to V\)</span> be a linear transformation of a finite-dimensional vector space <span class="math inline">\(V\)</span> over a field <span class="math inline">\(F\)</span>. Let <span class="math inline">\(f(x)\)</span> be a polynomial over <span class="math inline">\(F\)</span>,  <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(A =  \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span>. Show that <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) = f(A).\]</span> Deduce that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(c_T(T)) = c_T(A)\)</span>.</p>
+<p>Let <span class="math inline">\(T \colon V \longrightarrow V\)</span> be a linear transformation of a finite-dimensional vector space <span class="math inline">\(V\)</span> over a field <span class="math inline">\(F\)</span>. Let <span class="math inline">\(f(x)\)</span> be a polynomial over <span class="math inline">\(F\)</span>,  <span class="math inline">\(\mathscr{B}\)</span> be a basis for <span class="math inline">\(V\)</span> and <span class="math inline">\(A =  \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span>. Show that <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) = f(A).\]</span> Deduce that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(c_T(T)) = c_T(A)\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Suppose that <span class="math display">\[f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \cdots + a_{k}x^{k}.\]</span> The first thing to do is make use of Problem 5 on the Problem Sheet for Section 4 (Linear Transformations). It says that if <span class="math inline">\(S,T \colon V \longrightarrow V\)</span> are linear transformations, then <span class="math display">\[\operatorname{Mat}_{}(ST) = \operatorname{Mat}_{}(S) \cdot \operatorname{Mat}_{}(T).\]</span> Applied to powers of <span class="math inline">\(T\)</span>, we deduce that <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{i}) = A^{i}\]</span> where <span class="math inline">\(A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)\)</span>.</p>
+<p>Suppose <span class="math inline">\(A = [\alpha_{ij}]\)</span>. Then <span class="math inline">\(T(v_{j}) = \sum_{i=1}^{n}  \alpha_{ij} v_{i}\)</span> (where <span class="math inline">\(\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}\)</span>), so <span class="math display">\[aT(v_{j}) = \sum_{i=1}^{n} (a\alpha_{ij}) v_{i}\]</span> for any scalar <span class="math inline">\(a\)</span> and we deduce <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(aT) = [a\alpha_{ij}] = a \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).\]</span></p>
+<p>If <span class="math inline">\(S \colon V \longrightarrow V\)</span> is any linear transformation with matrix <span class="math inline">\(B =  [\beta_{ij}]\)</span>, then <span class="math display">\[(S+T)(v_{j}) = S(v_{j}) + T(v_{j}) = \sum_{i=1}^{n} \beta_{ij}v_{i} +
+  \sum_{i=1}^{n} \alpha_{ij}v_{i} = \sum_{i=1}^{n} (\beta_{ij}+\alpha_{ij})v_{i}.\]</span> Hence <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S+T) = [\beta_{ij}+\alpha_{ij}] = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).\]</span></p>
+<p>We now put this all together: <span class="math display">\[\begin{aligned}
+    \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I + a_{1}T + a_{2}T^{2} +
+    \dots + a_{k}T^{k}) \\
+    &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
+    \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{2}T^{2}) \\
+    &amp;\hspace{4cm} \mbox{} + \dots + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{k}T^{k}) \\
+    &amp;= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(I) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
+    \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{2}) \\
+    &amp;\hspace{4cm} \mbox{} + \dots + a_{k} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{k}) \\
+    &amp;= a_{0} I + a_{1}A + a_{2}A^{2} + \dots + a_{k}A^{k} \\
+    &amp;= f(A),
+  \end{aligned}\]</span> as required.</p>
+<p>That <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)(c_T(T)) = c_T(A)\)</span> follows immediately from the above since <span class="math inline">\(c_T(x)\)</span> is a polynomial over <span class="math inline">\(F\)</span>.</p>
 </div></li>
 </ol>
 <section class="footnotes" role="doc-endnotes">
