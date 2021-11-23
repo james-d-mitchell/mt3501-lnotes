@@ -377,12 +377,12 @@ for (i = 0; i < coll.length; i++) {
   \|v_{1}\| = \frac{1}{\|v_{1}\|}
   \cdot \|v_{1}\| = 1.\]</span> There is no orthogonality to check in the set <span class="math inline">\(\{e_1\}\)</span>, since it contains a single vector. Hence <span class="math inline">\(\{ e_{1} \}\)</span> is an orthonormal set and by definition <span class="math inline">\(e_{1} \in \operatorname{Span}(v_{1})\)</span>.</p>
 <h5 id="step-k-1">Step <span class="math inline">\(k\)</span>:</h5>
-<p>Suppose that <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k-1} \}\)</span> is an orthonormal set contained in <span class="math inline">\(\operatorname{Span}(v_{1},v_{2},\dots,v_{k-1})\)</span> for some <span class="math inline">\(k \geq 2\)</span>. Set <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle.\]</span> If <span class="math inline">\(w_{k} = \vec{0}\)</span>, then <span class="math display">\[\begin{aligned}
+<p>Suppose that <span class="math inline">\(\{  e_{1},e_{2},\dots,e_{k-1} \}\)</span> is an orthonormal set contained in <span class="math inline">\(\operatorname{Span}(v_{1},v_{2},\dots,v_{k-1})\)</span> for some <span class="math inline">\(k \geq 2\)</span>. Set <span class="math display">\[w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_i.\]</span> If <span class="math inline">\(w_{k} = \vec{0}\)</span>, then <span class="math display">\[\begin{aligned}
     v_{k} = \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i} \in
     \operatorname{Span}(e_{1},\dots,e_{k-1}) \subseteq
     \operatorname{Span}(v_{1},\dots,v_{k-1}),
   \end{aligned}\]</span> which contradicts the assumption that <span class="math inline">\(\{ v_{1},v_{2},\dots,v_{n} \}\)</span> is linearly independent. Thus <span class="math inline">\(w_{k} \neq \vec{0}\)</span> and <span class="math inline">\(e_{k} = \frac{1}{\|w_{k}\|}w_{k}\)</span> is defined.</p>
-<p>By construction, <span class="math inline">\(\|e_{k\|} = 1\)</span> and <span class="math display">\[\begin{aligned}
+<p>By construction, <span class="math inline">\(\|e_{k}\| = 1\)</span> and <span class="math display">\[\begin{aligned}
     e_{k}  = \frac{1}{\|w_{k}\|} \biggl( v_{k} - \sum_{i=1}^{k-1}
     \langle v_{k},e_{i} \rangle e_{i} \biggr)                         
     \in \operatorname{Span}( e_{1}, \dots, e_{k-1}, v_{k})                 
@@ -532,27 +532,31 @@ for (i = 0; i < coll.length; i++) {
 </div>
 <p>Recall from <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#section-projection-maps">Section 6.2</a> that associated to every direct sum are (at least) two projection maps. In particular, if <span class="math inline">\(V\)</span> is any vector space and <span class="math inline">\(U\)</span> is a subspace of <span class="math inline">\(V\)</span>, then <span class="math inline">\(V = U \oplus U ^ {\perp}\)</span> and so there is a projection <span class="math inline">\(P_{U} : V \to V\)</span> onto <span class="math inline">\(U\)</span>. The projection <span class="math inline">\(P_U\)</span> is defined by <span class="math display">\[P_{U}(v) = u\]</span> where <span class="math inline">\(v = u+w\)</span> is the unique decomposition of <span class="math inline">\(v\)</span> with <span class="math inline">\(u \in U\)</span> and <span class="math inline">\(w \in U^{\perp}\)</span>.</p>
 <div class="thm">
+<p><span id="thm-pythagorus" label="thm-pythagorus"></span> If <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are orthogonal vectors in an inner product space, then <span class="math display">\[\|u + v\| ^ 2 = \|u\|^ 2 + \|v\| ^ 2.\]</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math display">\[\begin{aligned}
+    \|u + v\| ^ 2 &amp; = \langle u + v, u + v \rangle &amp; \text{(by definition of
+    norm)} \\
+                  &amp; = \langle u, u\rangle + \langle u, v\rangle + \langle v,
+    u\rangle + \langle v, v\rangle &amp; \text{(by additivity of inner products)} \\
+                                   &amp; = \langle u, u\rangle + \langle v, v
+    \rangle &amp; \text{(since $\langle u, v\rangle =\langle v, u\rangle=0$)}\\
+            &amp; = \|u\| ^ 2 + \|v\| ^ 2. \square
+  \end{aligned}\]</span> ◻</p>
+</div>
+<div class="thm">
 <p>Let <span class="math inline">\(V\)</span> be a finite-dimensional inner product space and <span class="math inline">\(U\)</span> be a subspace of <span class="math inline">\(V\)</span>. Let <span class="math inline">\(P_{U}:V \to V\)</span> be the projection map onto <span class="math inline">\(U\)</span> associated to the direct sum decomposition <span class="math inline">\(V = U \oplus U^{\perp}\)</span>. If <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(\|v - P_{U}(v)\| \leq  \|v - u\|\)</span> for all <span class="math inline">\(u \in U\)</span>. (In other words, <span class="math inline">\(P_{U}(v)\)</span> is the closest vector in <span class="math inline">\(U\)</span> to <span class="math inline">\(v\)</span>.)</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Since <span class="math inline">\(V = U \oplus U^{\perp}\)</span>, we can write <span class="math inline">\(v = u_{0} + w_{0}\)</span> where <span class="math inline">\(u_{0} \in U\)</span> and <span class="math inline">\(w_{0} \in U^{\perp}\)</span>, so that <span class="math inline">\(P_{U}(v) = u_{0}\)</span>. Then if <span class="math inline">\(u\)</span> is any vector in <span class="math inline">\(U\)</span>, <span class="math display">\[\begin{aligned}
-  \|v-u\|^{2} &amp; = \|v-u_{0}\| + (u_{0} - u)^{2} 
-                   &amp; (v - u = v-u_{0} + (u_{0} - u)) \\
-                   &amp; = \|w_{0}\| + (u_{0} - u)^{2}  &amp; (v - u_0 = w_0) \\
-                   &amp; = \langle w_{0} + (u_{0}-u), w_{0} + (u_{0}-u) \rangle 
-                   &amp; (\text{definition of the norm}) \\
-                   &amp; = \langle w_{0},w_{0} \rangle 
-                       + \langle w_{0},u_{0}-u \rangle 
-                       + \langle u_{0}-u, w_{0} \rangle 
-                       + \langle u_{0}-u, u_{0}-u \rangle 
-                   &amp; (\text{additivity})\\
-                   &amp; = \|w_{0}\|^{2} + \|u_{0} - u \|^{2} 
-                   &amp; \text{(since $w_{0}$ is orthogonal to $u_{0}-u \in U$)} \\
-                   &amp; \geq \|w_{0}\|^{2} 
-                   &amp; \text{(since $\|u_{0} - u\| \geq 0$)} \\
-                   &amp; = \|v - u_{0}\|^{2} \\
-                   &amp; = \|v - P_{U}(v)\|^{2}.
-  \end{aligned}\]</span> Hence <span class="math inline">\(\|v-u\| \geq \|v -  P_{U}(v)\|\)</span> for all <span class="math inline">\(u \in U\)</span>. ◻</p>
+<p><em>Proof.</em> Let <span class="math inline">\(v\in V\)</span> and <span class="math inline">\(u\in U\)</span> be arbitrary. Then there exist <span class="math inline">\(u_0\in U\)</span> and <span class="math inline">\(w_0  \in U^ {\perp}\)</span> such that <span class="math inline">\(v = u_0 + w_0\)</span> and <span class="math inline">\(P_U(v) = u_0\)</span>. Hence <span class="math display">\[\begin{aligned}
+    \|v - P_U(v)\| ^ 2 &amp; \leq \|v - P_U(v)\| ^ 2 + \|P_U(v) - u\| ^ 2 
+                       &amp; \text{(since  $\|P_U(v) - u\| ^ 2\geq 0$).}
+  \end{aligned}\]</span> But <span class="math inline">\(P_U(v) - v = u_0 - (u_0 + w_0) = w_0 \in U^ {\perp}\)</span> and <span class="math inline">\(P_U(v) - u =  u_0 - u \in U\)</span>. In other words, <span class="math inline">\(P_U(v) - v\)</span> and <span class="math inline">\(P_U(v) - u\)</span> are orthogonal, and so <a href="https://jdbm.me/mt3501-lnotes/11-inner-products/#thm-pythagorus">Theorem 11.5.4</a> implies that <span class="math display">\[\begin{aligned}
+     \|v - P_U(v)\| ^ 2 &amp; \leq \|v - P_U(v)\| ^ 2 + \|P_U(v) - u\| ^ 2 \\
+                       &amp; =  \|v - P_U(v) + P_U(v) - u\| ^ 2\\
+                       &amp; = \|v - u \| ^ 2.
+  \end{aligned}\]</span> Hence <span class="math inline">\(\|v-u\| \geq \|v - P_{U}(v)\|\)</span> for all <span class="math inline">\(u \in U\)</span>. ◻</p>
 </div>
 <div class="exampjupyter">
 <p>Find the distance from the vector <span class="math inline">\(\vec{w}_{0} =  \begin{pmatrix}  -1 \\  5 \\  1 \\  \end{pmatrix}\)</span> in <span class="math inline">\(\mathbb{R}^{3}\)</span> to the subspace <span class="math display">\[U = \operatorname{Span} \left( \begin{pmatrix}

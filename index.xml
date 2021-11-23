@@ -151,7 +151,7 @@ Show that a collection \(\mathscr{A}\) of vectors in a vector space \(V\) is lin
       
       <guid>https://jdbm.me/mt3501-lnotes/09-diagonal/</guid>
       <description>Diagonalisation of linear transformations body { counter-reset: chapter 8; }  In this section, we will discuss the diagonalisation of linear transformations.
-Diagonalisability A linear transformation \(T : V \to V\) of a finite-dimensional vector space \(V\) is diagonalisable if there is a basis \(\mathscr{B}\) for \(V\) such that \(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\) is a diagonal matrix.
+Diagonalisability A linear transformation \(T : V \longrightarrow V\) of a finite-dimensional vector space \(V\) is diagonalisable if there is a basis \(\mathscr{B}\) for \(V\) such that \(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\) is a diagonal matrix.
 A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\) such that \(P^{-1}AP\) is diagonal.</description>
     </item>
     

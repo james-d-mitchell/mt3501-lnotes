@@ -188,7 +188,7 @@ for (i = 0; i < coll.length; i++) {
   \end{pmatrix}\]</span> for some positive integer <span class="math inline">\(n\)</span> and some scalar <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 <div class="defn">
-<p>A linear transformation <span class="math inline">\(T : V \to V\)</span> (of a vector space <span class="math inline">\(V\)</span>) has <strong><em>Jordan normal form</em></strong> <span class="math inline">\(A\)</span> if there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math display">\[\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A = \begin{pmatrix}
+<p>A linear transformation <span class="math inline">\(T : V \longrightarrow V\)</span> (of a vector space <span class="math inline">\(V\)</span>) has <strong><em>Jordan normal form</em></strong> <span class="math inline">\(A\)</span> if there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math display">\[\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A = \begin{pmatrix}
       J_{n_{1}}(\lambda_{1}) &amp; 0                      &amp; \cdots &amp; \cdots &amp; 0                      \\
       0                      &amp; J_{n_{2}}(\lambda_{2}) &amp; 0      &amp; \cdots &amp; 0                      \\
       \vdots                 &amp; 0                      &amp; \ddots &amp; \ddots &amp; \vdots                 \\
@@ -197,14 +197,14 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}\]</span> for some positive integers <span class="math inline">\(n_{1}\)</span>, <span class="math inline">\(n_{2}\)</span>, …, <span class="math inline">\(n_{k}\)</span> and scalars <span class="math inline">\(\lambda_{1}\)</span>, <span class="math inline">\(\lambda_{2}\)</span>, …, <span class="math inline">\(\lambda_{k}\)</span>.</p>
 </div>
 <div class="thm">
-<p><span id="thm-JNF" label="thm-JNF"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and <span class="math inline">\(T : V \to V\)</span> be a linear transformation such that polynomial <span class="math inline">\(c_{T}(x) = (x - \lambda_1) ^  {a_{\lambda_1}} \cdots (x - \lambda_k) ^ {a_{\lambda_k}}\)</span> (<span class="math inline">\(\lambda_{1}\)</span>, <span class="math inline">\(\lambda_{2}\)</span>, …, <span class="math inline">\(\lambda_{k}\)</span> are the eigenvalues of <span class="math inline">\(T\)</span>). Then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\)</span> is in Jordan normal form, where each Jordan block has the form <span class="math inline">\(J_{m}(\lambda_{i})\)</span> for some <span class="math inline">\(m\)</span> and some <span class="math inline">\(i\)</span>.</p>
+<p><span id="thm-JNF" label="thm-JNF"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space and <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation such that polynomial <span class="math inline">\(c_{T}(x) = (x - \lambda_1) ^  {a_{\lambda_1}} \cdots (x - \lambda_k) ^ {a_{\lambda_k}}\)</span> (<span class="math inline">\(\lambda_{1}\)</span>, <span class="math inline">\(\lambda_{2}\)</span>, …, <span class="math inline">\(\lambda_{k}\)</span> are the eigenvalues of <span class="math inline">\(T\)</span>). Then there exists a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)\)</span> is in Jordan normal form, where each Jordan block has the form <span class="math inline">\(J_{m}(\lambda_{i})\)</span> for some <span class="math inline">\(m\)</span> and some <span class="math inline">\(i\)</span>.</p>
 </div>
 <p>In particular, this theorem applies when our field is <span class="math inline">\(\mathbb{C}\)</span>, since every polynomial is a product of linear factors over <span class="math inline">\(\mathbb{C}\)</span>. When <span class="math inline">\(c_{T}(x)\)</span> is not a product of linear factors, Jordan normal form cannot be used, and in that case, something called the <em>rational normal form</em> is used instead.</p>
 <div class="cor">
 <p>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix over <span class="math inline">\(\mathbb{C}\)</span>. Then there exists an invertible <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(P\)</span> (over <span class="math inline">\(\mathbb{C}\)</span>) such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \to \mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{B}}(T) = A\)</span>. Then by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C},  \mathscr{B}}(\operatorname{id}_{\mathbb{C} ^ n})\)</span> is the change of basis matrix from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P =  \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
+<p><em>Proof.</em> Suppose that <span class="math inline">\(T: \mathbb{C} ^ n \longrightarrow\mathbb{C} ^ n\)</span> and <span class="math inline">\(\mathscr{B}\)</span> is a basis for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{B},  \mathscr{B}}(T) = A\)</span>. Then by <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a> there exists a basis <span class="math inline">\(\mathscr{C}\)</span> for <span class="math inline">\(\mathbb{C} ^ n\)</span> such that <span class="math inline">\(\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span> is in Jordan normal form. Hence if <span class="math inline">\(P = \operatorname{Mat}_{\mathscr{C},  \mathscr{B}}(\operatorname{id}_{\mathbb{C} ^ n})\)</span> is the change of basis matrix from <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-change-basis">Theorem 4.3.1</a>, then <span class="math inline">\(P ^ {-1} A P =  \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)\)</span>. ◻</p>
 </div>
 <p>We shall not prove <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#thm-JNF">Theorem 10.1.3</a>. It is reasonably hard to prove and is most easily addressed by developing more advanced concepts and theory. Instead, we shall use this section to explain how to calculate the Jordan normal form associated to a linear transformation or matrix.</p>
 <p>Why do we care about the Jordan normal form? For more or less the same reason as we cared about diagonal matrices, they are considerably easier to handle than arbitrary matrices.</p>
@@ -222,7 +222,7 @@ for (i = 0; i < coll.length; i++) {
 <h2 id="finding-the-jordan-normal-form">Finding the Jordan normal form</h2>
 <p>The following proposition will allow us to determine the Jordan normal form of a matrix of a linear transformation in some small cases.</p>
 <div class="prop">
-<p><span id="prop-JNF" label="prop-JNF"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space, let <span class="math inline">\(T: V\to V\)</span> be a linear transformation such that <span class="math inline">\(c_T(x)\)</span> is a product of linear factors, and let <span class="math inline">\(J\)</span> denote the Jordan normal form of <span class="math inline">\(T\)</span>. If <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(T\)</span>, then</p>
+<p><span id="prop-JNF" label="prop-JNF"></span> Let <span class="math inline">\(V\)</span> be a finite-dimensional vector space, let <span class="math inline">\(T: V\longrightarrow V\)</span> be a linear transformation such that <span class="math inline">\(c_T(x)\)</span> is a product of linear factors, and let <span class="math inline">\(J\)</span> denote the Jordan normal form of <span class="math inline">\(T\)</span>. If <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(T\)</span>, then</p>
 <ol type="1">
 <li><p>the algebraic multiplicity <span class="math inline">\(a_{\lambda}\)</span> of <span class="math inline">\(\lambda\)</span> equals the sum of the sizes of the Jordan blocks <span class="math inline">\(J_{n}(\lambda)\)</span> occurring in <span class="math inline">\(J\)</span>;</p></li>
 <li><p>if the power of <span class="math inline">\((x-\lambda)\)</span> occurring in the minimum polynomial <span class="math inline">\(m_{T}(x)\)</span> is <span class="math inline">\((x-\lambda)^{m}\)</span>, then <span class="math inline">\(J\)</span> contains a Jordan block <span class="math inline">\(J_m(\lambda)\)</span>, and <span class="math inline">\(m\)</span> is the largest size of a Jordan block associated to <span class="math inline">\(\lambda\)</span> in <span class="math inline">\(J\)</span>;</p></li>
@@ -231,7 +231,7 @@ for (i = 0; i < coll.length; i++) {
 </div>
 <h2 id="examples">Examples</h2>
 <div class="exampjupyter">
-<p>Let <span class="math inline">\(V = \mathbb{R}^{4}\)</span> and let <span class="math inline">\(T : V \to V\)</span> be the linear transformation given by the matrix <span class="math display">\[B = \begin{pmatrix}
+<p>Let <span class="math inline">\(V = \mathbb{R}^{4}\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be the linear transformation given by the matrix <span class="math display">\[B = \begin{pmatrix}
       2 &amp; 1 &amp; 0  &amp; -3 \\
       0 &amp; 2 &amp; 0  &amp; 4  \\
       4 &amp; 5 &amp; -2 &amp; 1  \\
@@ -258,7 +258,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix} \\
              &amp; = (x-2)^{2} (x+2)^{2}.
   \end{aligned}\]</span> It follows that the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> and the algebraic multiplicities are <span class="math inline">\(a_2 = 2 = a_{-2}\)</span>. By <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#prop-JNF">Proposition 10.2.1</a>(1), <span class="math inline">\(a_2\)</span> is the sum of the sizes of the Jordan blocks <span class="math inline">\(J_{?}(2)\)</span> in the JNF for <span class="math inline">\(T\)</span>. It follows that either <span class="math inline">\(a_2 = 1 + 1\)</span> (the JNF has <span class="math inline">\(2\)</span> blocks of size <span class="math inline">\(1\)</span>) or <span class="math inline">\(a_2 = 2\)</span> (the JNF has <span class="math inline">\(1\)</span> block of size <span class="math inline">\(2\)</span>). The analogous statement holds for the eigenvalue <span class="math inline">\(-2\)</span>. To figure out which option occurs, we compute the minimum polynomial.</p>
-<p>The minimum polynomial <span class="math inline">\(m_T(x)\)</span> of <span class="math inline">\(T\)</span> has the form <span class="math inline">\(m_{T}(x) =  (x-2)^{i}(x+2)^{j}\)</span> where <span class="math inline">\(1 \leq i,j \leq 2\)</span>. Since <span class="math display">\[B - 2I = \begin{pmatrix}
+<p>The minimum polynomial <span class="math inline">\(m_T(x)\)</span> of <span class="math inline">\(T\)</span> has the form <span class="math inline">\(m_{T}(x) =  (x-2)^{i}(x+2)^{j}\)</span> where <span class="math inline">\(1 \leqslant i,j \leqslant 2\)</span>. Since <span class="math display">\[B - 2I = \begin{pmatrix}
       0 &amp; 1 &amp; 0  &amp; -3 \\
       0 &amp; 0 &amp; 0  &amp; 4  \\
       4 &amp; 5 &amp; -4 &amp; 1  \\
@@ -309,7 +309,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span></p>
 </div>
 <div class="exampjupyter">
-<p><span id="ex:JNF-exD" label="ex:JNF-exD"></span> Let <span class="math inline">\(V = \mathbb{R}^{4}\)</span> and let <span class="math inline">\(T : V \to V\)</span> be the linear transformation given by the matrix <span class="math display">\[C = \begin{pmatrix}
+<p><span id="ex:JNF-exD" label="ex:JNF-exD"></span> Let <span class="math inline">\(V = \mathbb{R}^{4}\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be the linear transformation given by the matrix <span class="math display">\[C = \begin{pmatrix}
       3  &amp; 0 &amp; 1 &amp; -1 \\
       1  &amp; 2 &amp; 1 &amp; -1 \\
       -1 &amp; 0 &amp; 1 &amp; 1  \\
@@ -392,7 +392,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}\]</span> (the matrix from <a href="https://jdbm.me/mt3501-lnotes/10-jnf/#ex:JNF-exD">Example 10.3.2</a>). Find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}CP\)</span> is in Jordan normal form.</p>
 </div>
 <div class="solution">
-<p>We have already established the Jordan normal form of the transformation <span class="math inline">\(T : \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> with matrix <span class="math inline">\(C\)</span> is <span class="math display">\[A = \begin{pmatrix}
+<p>We have already established the Jordan normal form of the transformation <span class="math inline">\(T : \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}\)</span> with matrix <span class="math inline">\(C\)</span> is <span class="math display">\[A = \begin{pmatrix}
       J_{2}(2) &amp; 0        &amp; 0        \\
       0        &amp; J_{1}(2) &amp; 0        \\
       0        &amp; 0        &amp; J_{1}(2)
@@ -428,7 +428,7 @@ for (i = 0; i < coll.length; i++) {
 <p>[<span class="sans-serif">Exercise:</span> Calculate <span class="math inline">\(P^{-1}CP\)</span> and verify it has the correct form.]</p>
 </div>
 <div class="exampjupyter">
-<p>Let <span class="math inline">\(T : \mathbb{R}^{4} \to \mathbb{R}^{4}\)</span> be the linear transformation given by the matrix <span class="math display">\[D = \begin{pmatrix}
+<p>Let <span class="math inline">\(T : \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}\)</span> be the linear transformation given by the matrix <span class="math display">\[D = \begin{pmatrix}
       -3 &amp; 2  &amp; \textstyle\frac{1}{2} &amp; -2 \\
       0  &amp; 0  &amp; 0     &amp; 0  \\
       0  &amp; -3 &amp; -3    &amp; -3 \\
@@ -453,7 +453,7 @@ for (i = 0; i < coll.length; i++) {
       3 &amp; x+3
     \end{pmatrix} \\
              &amp; = x^{2}(x+3)^{2}.
-  \end{aligned}\]</span> So the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(0\)</span> and <span class="math inline">\(-3\)</span>. Then <span class="math inline">\(m_{T}(x) =  x^{i}(x+3)^{j}\)</span> where <span class="math inline">\(1 \leq i,j \leq 2\)</span>. Since <span class="math display">\[D + 3I = \begin{pmatrix}
+  \end{aligned}\]</span> So the eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(0\)</span> and <span class="math inline">\(-3\)</span>. Then <span class="math inline">\(m_{T}(x) =  x^{i}(x+3)^{j}\)</span> where <span class="math inline">\(1 \leqslant i,j \leqslant 2\)</span>. Since <span class="math display">\[D + 3I = \begin{pmatrix}
       0 &amp; 2  &amp; \textstyle\frac{1}{2} &amp; -2 \\
       0 &amp; 3  &amp; 0     &amp; 0  \\
       0 &amp; -3 &amp; 0     &amp; -3 \\
@@ -547,7 +547,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span></p>
 </div>
 <div class="omittedexampjupyter">
-<p>Let <span class="math inline">\(V = \mathbb{R}^{5}\)</span> and let <span class="math inline">\(T : V \to V\)</span> be the linear transformation given by the matrix <span class="math display">\[E = \begin{pmatrix}
+<p>Let <span class="math inline">\(V = \mathbb{R}^{5}\)</span> and let <span class="math inline">\(T : V \longrightarrow V\)</span> be the linear transformation given by the matrix <span class="math display">\[E = \begin{pmatrix}
       1  &amp; 0 &amp; -1 &amp; 0 &amp; -8  \\
       0  &amp; 1 &amp; 4  &amp; 0 &amp; 29  \\
       -1 &amp; 0 &amp; 1  &amp; 1 &amp; 5   \\
@@ -587,7 +587,7 @@ for (i = 0; i < coll.length; i++) {
              &amp; = (x-1)^{2}(x+2) \bigl( (x-1)^{2} + 1 - 1 \bigr)                                                      \\
              &amp; = (x-1)^{4} (x+2).
   \end{aligned}\]</span> We now know that the Jordan normal form for <span class="math inline">\(T\)</span> contains a single Jordan block <span class="math inline">\(J_{1}(-2)\)</span> corresponding to eigenvalue <span class="math inline">\(-2\)</span> and some number of Jordan blocks <span class="math inline">\(J_{n}(1)\)</span> corresponding to eigenvalue <span class="math inline">\(1\)</span>. The sum of the sizes of these latter blocks equals <span class="math inline">\(4\)</span>.</p>
-<p>Let us now determine the minimum polynomial of <span class="math inline">\(T\)</span>. We know <span class="math inline">\(m_{T}(x) = (x-1)^{i} (x+2)\)</span> where <span class="math inline">\(1 \leq i \leq 4\)</span> by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) and (3). Now <span class="math display">\[E-I = \begin{pmatrix}
+<p>Let us now determine the minimum polynomial of <span class="math inline">\(T\)</span>. We know <span class="math inline">\(m_{T}(x) = (x-1)^{i} (x+2)\)</span> where <span class="math inline">\(1 \leqslant i \leqslant 4\)</span> by <a href="https://jdbm.me/mt3501-lnotes/09-diagonal/#prop-m-divide">Proposition 9.4.2</a>(2) and (3). Now <span class="math display">\[E-I = \begin{pmatrix}
       0  &amp; 0 &amp; -1 &amp; 0 &amp; -8  \\
       0  &amp; 0 &amp; 4  &amp; 0 &amp; 29  \\
       -1 &amp; 0 &amp; 0  &amp; 1 &amp; 5   \\
@@ -854,14 +854,324 @@ for (i = 0; i < coll.length; i++) {
 </table>
 </div>
 <p>[Hint: How can the dimension of the vector space be deduced from knowledge of the characteristic polynomial?]</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<ol type="1">
+<li><p> If <span class="math inline">\(c_{T}(x) = (x-2)^{4} (x-3)^{2}\)</span> and <span class="math inline">\(m_{T}(x) = (x-2)^{2} (x-3)^{2}\)</span>, then the largest sizes of the Jordan blocks for the eigenvalues <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> are both <span class="math inline">\(2\)</span>. The sum of the sizes of the Jordan blocks are <span class="math inline">\(4\)</span> and <span class="math inline">\(2\)</span>, respectively. Hence there are two possibilities <span class="math display">\[\begin{pmatrix}
+J_{2}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(3)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{3} &amp; \mathbf{1} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{3}
+\end{pmatrix}\]</span> and <span class="math display">\[\begin{pmatrix}
+J_{2}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{2}(3)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{3} &amp; \mathbf{1} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{3}
+\end{pmatrix}\]</span> (where the Jordan blocks are highlighted for emphasis).</p></li>
+<li><p> The Jordan blocks have total size <span class="math inline">\(5\)</span> and largest size <span class="math inline">\(2\)</span>. Hence we have the following two possibilities: <span class="math display">\[\begin{gathered}
+\begin{pmatrix}
+J_{2}(7) &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(7) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(7)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{7} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{7} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{7} &amp; \mathbf{1} &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{7} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{7}
+\end{pmatrix} \\
+\begin{pmatrix}
+J_{2}(7) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(7) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(7) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(7) 
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{7} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{7} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{7} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{7} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{7}
+\end{pmatrix}\end{gathered}\]</span></p></li>
+<li><p> The Jordan blocks have total size <span class="math inline">\(7\)</span> and largest size <span class="math inline">\(3\)</span>. Hence we have the following four possibilities: <span class="math display">\[\begin{gathered}
+\begin{pmatrix}
+J_{3}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{3}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(7)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; \mathbf{0} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; \mathbf{1} &amp; \mathbf{0} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{3}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; \mathbf{0} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; \mathbf{1} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{2}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{3}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; \mathbf{0} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{3}(2) &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{1}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{2} &amp; \mathbf{1} &amp; \mathbf{0} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{2} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{0} &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{2}
+\end{pmatrix}\end{gathered}\]</span></p></li>
+<li><p> There are four possibilities: <span class="math display">\[\begin{gathered}
+\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(3) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{2}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(3) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(5) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{1}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(3) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(3) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{2}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{2}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5}
+\end{pmatrix} \\
+%%%%%%%%%%
+\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(3) &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(3) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{2}(5) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{1}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{1}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{3} &amp; \mathbf{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\mathbf{0} &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \mathbf{3} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; \mathbf{1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{0} &amp; \mathbf{5} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{5}
+\end{pmatrix}\end{gathered}\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-10-02" label="problem-10-02"></span></p>
 <div class="question">
-<p>Determine all possible Jordan normal forms for a linear transformation <span class="math inline">\(T \colon V \to V\)</span> whose characteristic polynomial is <span class="math inline">\(c_{T}(x) =  (x-2)^{3}(x-5)^{2}\)</span>.</p>
+<p>Determine all possible Jordan normal forms for a linear transformation <span class="math inline">\(T \colon V \longrightarrow V\)</span> whose characteristic polynomial is <span class="math inline">\(c_{T}(x) =  (x-2)^{3}(x-5)^{2}\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>If <span class="math inline">\(c_{T}(x) = (x-2)^{3} (x-5)^{2}\)</span>, then <span class="math inline">\(m_{T}(x) = (x-2)^{i} (x-5)^{j}\)</span> where <span class="math inline">\(1 \leqslant i \leqslant 3\)</span> and <span class="math inline">\(1 \leqslant j \leqslant 2\)</span>. We consider each possibility in turn:</p>
+<h5 id="m_tx-x-2x-5"><span class="math inline">\(m_{T}(x) = (x-2)(x-5)\)</span>:</h5>
+<p>In this case, <span class="math inline">\(T\)</span> is diagonalisable, so the Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{1}(2) &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; J_{1}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
+<h5 id="m_tx-x-22-x-5"><span class="math inline">\(m_{T}(x) = (x-2)^{2} (x-5)\)</span>:</h5>
+<p>The Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{2}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(5) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
+<h5 id="m_tx-x-23x-5"><span class="math inline">\(m_{T}(x) = (x-2)^{3}(x-5)\)</span>:</h5>
+<p>The Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{3}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(5) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
+<h5 id="m_tx-x-2x-52"><span class="math inline">\(m_{T}(x) = (x-2)(x-5)^{2}\)</span>:</h5>
+<p>The Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{1}(2) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{2}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
+<h5 id="m_tx-x-22x-52"><span class="math inline">\(m_{T}(x) = (x-2)^{2}(x-5)^{2}\)</span>:</h5>
+<p>The Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{2}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
+<h5 id="m_tx-x-23-x-52"><span class="math inline">\(m_{T}(x) = (x-2)^{3} (x-5)^{2}\)</span>:</h5>
+<p>The Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{3}(2) &amp; 0 \\
+0 &amp; J_{2}(5)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5
+\end{pmatrix}.\]</span></p>
 </div></li>
 <li><p><span id="problem-10-03" label="problem-10-03"></span></p>
 <div class="question">
 <p>Determine all possible Jordan normal forms for a <span class="math inline">\(5 \times 5\)</span> matrix whose minimum polynomial is <span class="math inline">\((x-3)^{2}\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>The characteristic polynomial is <span class="math inline">\(c_{T}(x) = (x-3)^{5}\)</span>. The possibilities are <span class="math display">\[\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 \\
+0 &amp; J_{2}(3) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(3)
+\end{pmatrix} =
+\begin{pmatrix}
+3 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 3 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 3 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix}\]</span> and <span class="math display">\[\begin{pmatrix}
+J_{2}(3) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(3) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(3) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; J_{1}(3)
+\end{pmatrix} =
+\begin{pmatrix}
+3 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 3 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 3 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span></p>
 </div></li>
 <li><p><span id="problem-10-04" label="problem-10-04"></span></p>
 <div class="question">
@@ -896,10 +1206,239 @@ for (i = 0; i < coll.length; i++) {
     -1 &amp; 0 &amp; 3
   \end{pmatrix}.
 \end{array}\]</span> [Hint: These matrices appeared on the Problem Sheets for Sections 8 and 9!]</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p>Recall we calculated the characteristic polynomials and minimum polynomials in the Problem Sheet for Sections 8 and 9. We use this information below.</p>
+<ol type="1">
+<li><p><span class="math display">\[A = \begin{pmatrix}
+3 &amp; -4 &amp; 0 \\
+0 &amp; -1 &amp; 0 \\
+0 &amp; 6 &amp; 2
+\end{pmatrix}.\]</span> On the Problem Sheet for Section 9 (Problem 2) we determined that <span class="math inline">\(A\)</span> was diagonalisable. This diagonal matrix will be its Jordan normal form: <span class="math display">\[\begin{pmatrix}
+-1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{pmatrix} =
+\begin{pmatrix}
+J_{1}(-1) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(3)
+\end{pmatrix}.\]</span></p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+1 &amp; 1 &amp; -1 \\
+-2 &amp; 4 &amp; -2 \\
+0 &amp; 1 &amp; 0
+\end{pmatrix}.\]</span> On the Problem Sheet for Section 9 (Problems 2 and 3) we determined that <span class="math display">\[c_{A}(x) = (x-1)(x-2)^{2} \qquad \text{and} \qquad m_{A}(x) = (x-1)(x-2)^{2}.\]</span> Hence the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{1}(1) &amp; 0 \\
+0 &amp; J_{2}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span></p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+5 &amp; 2 &amp; 2 \\
+2 &amp; 2 &amp; -4 \\
+2 &amp; -4 &amp; 2
+\end{pmatrix}.\]</span> We determined that <span class="math inline">\(A\)</span> was diagonalisable. This diagonal matrix will be its Jordan normal form: <span class="math display">\[\begin{pmatrix}
+-3 &amp; 0 &amp; 0 \\
+0 &amp; 6 &amp; 0 \\
+0 &amp; 0 &amp; 6
+\end{pmatrix} =
+\begin{pmatrix}
+J_{1}(-3) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(6) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(6)
+\end{pmatrix}.\]</span></p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+3 &amp; 4 &amp; 4 \\
+1 &amp; 3 &amp; 0 \\
+-2 &amp; -4 &amp; -1
+\end{pmatrix}.\]</span> We determined <span class="math display">\[c_{A}(x) = (x-1)^{2} (x-3) \qquad \text{and} \qquad m_{A}(x) = (x-1)^{2}(x-3).\]</span> Hence the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{2}(1) &amp; 0 \\
+0 &amp; J_{1}(3)
+\end{pmatrix} =
+\begin{pmatrix}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span></p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+1 &amp; 0 &amp; 1 \\
+0 &amp; 2 &amp; 1 \\
+-1 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span> We determined <span class="math display">\[c_{A}(x) = (x-2)^{3} \qquad \text{and} \qquad m_{A}(x) = (x-2)^{3}.\]</span> Hence the Jordan normal form of <span class="math inline">\(A\)</span> consists of a single Jordan block of size <span class="math inline">\(3\)</span>: <span class="math display">\[J_{3}(2) = \begin{pmatrix}
+2 &amp; 1 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span></p></li>
+<li><p><span class="math display">\[A = \begin{pmatrix}
+-2 &amp; -3 &amp; 0 \\
+3 &amp; 4 &amp; 0 \\
+6 &amp; 6 &amp; 1
+\end{pmatrix}.\]</span> We determined <span class="math display">\[c_{A}(x) = (x-1)^{3} \qquad \text{and} \qquad m_{A}(x) = (x-1)^{2}\]</span> (see the Problem Sheet for Section 9, Problems 2 and 3, part (g)). Hence the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{2}(1) &amp; 0 \\
+0 &amp; J_{1}(1)
+\end{pmatrix} =
+\begin{pmatrix}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-10-05" label="problem-10-05"></span></p>
 <div class="questionjupyter">
 <p>For each matrix <span class="math inline">\(A\)</span> appearing in Problem 4, find an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}AP\)</span> is in Jordan normal form.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<ol type="1">
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> For <span class="math display">\[A = \begin{pmatrix}
+        3 &amp; -4 &amp; 0 \\
+        0 &amp; -1 &amp; 0 \\
+        0 &amp; 6 &amp; 2
+      \end{pmatrix},\]</span> we determined that <span class="math inline">\(A\)</span> was diagonalisable and showed <span class="math display">\[P^{-1}AP = \begin{pmatrix}
+        -1 &amp; 0 &amp; 0 \\
+        0 &amp; 2 &amp; 0 \\
+        0 &amp; 0 &amp; 3
+      \end{pmatrix}\]</span> when <span class="math display">\[P = \begin{pmatrix}
+        1 &amp; 0 &amp; 1 \\
+        1 &amp; 0 &amp; 0 \\
+        -2 &amp; 1 &amp; 0
+      \end{pmatrix}\]</span> (see the Problem Sheet for Section 9, Problem 2(a)).</p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 1 &amp; -1 \\
+-2 &amp; 4 &amp; -2 \\
+0 &amp; 1 &amp; 0
+\end{pmatrix}.\]</span> From Question 4, the Jordan normal form is <span class="math display">\[\begin{pmatrix}
+J_{1}(1) &amp; 0 \\
+0 &amp; J_{2}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span></p>
+<p>First we determine the eigenspace <span class="math inline">\(E_{1}\)</span>. We solve <span class="math inline">\((A-I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 1 &amp; -1 \\
+-2 &amp; 3 &amp; -2 \\
+0 &amp; 1 &amp; -1
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+= \begin{pmatrix}0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[y-z = -2x + 3y - 2z = 0.\]</span> Taking <span class="math inline">\(z\)</span> to be arbitrary, we see <span class="math inline">\(y = z\)</span> and <span class="math inline">\(2x = 3y - 2z = z\)</span>, so <span class="math inline">\(x = \textstyle\frac{1}{2}z\)</span>. Hence <span class="math display">\[E_{1} = \left\{ \begin{pmatrix}\textstyle\frac{1}{2}z\\z\\z\end{pmatrix} \biggm| z \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}\textstyle\frac{1}{2}\\1\\1\end{pmatrix} \right).\]</span> Take <span class="math display">\[v_{1} = \begin{pmatrix}\textstyle\frac{1}{2}\\1\\1\end{pmatrix},\]</span> so <span class="math inline">\(A(v_{1}) = v_{1}\)</span>.</p>
+<p>We determined the eigenspace <span class="math inline">\(E_{2}\)</span> in Problem 2 on the Problem Sheet for Section 9 (Diagonalisation): <span class="math display">\[E_{2} = \operatorname{Span} \left( \begin{pmatrix}1\\2\\1\end{pmatrix} \right).\]</span> Take <span class="math display">\[v_{2} = \begin{pmatrix}1\\2\\1\end{pmatrix},\]</span> so <span class="math inline">\(A(v_{2}) = 2v_{2}\)</span>.</p>
+<p>For our final basis vector <span class="math inline">\(v_{3}\)</span>, we require <span class="math inline">\(A(v_{3}) = v_{2} + 2v_{3}\)</span>, so we solve <span class="math inline">\((A-2I)(v) = v_{2}\)</span>: <span class="math display">\[\begin{pmatrix}
+-1 &amp; 1 &amp; -1 \\
+-2 &amp; 2 &amp; -2 \\
+0 &amp; 1 &amp; -2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+= \begin{pmatrix}1\\2\\1\end{pmatrix}.\]</span> So <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+-x &amp; {} + y &amp; {} - z &amp;{} = 1 \\
+-2x &amp;{} + 2y &amp;{} - 2z &amp;{} = 2 \\
+&amp; y &amp;{} - 2z &amp;{} = 1.
+\end{array}\]</span> The first two equations are equivalent. Any <span class="math inline">\(z\)</span> will yield an appropriate solution, so we take <span class="math inline">\(z = 0\)</span>. Then <span class="math inline">\(y = 1+2z = 1\)</span> and <span class="math display">\[x = y-z - 1 = 1 - 0 - 1 = 0.\]</span> Hence we take <span class="math display">\[v_{3} = \begin{pmatrix}0\\1\\0\end{pmatrix}.\]</span></p>
+<p>Therefore, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}\textstyle\frac{1}{2}\\1\\1\end{pmatrix}, \begin{pmatrix}1\\2\\1\end{pmatrix},
+  \begin{pmatrix}0\\1\\0\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+\textstyle\frac{1}{2}&amp; 1 &amp; 0 \\
+1 &amp; 2 &amp; 1 \\
+1 &amp; 1 &amp; 0
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<p>From the Problem Sheet for Section 9 (Diagonalisation), Problem 2(c), we take <span class="math display">\[P = \begin{pmatrix}
+-\textstyle\frac{1}{2}&amp; 2 &amp; 2 \\
+1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1
+\end{pmatrix}\]</span> to obtain <span class="math display">\[P^{-1}AP = \begin{pmatrix}
+-3 &amp; 0 &amp; 0 \\
+0 &amp; 6 &amp; 0 \\
+0 &amp; 0 &amp; 6
+\end{pmatrix},\]</span> which is the Jordan normal form of <span class="math display">\[A = \begin{pmatrix}
+5 &amp; 2 &amp; 2 \\
+2 &amp; 2 &amp; -4 \\
+2 &amp; -4 &amp; 2
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+3 &amp; 4 &amp; 4 \\
+1 &amp; 3 &amp; 0 \\
+-2 &amp; -4 &amp; -1
+\end{pmatrix}.\]</span> From Question 4, the Jordan normal form is <span class="math display">\[\begin{pmatrix}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span> We determined the eigenspace <span class="math inline">\(E_{1}\)</span> in Problem 2 on the Problem Sheet for Section 9: <span class="math display">\[E_{1} = \operatorname{Span} \left( \begin{pmatrix}-2\\1\\0\end{pmatrix} \right).\]</span> We take <span class="math display">\[v_{1} = \begin{pmatrix}-2\\1\\0\end{pmatrix}.\]</span> To find <span class="math inline">\(v_{2}\)</span>, we solve <span class="math inline">\(A(v) = v_{1} + v\)</span>; that is, <span class="math inline">\((A-I)(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+2 &amp; 4 &amp; 4 \\
+1 &amp; 2 &amp; 0 \\
+-2 &amp; -4 &amp; -2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+= \begin{pmatrix}-2\\1\\0\end{pmatrix}.\]</span> So <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+x &amp;{} + 2y &amp;{} + 2z &amp;{} = -1 \\
+x &amp;{} + 2y &amp; &amp;{} = 1 \\
+x &amp;{} + 2y &amp;{} + z &amp;{} = 0.
+\end{array}\]</span> Subtracting the second equation from the first and third gives <span class="math inline">\(2z = -2\)</span> and <span class="math inline">\(z = -1\)</span>. Thus these are compatible equations (as they have to be given the fact that the Jordan normal form is as described). Any value of <span class="math inline">\(y\)</span> will yield a solution, so we take <span class="math inline">\(y = 0\)</span> and hence <span class="math inline">\(x = 1\)</span>. So we take <span class="math display">\[v_{2} = \begin{pmatrix}1\\0\\-1\end{pmatrix}.\]</span></p>
+<p>Finally we determine the eigenspace <span class="math inline">\(E_{3}\)</span>. We solve <span class="math inline">\((A-3I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 4 &amp; 4 \\
+1 &amp; 0 &amp; 0 \\
+-2 &amp; -4 &amp; -4
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+= \begin{pmatrix}0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+&amp; 4y &amp;{} + 4z &amp;{} = 0 \\
+x &amp; &amp; &amp;{} = 0 \\
+-2x &amp; {} - 4y &amp;{} - 4z &amp;{} = 0.
+\end{array}\]</span> Hence <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(z = -y\)</span>. Thus <span class="math display">\[E_{3} = \left\{ \begin{pmatrix}0\\y\\-y\end{pmatrix} \biggm| y \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}0\\1\\-1\end{pmatrix} \right).\]</span> So take <span class="math display">\[v_{3} = \begin{pmatrix}0\\1\\-1\end{pmatrix}.\]</span></p>
+<p>Therefore, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}-2\\1\\0\end{pmatrix}, \begin{pmatrix}1\\0\\-1\end{pmatrix},
+  \begin{pmatrix}0\\1\\-1\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+-2 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1 \\
+0 &amp; -1 &amp; -1
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<p>The Jordan normal form of <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 0 &amp; 1 \\
+0 &amp; 2 &amp; 1 \\
+-1 &amp; 0 &amp; 3
+\end{pmatrix}\]</span> is <span class="math display">\[\begin{pmatrix}
+2 &amp; 1 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span> We determined the eigenspace <span class="math inline">\(E_{2}\)</span> on the Problem Sheet for Section 9: <span class="math display">\[E_{2} = \operatorname{Span} \left( \begin{pmatrix}0\\1\\0\end{pmatrix} \right),\]</span> so we take <span class="math display">\[v_{1} = \begin{pmatrix}0\\1\\0\end{pmatrix}.\]</span></p>
+<p>To find <span class="math inline">\(v_{2}\)</span>, we solve <span class="math inline">\((A-2I)(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+-1 &amp; 0 &amp; 1
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\1\\0\end{pmatrix},\]</span> so <span class="math display">\[-x + z = 0, \qquad z = 1.\]</span> Hence <span class="math inline">\(x = z = 1\)</span> and <span class="math inline">\(y\)</span> may be arbitrary. We shall choose <span class="math inline">\(y = 0\)</span> and take <span class="math display">\[v_{2} = \begin{pmatrix}1\\0\\1\end{pmatrix}.\]</span></p>
+<p>Finally to find <span class="math inline">\(v_{3}\)</span>, we solve <span class="math inline">\((A-2I)(v) = v_{2}\)</span>: <span class="math display">\[\begin{pmatrix}
+-1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+-1 &amp; 0 &amp; 1
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}1\\0\\1\end{pmatrix}.\]</span> So <span class="math display">\[-x + z = 1, \qquad z = 0.\]</span> Hence <span class="math inline">\(x = -1\)</span> and <span class="math inline">\(y\)</span> may be arbitrary. We shall choose <span class="math inline">\(y = 0\)</span> and take <span class="math display">\[v_{3} = \begin{pmatrix}-1\\0\\0\end{pmatrix}.\]</span></p>
+<p>Therefore, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}0\\1\\0\end{pmatrix}, \begin{pmatrix}1\\0\\1\end{pmatrix},
+  \begin{pmatrix}-1\\0\\0\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+2 &amp; 1 &amp; 0 \\
+0 &amp; 2 &amp; 1 \\
+0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+0 &amp; 1 &amp; -1 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0
+\end{pmatrix}.\square\]</span></p></li>
+</ol>
 </div></li>
 <li><p><span id="problem-10-06" label="problem-10-06"></span></p>
 <div class="questionjupyter">
@@ -908,6 +1447,52 @@ for (i = 0; i < coll.length; i++) {
       0 &amp; 0 &amp; 3 \\
       0 &amp; 0 &amp; 0
     \end{pmatrix}\]</span> is not diagonalisable. Find a Jordan normal form <span class="math inline">\(J\)</span> of <span class="math inline">\(A\)</span> and an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(P^{-1}AP = J\)</span>.</p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<p>The characteristic equation of <span class="math inline">\(A\)</span> is <span class="math display">\[c_{A}(x) = \det \begin{pmatrix}
+x &amp; -1 &amp; -2 \\
+0 &amp; x &amp; -3 \\
+0 &amp; 0 &amp; x
+\end{pmatrix} = x^{3}.\]</span> Now <span class="math inline">\(A\)</span> is diagonalisable if and only if the minimum polynomial equals <span class="math inline">\(x\)</span> (the only possible product of distinct linear factors). But <span class="math inline">\(A \neq 0\)</span>, so <span class="math inline">\(m_{A}(x) \neq x\)</span>. Hence <span class="math inline">\(A\)</span> is not diagonalisable.</p>
+<p><span class="math display">\[A^{2} = \begin{pmatrix}
+0 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0,\]</span> so <span class="math inline">\(m_{A}(x) \neq x^{2}\)</span>. Since <span class="math inline">\(m_{A}(x)\)</span> divides <span class="math inline">\(c_{A}(x)\)</span>, we conclude <span class="math display">\[m_{A}(x) = x^{3} = c_{A}(x).\]</span> Consequently the Jordan normal form of <span class="math inline">\(A\)</span> consists of a single block <span class="math display">\[J = J_{3}(0) = \begin{pmatrix}
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span></p>
+<p>We now determine the eigenspace <span class="math inline">\(E_{0}\)</span>. We solve <span class="math inline">\(A(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 1 &amp; 2 \\
+0 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[y + 2z = 3z = 0.\]</span> We deduce <span class="math inline">\(z = y = 0\)</span>, but <span class="math inline">\(x\)</span> can be arbitrary. Thus <span class="math display">\[E_{0} = \left\{ \begin{pmatrix}x\\0\\0\end{pmatrix} \biggm| x \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}1\\0\\0\end{pmatrix} \right).\]</span> Take <span class="math display">\[v_{1} = \begin{pmatrix}1\\0\\0\end{pmatrix}.\]</span></p>
+<p>To find <span class="math inline">\(v_{2}\)</span>, we solve <span class="math inline">\(A(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 1 &amp; 2 \\
+0 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}1\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[y + 2z = 1, \qquad 3z = 0\]</span> and we deduce <span class="math inline">\(y = 1\)</span>,  <span class="math inline">\(z = 0\)</span>, but <span class="math inline">\(x\)</span> can be arbitrary. We choose <span class="math inline">\(x = 0\)</span>, so take <span class="math display">\[v_{2} = \begin{pmatrix}0\\1\\0\end{pmatrix}.\]</span></p>
+<p>Finally to find <span class="math inline">\(v_{3}\)</span>, we solve <span class="math inline">\(A(v) = v_{2}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 1 &amp; 2 \\
+0 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\1\\0\end{pmatrix},\]</span> so <span class="math display">\[y + 2z = 0, \qquad 3z = 1.\]</span> We deduce <span class="math inline">\(z = \frac{1}{3}\)</span>,  <span class="math inline">\(y = -2z = -\frac{2}{3}\)</span> and <span class="math inline">\(x\)</span> can be arbitrary. We choose <span class="math inline">\(x = 0\)</span>, so take <span class="math display">\[v_{3} = \begin{pmatrix}0\\-\frac{2}{3}\\\frac{1}{3}\end{pmatrix}.\]</span></p>
+<p>Hence, the matrix of <span class="math inline">\(A\)</span> with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\0\end{pmatrix},
+  \begin{pmatrix}0\\-\frac{2}{3}\\\frac{1}{3}\end{pmatrix} \right\}\]</span> is <span class="math display">\[J = \begin{pmatrix}
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -\frac{2}{3} \\
+0 &amp; 0 &amp; \frac{1}{3}
+\end{pmatrix}.\]</span></p>
 </div></li>
 <li><p><span id="problem-10-07" label="problem-10-07"></span></p>
 <div class="questionjupyter">
@@ -955,6 +1540,663 @@ for (i = 0; i < coll.length; i++) {
     2 &amp; -1 &amp; 0 &amp; 5
   \end{pmatrix}.
 \end{array}\]</span></p>
+</div>
+<button type="button" class="collapsible">
+<p>SOLUTION.</p>
+</button>
+<div class="solution04">
+<p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong></p>
+<ol type="1">
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; -1 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; -1 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 1
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x-1 &amp; 0 &amp; 0 &amp; 0 \\
+6 &amp; x+1 &amp; -1 &amp; 0 \\
+4 &amp; 0 &amp; x+1 &amp; 0 \\
+-13 &amp; 0 &amp; -6 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1) \det \begin{pmatrix}
+x+1 &amp; -1 &amp; 0 \\
+0 &amp; x+1 &amp; 0 \\
+0 &amp; -6 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1)(x+1) \det \begin{pmatrix}
+x+1 &amp; 0 \\
+-6 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1)^{2} (x+1)^{2}.\end{aligned}\]</span> Therefore <span class="math inline">\(m_{A}(x) = (x-1)^{i}(x+1)^{j}\)</span> where <span class="math inline">\(1 \leqslant i,j \leqslant 2\)</span>. We have <span class="math display">\[A-I = \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; -2 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+A+I = \begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 0 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; 0 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 2
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+(A-I)(A+I) &amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0, \\
+(A-I)^{2}(A+I) &amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; -2 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+8 &amp; 0 &amp; 4 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0, \\
+\qquad\text{and}\qquad
+(A-I)(A+I)^{2} &amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 0 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; 0 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 2
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+4 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0.\end{aligned}\]</span> Hence <span class="math inline">\(m_{A}(x) = (x-1)^{2}(x+1)^{2}\)</span> (since we have eliminated the smaller degree possibilities). Therefore the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{2}(1) &amp; 0 \\
+0 &amp; J_{2}(-1)
+\end{pmatrix} =
+\begin{pmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -1
+\end{pmatrix}.\]</span></p>
+<p>Now we determine <span class="math inline">\(E_{1}\)</span>, so solve <span class="math inline">\((A-I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; -2 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-6x - 2y + z &amp;= 0 \\
+-4x \quad\;\;\; -2z &amp;= 0 \label{eq:JNF2a} \\
+13x \quad\;\;\; + 6z &amp;= 0. \label{eq:JNF3a}\end{aligned}\]</span> Multiplying <a href="#eq:JNF2a" data-reference-type="eqref" data-reference="eq:JNF2a">[eq:JNF2a]</a> and adding to <a href="#eq:JNF3a" data-reference-type="eqref" data-reference="eq:JNF3a">[eq:JNF3a]</a>, we deduce <span class="math inline">\(x = 0\)</span>, so <span class="math inline">\(z = 0\)</span> and hence <span class="math inline">\(y = 0\)</span>. Thus <span class="math display">\[E_{1} = \left\{ \begin{pmatrix}0\\0\\0\\t\end{pmatrix} \biggm| t \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}0\\0\\0\\1\end{pmatrix} \right).\]</span> We take <span class="math display">\[v_{1} = \begin{pmatrix}0\\0\\0\\1\end{pmatrix}.\]</span> To find <span class="math inline">\(v_{2}\)</span>, we solve <span class="math inline">\((A-I)(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; -2 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; -2 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\1\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-6x -2y + z &amp;= 0 \\
+-4x \quad\;\;\; -2z &amp;= 0 \label{eq:JNF5a} \\
+13x \quad\;\;\; +6z &amp;= 1. \label{eq:JNF6a}\end{aligned}\]</span> Multiplying <a href="#eq:JNF5a" data-reference-type="eqref" data-reference="eq:JNF5a">[eq:JNF5a]</a> by <span class="math inline">\(3\)</span> and adding to <a href="#eq:JNF6a" data-reference-type="eqref" data-reference="eq:JNF6a">[eq:JNF6a]</a>, we deduce <span class="math inline">\(x = 1\)</span>, so <span class="math inline">\(2z = -4x = -4\)</span> and hence <span class="math inline">\(z = -2\)</span>. Therefore <span class="math inline">\(2y = -6x + z = -6 - 2 = -8\)</span> and we conclude <span class="math inline">\(y = -4\)</span>, while <span class="math inline">\(t\)</span> remains arbitrary. We choose to take <span class="math inline">\(t = 0\)</span> and hence take <span class="math display">\[v_{2} = \begin{pmatrix}1\\-4\\-2\\0\end{pmatrix}.\]</span></p>
+<p>Now determine <span class="math inline">\(E_{-1}\)</span>, so solve <span class="math inline">\((A+I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 0 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; 0 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+-2x &amp; &amp; &amp;{} = 0 \\
+-6x &amp;{} + z &amp; &amp;{} = 0 \\
+-4x &amp; &amp; &amp;{} = 0 \\
+13x &amp;{} + 6z &amp;{} + 2t &amp;{} = 0.
+\end{array}\]</span> Hence <span class="math inline">\(x = 0\)</span>,  <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(t = 0\)</span>, while <span class="math inline">\(y\)</span> can be arbitrary. Thus <span class="math display">\[E_{-1} = \left\{ \begin{pmatrix}0\\y\\0\\0\end{pmatrix} \biggm| y \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}0\\1\\0\\0\end{pmatrix} \right),\]</span> so we take <span class="math display">\[v_{3} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix}.\]</span> Finally to find <span class="math inline">\(v_{4}\)</span>, we solve <span class="math inline">\((T+I)(v) = v_{3}\)</span>: <span class="math display">\[\begin{pmatrix}
+2 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 0 &amp; 1 &amp; 0 \\
+-4 &amp; 0 &amp; 0 &amp; 0 \\
+13 &amp; 0 &amp; 6 &amp; 2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+2x &amp; &amp; &amp;{} = 0 \\
+-6x &amp;{} + z &amp; &amp;{} = 1 \\
+-4x &amp; &amp; &amp;{} = 0 \\
+13x &amp;{} + 6z &amp;{} + 2t &amp;{} = 0.
+\end{array}\]</span> Hence <span class="math inline">\(x = 0\)</span>,  <span class="math inline">\(z = 1\)</span> and <span class="math inline">\(2t = -13x - 6z = -6\)</span>, so <span class="math inline">\(t = -3\)</span>, while <span class="math inline">\(y\)</span> may be arbitrary. We shall take <span class="math display">\[v_{4} = \begin{pmatrix}0\\0\\1\\-3\end{pmatrix}.\]</span></p>
+<p>Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}0\\0\\0\\1\end{pmatrix}, \begin{pmatrix}1\\-4\\-2\\0\end{pmatrix},
+  \begin{pmatrix}0\\1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\\-3\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -1
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; -4 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 1 \\
+1 &amp; 0 &amp; 0 &amp; -3
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+-14 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 0 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; -3 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 11
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x+14 &amp; -1 &amp; 0 &amp; -14 \\
+6 &amp; x &amp; 0 &amp; -6 \\
+-6 &amp; 3 &amp; x+3 &amp; 6 \\
+11 &amp; -1 &amp; 0 &amp; x-11
+\end{pmatrix} \\
+&amp;= (x+3) \det \begin{pmatrix}
+x+14 &amp; -1 &amp; -14 \\
+6 &amp; x &amp; -6 \\
+11 &amp; -1 &amp; x-11
+\end{pmatrix} \\
+&amp;= (x+3) \left( (x+14) \det \begin{pmatrix}
+x &amp; -6 \\
+-1 &amp; x-11
+\end{pmatrix} + \det \begin{pmatrix}
+6 &amp; -6 \\
+11 &amp; x-11
+\end{pmatrix} \right. \\
+&amp;\hspace{2.5in} \left. {} - 14 \det \begin{pmatrix}
+6 &amp; x \\
+11 &amp; -1
+\end{pmatrix} \right) \\
+&amp;= (x+3) \bigl( (x+14) (x^{2} - 11x - 6) + 6x - 66 + 66 - 14 (-6 -
+11x) \bigr) \\
+&amp;= (x+3) (x^{3} + 3x^{2} - 160x - 84 + 6x + 84 + 154x ) \\
+&amp;= (x+3)(x^{3} + 3x^{2}) \\
+&amp;= x^{2} (x+3)^{2}.\end{aligned}\]</span> Therefore <span class="math inline">\(m_{A}(x) = x^{i}(x+3)^{j}\)</span> where <span class="math inline">\(1 \leqslant i,j \leqslant 2\)</span>. We have <span class="math display">\[A + 3I = \begin{pmatrix}
+-11 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 3 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; 0 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 14
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+A(A+3I) &amp;= \begin{pmatrix}
+-6 &amp; 3 &amp; 0 &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 3 &amp; 0 &amp; 6
+\end{pmatrix} \neq 0 \\
+\qquad\text{and}\qquad
+A^{2}(A+3I) &amp;= \begin{pmatrix}
+-14 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 0 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; -3 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 11
+\end{pmatrix}
+\begin{pmatrix}
+-6 &amp; 3 &amp; 0 &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+-6 &amp; 3 &amp; 0 &amp; 6
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\end{aligned}\]</span> Hence <span class="math inline">\(m_{A}(x) = x^{2}(x+3)\)</span>, so we deduce the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{2}(0) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(-3) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(-3)
+\end{pmatrix} =
+\begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{pmatrix}.\]</span></p>
+<p>We now determine the eigenspace <span class="math inline">\(E_{0}\)</span>, so solve <span class="math inline">\(T(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-14 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 0 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; -3 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 11
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-14x + y \quad\;\;\; + 14t &amp;= 0 \label{eq:JNF1b} \\
+-6x \qquad\qquad\;\; + 6t &amp;= 0 \label{eq:JNF2b} \\
+6x - 3y - 3z - 6t &amp;= 0 \label{eq:JNF3b} \\
+-11x + y \quad\;\;\; + 11t &amp;= 0.\end{aligned}\]</span> Equation <a href="#eq:JNF2b" data-reference-type="eqref" data-reference="eq:JNF2b">[eq:JNF2b]</a> tells us <span class="math inline">\(x = t\)</span> and then <a href="#eq:JNF1b" data-reference-type="eqref" data-reference="eq:JNF1b">[eq:JNF1b]</a> gives <span class="math inline">\(y = 0\)</span>. Hence <span class="math inline">\(z = 0\)</span> by <a href="#eq:JNF3b" data-reference-type="eqref" data-reference="eq:JNF3b">[eq:JNF3b]</a>. We deduce <span class="math display">\[E_{0} = \left\{ \begin{pmatrix}x\\0\\0\\x\end{pmatrix} \biggm| x \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}1\\0\\0\\1\end{pmatrix} \right),\]</span> so we take <span class="math display">\[v_{1} = \begin{pmatrix}1\\0\\0\\1\end{pmatrix}.\]</span> To find <span class="math inline">\(v_{2}\)</span>, we now solve <span class="math inline">\(A(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+-14 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 0 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; -3 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 11
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}1\\0\\0\\1\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-14x + y \quad\;\;\; + 14 t &amp;= 1 \label{eq:JNF5b} \\
+-6x \qquad\qquad\;\; + 6t &amp;= 0 \label{eq:JNF6b} \\
+6x -3y - 3z - 6t &amp;= 0 \label{eq:JNF7b} \\
+-11x + y \quad\;\;\; + 11t &amp;=1.\end{aligned}\]</span> Equation <a href="#eq:JNF6b" data-reference-type="eqref" data-reference="eq:JNF6b">[eq:JNF6b]</a> tells us <span class="math inline">\(x = t\)</span>. Then <a href="#eq:JNF5b" data-reference-type="eqref" data-reference="eq:JNF5b">[eq:JNF5b]</a> implies <span class="math inline">\(y = 1\)</span> and <a href="#eq:JNF7b" data-reference-type="eqref" data-reference="eq:JNF7b">[eq:JNF7b]</a> forces <span class="math inline">\(z = -y = -1\)</span>. The final choice of <span class="math inline">\(x\)</span> remains arbitrary, so we shall take <span class="math inline">\(x = 0\)</span> and <span class="math display">\[v_{2} = \begin{pmatrix}0\\1\\-1\\0\end{pmatrix}.\]</span></p>
+<p>Finally we determine <span class="math inline">\(E_{-3}\)</span>, so solve <span class="math inline">\((A+3I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-11 &amp; 1 &amp; 0 &amp; 14 \\
+-6 &amp; 3 &amp; 0 &amp; 6 \\
+6 &amp; -3 &amp; 0 &amp; -6 \\
+-11 &amp; 1 &amp; 0 &amp; 14
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so we have essentially just two equations: <span class="math display">\[\begin{aligned}
+-11x + y + 14t &amp;= 0 \label{eq:JNF9b} \\
+-6x + 3y + 6t &amp;= 0. \label{eq:JNF10b}\end{aligned}\]</span> Multiplying <a href="#eq:JNF9b" data-reference-type="eqref" data-reference="eq:JNF9b">[eq:JNF9b]</a> by <span class="math inline">\(3\)</span> and subtracting from <a href="#eq:JNF10b" data-reference-type="eqref" data-reference="eq:JNF10b">[eq:JNF10b]</a> gives <span class="math inline">\(27x - 36t = 0\)</span>, so <span class="math inline">\(x = \frac{4}{3}t\)</span>, while <span class="math display">\[y = 11x - 14t = \frac{2}{3}t.\]</span> The value of <span class="math inline">\(z\)</span> remains arbitrary, so <span class="math display">\[E_{-3} = \left\{ \begin{pmatrix}\frac{4}{3}t\\\frac{2}{3}t\\z\\t\end{pmatrix} \biggm|
+  z,t \in \mathbb{R}\right\} = \operatorname{Span} \left(
+  \begin{pmatrix}0\\0\\1\\0\end{pmatrix}, \begin{pmatrix}4\\2\\0\\3\end{pmatrix} \right).\]</span> We take <span class="math display">\[v_{3} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix} \qquad \text{and} \qquad v_{4} =
+\begin{pmatrix}4\\2\\0\\3\end{pmatrix}.\]</span> Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}1\\0\\0\\1\end{pmatrix}, \begin{pmatrix}0\\1\\-1\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\\0\end{pmatrix}, \begin{pmatrix}4\\2\\0\\3\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 4 \\
+0 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; -1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+-2 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 1 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 4
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x+2 &amp; -1 &amp; 0 &amp; 9 \\
+0 &amp; x-1 &amp; 0 &amp; 0 \\
+-2 &amp; -1 &amp; x-1 &amp; -7 \\
+-1 &amp; 0 &amp; 0 &amp; x-4
+\end{pmatrix} \\
+&amp;= (x-1) \det \begin{pmatrix}
+x+2 &amp; 0 &amp; 9 \\
+-2 &amp; x-1 &amp; -7 \\
+-1 &amp; 0 &amp; x-4
+\end{pmatrix} \\
+&amp;= (x-1)^{2} \det \begin{pmatrix}
+x+2 &amp; 9 \\
+-1 &amp; x-4
+\end{pmatrix} \\
+&amp;= (x-1)^{2} \bigl( (x+2)(x-4) + 9 \bigr) \\
+&amp;= (x-1)^{2} (x^{2} - 2x -8 + 9) \\
+&amp;= (x-1)^{2} (x^{2} - 2x + 1) \\
+&amp;= (x-1)^{4}.\end{aligned}\]</span> To determine the minimum polynomial, we calculate successive powers of <span class="math display">\[A-I = \begin{pmatrix}
+-3 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span> We calculate <span class="math display">\[\begin{aligned}
+(A-I)^{2} &amp;= \begin{pmatrix}
+0 &amp; -3 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 2 &amp; 0 &amp; 3 \\
+0 &amp; 1 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0 \\
+\qquad\text{and}\qquad
+(A-I)^{3} &amp;= \begin{pmatrix}
+0 &amp; -3 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 2 &amp; 0 &amp; 3 \\
+0 &amp; 1 &amp; 0 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+-3 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \neq 0.\end{aligned}\]</span> Hence <span class="math inline">\(m_{A}(x) = (x-1)^{4}\)</span> (as we have eliminated all smaller degree possibilities) and the Jordan normal form of <span class="math inline">\(A\)</span> consists of a single Jordan block <span class="math display">\[J_{4}(1) = \begin{pmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span></p>
+<p>Since <span class="math inline">\(A\)</span> has a single Jordan block, <span class="math inline">\(\dim E_{1} = 1\)</span>. Consider <span class="math inline">\(A-I\)</span>, we note immediately that <span class="math display">\[v_{1} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix}\]</span> satisfies <span class="math inline">\((A-I)(v_{1}) = \vec{0}\)</span>. Hence <span class="math inline">\(v_{1}\)</span> spans <span class="math inline">\(E_{1}\)</span>.</p>
+<p>We now solve <span class="math inline">\((A-I)(v) = v_{1}\)</span>: <span class="math display">\[\begin{pmatrix}
+-3 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-3x + y - 9t &amp;= 0 \label{eq:JNF1c} \\
+2x + y + 7t &amp;= 1 \label{eq:JNF2c} \\
+x \quad\;\;\; + 3t &amp;= 0. \label{eq:JNF3c}\end{aligned}\]</span> Multiplying <a href="#eq:JNF3c" data-reference-type="eqref" data-reference="eq:JNF3c">[eq:JNF3c]</a> by <span class="math inline">\(3\)</span> and adding to <a href="#eq:JNF1c" data-reference-type="eqref" data-reference="eq:JNF1c">[eq:JNF1c]</a> gives <span class="math inline">\(y = 0\)</span>. Multiplying <a href="#eq:JNF3c" data-reference-type="eqref" data-reference="eq:JNF3c">[eq:JNF3c]</a> by <span class="math inline">\(2\)</span> and subtracting from <a href="#eq:JNF2c" data-reference-type="eqref" data-reference="eq:JNF2c">[eq:JNF2c]</a> now yields <span class="math inline">\(t = 1\)</span> and hence <span class="math inline">\(x = -3t = -3\)</span>. The value of <span class="math inline">\(z\)</span> is arbitrary, so we choose <span class="math inline">\(z = 0\)</span> and take <span class="math display">\[v_{2} = \begin{pmatrix}-3\\0\\0\\1\end{pmatrix}.\]</span></p>
+<p>We now solve <span class="math inline">\((A-I)(v) = v_{2}\)</span>: <span class="math display">\[\begin{pmatrix}
+-3 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}-3\\0\\0\\1\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-3x + y - 9t &amp;= -3 \label{eq:JNF4c} \\
+2x + y + 7t &amp;= 0 \label{eq:JNF5c} \\
+x \quad\;\;\; + 3t &amp;= 1. \label{eq:JNF6c}\end{aligned}\]</span> Multiplying <a href="#eq:JNF6c" data-reference-type="eqref" data-reference="eq:JNF6c">[eq:JNF6c]</a> by <span class="math inline">\(3\)</span> and adding to <a href="#eq:JNF4c" data-reference-type="eqref" data-reference="eq:JNF4c">[eq:JNF4c]</a> gives <span class="math inline">\(y = 0\)</span>. Multiplying <a href="#eq:JNF6c" data-reference-type="eqref" data-reference="eq:JNF6c">[eq:JNF6c]</a> by <span class="math inline">\(2\)</span> and subtracting from <a href="#eq:JNF5c" data-reference-type="eqref" data-reference="eq:JNF5c">[eq:JNF5c]</a> then yields <span class="math inline">\(t = -2\)</span> and hence <span class="math inline">\(x = 1-3t = 7\)</span>. We take <span class="math inline">\(z = 0\)</span> (it can be any value) and <span class="math display">\[v_{3} = \begin{pmatrix}7\\0\\0\\-2\end{pmatrix}.\]</span></p>
+<p>Finally we solve <span class="math inline">\((A-I)(v) = v_{3}\)</span>: <span class="math display">\[\begin{pmatrix}
+-3 &amp; 1 &amp; 0 &amp; -9 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 7 \\
+1 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}7\\0\\0\\-2\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+-3x &amp;{} + y &amp;{} - 9t &amp;{} = 7 \\
+2x &amp;{} + y &amp;{} + 7t &amp;{} = 0 \\
+x &amp; &amp;{} + 3t &amp;{} = -2.
+\end{array}\]</span> Hence <span class="math display">\[\begin{aligned}
+y &amp;= (-3x+y-9t) + 3(x+3t) = 7-6 = 1 \\
+t &amp;= (2x+y+7t) - y - 2(x+3t) = 0 - 1 + 4 = 3 \\
+\qquad\text{and}\qquad
+x &amp;= -2 - 3t = -11.\end{aligned}\]</span> We take <span class="math display">\[v_{4} = \begin{pmatrix}-11\\1\\0\\3\end{pmatrix}\]</span> since <span class="math inline">\(z\)</span> (arbitrary) can be taken to be <span class="math inline">\(0\)</span>. Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}0\\0\\1\\0\end{pmatrix}, \begin{pmatrix}-3\\0\\0\\1\end{pmatrix},
+  \begin{pmatrix}7\\0\\0\\-2\end{pmatrix}, \begin{pmatrix}-11\\1\\0\\3\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+0 &amp; -3 &amp; 7 &amp; -11 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; -2 &amp; 3
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+-4 &amp; 0 &amp; 2 &amp; -4 \\
+-2 &amp; -2 &amp; 3 &amp; -4 \\
+0 &amp; 0 &amp; -2 &amp; 0 \\
+1 &amp; 0 &amp; -1 &amp; 0
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x+4 &amp; 0 &amp; -2 &amp; 4 \\
+2 &amp; x+2 &amp; -3 &amp; 4 \\
+0 &amp; 0 &amp; x+2 &amp; 0 \\
+-1 &amp; 0 &amp; 1 &amp; x
+\end{pmatrix} \\
+&amp;= (x+2) \det \begin{pmatrix}
+x+4 &amp; -2 &amp; 4 \\
+0 &amp; x+2 &amp; 0 \\
+-1 &amp; 1 &amp; x
+\end{pmatrix} \\
+&amp;= (x+2)^{2} \det \begin{pmatrix}
+x+4 &amp; 4 \\
+-1 &amp; x
+\end{pmatrix} \\
+&amp;= (x+2)^{2} (x^{2} + 4x + 4) \\
+&amp;= (x+2)^{4}.\end{aligned}\]</span> We calculate successive powers of <span class="math display">\[A+2I = \begin{pmatrix}
+-2 &amp; 0 &amp; 2 &amp; -4 \\
+-2 &amp; 0 &amp; 3 &amp; -4 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; -1 &amp; 2
+\end{pmatrix}.\]</span> Then <span class="math display">\[(A+2I)^{2} = \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix},\]</span> so the minimum polynomial is <span class="math inline">\(m_{A}(x) = (x+2)^{2}\)</span>. To finish determining the Jordan normal form, we need to know the number of Jordan blocks occurring and so need to calculate <span class="math inline">\(\dim E_{-2}\)</span>.</p>
+<p>We solve <span class="math inline">\((A+2I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-2 &amp; 0 &amp; 2 &amp; -4 \\
+-2 &amp; 0 &amp; 3 &amp; -4 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; -1 &amp; 2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+-2x &amp;{} + 2z &amp;{} -4t &amp;{} = 0 \\
+-2x &amp;{} + 3z &amp;{} - 4t &amp;{} = 0 \\
+x &amp;{} - z &amp; {} +2t &amp;= 0.
+\end{array}\]</span> This yields <span class="math inline">\(x + 2t = z = 0\)</span>. Hence <span class="math display">\[E_{-2} = \left\{ \begin{pmatrix}-2t\\y\\0\\t\end{pmatrix} \biggm| y,t \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}-2\\0\\0\\1\end{pmatrix}, \begin{pmatrix}0\\1\\0\\0\end{pmatrix}
+\right).\]</span> Thus <span class="math inline">\(\dim E_{-2} = 2\)</span> and we deduce the Jordan normal form of <span class="math inline">\(A\)</span> contains <span class="math inline">\(2\)</span> Jordan blocks. The Jordan normal form is therefore <span class="math display">\[\begin{pmatrix}
+J_{2}(-2) &amp; 0 \\
+0 &amp; J_{2}(-2)
+\end{pmatrix} =
+\begin{pmatrix}
+-2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -2 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -2
+\end{pmatrix}.\]</span></p>
+<p>The corresponding basis must contain two vectors <span class="math inline">\(v_{1},v_{3}\)</span> which span <span class="math inline">\(E_{-2}\)</span>. To find the choice for <span class="math inline">\(v_{2}\)</span> and <span class="math inline">\(v_{4}\)</span>, we solve <span class="math inline">\((A+2I)(v) \in E_{-2}\)</span>  (since we require <span class="math inline">\(A(v_{2}) = v_{1} - 2v_{2}\)</span> and <span class="math inline">\(A(v_{4}) = v_{3} - 2v_{4}\)</span>): <span class="math display">\[\begin{pmatrix}
+-2 &amp; 0 &amp; 2 &amp; -4 \\
+-2 &amp; 0 &amp; 3 &amp; -4 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; -1 &amp; 2
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} =
+\begin{pmatrix}-2\alpha\\\beta\\0\\\alpha\end{pmatrix}
+\label{eq:JNF*d}\]</span> for scalars <span class="math inline">\(\alpha,\beta \in \mathbb{R}\)</span>  (the right-hand side being an arbitrary vector in <span class="math inline">\(E_{-2}\)</span>). Hence <span class="math display">\[\begin{aligned}
+-2x + 2z - 4t &amp;= -2\alpha \label{eq:JNF1d} \\
+-2x + 3z - 4t &amp;= \beta \label{eq:JNF2d} \\
+x - z + 2t &amp;= \alpha. \label{eq:JNF3d}\end{aligned}\]</span> Hence <span class="math inline">\(z = 2\alpha + \beta\)</span> (subtracting <a href="#eq:JNF1d" data-reference-type="eqref" data-reference="eq:JNF1d">[eq:JNF1d]</a> from <a href="#eq:JNF2d" data-reference-type="eqref" data-reference="eq:JNF2d">[eq:JNF2d]</a>) and <span class="math inline">\(x = \alpha + z - 2t = 3\alpha + \beta - 2t\)</span>.</p>
+<p>If we take <span class="math inline">\(\alpha = 1\)</span> and <span class="math inline">\(\beta = 0\)</span>, we should take <span class="math display">\[v_{1} = \begin{pmatrix}-2\\0\\0\\1\end{pmatrix} \qquad \text{and} \qquad v_{2} =
+\begin{pmatrix}3-2t\\y\\2\\t\end{pmatrix}\]</span> for any values of <span class="math inline">\(y\)</span> and <span class="math inline">\(t\)</span>. We choose <span class="math inline">\(t = y = 0\)</span> to give <span class="math display">\[v_{2} = \begin{pmatrix}3\\0\\2\\0\end{pmatrix}.\]</span></p>
+<p>Similarly taking <span class="math inline">\(\alpha = 0\)</span>,  <span class="math inline">\(\beta = 1\)</span>,  <span class="math inline">\(t = y = 0\)</span> tells us that we should take <span class="math display">\[v_{3} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix} \qquad \text{and} \qquad v_{4} =
+\begin{pmatrix}1\\0\\1\\0\end{pmatrix}.\]</span></p>
+<p>Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}-2\\0\\0\\1\end{pmatrix}, \begin{pmatrix}3\\0\\2\\0\end{pmatrix},
+  \begin{pmatrix}0\\1\\0\\0\end{pmatrix}, \begin{pmatrix}1\\0\\1\\0\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+-2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; -2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -2 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -2
+\end{pmatrix}.\]</span> The corresponding change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+-2 &amp; 3 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 1 \\
+1 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+-3 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; -3 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x+3 &amp; -2 &amp; -\textstyle\frac{1}{2}&amp; 2 \\
+0 &amp; x &amp; 0 &amp; -1 \\
+0 &amp; 3 &amp; x+3 &amp; -3 \\
+0 &amp; 0 &amp; 0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x+3) \det \begin{pmatrix}
+x &amp; 0 &amp; -1 \\
+3 &amp; x+3 &amp; -3 \\
+0 &amp; 0 &amp; x-1
+\end{pmatrix} \\
+&amp;= (x-1)(x+3) \det \begin{pmatrix}
+x &amp; 0 \\
+3 &amp; x+3
+\end{pmatrix} \\
+&amp;= x(x-1)(x+3)^{2}.\end{aligned}\]</span> Hence the minimum polynomial has the form <span class="math inline">\(m_{A}(x) = x(x-1)(x+3)^{i}\)</span> where <span class="math inline">\(1 \leqslant i \leqslant 2\)</span>. Now <span class="math display">\[A-I = \begin{pmatrix}
+-4 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; -1 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; -4 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+A+3I = \begin{pmatrix}
+0 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 3 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 4
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+A(A-I)(A+3I) &amp;=
+\begin{pmatrix}
+-3 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; -3 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+0 &amp; -\frac{7}{2} &amp; -2 &amp; \frac{7}{2} \\
+0 &amp; -3 &amp; 0 &amp; 3 \\
+0 &amp; 3 &amp; 0 &amp; -3 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \\
+&amp;= \begin{pmatrix}
+0 &amp; 6 &amp; 6 &amp; -6 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\end{aligned}\]</span> Hence <span class="math inline">\(m_{A}(x) = x(x-1)(x+3)^{2}\)</span>. Consequently the Jordan normal form of <span class="math inline">\(A\)</span> is <span class="math display">\[\begin{pmatrix}
+J_{1}(0) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(1) &amp; 0 \\
+0 &amp; 0 &amp; J_{2}(-3)
+\end{pmatrix} =
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{pmatrix}.\]</span></p>
+<p>We next determine the three eigenspaces <span class="math inline">\(E_{0}\)</span>, <span class="math inline">\(E_{1}\)</span> and <span class="math inline">\(E_{-3}\)</span> (which we now know are <span class="math inline">\(1\)</span>-dimensional). For <span class="math inline">\(E_{0}\)</span>, we solve <span class="math inline">\(A(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-3 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; -3 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+-3x + 2y + \textstyle\frac{1}{2}z - 2t &amp;= 0 \\
+t &amp;= 0 \\
+-3y - 3z + 3t &amp;= 0.\end{aligned}\]</span> Hence <span class="math inline">\(t = 0\)</span>,  <span class="math inline">\(z\)</span> may be arbitrary, <span class="math inline">\(y = -z\)</span> and <span class="math inline">\(3x = 2y + \textstyle\frac{1}{2}z = -\frac{3}{2}z\)</span>, so <span class="math inline">\(x = -\textstyle\frac{1}{2}z\)</span>. Hence <span class="math display">\[E_{0} = \left\{ \begin{pmatrix}-\textstyle\frac{1}{2}z\\-z\\z\\0\end{pmatrix} \biggm| z \in \mathbb{R}\right\}
+= \operatorname{Span} \left( \begin{pmatrix}-\textstyle\frac{1}{2}\\-1\\1\\0\end{pmatrix} \right),\]</span> so we take <span class="math display">\[v_{1} = \begin{pmatrix}-\textstyle\frac{1}{2}\\-1\\1\\0\end{pmatrix}.\]</span></p>
+<p>For <span class="math inline">\(E_{1}\)</span>, we solve <span class="math inline">\((A-I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-4 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; -1 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; -4 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+-4x + 2y &amp;{} + \textstyle\frac{1}{2}z &amp;{} -2t &amp;{} = 0 \\
+-y &amp; &amp;{} + t &amp;{} = 0 \\
+-3y &amp;{} - 4z &amp;{} + 3t &amp;{} = 0.
+\end{array}\]</span> Given arbitrary <span class="math inline">\(t\)</span>, we see <span class="math inline">\(y = t\)</span>, so <span class="math inline">\(4z = 3y - 3t = 0\)</span> and consequently <span class="math inline">\(z = 0\)</span>. Thus <span class="math inline">\(4x = 2y + \textstyle\frac{1}{2}z - 2t = 0\)</span> and so <span class="math inline">\(x = 0\)</span>. Hence <span class="math display">\[E_{1} = \left\{ \begin{pmatrix}0\\t\\0\\t\end{pmatrix} \biggm| t \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}0\\1\\0\\1\end{pmatrix} \right)\]</span> and we take <span class="math display">\[v_{2} = \begin{pmatrix}0\\1\\0\\1\end{pmatrix}.\]</span></p>
+<p>Finally, for <span class="math inline">\(E_{-3}\)</span>, we solve <span class="math inline">\((A+3I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 3 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 4
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+2y &amp;{} + \textstyle\frac{1}{2}z &amp;{} - 2t &amp;{} = 0 \\
+3y &amp; &amp;{} + t &amp;{} = 0 \\
+-3y &amp; &amp;{} +3t &amp;{} = 0 \\
+&amp; &amp; 4t &amp;{} = 0.
+\end{array}\]</span> Hence <span class="math inline">\(t = 0\)</span>, <span class="math inline">\(y = 0\)</span> and <span class="math inline">\(z = 0\)</span>. Thus <span class="math display">\[E_{-3} = \left\{ \begin{pmatrix}x\\0\\0\\0\end{pmatrix} \biggm| x \in \mathbb{R}\right\} =
+\operatorname{Span} \left( \begin{pmatrix}1\\0\\0\\0\end{pmatrix} \right)\]</span> and we take <span class="math display">\[v_{3} = \begin{pmatrix}1\\0\\0\\0\end{pmatrix}.\]</span> Finally we require <span class="math inline">\(A(v_{4}) = v_{3} - 3v_{4}\)</span>, so solve <span class="math inline">\((A+3I)(v) = v_{3}\)</span>: <span class="math display">\[\begin{pmatrix}
+0 &amp; 2 &amp; \textstyle\frac{1}{2}&amp; -2 \\
+0 &amp; 3 &amp; 0 &amp; 1 \\
+0 &amp; -3 &amp; 0 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 4
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}1\\0\\0\\0\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}r@{}r@{}l}
+2y &amp;{} + \textstyle\frac{1}{2}z &amp;{} - 2t &amp;{} = 1 \\
+3y &amp; &amp;{} + t &amp;{} = 0 \\
+-3y &amp; &amp;{} + 3t &amp;{} = 0 \\
+&amp; &amp; 4t &amp;{} = 0.
+\end{array}\]</span> Hence <span class="math inline">\(t = 0\)</span>,  <span class="math inline">\(y = 0\)</span> and <span class="math inline">\(\textstyle\frac{1}{2}z = 1\)</span>, so <span class="math inline">\(z = 2\)</span> while <span class="math inline">\(x\)</span> can be arbitrary. We choose <span class="math inline">\(x = 0\)</span> and so take <span class="math display">\[v_{4} = \begin{pmatrix}0\\0\\2\\0\end{pmatrix}.\]</span></p>
+<p>Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}-\textstyle\frac{1}{2}\\-1\\1\\0\end{pmatrix}, \begin{pmatrix}0\\1\\0\\1\end{pmatrix},
+  \begin{pmatrix}1\\0\\0\\0\end{pmatrix}, \begin{pmatrix}0\\0\\2\\0\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -3 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+-\textstyle\frac{1}{2}&amp; 0 &amp; 1 &amp; 0 \\
+-1 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span></p></li>
+<li><p><strong>This solution is here for reference only, you should use a computer to solve this type of problem in this course!</strong> <span class="math display">\[A = \begin{pmatrix}
+-2 &amp; 2 &amp; 0 &amp; -6 \\
+-2 &amp; 3 &amp; 0 &amp; -3 \\
+-2 &amp; 1 &amp; 2 &amp; -3 \\
+2 &amp; -1 &amp; 0 &amp; 5
+\end{pmatrix},\]</span> so <span class="math display">\[\begin{aligned}
+c_{A}(x) &amp;= \det \begin{pmatrix}
+x+2 &amp; -2 &amp; 0 &amp; 6 \\
+2 &amp; x-3 &amp; 0 &amp; 3 \\
+2 &amp; -1 &amp; x-2 &amp; 3 \\
+-2 &amp; 1 &amp; 0 &amp; x-5
+\end{pmatrix} \\
+&amp;= (x-2) \det \begin{pmatrix}
+x+2 &amp; -2 &amp; 6 \\
+2 &amp; x-3 &amp; 3 \\
+-2 &amp; 1 &amp; x-5
+\end{pmatrix} \\
+&amp;= (x-2) \left( (x+2) \det \begin{pmatrix}
+x-3 &amp; 3 \\
+1 &amp; x-5
+\end{pmatrix} + 2 \det \begin{pmatrix}
+2 &amp; 3 \\
+-2 &amp; x-5
+\end{pmatrix} \right. \\
+&amp;\left. \hspace{2.5in} {} + 6 \det \begin{pmatrix}
+2 &amp; x-3 \\
+-2 &amp; 1
+\end{pmatrix} \right) \\
+&amp;= (x-2) \biggl( (x+2) \bigl( (x-3)(x-5) - 3 \bigr) + 2 (2x-10+6) + 6
+(2 + 2x - 6) \biggr) \\
+&amp;= (x-2) \bigl( (x+2) (x^{2} - 8x + 15 - 3) + 2(2x-4) + 6(2x-4) \bigr)
+\\
+&amp;= (x-2) \bigl( (x+2) (x^{2} - 8x + 12) + 16(x-2) \bigr) \\
+&amp;= (x-2) \bigl( (x+2)(x-2)(x-6) + 16(x-2) \bigr) \\
+&amp;= (x-2)^{2} \bigl( (x+2)(x-6) + 16 \bigr) \\
+&amp;= (x-2)^{2} (x^{2} - 4x - 12 + 16) \\
+&amp;= (x-2)^{2} (x^{2} - 4x + 4) \\
+&amp;= (x-2)^{4}.\end{aligned}\]</span> Now <span class="math display">\[A-2I = \begin{pmatrix}
+-4 &amp; 2 &amp; 0 &amp; -6 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+2 &amp; -1 &amp; 0 &amp; 3
+\end{pmatrix},\]</span> so <span class="math display">\[(A-2I)^{2} = \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span> Hence <span class="math inline">\(m_{A}(x) = (x-2)^{2}\)</span>. To determine the Jordan normal form, we need to determine <span class="math inline">\(\dim E_{2}\)</span>, so as to determine the number of Jordan blocks occurring.</p>
+<p>We solve <span class="math inline">\((A-2I)(v) = \vec{0}\)</span>: <span class="math display">\[\begin{pmatrix}
+-4 &amp; 2 &amp; 0 &amp; -6 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+2 &amp; -1 &amp; 0 &amp; 3
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}\]</span> and observe all four resulting equations are scalar multiples of <span class="math display">\[2x - y + 3t = 0.\]</span> Hence <span class="math inline">\(y = 2x + 3t\)</span>, while <span class="math inline">\(x\)</span>, <span class="math inline">\(t\)</span> and <span class="math inline">\(z\)</span> can be arbitrary. Thus <span class="math display">\[E_{2} = \left\{ \begin{pmatrix}x\\2x+3t\\z\\t\end{pmatrix} \biggm| x,z,t \in \mathbb{R}\right\}
+= \operatorname{Span} \left( \begin{pmatrix}1\\2\\0\\0\end{pmatrix},
+  \begin{pmatrix}0\\0\\1\\0\end{pmatrix}, \begin{pmatrix}0\\3\\0\\1\end{pmatrix} \right).\]</span> In particular, <span class="math inline">\(\dim E_{2} = 3\)</span> and so three Jordan blocks occur in the Jordan normal form of <span class="math inline">\(A\)</span>. This Jordan normal form is therefore <span class="math display">\[\begin{pmatrix}
+J_{2}(2) &amp; 0 &amp; 0 \\
+0 &amp; J_{1}(2) &amp; 0 \\
+0 &amp; 0 &amp; J_{1}(2)
+\end{pmatrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span></p>
+<p>We require <span class="math inline">\(\{ v_{1},v_{3},v_{4} \}\)</span> to form a basis for <span class="math inline">\(E_{2}\)</span> and then <span class="math inline">\(A(v_{2}) = v_{1} + 2v_{2}\)</span>, so we solve <span class="math inline">\((A-2I)(v) \in E_{2}\)</span>: <span class="math display">\[\begin{pmatrix}
+-4 &amp; 2 &amp; 0 &amp; -6 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+-2 &amp; 1 &amp; 0 &amp; -3 \\
+2 &amp; -1 &amp; 0 &amp; 3
+\end{pmatrix} \begin{pmatrix}x\\y\\z\\t\end{pmatrix} =
+\begin{pmatrix}\alpha\\2\alpha+3\gamma\\\beta\\\gamma\end{pmatrix},\]</span> so <span class="math display">\[\begin{array}{r@{}l}
+2(-2x+y-3t) &amp;{} = \alpha \\
+(-2x+y-3t) &amp;{} = 2\alpha + 3\gamma \\
+(-2x+y-3t) &amp;{} = \beta \\
+-(-2x+y-3t) &amp;{} = \gamma.
+\end{array}
+\label{eq:JNFf}\]</span> Hence, for a solution to exist, we require <span class="math display">\[\textstyle\frac{1}{2}\alpha = 2\alpha+3\gamma = \beta = -\gamma.\]</span> Here <span class="math inline">\(\alpha\)</span> may be arbitrary (but non-zero to achieve <span class="math inline">\(v_{1} \neq \vec{0}\)</span>), so we choose <span class="math inline">\(\alpha = 2\)</span>. Then <span class="math inline">\(\beta = 1\)</span>,  <span class="math inline">\(\gamma = -1\)</span> (and we check <span class="math inline">\(2\alpha + 3\gamma = 4-3 = 1\)</span>, as required). Thus our equations <a href="#eq:JNFf" data-reference-type="eqref" data-reference="eq:JNFf">[eq:JNFf]</a> reduce to <span class="math display">\[-2x + y - 3t = 1.\]</span> Here <span class="math inline">\(x\)</span>, <span class="math inline">\(z\)</span> and <span class="math inline">\(t\)</span> may be arbitrary, we shall take them all to be <span class="math inline">\(0\)</span>, so <span class="math inline">\(y = 1\)</span>. Hence we choose <span class="math display">\[v_{1} = \begin{pmatrix}\alpha\\2\alpha+3\gamma\\\beta\\\gamma\end{pmatrix} =
+\begin{pmatrix}2\\1\\1\\-1\end{pmatrix} \qquad \text{and} \qquad v_{2} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix}.\]</span> The choice of <span class="math inline">\(v_{3}\)</span> and <span class="math inline">\(v_{4}\)</span> are to produce a basis for <span class="math inline">\(E_{2}\)</span> when taken together with <span class="math inline">\(v_{1}\)</span>, so let us choose <span class="math display">\[v_{3} = \begin{pmatrix}1\\2\\0\\0\end{pmatrix} \qquad \text{and} \qquad v_{4} =
+\begin{pmatrix}0\\0\\1\\0\end{pmatrix}.\]</span></p>
+<p>Hence, with respect to the basis <span class="math display">\[\mathscr{B}= \left\{ \begin{pmatrix}2\\1\\1\\-1\end{pmatrix}, \begin{pmatrix}0\\1\\0\\0\end{pmatrix},
+  \begin{pmatrix}1\\2\\0\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\\0\end{pmatrix} \right\},\]</span> the matrix of <span class="math inline">\(A\)</span> is in Jordan normal form: <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(A) = \begin{pmatrix}
+2 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 2
+\end{pmatrix}.\]</span> The required change of basis matrix is <span class="math display">\[P = \begin{pmatrix}
+2 &amp; 0 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; 2 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 1 \\
+-1 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span></p></li>
+</ol>
 </div></li>
 </ol>
 
