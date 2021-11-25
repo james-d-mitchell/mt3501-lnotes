@@ -185,7 +185,7 @@ for (i = 0; i < coll.length; i++) {
                                     &amp; = \{v \in V : T(v) = \lambda v\},
   \end{aligned}\]</span> where <span class="math inline">\(\operatorname{id}: V \longrightarrow V\)</span> is the identity transformation. In other words, the eigenspace of an eigenvalue <span class="math inline">\(\lambda\)</span> is the subspace of <span class="math inline">\(V\)</span> consisting of all of the eigenvectors for <span class="math inline">\(\lambda\)</span> and the zero vector <span class="math inline">\(\vec{0}_V\)</span>.</p>
 </div>
-<p>Note that <span class="math inline">\(T-\lambda I\)</span> is a linear transformation and so <span class="math inline">\(E_{\lambda}=\ker(T-\lambda I)\)</span> is a subspace of <span class="math inline">\(V\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>.</p>
+<p>Note that <span class="math inline">\(T-\lambda \operatorname{id}\)</span> is a linear transformation and so <span class="math inline">\(E_{\lambda}=\ker(T-\lambda \operatorname{id})\)</span> is a subspace of <span class="math inline">\(V\)</span> by <a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#prop-image-kernel-subspaces">Proposition 4.1.5</a>.</p>
 <h2 id="characteristic-polynomial">Characteristic polynomial</h2>
 <div class="defn">
 <p>Let <span class="math inline">\(T : V \longrightarrow V\)</span> be a linear transformation of the finite-dimensional vector space <span class="math inline">\(V\)</span> (over <span class="math inline">\(F\)</span>) and let <span class="math inline">\(A\)</span> be the matrix of <span class="math inline">\(T\)</span> with respect to some basis. The <strong><em>characteristic polynomial</em></strong> of <span class="math inline">\(T\)</span> is <span class="math display">\[c_{T}(x) = \det(xI-A)\]</span> where <span class="math inline">\(x\)</span> is an indeterminate variable.</p>
@@ -782,12 +782,12 @@ x+4 &amp; 15 \\
 <p>If <span class="math inline">\(S \colon V \longrightarrow V\)</span> is any linear transformation with matrix <span class="math inline">\(B =  [\beta_{ij}]\)</span>, then <span class="math display">\[(S+T)(v_{j}) = S(v_{j}) + T(v_{j}) = \sum_{i=1}^{n} \beta_{ij}v_{i} +
   \sum_{i=1}^{n} \alpha_{ij}v_{i} = \sum_{i=1}^{n} (\beta_{ij}+\alpha_{ij})v_{i}.\]</span> Hence <span class="math display">\[\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S+T) = [\beta_{ij}+\alpha_{ij}] = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).\]</span></p>
 <p>We now put this all together: <span class="math display">\[\begin{aligned}
-    \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I + a_{1}T + a_{2}T^{2} +
+    \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}\operatorname{id}+ a_{1}T + a_{2}T^{2} +
     \dots + a_{k}T^{k}) \\
-    &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
+    &amp;= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}\operatorname{id}) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
     \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{2}T^{2}) \\
     &amp;\hspace{4cm} \mbox{} + \dots + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{k}T^{k}) \\
-    &amp;= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(I) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
+    &amp;= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(\operatorname{id}) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
     \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{2}) \\
     &amp;\hspace{4cm} \mbox{} + \dots + a_{k} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{k}) \\
     &amp;= a_{0} I + a_{1}A + a_{2}A^{2} + \dots + a_{k}A^{k} \\

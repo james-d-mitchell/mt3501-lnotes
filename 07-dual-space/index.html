@@ -306,7 +306,19 @@ for (i = 0; i < coll.length; i++) {
 <h2 id="the-matrix-of-the-dual-of-a-linear-transformation">The matrix of the dual of a linear transformation</h2>
 <p>In this section we consider the matrix of the dual of a linear transformation.</p>
 <div class="defn">
-<p>If <span class="math inline">\(A\)</span> is a matrix with entries in a field <span class="math inline">\(F\)</span>, then the <strong><em>transpose</em></strong> <span class="math inline">\(A ^ *\)</span> of <span class="math inline">\(A\)</span> is the matrix obtained by swapping the rows and columns of <span class="math inline">\(A\)</span>. More precisely, if <span class="math inline">\(A = [\alpha_{ij}]\)</span>, then <span class="math inline">\(A  ^ * = [\alpha_{ji}]\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is a matrix with entries in a field <span class="math inline">\(F\)</span>, then the <strong><em>transpose</em></strong> <span class="math inline">\(A ^ *\)</span> of <span class="math inline">\(A\)</span> is the matrix obtained by swapping the rows and columns of <span class="math inline">\(A\)</span>. More precisely, if <span class="math display">\[A = [\alpha_{ij}] =
+    \begin{pmatrix}
+      \alpha_{11} &amp; \alpha_{12} &amp; \cdots &amp; \alpha_{1n} \\
+      \alpha_{21} &amp; \alpha_{22} &amp; \cdots &amp; \alpha_{2n} \\
+      \vdots      &amp; \vdots      &amp; \ddots &amp; \vdots      \\
+      \alpha_{m1} &amp; \alpha_{m2} &amp; \cdots &amp; \alpha_{mn}
+    \end{pmatrix},\]</span> then <span class="math display">\[A ^ * = [\alpha_{ji}] =
+    \begin{pmatrix}
+      \alpha_{11} &amp; \alpha_{21} &amp; \cdots &amp; \alpha_{m1} \\
+      \alpha_{12} &amp; \alpha_{22} &amp; \cdots &amp; \alpha_{m2} \\
+      \vdots      &amp; \vdots      &amp; \ddots &amp; \vdots      \\
+      \alpha_{1n} &amp; \alpha_{2n} &amp; \cdots &amp; \alpha_{mn}
+    \end{pmatrix}.\]</span></p>
 </div>
 <div class="example">
 <p><span class="math display">\[\text{If}\quad
@@ -412,7 +424,7 @@ for (i = 0; i < coll.length; i++) {
     \end{pmatrix}.\]</span> is <span class="math inline">\(2\)</span>, and the column rank is also <span class="math inline">\(2\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lemma-rank-im-dual-transf" label="lemma-rank-im-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T  : V \longrightarrow W\)</span> is a linear transformation, then <span class="math inline">\(\dim \operatorname{im} T = \dim \operatorname{im} T ^ *\)</span> where <span class="math inline">\(T ^ *: W ^ * \longrightarrow V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>.</p>
+<p><span id="lemma-rank-im-dual-transf" label="lemma-rank-im-dual-transf"></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional vector spaces over a field <span class="math inline">\(F\)</span>. If <span class="math inline">\(T  : V \longrightarrow W\)</span> is a linear transformation, then <span class="math inline">\(\dim \operatorname{im} T = \dim  \operatorname{im} T ^ *\)</span> where <span class="math inline">\(T ^ *: W ^ * \longrightarrow V ^ *\)</span> is the dual transformation of <span class="math inline">\(T\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> In Problem <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problem-07-02">2</a>(d) in <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#problems-07-dual-space">Section 7.6</a>, it is shown that <span class="math inline">\(\dim \ker T ^ * = \dim \ker T + \dim W - \dim V\)</span>. Also <span class="math inline">\(\dim  \operatorname{im} T ^ * = \dim W ^* - \dim \ker T ^ *\)</span> by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>). Since <span class="math inline">\(\dim W ^ * = \dim W\)</span>, (<a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#prop-dim-dual-space">Proposition 7.1.3</a>), it follows that <span class="math display">\[\begin{aligned}
@@ -497,11 +509,9 @@ for (i = 0; i < coll.length; i++) {
 <div class="center">
 <hr />
 </div></li>
-<li><p>Since <span class="math inline">\(U\)</span> is a vector space in its own right, let <span class="math inline">\(\iota:U \longrightarrow V\)</span> be defined by <span class="math inline">\(\iota(u) = u\)</span> for all <span class="math inline">\(u\in U\)</span>. Clearly, <span class="math inline">\(\iota\)</span> is a linear transformation (it’s just the identity on <span class="math inline">\(U\)</span>). If <span class="math inline">\(\iota ^ * : V ^ * \longrightarrow U  ^ *\)</span> is the dual transformation of <span class="math inline">\(\iota\)</span>, then it follows, by the Rank-Nullity Theorem (<a href="https://jdbm.me/mt3501-lnotes/04-linear-transf/#thm-rank-nullity">Theorem 4.1.7</a>), that <span class="math display">\[\label{eq-sheet-v-problem-2-b}
-      \dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ *.\]</span> If <span class="math inline">\(f\in \ker \iota ^ *\)</span>, then <span class="math inline">\(\iota ^ *(f) = f\circ \iota = \vec{0}_{U ^*}  \in U ^ *\)</span> (the linear transformation mapping every element of <span class="math inline">\(U\)</span> to <span class="math inline">\(0  \in F\)</span>). It follows that if <span class="math inline">\(f\in \ker \iota ^ *\)</span>, then <span class="math inline">\(f\in V ^ *\)</span> and if <span class="math inline">\(u\in  U\)</span>, then <span class="math inline">\(f(u) = f(\iota(u)) = \iota ^ *(f)(u) = 0\)</span> and so <span class="math inline">\(f \in U ^ 0\)</span>. Conversely, if <span class="math inline">\(f \in U ^ 0\)</span> and <span class="math inline">\(u\in U\)</span>, then <span class="math inline">\(\iota ^*(f)(u) = (f \circ \iota)(u) = f(\iota(u)) = f(u) = 0\)</span>, and so <span class="math inline">\(f\in \ker \iota ^ *\)</span>. We have shown that <span class="math inline">\(\ker \iota ^ * = U ^ 0\)</span> and so <span class="math inline">\(\dim \ker \iota ^ * = \dim U ^ 0\)</span>.</p>
-<p>If <span class="math inline">\(f\in U ^ *\)</span>, then <span class="math inline">\(f\)</span> can be extended to a linear functional <span class="math inline">\(\hat f: V  \longrightarrow F\)</span> (by extending any basis for <span class="math inline">\(U\)</span> to a basis <span class="math inline">\(\mathscr{B}\)</span> for <span class="math inline">\(V\)</span>, defining <span class="math inline">\(\hat f\)</span> to equal <span class="math inline">\(f\)</span> on the basis for <span class="math inline">\(U\)</span>, and to be arbitrary on the remaining vectors in <span class="math inline">\(\mathscr{B}\)</span>). It follows that <span class="math inline">\(\iota ^ * (\hat f) = \hat f  \circ \iota = f \circ \iota = f\)</span> and so <span class="math inline">\(f\in \operatorname{im}\iota ^ *\)</span>. Since <span class="math inline">\(f\in  U ^*\)</span> was arbitrary, it follows that <span class="math inline">\(\operatorname{im}\iota ^ * = U ^ *\)</span>, and so <span class="math inline">\(\dim \operatorname{im}  \iota ^ * =\dim U ^* = \dim U\)</span>.</p>
-<p>Thus by the equation above, it follows that <span class="math display">\[\dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ * 
-                 = \dim U ^ 0 + \dim U.\]</span> This was probably an unreasonably hard problem.</p>
+<li><p>If <span class="math inline">\(f: X \longrightarrow Y\)</span> is any function, and <span class="math inline">\(Z\subseteq X\)</span>, then we denote by <span class="math inline">\(f|_{Z}: Z \longrightarrow Y\)</span> the function <span class="math inline">\(f\)</span> <em>restricted</em> to the set <span class="math inline">\(Z\)</span> (i.e. <span class="math inline">\(f\)</span> and <span class="math inline">\(f|_{Z}\)</span> coincide on <span class="math inline">\(Z\)</span> but <span class="math inline">\(f|_{Z}\)</span> is just not defined outside <span class="math inline">\(Z\)</span>.</p>
+<p>We define <span class="math inline">\(\phi: V ^ * \longrightarrow U ^*\)</span> by <span class="math inline">\(\phi(f) = f|_{U}\)</span>. Then <span class="math inline">\(\operatorname{im}\phi = U  ^ *\)</span> and <span class="math inline">\(\ker(\phi) = \{\,f\in V ^ *\mid\phi(f) = \vec{0}_{U}\,\} = U ^ 0\)</span>. Hence by the Rank-Nullity Theorem <span class="math display">\[\dim V ^ * = \dim \operatorname{im}(\phi) + \dim \ker(\phi) 
+      = \dim U ^ * + \dim U ^ 0.\square\]</span></p>
 <div class="center">
 <hr />
 </div></li>
@@ -588,15 +598,15 @@ for (i = 0; i < coll.length; i++) {
 <div class="solution04">
 <p>Suppose that <span class="math inline">\(A = [\alpha_{ij}]\)</span> and <span class="math inline">\(B = [\beta_{jk}]\)</span>.</p>
 <ol type="1">
-<li><p>By definition, <span class="math inline">\(A + B = [\alpha_{ij} + \beta_{ij}]\)</span> and so <span class="math inline">\((A + B) ^ T = [\alpha_{ji} + \beta_{ji}] = [\alpha_{ji}] + [\beta_{ji}]  = A ^ T + B ^ T\)</span>, as required.</p>
+<li><p>By definition, <span class="math inline">\(A + B = [\alpha_{ij} + \beta_{ij}]\)</span> and so <span class="math inline">\((A + B) ^ * = [\alpha_{ji} + \beta_{ji}] = [\alpha_{ji}] + [\beta_{ji}]  = A ^ * + B ^ *\)</span>, as required.</p>
 <div class="center">
 <hr />
 </div></li>
-<li><p>Again, <span class="math inline">\(\gamma A = [\gamma \alpha_{ij}]\)</span> and so <span class="math inline">\((\gamma A) ^ T = [\gamma  \alpha_{ji}] = \gamma [\alpha_{ji}] = \gamma A ^ T\)</span>.</p>
+<li><p>Again, <span class="math inline">\(\gamma A = [\gamma \alpha_{ij}]\)</span> and so <span class="math inline">\((\gamma A) ^ * = [\gamma  \alpha_{ji}] = \gamma [\alpha_{ji}] = \gamma A ^ *\)</span>.</p>
 <div class="center">
 <hr />
 </div></li>
-<li><p>Suppose that <span class="math inline">\(T: F ^ n\longrightarrow F ^ m\)</span> and <span class="math inline">\(S : F ^ k\longrightarrow F ^ n\)</span> are linear transformations such that their matrices with respect to the standard bases for <span class="math inline">\(F ^ m\)</span>, <span class="math inline">\(F ^ n\)</span>, and <span class="math inline">\(F ^ k\)</span> are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively. Then <span class="math inline">\(T\circ S : F ^ k \longrightarrow F ^ m\)</span> is a linear transformation, whose matrix, with respect to the standard bases for <span class="math inline">\(F ^ k\)</span> and <span class="math inline">\(F ^ m\)</span> is <span class="math inline">\(AB\)</span>. If <span class="math inline">\(T ^ *: (F ^ m) ^ * \longrightarrow(F ^ n) ^ *\)</span> and <span class="math inline">\(S ^ *:  (F ^ n) ^ * \longrightarrow(F ^ k) ^ *\)</span> are the dual transformations of <span class="math inline">\(T\)</span> and <span class="math inline">\(S\)</span> respectively, then <span class="math inline">\(S ^ * \circ T ^ *: (F ^ m) ^ * \longrightarrow(F ^ k) ^ *\)</span> and <span class="math inline">\(S ^ * \circ T ^ * = (T\circ S) ^ *\)</span> (by Problem 1(c) on this sheet). It follows by <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a> that the matrix of <span class="math inline">\((T\circ S)  ^ *\)</span> is <span class="math inline">\((AB) ^ T\)</span>, while the matrix of <span class="math inline">\(S ^ * \circ T ^ *\)</span> is <span class="math inline">\(B ^ T A ^  T\)</span>, as required.</p></li>
+<li><p>Suppose that <span class="math inline">\(T: F ^ n\longrightarrow F ^ m\)</span> and <span class="math inline">\(S : F ^ k\longrightarrow F ^ n\)</span> are linear transformations such that their matrices with respect to the standard bases for <span class="math inline">\(F ^ m\)</span>, <span class="math inline">\(F ^ n\)</span>, and <span class="math inline">\(F ^ k\)</span> are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively. Then <span class="math inline">\(T\circ S : F ^ k \longrightarrow F ^ m\)</span> is a linear transformation, whose matrix, with respect to the standard bases for <span class="math inline">\(F ^ k\)</span> and <span class="math inline">\(F ^ m\)</span> is <span class="math inline">\(AB\)</span>. If <span class="math inline">\(T ^ *: (F ^ m) ^ * \longrightarrow(F ^ n) ^ *\)</span> and <span class="math inline">\(S ^ *: (F ^ n) ^ * \longrightarrow  (F ^ k) ^ *\)</span> are the dual transformations of <span class="math inline">\(T\)</span> and <span class="math inline">\(S\)</span> respectively, then <span class="math inline">\(S ^ * \circ T ^ *: (F ^ m) ^ * \longrightarrow(F ^ k) ^ *\)</span> and <span class="math inline">\(S ^ * \circ T  ^ * = (T\circ S) ^ *\)</span> (by Problem 1(c) on this sheet). It follows by <a href="https://jdbm.me/mt3501-lnotes/07-dual-space/#thm-transpose">Theorem 7.4.4</a> that the matrix of <span class="math inline">\((T\circ S) ^ *\)</span> is <span class="math inline">\((AB) ^ *\)</span>, while the matrix of <span class="math inline">\(S ^ * \circ T ^ *\)</span> is <span class="math inline">\(B ^ * A ^ *\)</span>, as required.</p></li>
 </ol>
 </div></li>
 <li><p><span id="problem-07-06" label="problem-07-06"></span></p>
@@ -674,7 +684,7 @@ for (i = 0; i < coll.length; i++) {
       \mathscr{C}}(T) 
       =  
       \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
-      (\text{Mat}_{\mathscr{B}, \mathscr{C}}(T)) ^ t
+      (\text{Mat}_{\mathscr{B}, \mathscr{C}}(T)) ^ *
       = 
       \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
       (\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *}(T ^ *))
