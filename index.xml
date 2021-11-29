@@ -170,7 +170,7 @@ A square matrix \(A\) is diagonalisable if there is an invertible matrix \(P\)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jdbm.me/mt3501-lnotes/11-inner-products/</guid>
-      <description>Inner product spaces body { counter-reset: chapter 10; }  In this section we consider the topic of inner product spaces. An “inner product” is essentially a generalisation of the dot product: \[\begin{pmatrix} x_1 \\ y_1 \\ z_1 \\ \end{pmatrix} \cdot \begin{pmatrix} x_2 \\ y_2 \\ z_2 \\ \end{pmatrix} = x_1x_2 + y_1y_2 + z_1z_2\] on \(\mathbb{R} ^ 3\). Inner products allow us to define the notion of “length” of a vector, and “angle” between vectors, in abstract vector spaces, not only in Euclidean spaces such as \(\mathbb{R} ^ 3\).</description>
+      <description>Inner product spaces body { counter-reset: chapter 10; }  In this section we consider the topic of inner product spaces. An “inner product” is essentially a generalisation of the dot product: \[\begin{pmatrix} x_0 \\ y_1 \\ z_1 \\ \end{pmatrix} \cdot \begin{pmatrix} x_2 \\ y_2 \\ z_2 \\\end{pmatrix} = x_1x_2 + y_1y_2 + z_1z_2\] on \(\mathbb{R} ^ 3\). Inner products allow us to define the notion of “length” of a vector, and “angle” between vectors, in abstract vector spaces, not only in Euclidean spaces such as \(\mathbb{R} ^ 3\).</description>
     </item>
     
     <item>
